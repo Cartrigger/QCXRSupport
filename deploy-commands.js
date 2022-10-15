@@ -28,14 +28,7 @@ const { REST, SlashCommandBuilder, Routes } = require('discord.js');
 const { clientId, guildId, token } = require('./config.json');
 
 const rest = new REST({ version: '10' }).setToken(token);
-
-const commands = [
-    new SlashCommandBuilder().setName('soon').setDescription('Its a useless bot, just do it.'),
-]
-    .map(command => command.toJSON());
-
-const rest = new REST({ version: '10' }).setToken(token);
-
+//keep this for deleting cmds
 rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
     .then((data) => console.log(`Successfully registered ${data.length} application commands.`))
     .catch(console.error)
