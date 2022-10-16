@@ -62,7 +62,7 @@ process.stdin.on("keypress", (char, evt) => {
     if (char === "q") {
         process.on('ready', () => {
             const child = spawn('node', ['remove-commands.js'], {
-                detach = true
+                detach: true
             });
         });
         process.exit();
