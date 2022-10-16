@@ -120,4 +120,4 @@ for (const file of commandFiles) {
 
 client.login(token);
 }
-})*/)}})
+})*/
