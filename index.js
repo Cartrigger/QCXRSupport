@@ -59,7 +59,7 @@ process.stdin.setRawMode(true);
 process.stdin.on("keypress", (char, evt) => {
     console.log("=====Key pressed=====");
     //console.log("Char:", JSON.stringify(char), "Evt:", JSON.stringify(evt));
-    if (char === "q") process.exit(); process.on('exit', () => {const child = spawn('node', ['remove-commands.js'], {
+    if (char === "q") process.exit(); process.on('ready', () => {const child = spawn('node', ['remove-commands.js'], {
         detached: true,
         stdio: 'ignore',
 });
