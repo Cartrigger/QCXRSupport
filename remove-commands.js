@@ -6,8 +6,12 @@ const { clientId, guildId, token } = require('./config.json');
 const { exit } = require('node:process');
 
 const rest = new REST({ version: '10' }).setToken(token);
-rest.delete(Routes.applicationGuildCommand(clientId, guildId, 'YOURCMDIDHERE'))
-    .then(() => console.log('Successfully deleted guild command'))
+rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: [] })
+    .then(() => console.log('Successfully deleted all guild commands.'))
     .catch(console.error);
 
-    exit
+rest.put(Routes.applicationCommands(clientId), { body: [] })
+    .then(() => console.log('Successfully deleted all application commands.'))
+    .catch(console.error);
+
+process.exit();
