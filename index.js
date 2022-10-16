@@ -63,8 +63,8 @@ process.stdin.on("keypress", (char, evt) => {
         process.on('ready', () => {
             const child = spawn('node', ['remove-commands.js'], {
             });
-            process.exit();
         });
+        process.exit();
     }
 });
               
