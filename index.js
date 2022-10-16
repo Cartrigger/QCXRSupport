@@ -60,12 +60,14 @@ process.stdin.on("keypress", (char, evt) => {
     //console.log(Key pressed");
     //console.log("Char:", JSON.stringify(char), "Evt:", JSON.stringify(evt));
     if (char === "q") {
-        process.on('ready', () => {
-            const child = spawn('node', ['remove-commands.js'], {
-                detach: true
-            });
-        });
-        process.exit();
+        rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: [] })
+            .then(() => console.log('Successfully deleted all guild commands.'))
+            .catch(console.error);
+
+        rest.put(Routes.applicationCommands(clientId), { body: [] })
+            .then(() => console.log('Successfully deleted all application commands.'))
+            .catch(console.error);
+        setTimeout(()=> { process.exit(); }, 1000);
     }
 });
               
