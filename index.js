@@ -54,7 +54,7 @@ client.on('interactionCreate', async interaction => {
 client.login(token);
 
 require("readline").emitKeypressEvents(process.stdin);
-process.stdin.setRawMode(true);
+//process.stdin.setRawMode(true);
 
 process.stdin.on("keypress", (char, evt) => {
     //console.log(Key pressed");
