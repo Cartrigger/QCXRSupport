@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 const discord12 = require('discord.js12')
+import discordjs12 from 'discord12';
 dotenv.config()
 import DiscordJS, { Intents, Message, MessageEmbed } from 'discord.js12';
 const client = new DiscordJS.Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
