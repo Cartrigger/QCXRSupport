@@ -1,12 +1,14 @@
 import dotenv from 'dotenv';
-const discord12 = require('discord.js12')
 dotenv.config()
-import DiscordJS, { Intents, Message, MessageEmbed } from 'discord.js12';
+import DiscordJS, { Intents, Message, MessageEmbed } from 'discord.js';
+const { REST } = require('@discordjs/rest')
+const { Routes } = require('discord.js')
 const client = new DiscordJS.Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 const config = require('./ptsd')
 const prefix = config.prefix
 const replyMessage = config.replyMessage
 const fs = require('node:fs');
+const rest = new REST({ version: '10' }).setToken('token');
 
 const addserversEmbed = new MessageEmbed()
   .setColor(config.addserversEmbed.color)
