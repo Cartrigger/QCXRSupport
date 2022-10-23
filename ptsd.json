@@ -1,8 +1,6 @@
 {
     "prefix": "!!",
-
     "playmultiplayer": "Yes! You can get the tutorial by doing, '!!createserver'",
-    "smp": "The official QuestCraft Smp is currently down.",
     "modList": "You can find the official mod compatibility list at https://docs.google.com/spreadsheets/d/16SopyOPDz3OrL4qcWwMPzL9s_5Uhl5Q-aRIePY6ztSA/edit#gid=0",
     "error401": "The error code 401 means that your microsoft account is not old enough. Your account must be 18+ to play. If your account is old enough to play and you are still having this issue, please ask for support for that.",
     "controlimg": "https://github.com/QuestCraftPlusPlus/QuestCraft/raw/main/Controls.png",
