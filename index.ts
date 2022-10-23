@@ -1,10 +1,10 @@
 import dotenv from 'dotenv';
 dotenv.config()
-import DiscordJS, { Intents, Message, MessageEmbed } from 'discord.js13';
 const config = require('./ptsd')
 const prefix = config.prefix
 const replyMessage = config.replyMessage
 const fs = require('node:fs');
+const { client, Intents, Message, MessageEmbed } = require ('discord.js13');
 
 const addserversEmbed = new MessageEmbed()
   .setColor(config.addserversEmbed.color)
