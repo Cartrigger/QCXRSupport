@@ -4,7 +4,7 @@ import DiscordJS, { Intents, Message, MessageEmbed } from 'discord.js';
 const { REST } = require('@discordjs/rest')
 const { Routes } = require('discord.js')
 const client = new DiscordJS.Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
-const config = require('./config')
+const config = require('./ptsd')
 const prefix = config.prefix
 const replyMessage = config.replyMessage
 const fs = require('node:fs');
