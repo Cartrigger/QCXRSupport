@@ -5,6 +5,6 @@ module.exports = {
           .setName('when')
           .setDescription('Tells you when it comes out.'),
       async execute(interaction) {
-                await interaction.reply('It will come out when Pojlib is done, which it is in early development.');
+                await interaction.reply('It will come out when Pojlib is done, which is in early development.');
       },
 };
