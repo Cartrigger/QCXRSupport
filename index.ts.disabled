@@ -137,7 +137,7 @@ const creditsEmbed = new MessageEmbed()
 
 client.on('ready', () => {
   console.log(`Crafty Online\nReady to help!`);
-  client.user!.setActivity("!!help QC Support", { type: "LISTENING" })
+  client.user.setActivity("!!help QC Support", { type: "LISTENING" })
 })
 
 client.on('messageCreate', (message) => {
