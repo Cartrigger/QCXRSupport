@@ -1,5 +1,4 @@
-import dotenv from 'dotenv';
-dotenv.config()
+const { clientId, guildId, token } = require('./config.json');
 const config = require('./ptsd')
 const prefix = config.prefix
 const replyMessage = config.replyMessage
