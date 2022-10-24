@@ -1,4 +1,5 @@
 const { clientId, guildId, token } = require('./config.json');
+import { Client } from "discord.js13";
 const config = require('./ptsd')
 const prefix = config.prefix
 const replyMessage = config.replyMessage
