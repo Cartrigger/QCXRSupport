@@ -3,7 +3,7 @@ const config = require('./ptsd')
 const prefix = config.prefix
 const replyMessage = config.replyMessage
 const fs = require('node:fs');
-const { client, Intents, Message, MessageEmbed } = require ('discord.js13');
+const { client, ClientEvents, Intents, Message, MessageEmbed } = require ('discord.js13');
 
 const addserversEmbed = new MessageEmbed()
   .setColor(config.addserversEmbed.color)
@@ -135,17 +135,17 @@ const creditsEmbed = new MessageEmbed()
   .setTimestamp()
   .setFooter({ text: config.creditsEmbed.footer.text, iconURL: config.creditsEmbed.footer.iconURL });
 
-client.on('ready', () => {
+client.on(ClientEvents.ready, () => {
   console.log(`Crafty Online\nReady to help!`);
   client.user.setActivity("!!help QC Support", { type: "LISTENING" })
 })
 
-client.on('messageCreate', (message) => {
+client.on(ClientEvents.messageCreate, (message) => {
   if (message.author.bot) return;
   let msg = message.content.toLowerCase()
-  if (msg.startsWith(prefix!)) {
-    const args = msg.slice(prefix!.length).split(/ +/);
-    const command = args.shift()!.toLowerCase();
+  if (msg.startsWith(prefix)) {
+    const args = msg.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
 
     if (command === 'commands') {
       message.channel.send({ embeds: [commandsEmbed] })
