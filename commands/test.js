@@ -5,6 +5,6 @@ module.exports = {
         .setName('aweroiuhterwiturehtreiuhotreiohu')
         .setDescription('something'),
     async execute(interaction) {
-        await interaction.reply('test');
+        await interaction.reply('is qc fix <:fancytroll:1037911795047870535>');
     },
 };
