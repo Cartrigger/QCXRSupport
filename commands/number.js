@@ -12,9 +12,8 @@ module.exports = {
     async execute(interaction) {
         let option = interaction.options.get("word").value;
         let word = option.toLowerCase();
-        let count = 0;
 
-        let messages = await interaction.channel.messages.fetch({ limit: 100 });
+        let messages = await interaction.channel.messages.fetch;
         messages.forEach(async (message) => {
             if (message.content.toLowerCase().includes(word)) {
                 count++;
