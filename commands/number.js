@@ -12,6 +12,7 @@ module.exports = {
     async execute(interaction) {
         let option = interaction.options.get("word").value;
         let word = option.toLowerCase();
+        let count = interaction.channel.messages.fetch;
 
         let messages = await interaction.channel.messages.fetch;
         messages.forEach(async (message) => {
