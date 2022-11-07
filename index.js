@@ -54,11 +54,8 @@ client.on('interactionCreate', async interaction => {
 client.login(token);
 
 require("readline").emitKeypressEvents(process.stdin);
-//process.stdin.setRawMode(true);
 
 process.stdin.on("keypress", (char, evt) => {
-    //console.log(Key pressed");
-    //console.log("Char:", JSON.stringify(char), "Evt:", JSON.stringify(evt));
     if (char === "q") {
         rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: [] })
             .then(() => console.log('Successfully deleted all guild commands.'))
