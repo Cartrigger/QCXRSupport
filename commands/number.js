@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js');
 
-module.exports = {
+/*module.exports = {
     data: new SlashCommandBuilder()
         .setName("counter")
         .setDescription("See how many times a word has been used.")
@@ -22,3 +22,4 @@ module.exports = {
         })
         interaction.reply({ content: `${option} has been said ${count} times!`, ephemeral: true });
     }}
+*/
