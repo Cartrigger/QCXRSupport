@@ -1,6 +1,6 @@
-const { SlashCommandBuilder } = require('discord.js');
+/*const { SlashCommandBuilder } = require('discord.js');
 
-/*module.exports = {
+module.exports = {
     data: new SlashCommandBuilder()
         .setName("counter")
         .setDescription("See how many times a word has been used.")
