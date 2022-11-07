@@ -14,7 +14,7 @@ module.exports = {
         let word = option.toLowerCase();
         let count = 0;
 
-        let messages = await interaction.channel.messages.fetch({ limit: 50000 });
+        let messages = await interaction.channel.messages.fetch({ limit: 100 });
         messages.forEach(async (message) => {
             if (message.content.toLowerCase().includes(word)) {
                 count++;
