@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('node:path');
+const { EmbedBuilder } = require('discord.js');
 const config = require('./config')
-const MessageEmbed = require('discord.js13')
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord.js');
@@ -9,15 +9,8 @@ const { clientId, guildId, token } = require('./config.json');
 const spawn = require('child_process').spawn;
 const prefix = config.prefix
 
-const commands = [];
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
-
-client.commands = new Collection();
-const commandsPath = path.join(__dirname, 'commands');
-const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
-
-const qcfix = new Message()
+const qcfix = new EmbedBuilder()
     .setColor(config.addserversEmbed.color)
     .setTitle(config.addserversEmbed.title)
     .setDescription(config.addserversEmbed.description)
@@ -27,6 +20,15 @@ const qcfix = new Message()
     )
     .setTimestamp()
     .setFooter({ text: config.addserversEmbed.footer.text, iconURL: config.addserversEmbed.footer.iconURL });
+
+const commands = [];
+
+const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+
+client.commands = new Collection();
+const commandsPath = path.join(__dirname, 'commands');
+const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
+
 
 for (const file of commandFiles) {
     const filePath = path.join(commandsPath, file);
