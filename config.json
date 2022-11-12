@@ -1,5 +1,24 @@
 {
     "token": "OTk3NjcwNzkwNjA0NTQyMDEy.Gq8_Q6.2M6E434mwHm-B_og01iH9u0D-x4VrC25Ek48O8",
     "clientId": "997670790604542012",
-    "guildId": "820767484042018829"
+    "guildId": "820767484042018829",
+
+
+    "prefix": "",
+        "qcfix": {
+            "color": "#0099ff",
+            "title": "How to add servers!",
+            "description": "**Note:** You must own Java Edition to play Questcraft.",
+            "fields": [
+                [
+                    "No.",
+                    "Questcraft isn't fixed, please check Announcements."
+                ]
+            ],
+            "thumbnail": "https://cdn.discordapp.com/attachments/911371005811916830/936309128064794664/export202201252311597020.png",
+            "footer": {
+                "text": "Made by Cart#4891",
+                "iconURL": "https://cdn.discordapp.com/attachments/952466090418642974/977050563239895060/crafty.png"
+            }
+        }
 }
