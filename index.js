@@ -17,7 +17,7 @@ client.commands = new Collection();
 const commandsPath = path.join(__dirname, 'commands');
 const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
-const qcfix = new MessageEmbed()
+const qcfix = new Message()
     .setColor(config.addserversEmbed.color)
     .setTitle(config.addserversEmbed.title)
     .setDescription(config.addserversEmbed.description)
@@ -70,7 +70,7 @@ client.on(ClientEvents.messageCreate, (message) => {
         const command = args.shift().toLowerCase();
 
         if (command === 'is it fixed?') {
-            message.channel.send({ embeds: [qcfix] })
+            message.channel.send({ message: [qcfix] })
 }
     }
 });
