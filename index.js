@@ -8,7 +8,7 @@ const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord.js');
 const { clientId, guildId, token } = require('./config.json');
 const spawn = require('child_process').spawn;
-const prefix = config.prefix
+const prefix = ('')
 
 
 const qcfix = new EmbedBuilder()
