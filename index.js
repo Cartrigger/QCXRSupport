@@ -72,7 +72,7 @@ client.on(ClientEvents.messageCreate, (message) => {
         const command = args.shift().toLowerCase();
 
         if (command === 'is it fixed?') {
-            message.channel.send({ message: [qcfix] })
+            message.channel.send({ embed: [qcfix] })
 }
     }
 });
