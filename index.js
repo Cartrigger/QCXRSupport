@@ -11,15 +11,15 @@ const prefix = config.prefix
 
 
 const qcfix = new EmbedBuilder()
-    .setColor(config.addserversEmbed.color)
-    .setTitle(config.addserversEmbed.title)
-    .setDescription(config.addserversEmbed.description)
-    .setThumbnail(config.addserversEmbed.thumbnail)
+    .setColor(0x0099FF)
+    .setTitle('Is QC Fix?')
+    .setDescription('**Note:** You must own Java Edition to play Questcraft.')
+    .setThumbnail('https://cdn.discordapp.com/attachments/911371005811916830/936309128064794664/export202201252311597020.png')
     .addFields(
-        { name: config.addserversEmbed.fields[0][0], value: config.addserversEmbed.fields[0][1] },
+        { name: 'No, QC is not fixed.', value: 'You can see news if its fixed in Announcements.' },
     )
     .setTimestamp()
-    .setFooter({ text: config.addserversEmbed.footer.text, iconURL: config.addserversEmbed.footer.iconURL });
+    .setFooter({ text: 'Made by Cart#4891', iconURL: 'https://cdn.discordapp.com/attachments/952466090418642974/977050563239895060/crafty.png' });
 
 const commands = [];
 
