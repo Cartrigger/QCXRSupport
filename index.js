@@ -66,6 +66,7 @@ client.on('interactionCreate', async interaction => {
 });
 
 client.on("messageCreate", (message) => {
+    console.log(`I found dem message`);
     if (message.author.bot) return;
     let msg = message.content.toLowerCase()
     if (msg.startsWith(prefix)) {
