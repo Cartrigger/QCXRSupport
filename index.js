@@ -66,18 +66,17 @@ client.on('interactionCreate', async interaction => {
 });
 
 client.on("messageCreate", function(message) {
-    console.log(`I found dem message`);
-    if (message.author.bot) return;
+ /*   if (message.author.bot) return;
     let msg = message.content.toLowerCase()
     if (msg.startsWith(prefix)) {
         const args = msg.slice(prefix.length).split(/ +/);
-        const command = args.shift().toLowerCase();
+        const command = args.shift().toLowerCase();*/
 
-        if (command === 'is it fixed?') {
+        if (message === 'is it fixed?') {
             message.channel.send({ embed: [qcfix] })
-}
-    }
-});
+}});
+
+
 
 
 client.on("ready", function () {
