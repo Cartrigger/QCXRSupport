@@ -79,6 +79,7 @@ client.on("messageCreate", (message) => {
     }
 });
 
+
 client.on("ready", function () {
     console.log(`the client becomes ready to start`);
     console.log(`I am ready! Logged in as ${client.user.tag}!`);
@@ -86,6 +87,7 @@ client.on("ready", function () {
 
     client.user.setActivity("Online!");
 });
+
 
 client.login(token);
 
