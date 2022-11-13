@@ -79,6 +79,8 @@ client.on("messageCreate", (message) => {
     }
 });
 
+client.user.setActivity("QCXR Go BRRRR");
+
 client.login(token);
 
 require("readline").emitKeypressEvents(process.stdin);
