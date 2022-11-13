@@ -79,7 +79,13 @@ client.on("messageCreate", (message) => {
     }
 });
 
-client.user.setActivity("QCXR Go BRRRR");
+client.on("ready", function () {
+    console.log(`the client becomes ready to start`);
+    console.log(`I am ready! Logged in as ${client.user.tag}!`);
+    console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
+
+    client.user.setActivity("Online!");
+});
 
 client.login(token);
 
