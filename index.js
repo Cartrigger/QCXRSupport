@@ -24,6 +24,11 @@ const qcfix = new EmbedBuilder()
 
 const commands = [];
 
+client.on("rateLimit", function(rateLimitData){
+    console.log(`the rate limit has been hit!  Slow'r down a tad.`);
+    console.log({rateLimitData});
+});
+
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 client.commands = new Collection();
