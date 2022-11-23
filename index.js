@@ -66,11 +66,8 @@ client.on('interactionCreate', async interaction => {
 });
 
 client.on("messageCreate", function(message) {
- /*   if (message.author.bot) return;
-    let msg = message.content.toLowerCase()
-    if (msg.startsWith(prefix)) {
-        const args = msg.slice(prefix.length).split(/ +/);
-        const command = args.shift().toLowerCase();*/
+    if (message.author.bot) return;
+    let message = message.content.toLowerCase()
 
         if (message === 'is it fixed?') {
             message.channel.send({ embed: [qcfix] })
