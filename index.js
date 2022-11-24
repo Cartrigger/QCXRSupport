@@ -72,7 +72,7 @@ client.on('interactionCreate', async interaction => {
 
 client.on("messageCreate", function(message) {
     if (message.author.bot) return;
-    let message = message.content.toLowerCase()
+    let messageCase = message.content.toLowerCase()
 
         if (message === 'is it fixed?') {
             message.channel.send({ embed: [qcfix] })
