@@ -15,7 +15,9 @@ async function fetchAllMessages() {
 
                 // Update our message pointer to be last message in page of messages
                 message = 0 < messagePage.size ? messagePage.at(messagePage.size - 1) : null;
-            },
+            })
+    }
+};
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -24,4 +26,4 @@ module.exports = {
     async execute(interaction) {
         await interaction.reply('Command not ready. Coming soon.');
     },
-})}};
+};
