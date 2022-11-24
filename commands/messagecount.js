@@ -12,8 +12,6 @@ async function fetchAllMessages() {
             .fetch({ limit: 100, before: message.id })
             .then(messagePage => {
                 messagePage.forEach(msg => messages.push(msg));
-
-                // Update our message pointer to be last message in page of messages
                 message = 0 < messagePage.size ? messagePage.at(messagePage.size - 1) : null;
             })
     }
