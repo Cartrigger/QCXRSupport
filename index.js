@@ -11,6 +11,7 @@ const spawn = require('child_process').spawn;
 const prefix = ('!')
 
 
+
 const qcfix = new EmbedBuilder()
     .setColor(0x0099FF)
     .setTitle('Is QC Fix?')
@@ -23,11 +24,6 @@ const qcfix = new EmbedBuilder()
     .setFooter({ text: 'Made by Cart#4891', iconURL: 'https://cdn.discordapp.com/attachments/952466090418642974/977050563239895060/crafty.png' });
 
 const commands = [];
-
-client.on("rateLimit", function(rateLimitData){
-    console.log(`the rate limit has been hit!  Slow'r down a tad.`);
-    console.log({rateLimitData});
-});
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
@@ -50,13 +46,21 @@ for (const file of commandFiles) {
 
 const rest = new REST({ version: '10' }).setToken(token);
 
+client.on("ready", function () {
+    console.log(`the client becomes ready to start`);
+    console.log(`I am ready! Logged in as ${client.user.tag}!`);
+
+    client.user.setActivity("Online!");
+});
+
+client.on("rateLimit", function (rateLimitData) {
+    console.log(`the rate limit has been hit!  Slow'r down a tad.`);
+    console.log({ rateLimitData });
+});
+
 rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
     .then(() => console.log('Successfully registered application commands. Welcome to the world of QCXR.'))
     .catch(console.error);
-
-client.once('ready', () => {
-    console.log('Ready!');
-});
 
 client.on('interactionCreate', async interaction => {
     if (!interaction.isChatInputCommand()) return;
@@ -72,25 +76,17 @@ client.on('interactionCreate', async interaction => {
 
 client.on("messageCreate", function(message) {
     if (message.author.bot) return;
-    let messageCase = message.content.toLowerCase()
+    let message = message.content.toLowerCase()
 
         if (message === 'is it fixed?') {
             message.channel.send({ embed: [qcfix] })
 }});
 
-
-
-
-client.on("ready", function () {
-    console.log(`the client becomes ready to start`);
-    console.log(`I am ready! Logged in as ${client.user.tag}!`);
-    console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
-
-    client.user.setActivity("Online!");
-});
-
-
 client.login(token);
+
+client.once('ready', () => {
+    console.log('Ready!');
+});
 
 require("readline").emitKeypressEvents(process.stdin);
 
