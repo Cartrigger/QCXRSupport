@@ -12,7 +12,7 @@ const prefix = ('!')
 
 
 
-const qcfix = new EmbedBuilder()
+/*const qcfix = new EmbedBuilder()
     .setColor(0x0099FF)
     .setTitle('Is QC Fix?')
     .setDescription('**Note:** You must own Java Edition to play Questcraft.')
@@ -21,7 +21,7 @@ const qcfix = new EmbedBuilder()
         { name: 'No, QC is not fixed.', value: 'You can see news if its fixed in Announcements.' },
     )
     .setTimestamp()
-    .setFooter({ text: 'Made by Cart#4891', iconURL: 'https://cdn.discordapp.com/attachments/952466090418642974/977050563239895060/crafty.png' });
+    .setFooter({ text: 'Made by Cart#4891', iconURL: 'https://cdn.discordapp.com/attachments/952466090418642974/977050563239895060/crafty.png' });*/
 
 const commands = [];
 
