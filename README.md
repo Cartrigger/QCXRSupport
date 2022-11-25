@@ -6,5 +6,5 @@ You can see I suck at this and shouldn't be doing this :>
 
 
 How to setup this bot:
-First: Make a .env file to your information. (EXAMPLE ENV)
+First: Rename EXAMPLE env file, then set it to your information. 
 Final: (Run index.js) With "node index.js"
