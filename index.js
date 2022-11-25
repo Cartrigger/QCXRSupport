@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('node:path');
 const { EmbedBuilder } = require('discord.js');
-//const config = require('./config')
 const { ClientEvents } = require ('discord.js13')
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const { REST } = require('@discordjs/rest');
