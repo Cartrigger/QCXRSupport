@@ -1,17 +1,18 @@
 const fs = require('fs');
 const path = require('node:path');
 const { EmbedBuilder } = require('discord.js');
-const config = require('./config')
+//const config = require('./config')
 const { ClientEvents } = require ('discord.js13')
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord.js');
-const { clientId, guildId, token } = require('./config.json');
+const { config } = require('dotenv');
 const spawn = require('child_process').spawn;
 const prefix = ('!')
-require("dotenv").config();
-
-
+config();
+const token = process.env.token;
+const clientId = process.env.clientID;
+const guildId = process.env.guildID;
 
 /*const qcfix = new EmbedBuilder()
     .setColor(0x0099FF)
