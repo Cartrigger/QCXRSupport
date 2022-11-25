@@ -13,17 +13,6 @@ const token = process.env.token;
 const clientId = process.env.clientID;
 const guildId = process.env.guildID;
 
-/*const qcfix = new EmbedBuilder()
-    .setColor(0x0099FF)
-    .setTitle('Is QC Fix?')
-    .setDescription('**Note:** You must own Java Edition to play Questcraft.')
-    .setThumbnail('https://cdn.discordapp.com/attachments/911371005811916830/936309128064794664/export202201252311597020.png')
-    .addFields(
-        { name: 'No, QC is not fixed.', value: 'You can see news if its fixed in Announcements.' },
-    )
-    .setTimestamp()
-    .setFooter({ text: 'Made by Cart#4891', iconURL: 'https://cdn.discordapp.com/attachments/952466090418642974/977050563239895060/crafty.png' });*/
-
 const commands = [];
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -74,14 +63,6 @@ client.on('interactionCreate', async interaction => {
         await interaction.reply({ content: 'There was an error while executing this command! Please contact Cart.', ephemeral: true });
     }
 });
-
-/*client.on("messageCreate", function(message) {
-    if (message.author.bot) return;
-    let message = message.content.toLowerCase()
-
-        if (message === 'is it fixed?') {
-            message.channel.send({ embed: [qcfix] })
-}});*/
 
 client.login(token);
 
