@@ -1,0 +1,17 @@
+name: Bot
+
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+jobs:
+  bash-example:
+    runs-on: self-hosted
+    steps:
+      - name: Group of log lines
+        run: |
+            echo starting work
+            npm i
+            node index.js
+            
