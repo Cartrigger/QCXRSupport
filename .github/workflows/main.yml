@@ -8,7 +8,7 @@ on:
 jobs:
   tests:
     name: Tests
-    runs-on: ubuntu-latest
+    runs-on: self-host
     env:
       TOKEN: ${{ env.token }}
       clientID: ${{ env.clientID }}
