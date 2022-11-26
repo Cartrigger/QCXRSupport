@@ -4,15 +4,15 @@ on:
   pull_request:
   push:
   workflow_dispatch:
-
+  
 jobs:
   tests:
     name: Tests
     runs-on: ubuntu-latest
     env:
-      TOKEN: ${{ secrets.token }}
-      clientID: ${{ secrets.clientID }}
-      guildID: ${{ secrets.guildID }}
+      TOKEN: ${{ env.token }}
+      clientID: ${{ env.clientID }}
+      guildID: ${{ env.guildID }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
