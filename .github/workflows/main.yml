@@ -6,12 +6,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  bash-example:
+  BOT:
     runs-on: self-hosted
     steps:
-      - name: Group of log lines
-        run: |
-            echo starting work
-            npm i
-            node index.js
-            
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+         node-version: '10.x'
+    - name: npm install, run
+      run: |
+        npm install
+        node index.js
