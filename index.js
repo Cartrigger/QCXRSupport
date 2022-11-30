@@ -3,6 +3,7 @@ const { ask } = require("./ai.js");
 const path = require('node:path');
 const { EmbedBuilder } = require('discord.js');
 const { ClientEvents } = require ('discord.js13')
+const { Events } = require('discord.js')
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord.js');
