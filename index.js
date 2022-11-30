@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { ask } = require("./ai.js");
 const path = require('node:path');
 const { EmbedBuilder } = require('discord.js');
 const { ClientEvents } = require ('discord.js13')
@@ -61,6 +62,14 @@ client.on('interactionCreate', async interaction => {
     } catch (error) {
         console.error(error);
         await interaction.reply({ content: 'There was an error while executing this command! Please contact Cart.', ephemeral: true });
+    }
+});
+
+client.on(Events.MessageCreate, async message => {
+    if (message.content.substring(0, 1) === "!") {
+        const prompt = message.content.substring(1); 
+        const answer = await ask(prompt); 
+        client.channels.fetch(message.channelId).then(channel => channel.send(answer));
     }
 });
 
