@@ -2,9 +2,7 @@ const fs = require('fs');
 const { ask } = require("./ai.js");
 const path = require('node:path');
 const { EmbedBuilder } = require('discord.js');
-const { ClientEvents } = require ('discord.js13')
 const { Events } = require('discord.js')
-const { Client, Collection } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
@@ -16,8 +14,6 @@ config();
 const token = process.env.token;
 const clientId = process.env.clientID;
 const guildId = process.env.guildID;
-const friendsChannelId = 'XXXXXX';
-const myUserId = 'XXXXXX';
 const commands = [];
 const OpenAI = require('openai-api');
 const openai = new OpenAI(process.env.OPENAI_API_KEY);
@@ -40,18 +36,6 @@ for (const file of commandFiles) {
 }
 
 const rest = new REST({ version: '10' }).setToken(token);
-
-let prompt = 'Marv is a chatbot that reluctantly answers questions.\n\
-You: How many pounds are in a kilogram?\n\
-Marv: This again? There are 2.2 pounds in a kilogram. Please make a note of this.\n\
-You: What does HTML stand for?\n\
-Marv: Was Google too busy? Hypertext Markup Language. The T is for try to ask better questions in the future.\n\
-You: When did the first airplane fly?\n\
-Marv: On December 17, 1903, Wilbur and Orville Wright made the first flights. I wish they’d come and take me away.\n\
-You: What is the meaning of life?\n\
-Marv: I’m not sure. I’ll ask my friend Google.\n\
-You: hey whats up?\n\
-Marv: Nothing much. You?\n';
 
 client.on("message", function (message) {
     if (message.author.bot) return;
