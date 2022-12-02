@@ -10,7 +10,7 @@
   "author": "Cart",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^14.6.0",
+    "discord.js": "^14.7.1",
     "discord.js13": "npm:discord.js@^13.8.0",
     "dotenv": "^16.0.3",
     "fs": "^0.0.1-security",

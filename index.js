@@ -4,8 +4,10 @@ const path = require('node:path');
 const { EmbedBuilder } = require('discord.js');
 const { ClientEvents } = require ('discord.js13')
 const { Events } = require('discord.js')
-const { Client, Collection, GatewayIntentBits } = require('discord.js');
+const { Client, Collection } = require('discord.js');
 const { REST } = require('@discordjs/rest');
+const { Client, Collection, GatewayIntentBits } = require('discord.js');
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 const { Routes } = require('discord.js');
 const { config } = require('dotenv');
 const spawn = require('child_process').spawn;
@@ -14,10 +16,11 @@ config();
 const token = process.env.token;
 const clientId = process.env.clientID;
 const guildId = process.env.guildID;
-
+const friendsChannelId = 'XXXXXX';
+const myUserId = 'XXXXXX';
 const commands = [];
-
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const OpenAI = require('openai-api');
+const openai = new OpenAI(process.env.OPENAI_API_KEY);
 
 client.commands = new Collection();
 const commandsPath = path.join(__dirname, 'commands');
@@ -37,6 +40,36 @@ for (const file of commandFiles) {
 }
 
 const rest = new REST({ version: '10' }).setToken(token);
+
+let prompt = 'Marv is a chatbot that reluctantly answers questions.\n\
+You: How many pounds are in a kilogram?\n\
+Marv: This again? There are 2.2 pounds in a kilogram. Please make a note of this.\n\
+You: What does HTML stand for?\n\
+Marv: Was Google too busy? Hypertext Markup Language. The T is for try to ask better questions in the future.\n\
+You: When did the first airplane fly?\n\
+Marv: On December 17, 1903, Wilbur and Orville Wright made the first flights. I wish they’d come and take me away.\n\
+You: What is the meaning of life?\n\
+Marv: I’m not sure. I’ll ask my friend Google.\n\
+You: hey whats up?\n\
+Marv: Nothing much. You?\n';
+
+client.on("message", function (message) {
+    if (message.author.bot) return;
+    prompt += `You: ${message.content}\n`;
+    (async () => {
+        const gptResponse = await openai.createCompletion({
+            model: "text-davinci-002",
+            prompt: prompt,
+            max_tokens: 60,
+            temperature: 0.3,
+            top_p: 0.3,
+            presence_penalty: 0,
+            frequency_penalty: 0.5,
+        });
+        message.reply(`${gptResponse.data.choices[0].text.substring(5)}`);
+        prompt += `${gptResponse.data.choices[0].text}\n`;
+    })();
+});
 
 client.on("ready", function () {
     console.log(`the client becomes ready to start`);
