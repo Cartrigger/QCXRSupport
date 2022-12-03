@@ -20,8 +20,22 @@ async function fetchAllMessages() {
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('messagefetcher')
-        .setDescription('Fetches messages'),
+        .setDescription('Fetches messages')
+        .addUserOption(option =>
+           option
+                .setName('target')
+                .setDescription('Member to check messages from')
+                .setRequired(false))
+        .addStringOption(option =>
+            option
+                .setName('lookup')
+                .setDescription('The messages that you would like to lookup.')
+                .setRequired(true)),
     async execute(interaction) {
-        await interaction.reply('Command not ready. Coming soon.');
+        const target = interaction.options.getUser('target');
+        const reason = interaction.options.getString('lookup');
+
+        await interaction.reply('Searching...');
+        await interaction.reply('Amount of messages: Coming soon, Member of check: Coming soon.');
     },
 };
