@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { ask } = require("./ai.js");
 const path = require('node:path');
 const { EmbedBuilder } = require('discord.js');
 const { Events } = require('discord.js')
@@ -14,6 +15,8 @@ const token = process.env.token;
 const clientId = process.env.clientID;
 const guildId = process.env.guildID;
 const commands = [];
+const OpenAI = require('openai-api');
+const openai = new OpenAI(process.env.OPENAI_API_KEY);
 
 client.commands = new Collection();
 const commandsPath = path.join(__dirname, 'commands');
@@ -33,6 +36,24 @@ for (const file of commandFiles) {
 }
 
 const rest = new REST({ version: '10' }).setToken(token);
+
+client.on("message", function (message) {
+    if (message.author.bot) return;
+    prompt += `You: ${message.content}\n`;
+    (async () => {
+        const gptResponse = await openai.createCompletion({
+            model: "text-davinci-002",
+            prompt: prompt,
+            max_tokens: 60,
+            temperature: 0.3,
+            top_p: 0.3,
+            presence_penalty: 0,
+            frequency_penalty: 0.5,
+        });
+        message.reply(`${gptResponse.data.choices[0].text.substring(5)}`);
+        prompt += `${gptResponse.data.choices[0].text}\n`;
+    })();
+});
 
 client.on("ready", function () {
     console.log(`the client becomes ready to start`);
