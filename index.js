@@ -62,6 +62,14 @@ client.on('interactionCreate', async interaction => {
     }
 });
 
+client.on(Events.MessageCreate, async message => {
+    if (message.content.substring(0, 1) === "!") {
+        const prompt = message.content.substring(1); 
+        const answer = await ask(prompt); 
+        client.channels.fetch(message.channelId).then(channel => channel.send(answer));
+    }
+});
+
 client.login(token);
 
 client.once('ready', () => {
