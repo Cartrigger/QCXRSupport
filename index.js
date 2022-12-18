@@ -1,11 +1,8 @@
 const fs = require('fs');
-const { ask } = require("./ai.js");
 const path = require('node:path');
 const { EmbedBuilder } = require('discord.js');
-const { Events } = require('discord.js')
-const { REST } = require('@discordjs/rest');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
-const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
+const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord.js');
 const { config } = require('dotenv');
 const spawn = require('child_process').spawn;
@@ -14,9 +11,10 @@ config();
 const token = process.env.token;
 const clientId = process.env.clientID;
 const guildId = process.env.guildID;
+
 const commands = [];
-const OpenAI = require('openai-api');
-const openai = new OpenAI(process.env.OPENAI_API_KEY);
+
+const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 client.commands = new Collection();
 const commandsPath = path.join(__dirname, 'commands');
@@ -36,24 +34,6 @@ for (const file of commandFiles) {
 }
 
 const rest = new REST({ version: '10' }).setToken(token);
-
-client.on("message", function (message) {
-    if (message.author.bot) return;
-    prompt += `You: ${message.content}\n`;
-    (async () => {
-        const gptResponse = await openai.createCompletion({
-            model: "text-davinci-002",
-            prompt: prompt,
-            max_tokens: 60,
-            temperature: 0.3,
-            top_p: 0.3,
-            presence_penalty: 0,
-            frequency_penalty: 0.5,
-        });
-        message.reply(`${gptResponse.data.choices[0].text.substring(5)}`);
-        prompt += `${gptResponse.data.choices[0].text}\n`;
-    })();
-});
 
 client.on("ready", function () {
     console.log(`the client becomes ready to start`);
@@ -80,14 +60,6 @@ client.on('interactionCreate', async interaction => {
     } catch (error) {
         console.error(error);
         await interaction.reply({ content: 'There was an error while executing this command! Please contact Cart.', ephemeral: true });
-    }
-});
-
-client.on(Events.MessageCreate, async message => {
-    if (message.content.substring(0, 1) === "!") {
-        const prompt = message.content.substring(1); 
-        const answer = await ask(prompt); 
-        client.channels.fetch(message.channelId).then(channel => channel.send(answer));
     }
 });
 
