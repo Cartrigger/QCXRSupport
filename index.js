@@ -1,12 +1,11 @@
 const fs = require('fs');
 const path = require('node:path');
-const { EmbedBuilder } = require('discord.js');
+const { EmbedBuilder, Events, StringSelectMenuBuilder, interaction } = require('discord.js');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord.js');
 const { config } = require('dotenv');
 const spawn = require('child_process').spawn;
-const prefix = ('!')
 config();
 const token = process.env.token;
 const clientId = process.env.clientID;
@@ -20,6 +19,13 @@ client.commands = new Collection();
 const commandsPath = path.join(__dirname, 'commands');
 const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
+client.on(Events.InteractionCreate, async interaction => {
+    if (!interaction.isStringSelectMenu()) return;
+
+    const selected = interaction.values.join(', ');
+
+    await interaction.update(`The user selected ${selected}!`);
+});
 
 for (const file of commandFiles) {
     const filePath = path.join(commandsPath, file);
@@ -83,3 +89,4 @@ process.stdin.on("keypress", (char, evt) => {
         setTimeout(()=> { process.exit(); }, 1000);
     }
 });
+
