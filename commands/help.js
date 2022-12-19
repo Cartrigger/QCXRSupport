@@ -1,34 +1,23 @@
-const { SlashCommandBuilder, ActionRowBuilder, Events, StringSelectMenuBuilder, } = require('discord.js');
+
+const { SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, Events, MessageComponentInteraction } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('help')
-        .setDescription('replies with stuff'),
+        .setDescription('helps you :shrug:'),
     async execute(interaction) {
         const row = new ActionRowBuilder()
             .addComponents(
-                new StringSelectMenuBuilder()
-                    .setCustomId('select')
-                    .setPlaceholder('Nothing selected')
-                    .addOptions([
-                        {
-                            label: 'Select me',
-                            description: 'This is a description',
-                            value: 'first_option',
-                        },
-                        {
-                            label: 'You can select me too',
-                            description: 'This is also a description',
-                            value: 'second_option',
-                        },
-                        {
-                            label: 'I am also an option',
-                            description: 'This is a description as well',
-                            value: 'third_option',
-                        },
-                    ]),
+                new ButtonBuilder()
+                    .setCustomId('primary')
+                    .setLabel('Click me!')
+                    .setStyle(ButtonStyle.Primary),
+                new ButtonBuilder()
+                .setCustomId('Secondary')
+                .setLabel('test')
+                .setStyle(ButtonStyle.Secondary)
             );
 
-        await interaction.reply({ content: 'Pong!', components: [row] });
+        await interaction.reply({ content: 'I think you should,', components: [row] });
     },
 };
