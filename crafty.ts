@@ -1,10 +1,15 @@
-const { clientId, guildId, token } = require('./config.json');
+const path = require('node:path');
+const { tokens } = require('dotenv');
+tokens()
 const config = require('./ptsd')
 const prefix = config.prefix
 const replyMessage = config.replyMessage
 const fs = require('node:fs');
 const { client, ClientEvents, Intents, Message } = require ('discord.js13');
 const { EmbedBuilder } = require('discord.js');
+const token = process.env.token;
+const clientId = process.env.clientID;
+const guildId = process.env.guildID;
 
 const addserversEmbed = new EmbedBuilder()
   .setColor(config.addserversEmbed.color)
