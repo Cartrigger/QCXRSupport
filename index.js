@@ -27,6 +27,16 @@ client.on(Events.InteractionCreate, async interaction => {
     await interaction.update(`The user selected ${selected}!`);
 });
 
+client.on('interactionCreate', interaction => {
+
+    if (!interaction.isButton()) return;
+
+    if (interaction.customId == "id1") {
+    
+    }
+
+});
+
 for (const file of commandFiles) {
     const filePath = path.join(commandsPath, file);
     const command = require(filePath);
