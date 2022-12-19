@@ -1,12 +1,12 @@
 const { clientId, guildId, token } = require('./config.json');
-import { Client } from "discord.js13";
 const config = require('./ptsd')
 const prefix = config.prefix
 const replyMessage = config.replyMessage
 const fs = require('node:fs');
-const { client, ClientEvents, Intents, Message, MessageEmbed } = require ('discord.js13');
+const { client, ClientEvents, Intents, Message } = require ('discord.js13');
+const { EmbedBuilder } = require('discord.js');
 
-const addserversEmbed = new MessageEmbed()
+const addserversEmbed = new EmbedBuilder()
   .setColor(config.addserversEmbed.color)
   .setTitle(config.addserversEmbed.title)
   .setDescription(config.addserversEmbed.description)
@@ -17,7 +17,7 @@ const addserversEmbed = new MessageEmbed()
   .setTimestamp()
   .setFooter({ text: config.addserversEmbed.footer.text, iconURL: config.addserversEmbed.footer.iconURL });
 
-const createServersEmbed = new MessageEmbed()
+const createServersEmbed = new EmbedBuilder()
   .setColor(config.createServersEmbed.color)
   .setTitle(config.createServersEmbed.title)
   .setDescription(config.createServersEmbed.description)
@@ -28,7 +28,7 @@ const createServersEmbed = new MessageEmbed()
   .setTimestamp()
   .setFooter({ text: config.createServersEmbed.footer.text, iconURL: config.createServersEmbed.footer.iconURL });
 
-const howModsEmbed = new MessageEmbed()
+const howModsEmbed = new EmbedBuilder()
   .setColor(config.howModsEmbed.color)
   .setTitle(config.howModsEmbed.title)
   .setDescription(config.howModsEmbed.description)
@@ -42,7 +42,7 @@ const howModsEmbed = new MessageEmbed()
   .setTimestamp()
   .setFooter({ text: config.howModsEmbed.footer.text, iconURL: config.howModsEmbed.footer.iconURL });
 
-const addResourcePacksEmbed = new MessageEmbed()
+const addResourcePacksEmbed = new EmbedBuilder()
   .setColor(config.addResourcePacksEmbed.color)
   .setTitle(config.addResourcePacksEmbed.title)
   .setDescription(config.addResourcePacksEmbed.description)
@@ -56,7 +56,7 @@ const addResourcePacksEmbed = new MessageEmbed()
   .setTimestamp()
   .setFooter({ text: config.addResourcePacksEmbed.footer.text, iconURL: config.addResourcePacksEmbed.footer.iconURL });
 
-const fixBlackScreenEmbed = new MessageEmbed()
+const fixBlackScreenEmbed = new EmbedBuilder()
   .setColor(config.fixBlackScreenEmbed.color)
   .setTitle(config.fixBlackScreenEmbed.title)
   .setDescription(config.fixBlackScreenEmbed.description)
@@ -70,7 +70,7 @@ const fixBlackScreenEmbed = new MessageEmbed()
   .setTimestamp()
   .setFooter({ text: config.fixBlackScreenEmbed.footer.text, iconURL: config.fixBlackScreenEmbed.footer.iconURL });
 
-const commandsEmbed = new MessageEmbed()
+const commandsEmbed = new EmbedBuilder()
   .setColor(config.commandsEmbed.color)
   .setTitle(config.commandsEmbed.title)
   .setDescription(config.commandsEmbed.description)
@@ -90,7 +90,7 @@ const commandsEmbed = new MessageEmbed()
   .setFooter({ text: config.commandsEmbed.footer.text, iconURL: config.commandsEmbed.footer.iconURL });
 
 
-const installQCEmbed = new MessageEmbed()
+const installQCEmbed = new EmbedBuilder()
   .setColor(config.installQCEmbed.color)
   .setTitle(config.installQCEmbed.title)
   .setDescription(config.installQCEmbed.description)
@@ -102,7 +102,7 @@ const installQCEmbed = new MessageEmbed()
   .setTimestamp()
   .setFooter({ text: config.installQCEmbed.footer.text, iconURL: config.installQCEmbed.footer.iconURL });
 
-const notshowingupEmbed = new MessageEmbed()
+const notshowingupEmbed = new EmbedBuilder()
   .setColor(config.notshowingupEmbed.color)
   .setTitle(config.notshowingupEmbed.title)
   .setDescription(config.notshowingupEmbed.description)
@@ -114,7 +114,7 @@ const notshowingupEmbed = new MessageEmbed()
   .setTimestamp()
   .setFooter({ text: config.notshowingupEmbed.footer.text, iconURL: config.notshowingupEmbed.footer.iconURL });
 
-const creditsecretEmbed = new MessageEmbed()
+const creditsecretEmbed = new EmbedBuilder()
   .setColor(config.creditsecretEmbed.color)
   .setTitle(config.creditsecretEmbed.title)
   .setDescription(config.creditsecretEmbed.description)
@@ -125,7 +125,7 @@ const creditsecretEmbed = new MessageEmbed()
   .setTimestamp()
   .setFooter({ text: config.creditsecretEmbed.footer.text, iconURL: config.creditsecretEmbed.footer.iconURL });
 
-const creditsEmbed = new MessageEmbed()
+const creditsEmbed = new EmbedBuilder()
   .setColor(config.creditsEmbed.color)
   .setTitle(config.creditsEmbed.title)
   .setDescription(config.creditsEmbed.description)
