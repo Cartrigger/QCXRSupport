@@ -21,13 +21,11 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('messagefetcher')
         .setDescription('Fetches messages')
-        .addUserOption(option =>
-           option
+        .addUserOption(option => option
                 .setName('target')
                 .setDescription('Member to check messages from')
                 .setRequired(false))
-        .addStringOption(option =>
-            option
+        .addStringOption(option => option
                 .setName('lookup')
                 .setDescription('The messages that you would like to lookup.')
                 .setRequired(true)),
