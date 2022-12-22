@@ -5,7 +5,7 @@ module.exports = {
         .setName('xmas')
         .setDescription('MERRY CHRYSLER'),
     async execute(interaction) {
-        let date = new Date(2022, 12, 25);
+        let date = new Date(2022, 12, 25).getTime();
         let currDate = Date.now();
         let seconds = Math.round((date - currDate)/1000 % 60);
         let minutes = Math.round((date - currDate)/(1000*60) % 60);
