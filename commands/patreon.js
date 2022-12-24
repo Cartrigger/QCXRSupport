@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, client, Collection, GatewayIntentBits, users } = require('discord.js');
+const { SlashCommandBuilder, client } = require('discord.js');
 
 module.exports = {
         data: new SlashCommandBuilder()
@@ -9,7 +9,11 @@ module.exports = {
                 .setDescription('Image link. (YOU HAVE TO HAVE YOUR PATREON NAME)')
                 .setRequired(true)),
         async execute(interaction) {
+            var userID = interaction.user.id;
             const recipt = interaction.options.getString('recipt');
-            client.users.send('354059736049778708', recipt);
+            const channel = client.channels.cache.get('821076673331724309');
+            channel.send(recipt, userID)
+            await interaction.reply('Sent!')
+
     },
 };
