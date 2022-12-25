@@ -3,7 +3,7 @@ const path = require('node:path');
 const { EmbedBuilder, Events, StringSelectMenuBuilder, interaction } = require('discord.js');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const { REST } = require('@discordjs/rest');
-const { Routes } = require('discord.js');
+const { Routes, SlashCommandBuilder } = require('discord.js');
 const { config } = require('dotenv');
 const spawn = require('child_process').spawn;
 config();
@@ -78,6 +78,24 @@ client.on('interactionCreate', async interaction => {
         await interaction.reply({ content: 'There was an error while executing this command! Please contact Cart.', ephemeral: true });
     }
 });
+
+module.exports = {
+    data: new SlashCommandBuilder()
+        .setName('patreon')
+        .setDescription('Fetches messages')
+        .addStringOption(option => option
+            .setName('recipt')
+            .setDescription('Image link. (YOU HAVE TO HAVE YOUR PATREON NAME)')
+            .setRequired(true)),
+    async execute(interaction) {
+        var userID = interaction.user.id;
+        const recipt = interaction.options.getString('recipt');
+        const channel = client.channels.cache.get('821076673331724309');
+        channel.send(recipt, userID)
+        await interaction.reply('Sent!')
+
+    },
+};
 
 client.login(token);
 
