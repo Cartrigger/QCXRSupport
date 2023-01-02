@@ -1,11 +1,12 @@
 const fs = require('fs');
 const path = require('node:path');
-const { EmbedBuilder, Events, StringSelectMenuBuilder, interaction } = require('discord.js');
+const { EmbedBuilder } = require('discord.js');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const { REST } = require('@discordjs/rest');
-const { Routes, SlashCommandBuilder } = require('discord.js');
+const { Routes } = require('discord.js');
 const { config } = require('dotenv');
 const spawn = require('child_process').spawn;
+const prefix = ('!')
 config();
 const token = process.env.token;
 const clientId = process.env.clientID;
@@ -19,23 +20,6 @@ client.commands = new Collection();
 const commandsPath = path.join(__dirname, 'commands');
 const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
-client.on(Events.InteractionCreate, async interaction => {
-    if (!interaction.isStringSelectMenu()) return;
-
-    const selected = interaction.values.join(', ');
-
-    await interaction.update(`The user selected ${selected}!`);
-});
-
-client.on('interactionCreate', interaction => {
-
-    if (!interaction.isButton()) return;
-
-    if (interaction.customId == "id1") {
-    
-    }
-
-});
 
 for (const file of commandFiles) {
     const filePath = path.join(commandsPath, file);
@@ -79,24 +63,6 @@ client.on('interactionCreate', async interaction => {
     }
 });
 
-module.exports = {
-    data: new SlashCommandBuilder()
-        .setName('patreon')
-        .setDescription('Fetches messages')
-        .addStringOption(option => option
-            .setName('recipt')
-            .setDescription('Image link. (YOU HAVE TO HAVE YOUR PATREON NAME)')
-            .setRequired(true)),
-    async execute(interaction) {
-        var userID = interaction.user.id;
-        const recipt = interaction.options.getString('recipt');
-        const channel = client.channels.cache.get('821076673331724309');
-        channel.send(recipt, userID)
-        await interaction.reply('Sent!')
-
-    },
-};
-
 client.login(token);
 
 client.once('ready', () => {
@@ -117,4 +83,3 @@ process.stdin.on("keypress", (char, evt) => {
         setTimeout(()=> { process.exit(); }, 1000);
     }
 });
-
