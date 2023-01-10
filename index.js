@@ -7,10 +7,8 @@ config();
 const token = process.env.token;
 const clientId = process.env.clientID;
 const guildId = process.env.guildID;
-
-const commands = [];
-
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const commands = [];
 
 client.commands = new Collection();
 const commandsPath = path.join(__dirname, 'commands');
