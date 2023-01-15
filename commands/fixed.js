@@ -5,6 +5,6 @@ module.exports = {
           .setName('fixed')
           .setDescription('Is it fixed?'),
       async execute(interaction) {
-                await interaction.reply('**kinda**, you will get an @ everyone when it gets done. There is a workaround though.');
+                await interaction.reply('YES!!! 3.0 Was released!');
       },
 };
