@@ -26,7 +26,7 @@ for (const file of commandFiles) {
     commands.push(command.data.toJSON());
 }
 
-const rest = new REST({ version: '10' }).setToken(token);
+rest = new REST({version: '10'}).setToken(token);
 
 client.on("rateLimit", function (rateLimitData) {
     console.log(`the rate limit has been hit!`);
@@ -36,7 +36,7 @@ client.on("rateLimit", function (rateLimitData) {
 rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
     .then(() => console.log('Successfully registered application commands. Welcome to the world of QCXR.'))
     .catch(console.error);
-//on command
+
 client.on('interactionCreate', async interaction => {
     if (!interaction.isChatInputCommand()) return;
     const command = client.commands.get(interaction.commandName);
@@ -48,7 +48,7 @@ client.on('interactionCreate', async interaction => {
         await interaction.reply({ content: 'There was an error while executing this command! Please contact Cart.', ephemeral: true });
     }
 });
-//client login stage
+
 client.login(token);
 
 client.on("ready", function () {
