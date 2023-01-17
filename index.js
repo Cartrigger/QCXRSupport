@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('node:path');
-const { Client, Collection, GatewayIntentBits, Routes } = require('discord.js');
+const { Client, Collection, GatewayIntentBits, Routes, Events, ModalBuilder, ActionRowBuilder, TextInputBuilder, TextInputStyle, Interaction } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { config } = require('dotenv');
 config();
@@ -60,4 +60,9 @@ client.on("ready", function () {
 
 client.once('ready', () => {
     console.log('Ready!');
+});
+
+client.on(Events.InteractionCreate, interaction => {
+    if (!interaction.isModalSubmit()) return;
+    console.log(interaction);
 });
