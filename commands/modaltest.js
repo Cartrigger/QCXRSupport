@@ -1,5 +1,5 @@
-const { SlashCommandBuilder, Events, ModalBuilder, ActionRowBuilder, TextInputBuilder, TextInputStyle } = require('discord.js');
-
+const { SlashCommandBuilder, Events, ModalBuilder, ActionRowBuilder, TextInputBuilder } = require('discord.js');
+const {TextInputStyle} = require ('discord.js');
 const modal = new ModalBuilder()
     .setCustomId('myModal')
     .setTitle('My Modal')
