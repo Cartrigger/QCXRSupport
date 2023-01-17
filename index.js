@@ -4,9 +4,9 @@ const { Client, Collection, GatewayIntentBits, Routes } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { config } = require('dotenv');
 config();
-const token = process.env.token;
-const clientId = process.env.clientID;
-const guildId = process.env.guildID;
+const Token = process.env.token;
+const ClientID = process.env.clientID;
+const GuildID = process.env.guildID;
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const commands = [];
 
@@ -26,14 +26,14 @@ for (const file of commandFiles) {
     commands.push(command.data.toJSON());
 }
 
-rest = new REST({version: '10'}).setToken(token);
+rest = new REST({version: '10'}).setToken(Token);
 
 client.on("rateLimit", function (rateLimitData) {
     console.log(`the rate limit has been hit!`);
     console.log({ rateLimitData });
 });
 
-rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
+rest.put(Routes.applicationGuildCommands(ClientID, GuildID), { body: commands })
     .then(() => console.log('Successfully registered application commands. Welcome to the world of QCXR.'))
     .catch(console.error);
 
@@ -49,7 +49,7 @@ client.on('interactionCreate', async interaction => {
     }
 });
 
-client.login(token);
+client.login(Token);
 
 client.on("ready", function () {
     console.log(`the client becomes ready to start`);
