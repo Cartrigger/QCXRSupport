@@ -4,7 +4,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('otherheadsets')
         .setDescription('Tells you information about QC on other headsets.'),
-    async execute(interaction) {
-        await interaction.reply('QuestCraft on other headsets is unlikely, YVRCraft happened because YVR contacted us, if you want QuestCraft on another headset, you may need to ask that company to contact us.');
+    execute: async function (interaction) {
+        await interaction.reply('QuestCraft on other headsets is not going to happen if the company doesnt contact us. YVRCraft exists because YVR contacted us.');
     },
 };
