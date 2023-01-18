@@ -34,7 +34,7 @@ client.on("rateLimit", function (rateLimitData) {
 });
 
 rest.put(Routes.applicationGuildCommands(ClientID, GuildID), { body: commands })
-    .then(() => console.log('Successfully registered application commands. Welcome to the world of QCXR.'))
+    .then(() => console.log('Successfully registered application commands. Welcome to the world of QuestCraft.'))
     .catch(console.error);
 
 client.on('interactionCreate', async interaction => {
