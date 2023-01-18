@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require('discord.js');
 
 async function fetchAllMessages() {
-    const channel = client.channels.cache.get("820767484042018832");
+    const channel = client.channels.cache.get('820767484042018832');
     let messages = [];
     let message = await channel.messages
         .fetch({ limit: 1 })
@@ -15,7 +15,7 @@ async function fetchAllMessages() {
                 message = 0 < messagePage.size ? messagePage.at(messagePage.size - 1) : null;
             })
     }
-};
+}
 
 module.exports = {
     data: new SlashCommandBuilder()
