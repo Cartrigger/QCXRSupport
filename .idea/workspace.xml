@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beb985f6-4077-4854-ad65-1fc4c3097328" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/commands/messagecount.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/messagecount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +95,7 @@
       <workItem from="1673898849292" duration="1217000" />
       <workItem from="1673914975586" duration="2231000" />
       <workItem from="1673917696471" duration="3807000" />
-      <workItem from="1674077208730" duration="294000" />
+      <workItem from="1674077208730" duration="585000" />
     </task>
     <task id="LOCAL-00001" summary="change messages">
       <created>1673898573502</created>
