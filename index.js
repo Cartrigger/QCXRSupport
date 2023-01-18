@@ -64,6 +64,6 @@ client.once('ready', () => {
 
 //interactions
 client.on(Events.InteractionCreate, interaction => {
-    if (!interaction.isModalSubmit()) return;
+    if (!interaction.isStringSelectMenu()) return;
     console.log(interaction);
 });
