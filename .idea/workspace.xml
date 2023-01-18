@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beb985f6-4077-4854-ad65-1fc4c3097328" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/commands/menuselect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/messagecount.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/messagecount.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +86,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fd8a7053-c6a6-4296-9189-fc85fa5a5af1" name="Changes" comment="" />
+      <changelist id="beb985f6-4077-4854-ad65-1fc4c3097328" name="Changes" comment="" />
       <created>1673897398640</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -96,6 +95,7 @@
       <workItem from="1673898849292" duration="1217000" />
       <workItem from="1673914975586" duration="2231000" />
       <workItem from="1673917696471" duration="3807000" />
+      <workItem from="1674077208730" duration="294000" />
     </task>
     <task id="LOCAL-00001" summary="change messages">
       <created>1673898573502</created>
