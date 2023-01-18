@@ -14,16 +14,16 @@ module.exports = {
                         {
                             label: 'Select me',
                             description: 'This is a description',
-                            value: 'first_option',
+                            value: 'ping',
                         },
                         {
                             label: 'You can select me too',
                             description: 'This is also a description',
-                            value: 'second_option',
+                            value: 'pong',
                         },
                     ),
             );
 
-        await interaction.reply({ content: 'Pong!', components: [row] });
+        await interaction.reply({ content: 'Support Requestinator', components: [row] });
     },
 };

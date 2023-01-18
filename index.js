@@ -63,7 +63,14 @@ client.once('ready', () => {
 });
 
 //interactions
-client.on(Events.InteractionCreate, interaction => {
+client.on(Events.InteractionCreate, async interaction => {
     if (!interaction.isStringSelectMenu()) return;
-    console.log(interaction);
+
+    const selected = interaction.values[0];
+
+    if (selected === 'ping') {
+        await interaction.update('The Ping option has been selected!');
+    } else if (selected === 'pong') {
+        await interaction.update('The Pong option has been selected!');
+    }
 });
