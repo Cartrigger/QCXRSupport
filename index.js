@@ -9,7 +9,7 @@ const ClientID = process.env.clientID;
 const GuildID = process.env.guildID;
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const commands = [];
-
+const { SlashCommandBuilder, StringSelectMenuBuilder } = require('discord.js');
 client.commands = new Collection();
 const commandsPath = path.join(__dirname, 'commands');
 const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
@@ -68,9 +68,51 @@ client.on(Events.InteractionCreate, async interaction => {
 
     const selected = interaction.values[0];
 
+
+
     if (selected === 'ping') {
-        await interaction.update('The Ping option has been selected!');
-    } else if (selected === 'pong') {
-        await interaction.update('The Pong option has been selected!');
-    }
-});
+            const row = new ActionRowBuilder()
+                .addComponents(
+                    new StringSelectMenuBuilder()
+                        .setCustomId('select')
+                        .setPlaceholder('Nothing selected')
+                        .addOptions(
+                            {
+                                label: 'Select me',
+                                description: 'This is a description',
+                                value: 'ping',
+                            },
+                            {
+                                label: 'You can select me too',
+                                description: 'This is also a description',
+                                value: 'pong',
+                            },
+                        ),
+                );
+
+            await interaction.reply({ content: 'Support Requestinator', components: [row] });
+        }
+
+      else if (selected === 'pong') {
+            const row = new ActionRowBuilder()
+                .addComponents(
+                    new StringSelectMenuBuilder()
+                        .setCustomId('sus')
+                        .setPlaceholder('Nothing selected')
+                        .addOptions(
+                            {
+                                label: 'Select me',
+                                description: 'This is a description',
+                                value: 'sussy',
+                            },
+                            {
+                                label: 'You can select me too',
+                                description: 'This is also a description',
+                                value: 'sus',
+                            },
+                        ),
+                );
+
+            await interaction.reply({ content: 'Support Requestinator', components: [row] });
+        }
+    })
