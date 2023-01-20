@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beb985f6-4077-4854-ad65-1fc4c3097328" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/commands/menuselect.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/menuselect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +74,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
     &quot;ts.external.directory.path&quot;: &quot;G:\\webstorm\\WebStorm 2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -96,7 +96,10 @@
       <workItem from="1673898849292" duration="1217000" />
       <workItem from="1673914975586" duration="2231000" />
       <workItem from="1673917696471" duration="3807000" />
-      <workItem from="1674077208730" duration="910000" />
+      <workItem from="1674077208730" duration="1048000" />
+      <workItem from="1674158111003" duration="895000" />
+      <workItem from="1674169853928" duration="264000" />
+      <workItem from="1674201634081" duration="744000" />
     </task>
     <task id="LOCAL-00001" summary="change messages">
       <created>1673898573502</created>
