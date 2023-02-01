@@ -87,7 +87,7 @@ client.once('ready', () => {
 
 require("readline").emitKeypressEvents(process.stdin);
 
-/*process.stdin.on("keypress", (char, evt) => {
+process.stdin.on("keypress", (char, evt) => {
     if (char === "q") {
         rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: [] })
             .then(() => console.log('Successfully deleted all guild commands.'))
@@ -98,4 +98,4 @@ require("readline").emitKeypressEvents(process.stdin);
             .catch(console.error);
         setTimeout(()=> { process.exit(); }, 1000);
     }
-});*/
+});
