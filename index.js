@@ -62,6 +62,7 @@ client.once('ready', () => {
     console.log('Ready!');
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 require("readline").emitKeypressEvents(process.stdin);
 
