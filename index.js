@@ -61,3 +61,16 @@ client.on("ready", function () {
 client.once('ready', () => {
     console.log('Ready!');
 });
+
+/*process.stdin.on("keypress", (char, evt) => {
+    if (char === "q") {
+        rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: [] })
+            .then(() => console.log('Successfully deleted all guild commands.'))
+            .catch(console.error);
+
+        rest.put(Routes.applicationCommands(clientId), { body: [] })
+            .then(() => console.log('Successfully deleted all application commands.'))
+            .catch(console.error);
+        setTimeout(()=> { process.exit(); }, 1000);
+    }
+});*/
