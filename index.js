@@ -62,7 +62,8 @@ client.once('ready', () => {
     console.log('Ready!');
 });
 
-/*process.stdin.on("keypress", (char, evt) => {
+/*require("readline").emitKeypressEvents(process.stdin);
+process.stdin.on("keypress", (char, evt) => {
     if (char === "q") {
         rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: [] })
             .then(() => console.log('Successfully deleted all guild commands.'))
