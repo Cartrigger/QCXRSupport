@@ -184,5 +184,4 @@ client.on('messageCreate', function (message) {
   }
 });
 
-
 client.login(token);
