@@ -7,9 +7,9 @@ const { Routes } = require('discord.js');
 const { config } = require('dotenv');
 const spawn = require('child_process').spawn;
 config();
-const token = process.env.token;
-const clientId = process.env.clientID;
-const guildId = process.env.guildID;
+const Token = process.env.token;
+const ClientID = process.env.clientID;
+const GuildID = process.env.guildID;
 
 const commands = [];
 
