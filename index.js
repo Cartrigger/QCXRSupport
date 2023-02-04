@@ -17,8 +17,10 @@ const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('
 for (const file of commandFiles) {
     const filePath = path.join(commandsPath, file);
     const command = require(filePath);
+    console.log(command);
     client.commands.set(command.data.name, command);
 }
+
 
 for (const file of commandFiles) {
     const filePath = path.join(commandsPath, file);
@@ -74,3 +76,18 @@ process.stdin.on("keypress", (char, evt) => {
         setTimeout(()=> { process.exit(); }, 1000);
     }
 });*/
+
+client.on(Events.InteractionCreate, async interaction => {
+
+    if(!interaction.isStringSelectMenu()) return;
+
+    if(interaction.customId === 'select') {
+        let choices = "";
+
+        await interaction.values.forEach(async value => {
+            choices += `${value}`
+
+        })
+        await interaction.reply({content: `${choices}`})
+    }
+})
