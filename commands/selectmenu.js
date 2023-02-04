@@ -4,7 +4,7 @@ const support_menu  = new EmbedBuilder()
 .setTitle("Support Requestinator")
 .setDescription('Click the dropdown menu bellow to access all of the support presets')
 .setColor("Green")
-.setFooter({ text: 'This menu menu selector was made by TechyGiraffe99 - If you have any other suggestions please let them know'});
+.setFooter({ text: 'This menu menu selector was made by TechyGiraffe999 - If you have any other suggestions please let them know'});
 
 module.exports = {
     data: new SlashCommandBuilder()
