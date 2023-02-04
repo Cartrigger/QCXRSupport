@@ -1,13 +1,10 @@
-const { GatewayIntentBits } = require('discord.js');
-const Discord = require('discord.js');
-const client = new Discord.Client({ intents: [GatewayIntentBits.Guilds]});
-const { ActionRowBuilder, Events, StringSelectMenuBuilder } = require('discord.js');
+const { SlashCommandBuilder, ActionRowBuilder, Events, StringSelectMenuBuilder } = require('discord.js');
 
-
-client.on(Events.InteractionCreate, async interaction => {
-    if (!interaction.isChatInputCommand()) return;
-
-    if (interaction.commandName === 'menu') {
+module.exports = {
+    data: new SlashCommandBuilder()
+        .setName('menuselect')
+        .setDescription('menuselect'),
+    async execute(interaction) {
         const row = new ActionRowBuilder()
             .addComponents(
                 new StringSelectMenuBuilder()
@@ -15,17 +12,18 @@ client.on(Events.InteractionCreate, async interaction => {
                     .setPlaceholder('Nothing selected')
                     .addOptions(
                         {
-                            label: 'Select me',
+                            label: 'ping',
                             description: 'This is a description',
-                            value: 'first_option',
+                            value: 'ping',
                         },
                         {
                             label: 'You can select me too',
                             description: 'This is also a description',
-                            value: 'second_option',
+                            value: 'pong',
                         },
                     ),
             );
 
-        await interaction.reply({ content: 'Pong!', components: [row] });
-      } })
+        await interaction.reply({ content: 'Support Requestinator', components: [row] });
+    },
+};
