@@ -7,6 +7,7 @@ config();
 const Token = process.env.token;
 const ClientID = process.env.clientID;
 const GuildID = process.env.guildID;
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const commands = [];
 const { SlashCommandBuilder, StringSelectMenuBuilder } = require('discord.js');
