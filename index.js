@@ -36,7 +36,7 @@ client.on("rateLimit", function (rateLimitData) {
 });
 
 rest.put(Routes.applicationGuildCommands(ClientID, GuildID), { body: commands })
-    .then(() => console.log('Successfully registered application commands. Welcome to the world of QuestCraft.'))
+    .then(() => console.log('Successfully registered application commands with no errors! Your slash commands are working!'))
     .catch(console.error);
 
 client.on('interactionCreate', async interaction => {
@@ -54,7 +54,6 @@ client.on('interactionCreate', async interaction => {
 client.login(Token);
 
 client.on("ready", function () {
-    console.log(`the client becomes ready to start`);
     console.log(`I am ready! Logged in as ${client.user.tag}!`);
 
     client.user.setActivity("Online!");
@@ -63,19 +62,6 @@ client.on("ready", function () {
 client.once('ready', () => {
     console.log('Ready!');
 });
-
-/*require("readline").emitKeypressEvents(process.stdin);
-process.stdin.on("keypress", (char, evt) => {
-    if (char === "q") {
-        rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: [] })
-            .then(() => console.log('Successfully deleted all guild commands.'))
-            .catch(console.error);
-        rest.put(Routes.applicationCommands(clientId), { body: [] })
-            .then(() => console.log('Successfully deleted all application commands.'))
-            .catch(console.error);
-        setTimeout(()=> { process.exit(); }, 1000);
-    }
-});*/
 
 const embed_logs = new EmbedBuilder()
         .setTitle("Finding logs:")
