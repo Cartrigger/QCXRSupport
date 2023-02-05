@@ -16,7 +16,7 @@ const openai = new OpenAIApi(configuration);
 module.exports = {
     data: new SlashCommandBuilder()
     .setName('gpt-3')
-    .setDescription("Anwer any question you have using OpenAI's gpt language model!")
+    .setDescription("Answer any question you have using OpenAI's gpt language model!")
     .addStringOption(option => option.setName('question').setDescription('Your Question').setRequired(true))
     .setDMPermission(false),
     async execute (interaction) {
@@ -36,6 +36,7 @@ module.exports = {
             const embed = new EmbedBuilder()
             .setColor("Blue")
             .setDescription(`\`\`\`${res.data.choices[0].text}\`\`\``)
+            .setFooter({ text: 'GPT-3 functionality added by TechyGiraffe999'})
             
             await interaction.editReply({ embeds: [embed] })
         
