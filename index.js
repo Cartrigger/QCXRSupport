@@ -63,6 +63,8 @@ client.once('ready', () => {
     console.log('Ready!');
 });
 
+//selectmenu.js stuff below
+
 const embed_logs = new EmbedBuilder()
         .setTitle("Finding logs:")
         .setDescription("You can find logs for support in **(Quest 2)** ``Android/data/com.qcxr.qcxr/.minecraft/latestlog.txt``, you can use any file manager to get to that location, then send it to the support member who asked for logs. There is no information that someone could use to hack your account.")
