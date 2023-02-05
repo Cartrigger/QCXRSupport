@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('node:path');
-const { Client, Collection, GatewayIntentBits, Routes, Events, Interaction,EmbedBuilder, Embed } = require('discord.js');
+const { Client, Collection, GatewayIntentBits, Routes, Events, Interaction,EmbedBuilder, Embed, ActivityType  } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { config } = require('dotenv');
 config();
@@ -56,7 +56,10 @@ client.login(Token);
 client.on("ready", function () {
     console.log(`I am ready! Logged in as ${client.user.tag}!`);
 
-    client.user.setActivity("Online!");
+    client.user.setPresence({
+        activities: [{ name: `The QuestCraft Discord Server`, type: ActivityType.Watching }],
+        status: 'online',
+      });
 });
 
 client.once('ready', () => {
