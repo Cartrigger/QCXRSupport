@@ -31,7 +31,7 @@ for (const file of commandFiles) {
 rest = new REST({version: '10'}).setToken(Token);
 
 client.on("rateLimit", function (rateLimitData) {
-    console.log(`the rate limit has been hit!`);
+    console.log(`The Rate Limit has been hit!`);
     console.log({ rateLimitData });
 });
 
