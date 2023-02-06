@@ -21,6 +21,7 @@ for (const file of commandFiles) {
     client.commands.set(command.data.name, command);
 }
 
+console.log(Token)
 
 for (const file of commandFiles) {
     const filePath = path.join(commandsPath, file);
