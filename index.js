@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('node:path');
-const { Client, Collection, GatewayIntentBits, Routes, Events, Interaction,EmbedBuilder, Embed, ActivityType  } = require('discord.js');
+const { Client, Collection, GatewayIntentBits, Routes, Events, EmbedBuilder, ActivityType  } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { config } = require('dotenv');
 config();
@@ -9,7 +9,6 @@ const ClientID = process.env.clientID;
 const GuildID = process.env.guildID;
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const commands = [];
-const { SlashCommandBuilder, StringSelectMenuBuilder } = require('discord.js');
 client.commands = new Collection();
 const commandsPath = path.join(__dirname, 'commands');
 const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
@@ -199,4 +198,3 @@ client.on(Events.InteractionCreate, async interaction => {
         await interaction.reply({ embeds: [embed_test], ephemeral: true})
     }
 })
-
