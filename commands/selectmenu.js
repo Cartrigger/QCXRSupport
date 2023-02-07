@@ -97,6 +97,11 @@ module.exports = {
                             description: 'Displays a modding guide',
                             value: 'mods',
                         },
+                        {
+                            label: 'test',
+                            description: 'Test',
+                            value: 'test',
+                        }
                     ),
             );
 
