@@ -6,8 +6,8 @@ module.exports = {
         .setDescription('test'),
     async execute(interaction,client ) {
         const embed_test = new EmbedBuilder()
-            .setTitle("Test Title")
-            .setDescription("Test Description")
+            .setTitle("This is a test")
+            .setDescription("Test is functioning")
             .setColor("Green")
         await interaction.reply({
             embeds: [embed_test]
