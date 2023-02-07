@@ -2,7 +2,7 @@ const { SlashCommandBuilder, EmbedBuilder, Embed } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('support')
+        .setName('supportchannels')
         .setDescription('Says the channel for support'),
     async execute(interaction,client ) {
         const embed_support  = new EmbedBuilder()
