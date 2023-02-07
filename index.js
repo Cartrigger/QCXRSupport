@@ -2,11 +2,10 @@ const fs = require('fs');
 const path = require('node:path');
 const { Client, Collection, GatewayIntentBits, Routes, Events, EmbedBuilder, ActivityType  } = require('discord.js');
 const { REST } = require('@discordjs/rest');
-const { config } = require('dotenv');
-config();
-const Token = process.env.token;
-const ClientID = process.env.clientID;
-const GuildID = process.env.guildID;
+const config = require('./config.json');
+const Token = config.token;
+const ClientID = config.clientID;
+const GuildID = config.guildID;
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const commands = [];
 client.commands = new Collection();
@@ -34,6 +33,9 @@ client.on("rateLimit", function (rateLimitData) {
 });
 
 rest.put(Routes.applicationGuildCommands(ClientID, GuildID), { body: commands })
+    .then(() => console.log('Successfully registered application commands with no errors! Your slash commands are working!'))
+    .catch(console.error);
+Routes.applicationCommands(ClientID), { body: commands }
     .then(() => console.log('Successfully registered application commands with no errors! Your slash commands are working!'))
     .catch(console.error);
 
