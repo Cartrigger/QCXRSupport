@@ -5,7 +5,6 @@ const { REST } = require('@discordjs/rest');
 const config = require('./config.json');
 const Token = config.token;
 const ClientID = config.clientID;
-const GuildID = config.guildID;
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const commands = [];
 client.commands = new Collection();
