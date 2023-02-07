@@ -35,6 +35,9 @@ client.on("rateLimit", function (rateLimitData) {
 rest.put(Routes.applicationGuildCommands(ClientID, GuildID), { body: commands })
     .then(() => console.log('Successfully registered application commands with no errors! Your slash commands are working!'))
     .catch(console.error);
+Routes.applicationCommands(clientId), { body: commands }
+    .then(() => console.log('Successfully registered application commands with no errors! Your slash commands are working!'))
+    .catch(console.error);
 
 client.on('interactionCreate', async interaction => {
     if (!interaction.isChatInputCommand()) return;
