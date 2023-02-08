@@ -1,4 +1,5 @@
 // ALL EMBEDS USED IN INDEX.JS
+const { Client, Collection, GatewayIntentBits, Routes, Events, EmbedBuilder, ActivityType  } = require('discord.js');
 const embed_logs = new EmbedBuilder()
         .setTitle("Finding logs:")
         .setDescription("You can find logs for support in **(Quest 2)** ``Android/data/com.qcxr.qcxr/.minecraft/latestlog.txt``, you can use any file manager to get to that location, then send it to the support member who asked for logs. There is no information that someone could use to hack your account.")
@@ -50,7 +51,7 @@ const embed_performance = new EmbedBuilder()
         .setFooter({ text: 'Written by TechyGiraffe999'})
 const embed_servers  = new EmbedBuilder()
         .setTitle("**Server guide**")
-        .setDescription("you can host one on your computer or on oracle: https://blogs.oracle.com/developers/post/how-to-set-up-and-run-a-really-powerful-free-minecraft-server-in-the-cloud, which is a bit complex, or you can make a free one on aternos or minehut, I would reccomend making it on fabric or paper and installing the vivecraft plugin/mod so you can see things like ur friends movements who r also in vr\n\nAternos website: <https://aternos.org/>\n\n```aternos:  \n\n- create an account if you haven’t already and select ‘create server’\n\n- install paper 1.19.2/1.18.2 or fabric 1.19.3/1.18.2 using the 'software' bit on the left and install the version you are going to be playing questcraft on\n\n- click on the mods/plugins section on the left\n\n- search and install vivecraft/vivecraft spigot extensions, (if you are installing vivecraft spigot extensions you will need to also install via version)\n\n- join your server using the ip\n\n- with the 'access’ bit on the left you can also give your friends permission to start the server if they have an aternos account ```\n\n```(If you have any issues joining your server try joining with 'your server ip':'port'  the port can be found under the connect section when your server is online - if that doesn't work, try join using the dyn ip/direct ip - this also helps connect if you have issues with other server hosting platforms -  which can be found under 'connect' as well on the main server page when the servers online btw the dyn ip will change every time you start the server)```\n\n***Installing simple voice chat (aternos):*** *next to the plugins/mods tab search it up and install it onto your aternos server, then follow this guide: <https://support.aternos.org/hc/en-us/articles/360019336497-Installing-Voice-Chat-Mods>*\n\nTutorial by aternos (basic, does not install all of the questcraft features above):\n<https://youtu.be/LOFbK1eXzqo>")
+        .setDescription("you can host one on your computer or on oracle: https://blogs.oracle.com/developers/post/how-to-set-up-and-run-a-really-powerful-free-minecraft-server-in-the-cloud, which is a bit complex, or you can make a free one on aternos or minehut, I would reccomend making it on fabric or paper and installing the vivecraft plugin/mod so you can see things like ur friends movements who r also in vr\n\nAternos website: <https://aternos.org/>\n\n```aternos:  \n\n- create an account if you haven’t already and select ‘create server’\n\n- install paper 1.19.2/1.18.2 or fabric 1.19.3/1.18.2 using the 'software' bit on the left and install the version you are going to be playing questcraft on\n\n- click on the mods/plugins section on the left\n\n- search and install vivecraft/vivecraft spigot extensions, (if you are installing vivecraft spigot extensions you will need to also install via version)\n\n- join your server using the ip\n\n- with the 'access’ bit on the left you can also give your friends permission to start the server if they have an aternos account ```\n\n```(If you have any issues joining your server try joining with 'your server ip':'port'  the port can be found under the connect section when your server is online - if that doesn't work, try join using the dyn ip/direct ip - this also helps connect if you have issues with other server hosting platforms -  which can be found under 'connect' as well on the main server page when the servers online btw the dyn ip will change every time you start the server)```\n\n***Installing simple voice chat (aternos):*** *next to the plugins/mods tab search it up and install it onto your aternos server, then follow this guide: <https://support.aternos.org/hc/en-us/articles/360019336497-Installing-Voice-Chat-Mods>*\n\nTutorial by aternos (basic, does not install all of the questcraft features above):\n<https://youtu.be/LOFbK1eXzqo>  \n\nIf you have an issue where you cant join a server this may be because it blocks VR players from joining - e.g. Hypixel")
         .setColor("Green")
         .setFooter({ text: 'Written by TechyGiraffe999'})
 const embed_installation = new EmbedBuilder()
@@ -76,7 +77,6 @@ const embed_test = new EmbedBuilder()
 
 const fs = require('fs');
 const path = require('node:path');
-const { Client, Collection, GatewayIntentBits, Routes, Events, EmbedBuilder, ActivityType  } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const config = require('./config.json');
 const Token = config.token;
@@ -223,9 +223,13 @@ client.on(Events.InteractionCreate, async interaction => {
 
     if (interaction.customId === 'support') {
         const issue = interaction.fields.getTextInputValue('issue')
-        await interaction.reply({ content: `Crafty is reading this message! Your test message was ${issue}`})
+            const server = ["server"];
+        if (server.every(server => issue.includes(server))) {
+            await interaction.reply({ embeds: [embed_servers]});
+            console.log(issue)
+        } else {
+            await interaction.reply({ content: `Crafty is reading this message! Your test message was ${issue}`})
+        }
     }
-
-    console.log(`issue read as: ${issue}`)
-})
+});
 
