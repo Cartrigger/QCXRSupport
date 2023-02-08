@@ -5,6 +5,6 @@ module.exports = {
         .setName('soon')
         .setDescription('Replies with soon:tm:'),
     async execute(interaction) {
-        await interaction.reply(':soon_tm: a moment between the next minute and the heat death of the universe.');
+        await interaction.reply('\<:soon_tm:851921269871214632> a moment between the next minute and the heat death of the universe.');
     },
 };
