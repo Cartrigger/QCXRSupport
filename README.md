@@ -1,10 +1,13 @@
-# QCXRsoonbot
-A okay bot made in JS using DJS and Node.
+## Install
 
+1. fill the token and other values in config.json.
 
-How to setup this bot:
-First: Open config.json and then set it to your information. 
-Second: Do npm i
-Final: (Run index.js) With "node index.js"
+2. run npm i
 
-All PR's are welcome for improvements.
+3. run node bot.js
+
+## Current developers:
+Cart, TechyGiraffe999
+
+## Additional credits:
+- This bot utilises the hanlder template made by Naman Vrati
