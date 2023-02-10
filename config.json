@@ -1,4 +1,7 @@
 {
-  "token": "...",
-  "clientID": "..."
+	"prefix": "!",
+	"token": "MTA1OTg0MjMxMTIxMjc3MzM4Ng.G8fQFi.wd_dMp6hy10DgRE3Zje3qTLLj4d_sy2hBze6Jg",
+	"owner": ["719815864135712799","317814254336081930"],
+	"client_id": "1059842311212773386",
+	"test_guild_id": "dev-server-id"
 }
