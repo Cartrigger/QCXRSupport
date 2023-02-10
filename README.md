@@ -2,7 +2,7 @@
 
 1. fill the token and other values in config.json.
 
-2. npm i
+2. run npm i
 
 3. node bot.js
 
