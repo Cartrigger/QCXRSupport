@@ -6,10 +6,10 @@
 
 3. run node bot.js
 
-All PR's are welcome for improvements.
-
 ## Current developers:
 Cart, TechyGiraffe999
 
 ## Additional credits:
 - This bot utilises the hanlder template made by Naman Vrati
+
+- All PR's are welcome for improvements.
