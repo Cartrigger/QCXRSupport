@@ -1,6 +1,6 @@
 ## Install
 
-1. fill the token and other values in config.json.
+1. fill in the token and other values in config.json.
 
 2. run npm i
 
