@@ -4,7 +4,7 @@
 
 2. run npm i
 
-3. node bot.js
+3. run node bot.js
 
 ## Current developers:
 Cart, TechyGiraffe999
