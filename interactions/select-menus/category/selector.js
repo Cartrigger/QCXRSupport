@@ -1,8 +1,10 @@
+
 const { EmbedBuilder } = require("discord.js");
 
 /**
  * @type {import('../../../typings').SelectInteractionCommand}
  */
+
 const embed_logs = new EmbedBuilder()
         .setTitle("Finding logs:")
         .setDescription("You can find logs for support in **(Quest 2)** ``Android/data/com.qcxr.qcxr/.minecraft/latestlog.txt``, you can use any file manager to get to that location, then send it to the support member who asked for logs. There is no information that someone could use to hack your account.")
@@ -79,7 +81,6 @@ const embed_test = new EmbedBuilder()
         .setFooter({ text: 'Test added by Cart'})
 module.exports = {
 	id: "select",
-
 	async execute(interaction) {
                 const selected = interaction.values[0]
 
