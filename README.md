@@ -14,3 +14,5 @@ Cart, TechyGiraffe999
 ## Additional credits:
 - This bot utilises the hanlder template made by Naman Vrati
 
+⚠️ BUILD BROKEN AT THE MOMENT⚠️
+
