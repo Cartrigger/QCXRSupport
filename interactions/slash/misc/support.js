@@ -9,7 +9,7 @@ const { SlashCommandBuilder, ModalBuilder, TextInputBuilder, TextInputStyle, Act
 module.exports = {
     data: new SlashCommandBuilder()
     .setName("support")
-    .setDescription("Ask Crafty for support below! [INDEV]"),
+    .setDescription("Ask Crafty for support! [INDEV]"),
     async execute(interaction) {
         if (!owner.includes(interaction.user.id)) return interaction.reply({ content: "This command is currently [INDEV] and is only accessible to the developers of Crafty. The command will be comming <:soon_tm:851921269871214632>\
         ", ephemeral: true });
