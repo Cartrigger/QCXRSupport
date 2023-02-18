@@ -87,7 +87,8 @@ module.exports = {
             await interaction.reply({ embeds: [embed_servers]});
             console.log(issue)
         } else {
-            await interaction.reply({ content: `Crafty is reading this message! Your test message was: ${issue}`,ephemeral: true})
+                
+            await interaction.reply({ content: `Crafty is reading this message! Your test message was: ${issue}\n- only the developers of Crafty can currently open/use this command`,ephemeral: true})
 		};
 		return;
 	},
