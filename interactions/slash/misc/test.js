@@ -5,17 +5,15 @@ const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
 /**
  * @type {import('../../../typings').SlashInteractionCommand}
  */
+const embeds = require('../../../embeds.js');
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('test')
         .setDescription('test'),
     async execute(interaction,client ) {
-        const embed_test = new EmbedBuilder()
-            .setTitle("This is a test")
-            .setDescription("Test is functioning")
-            .setColor("Green")
         await interaction.reply({
-            embeds: [embed_test]
+            embeds: [embeds.test]
         });
     },
 };
