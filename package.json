@@ -1,8 +1,7 @@
 {
-	"name": "discordbot-template",
-	"version": "3.3.1",
-	"description": "A modified template based on discordjs.guide to create your own discord-js based bot!",
-	"funding": "https://ko-fi.com/namanvrati",
+	"name": "discord-questcraftsoonbot",
+	"version": "2.0.0",
+	"description": "",
 	"types": "./typings.d.ts",
 	"main": "bot.js",
 	"scripts": {
@@ -10,32 +9,16 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/NamVr/DiscordBot-Template.git"
+		"url": "git+https://github.com/Cartrigger/QCXRSoonBot.git"
 	},
 	"keywords": [
 		"discord-js"
 	],
-	"author": {
-		"name": "Naman Vrati",
-		"url": "https://github.com/NamVr",
-		"email": "info@namanvrati.cf"
-	},
-	"contributors": [
-		{
-			"name": "Krish Garg",
-			"url": "https://github.com/KrishGarg"
-		},
-		{
-			"name": "Thomas Fournier",
-			"email": "thomas@artivain.com",
-			"url": "https://github.com/GoudronViande24"
-		}
-	],
-	"license": "Apache-2.0",
+	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/NamVr/DiscordBot-Template/issues"
+		"url": "https://github.com/Cartrigger/QCXRSoonBot/issues"
 	},
-	"homepage": "https://github.com/NamVr/DiscordBot-Template#readme",
+	"homepage": "https://github.com/Cartrigger/QCXRSoonBot/blob/main/README.md",
 	"dependencies": {
 		"@discordjs/rest": "^1.0.0",
 		"discord-api-types": "^0.36.2",
