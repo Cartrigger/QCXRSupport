@@ -5,12 +5,15 @@ const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
 /**
  * @type {import('../../../typings').SlashInteractionCommand}
  */
+const embeds = require('../../../embeds.js');
 
 module.exports = {
       data: new SlashCommandBuilder()
           .setName('fixed')
           .setDescription('Is it fixed?'),
-      async execute(interaction) {
-                await interaction.reply('YES!!! 3.0 Was released!');
-      },
-};
+          async execute(interaction,client ) {
+            await interaction.reply({
+                embeds: [embeds.fixed]
+            });
+        },
+    };

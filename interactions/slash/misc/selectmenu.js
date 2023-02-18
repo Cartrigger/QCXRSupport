@@ -6,11 +6,8 @@ const { SlashCommandBuilder, ActionRowBuilder, Events, StringSelectMenuBuilder,E
 /**
  * @type {import('../../../typings').SlashInteractionCommand}
  */
-const support_menu  = new EmbedBuilder()
-.setTitle("Support Requestinator")
-.setDescription('Click the dropdown menu bellow to access all of the support presets')
-.setColor("Green")
-.setFooter({ text: 'This menu menu selector was made by TechyGiraffe999 - If you have any other suggestions please let them know'});
+const embeds = require('../../../embeds.js');
+
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -111,6 +108,6 @@ module.exports = {
                     ),
             );
 
-        await interaction.reply({ embeds: [support_menu], components: [row] });
+        await interaction.reply({ embeds: [embeds.support_menu], components: [row] });
     },
 };
