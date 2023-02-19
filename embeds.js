@@ -48,7 +48,7 @@ const embeds = {
     .setTitle("Support Requestinator")
     .setDescription('Click the dropdown menu bellow to access all of the support presets')
     .setColor("Green")
-    .setFooter({ text: 'This menu menu selector was made by TechyGiraffe999 - If you have any other suggestions please let them know'}),
+    .setFooter({ text: 'This menu selector was made by TechyGiraffe999 - If you have any other suggestions please let them know'}),
   servers: new EmbedBuilder()
     .setTitle("**Server guide**")
     .setDescription("you can host one on your computer or on oracle: https://blogs.oracle.com/developers/post/how-to-set-up-and-run-a-really-powerful-free-minecraft-server-in-the-cloud, which is a bit complex, or you can make a free one on aternos or minehut, I would reccomend making it on fabric or paper and installing the vivecraft plugin/mod so you can see things like ur friends movements who r also in vr\n\nAternos website: <https://aternos.org/>\n\n```aternos:  \n\n- create an account if you haven’t already and select ‘create server’\n\n- install paper 1.19.2/1.18.2 or fabric 1.19.3/1.18.2 using the 'software' bit on the left and install the version you are going to be playing questcraft on\n\n- click on the mods/plugins section on the left\n\n- search and install vivecraft/vivecraft spigot extensions, (if you are installing vivecraft spigot extensions you will need to also install via version)\n\n- join your server using the ip\n\n- with the 'access’ bit on the left you can also give your friends permission to start the server if they have an aternos account ```\n\n```(If you have any issues joining your server try joining with 'your server ip':'port'  the port can be found under the connect section when your server is online - if that doesn't work, try join using the dyn ip/direct ip - this also helps connect if you have issues with other server hosting platforms -  which can be found under 'connect' as well on the main server page when the servers online btw the dyn ip will change every time you start the server)```\n\n***Installing simple voice chat (aternos):*** *next to the plugins/mods tab search it up and install it onto your aternos server, then follow this guide: <https://support.aternos.org/hc/en-us/articles/360019336497-Installing-Voice-Chat-Mods>*\n\nTutorial by aternos (basic, does not install all of the questcraft features above):\n<https://youtu.be/LOFbK1eXzqo>")
@@ -95,7 +95,22 @@ const embeds = {
     .setTitle("test")
     .setDescription("this is a test")
     .setColor("Green")
-    .setFooter({ text: 'Test added by Cart'})
+    .setFooter({ text: 'Test added by Cart'}),
+  crashes:  new EmbedBuilder()
+  .setTitle("Crash fixes")
+  .setDescription('Click the dropdown menu bellow to access all of the support presets to fix crashing issues')
+  .setColor("Green")
+  .setFooter({ text: 'This menu selector was made by TechyGiraffe999 - If you have any other suggestions please let them know'}),
+  login_download_crash:  new EmbedBuilder()
+  .setTitle("QuestCraft crashes at login/download:  ")
+  .setDescription("You can use mobile data through a hotspot to do the process and it should work.\n**or** if you don't have mobile data\nyou can also use a different internet connection(not just different wifi)(such as a friends internet/wifi connection)\n\nUpdate:\nafter trying a fix and not having the issue solved here is what you can try:\nif you have another sim you can try that one as it worked for some people\nif that also doesnt work you can install an older version of questcraft that shouldnt have this issue:\n**https://github.com/QuestCraftPlusPlus/QuestCraft/releases/download/3.0.1/QCXR-3.0.1.apk**")
+  .setColor("Green")
+  .setFooter({ text: 'Written by !DED - Thanks to all the people that helped test this with me!'}),
+  falling_blocks_crash:  new EmbedBuilder()
+  .setTitle("falling blocks crash my game:  ")
+  .setDescription("you probably have the continuity mod, continuity has an conditional dependency.\nif sodium is present indium will have to be installed so that continuity can be happy.\n\n**https://www.curseforge.com/minecraft/mc-mods/indium/files**\n\n*find the indium for your game version and install it along with continuity and the crash shouldn't happen no longer.\n__feel free to let me know if you have issues__")
+  .setColor("Green")
+  .setFooter({ text: 'Written by !DED'}),
 };
 
 module.exports = embeds;
