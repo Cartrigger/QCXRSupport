@@ -20,16 +20,16 @@ module.exports = {
 				const category = interaction.options.getString('presets');
 
 				if (category === 'login_download') {
-				  if (!interaction.replied) {
 					await interaction.reply({ embeds: [embeds.login_download_crash] });
-				  }
-				} else if (category === 'falling_blocks') {
-				  if (!interaction.replied) {
+					return;
+				} 
+				if (category === 'falling_blocks') {
 					await interaction.reply({ embeds: [embeds.falling_blocks_crash] });
-				  }
-				} else {
-				  if (!interaction.replied) {
+					return;
+				} 
+				else {
 					await interaction.reply({ embeds: [embeds.login_download_crash] });
-				  }
+					return;
 				}
-			  }}
+			  }
+			}
