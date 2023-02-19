@@ -111,6 +111,47 @@ const embeds = {
   .setDescription("you probably have the continuity mod, continuity has an conditional dependency.\nif sodium is present indium will have to be installed so that continuity can be happy.\n\n**https://www.curseforge.com/minecraft/mc-mods/indium/files**\n\n*find the indium for your game version and install it along with continuity and the crash shouldn't happen no longer.\n__feel free to let me know if you have issues__")
   .setColor("Green")
   .setFooter({ text: 'Written by !DED'}),
+  faq_world:  new EmbedBuilder()
+  .setTitle("when I load into a world it doesn't show anything:  ")
+  .setDescription("switch the graphics quality to fast.  ")
+  .setImage('https://cdn.discordapp.com/attachments/821469293156892724/1075576744658083970/image.png')
+  .setColor("Green")
+  .setFooter({ text: 'Written by !DED'}),
+  rebdining:  new EmbedBuilder()
+  .setTitle("Cant rebind keys:  ")
+  .setDescription("Rebinding is not officially supported  ")
+  .setColor("Green")
+  .setFooter({ text: 'Written by !DED'}),
+  lava:  new EmbedBuilder()
+  .setTitle("After dying in lava I can’t respawn:  ")
+  .setDescription("- this is a bug the only way to respawn is to log into the server on a computer, respawn and then log back in on your quest\n\n- alternatively you could make sure this gamerule is enabled, this will not give you the option to respawn and you will auto respawn immediately - **/gamerule doImmediateRespawn true**\nI have tested the command to see if enabling it after you have died fixes the issue it doesn't\n\n- another option is to delete your player data file, however **deleting this will delete everything about your player, including ender chests, bed spawn and your location** this file is located in ``world/playerdata/‘youruuid’`` to find your uuid just join the server and it will be displayed in the console/ your Minecraft log file. Alternatively you can find it by searching for your username on https://namemc.com/\n\n- or if you really know what you're doing you could edit your player.dat file manually")
+  .setColor("Green")
+  .setFooter({ text: 'Written by TechyGiraffe999'}),
+  reinstall_glitch:  new EmbedBuilder()
+  .setTitle("My game is still glitched after a reinstall:")
+  .setDescription("To fix this: Go into the quest with a file manager (desktop sidequest or something on the quest itself like CX file explorer or amaze) and find the following folder in this filepath:\n``*Android/data/com.qcxr.qcxr*``\ndelete ONLY the qcxr folder, if you accidentally delete the entire data folder you will delete all your games’ data, and then you can proceed by uninstalling and reinstalling normally.\n||(side note: if you know how to issue ADB commands, all you have to execute is ``adb uninstall com.qcxr.qcxr``)||")
+  .setColor("Green")
+  .setFooter({ text: 'Written by Reality'}),
+  immersive_controls:  new EmbedBuilder()
+  .setTitle("how do i turn immersive controls on?  ")
+  .setDescription("immersive controls are on by default\nswing at stuff to break or hit. punching might not work as good\n\ndrinking and eating works by putting food up to your mouth ")
+  .setColor("Green")
+  .setFooter({ text: 'Written by !DED'}),
+  voice_chat:  new EmbedBuilder()
+  .setTitle("how do I enable voicechat:  ")
+  .setDescription("1. go into a game\n2. click the right controller B button, this will open radial menu.\n3. while in radial menu find the bottom option that says 'voicechat gui'\n4. in voicechat gui click settings.\n5. in settings switch vice activation type to 'voice'\n(optional)\n6. drag the voice activation threshold down to -127 ")
+  .setColor("Green")
+  .setFooter({ text: 'Written by !DED'}),
+  microsoft_login:  new EmbedBuilder()
+  .setTitle("Microsoft login does nothing:  ")
+  .setDescription("Make sure you own Minecraft java on your Microsoft account.\nI know it might seem intuitive but a lot of people who want to play QuestCraft don't have a Minecraft account connected to their Microsoft account.\nBuy Minecraft java with this link:\nhttps://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc\n**or**\nif you already have Minecraft java purchased on a Mojang account you can migrate to Microsoft:\nhttps://www.minecraft.net/en-us/mojang-account-move\n\nif you just bought Minecraft java you may need to give your Minecraft account a username before you play.\ndo so with this link:\nhttps://www.minecraft.net/en-us/msaprofile/mygames/editprofile\n\nafter all of this if it doesn't work:\n**this is a common issue** so if you cant get it to work you should try again later, **~~some accounts simply dont work right now.~~**\n\nUpdate: **a fix is being experimented with so if you are having issues _ping me_ or _open a ticket._** ")
+  .setColor("Green")
+  .setFooter({ text: 'Written by !DED'}),
+  faq:  new EmbedBuilder()
+  .setTitle("FAQ info")
+  .setDescription("Checking the <#821469293156892724> channel first can potentially help your issue get resolved quicker, please check that before messaging here")
+  .setColor("Green")
+  .setFooter({ text: 'Written by TechyGiraffe999'}),
 };
 
 module.exports = embeds;
