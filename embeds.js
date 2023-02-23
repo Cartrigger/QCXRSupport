@@ -20,7 +20,7 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999'}),
   logs: new EmbedBuilder()
     .setTitle("Finding logs:")
-    .setDescription("You can find logs for support in **(Quest 2)** ``Android/data/com.qcxr.qcxr/.minecraft/latestlog.txt`` you can use any file manager to get to that location, then send it to the support member who asked for logs. There is no information that someone could use to hack your account.")
+    .setDescription("You can find logs for support in **(Quest 2)** ``Android/Data/com.qcxr.qcxr/files/latestlog.txt`` you can use any file manager to get to that location, then send it to the support member who asked for logs. There is no information that someone could use to hack your account.")
     .setColor("Green"),
   mods: new EmbedBuilder()
     .setTitle("**Modding guide**")
