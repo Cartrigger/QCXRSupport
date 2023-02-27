@@ -148,6 +148,11 @@ const embeds = {
     .setDescription("Checking the <#821469293156892724> channel first can potentially help your issue get resolved quicker, please check that before messaging here")
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999'}),
+  president:  new EmbedBuilder()
+    .setTitle("Current President")
+    .setDescription("The current president is yet to be decided, come back later when the president has been elected")
+    .setColor("Green")
+    .setFooter({ text: 'Mantained by DevLime' }),
 };
 
 module.exports = embeds;
