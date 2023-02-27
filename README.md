@@ -9,8 +9,8 @@
 - All PR's are welcome for improvements.
 
 ## Current developers:
-Cart, TechyGiraffe999
+[Cart](https://github.com/Cartrigger) and [TechyGiraffe999](https://github.com/TecEash1)
 
-## Additional credits:
-- This bot utilises the hanlder template made by Naman Vrati
+### 🏗️ Additional Credits
+ - This bot utilizes the [Handler command template](https://github.com/NamVr/DiscordBot-Template) made by [Naman Vrati](https://github.com/NamVr)! [\[Apache License 2.0\]](https://github.com/NamVr/DiscordBot-Template/blob/master/LICENSE)
 
