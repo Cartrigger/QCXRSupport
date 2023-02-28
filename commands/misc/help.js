@@ -124,6 +124,7 @@ module.exports = {
 
 		// Finally send the embed.
 
-		message.reply({ embeds: [commandEmbed] });
-	},
+		message.channel.send({ embeds: [commandEmbed] });
+// Test message.reply when possible
+		},
 };
