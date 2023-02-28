@@ -46,7 +46,7 @@ module.exports = {
 					},
 				]);
 
-			// Attempts to send embed in DMs.
+			// Attempts to reply and send embed
 
             return message.channel
                 .send({ embeds: [helpEmbed] })
@@ -61,11 +61,11 @@ module.exports = {
                     // On failing, throw error.
 
                     console.error(
-                        `Could not send help DM to ${message.author.tag}.\n`,
+                        `Could not send help reply to ${message.author.tag}.\n`,
                         error
                     );
 
-                    message.reply({ content: "It seems like I can't DM you!" });
+                    message.reply({ content: "There was an error executing the command, please contact <@719815864135712799> or <@317814254336081930>!" });
                 });
 		}
 
@@ -124,6 +124,6 @@ module.exports = {
 
 		// Finally send the embed.
 
-		message.channel.send({ embeds: [commandEmbed] });
+		message.reply({ embeds: [commandEmbed] });
 	},
 };
