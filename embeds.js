@@ -3,11 +3,11 @@ const { EmbedBuilder } = require('discord.js');
 const embeds = {
   adb: new EmbedBuilder()
     .setTitle("uninstalling using ADB commands.")
-    .setDescription("To uninstall completely if you cannot install again, the command is: ```adb uninstall com.qcxr.qcxr```\n\nTo run ADB commands using SideQuest (advanced only) you can see the image below")
+    .setDescription("If you're unable to reinstall and need to perform a complete uninstallation, use the command: ``adb uninstall com.qcxr.qcxr``. For advanced users, SideQuest allows running ADB commands, as shown in the image below.")
     .setColor("Green"),
   bedrock: new EmbedBuilder()
     .setTitle("QuestCraft Bedrock Edition")
-    .setDescription("Bedrock on QuestCraft is not going to happen in the near future due to the Minecraft TOS")
+    .setDescription("QuestCraft doesn't have any immediate plans to introduce Bedrock due to the Minecraft TOS.")
     .setColor("Green"),
   developers: new EmbedBuilder()
     .setTitle("**Developers**")
@@ -20,11 +20,11 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999'}),
   logs: new EmbedBuilder()
     .setTitle("Finding logs:")
-    .setDescription("You can find logs for support in **(Quest 2)** ``Android/Data/com.qcxr.qcxr/files/latestlog.txt`` you can use any file manager to get to that location, then send it to the support member who asked for logs. There is no information that someone could use to hack your account.")
+    .setDescription("You can get the logs required by Support Staff at ``Android/Data/com.qcxr.qcxr/files/latestlog.txt``. Yes you can use any file manager to get to it and no, there is no information that someone could use to hack your account.")
     .setColor("Green"),
   mods: new EmbedBuilder()
     .setTitle("**Modding guide**")
-    .setDescription("**Adding mods to Questcraft 3.0:**\n*1. Install either the 1.18.2 or 1.19.3 fabric version of your mod to either your PC or your Quest\n2. If you are on PC, connect your Quest to Sidequest, and locate your mods folder at* ``android/data/com.qcxr.qcxr/files/.minecraft/mods.`` *If you are on your Quest, open a file manager like CX File Explorer, and locate the mods folder listed above. If you don't see the '.minecraft' folder then enable hidden files\n3. Move your mod file into that version's folder.*\n\n**Note: You MUST have launched either 1.18.2 or 1.19.3 QuestCraft PRIOR to putting your mod into the mods folder.\n\n**Where to find mods:** \n **[Modrinth](https://modrinth.com/mods?f=categories%3A%27worldgen%27&g=categories%3A%27fabric%27&v=1.18.2,1.19.3)**\n **[Curseforge](https://www.curseforge.com/minecraft/mc-mods?filter-game-version=2020709689%3A7499&filter-sort=4)**\nWhen picking mods make sure to **only download 1.18.2/1.19.3 versions** depending on what version of QuestCraft you are playing ")
+    .setDescription("**Adding mods to QuestCraft 3.0:**\n*1. Install either the 1.18.2 or 1.19.3 fabric version of your mod to either your PC or your Quest\n2. If you are on PC, connect your Quest to SideQuest, and locate your mods folder at* ``android/data/com.qcxr.qcxr/files/.minecraft/mods.`` *If you are on your Quest, open a file manager like CX File Explorer, and locate the mods folder listed above. If you don't see the '.minecraft' folder then enable hidden files\n3. Move your mod file into that version's folder.*\n\n**Note: You MUST have launched either 1.18.2 or 1.19.3 QuestCraft PRIOR to putting your mod into the mods folder.\n\n**Where to find mods:** \n **[Modrinth](https://modrinth.com/mods?f=categories%3A%27worldgen%27&g=categories%3A%27fabric%27&v=1.18.2,1.19.3)**\n **[Curseforge](https://www.curseforge.com/minecraft/mc-mods?filter-game-version=2020709689%3A7499&filter-sort=4)**\nWhen picking mods make sure to **only download 1.18.2/1.19.3 versions** depending on what version of QuestCraft you are playing ")
     .setColor("Green")
     .setFooter({ text: 'How to add mods written by Shradinx | Where to find mods written by TechyGiraffe999'}),
   nopiracy: new EmbedBuilder()
@@ -33,16 +33,17 @@ const embeds = {
     .setColor("Green"),
   otherheadsets: new EmbedBuilder()
     .setTitle("QuestCraft on other Headsets: ")
-    .setDescription("QuestCraft on other headsets is not going to happen if the company doesnt contact us. YVRCraft exists because YVR contacted us.")
+    .setDescription("QuestCraft is planned to release on other headsets in the future, however, it is required that the company contacts us first in order to do this. \n" +
+      "Currently we are planned to release on **YVR** and **Pimax** headsets.")
     .setColor("Green"),
   performance: new EmbedBuilder()
     .setTitle("**Better performance guide**")
-    .setDescription(" - Play on the latest version (it was released <t:1673985960:R> with a preinstalled performance pack)\n\n- Install both mods, [Krypton](https://www.curseforge.com/minecraft/mc-mods/krypton) and [Starlight](https://www.curseforge.com/minecraft/mc-mods/starlight) if they aren't installed already, make sure to install the right version\n- Also play on 1.18.2\n- Also try play on a server instead of singleplayer, check out <#966126967701262386> for a good server, if u want a singleplayer/ private server run /servers \n- With this u should be able to get an average of 50-60 fps on 8 render distance\n\n**Extras - (<@719815864135712799> has not tested this)**: \n<@1030196884880498698> has also suggested these mods:\n[Enhanced Block Entities](https://modrinth.com/mod/ebe) (No 1.19.3 support yet and mod [Indium](https://modrinth.com/mod/indium) required to get this to work)\n[Memory leak Fix](https://modrinth.com/mod/memoryleakfix)\n[Debugify](https://modrinth.com/mod/debugify) (It fixes small, annoying bugs and also adding some performance improvements without affecting the gameplay)\n[FeyTweaks](https://modrinth.com/mod/feytweaks)\n- <@719815864135712799> has not tested not tested the average FPS when adding the *extras*")
+    .setDescription("QuestCraft's latest release has been released with the latest approved mods to increase performance, the chances you will find anything to improve performance more is extremely low. The QCXR developers are working on ways to improve performance, please be patient with them.")
     .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999'}),
+    .setFooter({ text: 'Written by CADIndie'}),
   reinstall: new EmbedBuilder()
     .setTitle("QuestCraft Reinstall Instructions:")
-    .setDescription("1. Uninstall Questcraft (3 dots or uninstall from Sidequest)\n2. Restart Headset\n3. Install QuestCraft from Github / Sidequest\n4. Open Questcraft, if you have any issues with this procedure, please use /adb")
+    .setDescription("1. Uninstall QuestCraft (3 dots or uninstall from SideQuest)\n2. Restart Headset\n3. Install QuestCraft from GitHub / SideQuest\n4. Open QuestCraft, if you have any issues with this procedure, please use /adb")
     .setColor("Green"),
   support_menu:  new EmbedBuilder()
     .setTitle("Support Requestinator")
@@ -56,7 +57,7 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999'}),
   sidequest: new EmbedBuilder()
     .setTitle("QuestCraft on SideQuest")
-    .setDescription("QuestCraft is distribued on GitHub and Sidequest, the SideQuest link is [here](https://sidequestvr.com/app/7150/questcraft)")
+    .setDescription("QuestCraft is distributed on GitHub and SideQuest, the SideQuest link is [here](https://sidequestvr.com/app/7150/questcraft)")
     .setColor("Green"),
   support_channels: new EmbedBuilder()
     .setTitle("Sorry but <:notsupportchannel:993043214472859778>")
@@ -66,10 +67,6 @@ const embeds = {
     .setTitle("This is a test")
     .setDescription("Test is functioning")
     .setColor("Green"),
-  unity: new EmbedBuilder()
-    .setTitle("The new 3.0+ Launcher")
-    .setDescription("The 3.0+ launcher is made in Unity, with Pojlib, which makes it where you can launch into VR which means there is no need for a workaround.")
-    .setColor("Green"),
   versions: new EmbedBuilder()
     .setTitle("**Version info:**")
     .setDescription("You are unable to use versions on QuestCraft other than 1.19.3 and 1.18.2 at the moment - however if your friend or you own a Spigot/Paper server you can install [ViaVersion](https://www.spigotmc.org/resources/viaversion.19254/) or [ViaBackwards](https://www.spigotmc.org/resources/viabackwards.27448/) so you can join on either questcraft version. If you want to play on different versions on a Fabric server then you can see [the fabric version of this plugin](https://www.curseforge.com/minecraft/mc-mods/viafabric) or if you prefer Forge you can get the Forge version of that Fabric mod [here](https://www.curseforge.com/minecraft/mc-mods/viaforge)\nAll installation instructions are located on the SpigotMC/CurseForge page")
@@ -77,19 +74,19 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999, Corrected by DevLime'}),
   yvr: new EmbedBuilder()
     .setTitle("YVR info:")
-    .setDescription("YVR is a Chinese headset company. They have requested YVRCraft. We are working on both QCXR and YVRCraft at the same time.")
+    .setDescription("YVR is a Chinese headset company, they have requested we port QuestCraft. We are working on both QCXR and YVRCraft at the same time.")
     .setColor("Green"),
-  qcgithub: new EmbedBuilder()
-    .setTitle("Questcraft Github info:")
-    .setDescription("The QuestCraft GitHub is at the link [here](https://github.com/questcraftplusplus) any other GitHub is potentially dangerous and any APK should not be downloaded from it.")
+  botgithub: new EmbedBuilder()
+    .setTitle("QuestCraft GitHub info:")
+    .setDescription("My GitHub is located in [this link](https://github.com/Cartrigger/QCXRSoonBot)! Check out my code over there!")
     .setColor("Green"),
   fixed: new EmbedBuilder()
-    .setTitle("Was Questcraft fixed...?")
+    .setTitle("Was QuestCraft fixed...?")
     .setDescription("YES!!! 3.0 Was released!")
     .setColor("Green"),
   github: new EmbedBuilder()
-    .setTitle("Github info:")
-    .setDescription("My GitHub is located in [this link](https://github.com/Cartrigger/QCXRSoonBot)! Check out my code over there!")
+    .setTitle("GitHub info:")
+    .setDescription("The QuestCraft GitHub is at the link [here](https://github.com/questcraftplusplus) any other GitHub is potentially dangerous and any APK should not be downloaded from it.")
     .setColor("Green"),
 //.setFooter({ text: 'Test added by Cart, Test removed by DevLime, Cart there was already a test :/'}),
   crashes:  new EmbedBuilder()
@@ -97,11 +94,6 @@ const embeds = {
     .setDescription('Click the dropdown menu bellow to access all of the support presets to fix crashing issues')
     .setColor("Red") //Made crashes red to fit the theme better
     .setFooter({ text: 'This menu selector was made by TechyGiraffe999 - If you have any other suggestions please let them know'}),
-  login_download_crash:  new EmbedBuilder()
-    .setTitle("QuestCraft crashes at login/download:")
-    .setDescription("You can use mobile data through a hotspot to do the process and it should work.\n**Or** if you don't have mobile data\nYou can also use a different internet connection(not just different Wi-Fi)(such as a friend's internet/Wi-Fi connection)\n\n**Update:**\nAfter trying a fix and not having the issue solved here is what you can try:\nIf you have another SIM you can try that one as it worked for some people\nIf that also doesnt work you can install an older version of QuestCraft that shouldnt have this issue, one can be seen [here](https://github.com/QuestCraftPlusPlus/QuestCraft/releases/download/3.0.1/QCXR-3.0.1.apk)")
-    .setColor("Red")
-    .setFooter({ text: 'Written by !DED - Thanks to all the people that helped test this with me!'}),
   falling_blocks_crash:  new EmbedBuilder()
     .setTitle("Falling blocks crash my game:")
     .setDescription("You probably have the [Continuity](https://modrinth.com/mod/continuity) mod, Continuity has an conditional dependency.\nIf [Sodium](https://modrinth.com/mod/sodium) is present [Indium](https://modrinth.com/mod/indium) will have to be installed so that Continuity can be happy\n*Find the Indium for your game version and install it along with Continuity and the crash shouldn't happen no longer.\n__Feel free to let any of the support staff know if you have issues__")
@@ -115,7 +107,7 @@ const embeds = {
     .setFooter({ text: 'Written by !DED'}),
   rebdining:  new EmbedBuilder()
     .setTitle("I can't rebind keys:")
-    .setDescription("Rebinding is not officially supported")
+    .setDescription("Rebinding is not officially supported at the moment.")
     .setColor("Red")
     .setFooter({ text: 'Written by !DED'}),
   lava:  new EmbedBuilder()
@@ -140,7 +132,7 @@ const embeds = {
     .setFooter({ text: 'Written by !DED'}),
   microsoft_login:  new EmbedBuilder()
     .setTitle("Microsoft login does nothing:")
-    .setDescription("Make sure you own Minecraft java on your Microsoft account.\nI know it might seem intuitive but a lot of people who want to play QuestCraft don't have a Minecraft account connected to their Microsoft account.\nBuy Minecraft java with this link [here](https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc)\n**Or**\nif you already have Minecraft java purchased on a Mojang account you can migrate to a Microsoft account [here](https://www.minecraft.net/en-us/mojang-account-move)\n\nIf you just bought Minecraft java you may need to give your Minecraft account a username before you play.\nDo so with this link [here](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile)\n\nAfter all of this if it doesn't work:\n**This is a common issue** so if you cant get it to work you should try again later, **~~some accounts simply dont work right now.~~**\n\nUpdate: **A fix is being experimented with so if you are having issues ping !DED or _open a ticket._** ")
+    .setDescription("Make sure you own Minecraft java on your Microsoft account.\nI know it might seem dumb but a lot of people who want to play QuestCraft don't have a Minecraft account connected to their Microsoft account.\nBuy Minecraft java with this link [here](https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc)\n**Or**\nif you already have Minecraft java purchased on a Mojang account you can migrate to a Microsoft account [here](https://www.minecraft.net/en-us/mojang-account-move)\n\nIf you just bought Minecraft java you may need to give your Minecraft account a username before you play.\nDo so with this link [here](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile)\n\nAfter all of this if it doesn't work:\n**This is a common issue** so if you cant get it to work you should try again later, **~~some accounts simply dont work right now.~~**\n\nUpdate: **A fix is being experimented with so if you are having issues ping !DED or _open a ticket._** ")
     .setColor("Red")
     .setFooter({ text: 'Written by !DED'}),
   faq:  new EmbedBuilder()

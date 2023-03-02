@@ -30,8 +30,8 @@ module.exports = {
 	   if (selected === "otherheadsets") {
 		  await interaction.reply({ embeds: [embeds.otherheadsets], ephemeral: true })
 	   }
-	   if (selected === "qcgithub") {
-		   await interaction.reply({ embeds: [embeds.qcgithub], ephemeral: true })
+	   if (selected === "botgithub") {
+		   await interaction.reply({ embeds: [embeds.botgithub], ephemeral: true })
 	   }
 	   if (selected === "reinstall") {
 		   await interaction.reply({ embeds: [embeds.reinstall], ephemeral: true })
