@@ -51,9 +51,9 @@ module.exports = {
                             value: 'otherheadsets',
                         },
                         {
-                            label: 'qcgithub',
-                            description: 'Tells you where to find the QuestCraft Github.',
-                            value: 'qcgithub',
+                            label: 'botgithub',
+                            description: 'Tells you where to find the bot GitHub.',
+                            value: 'botgithub',
                         },
                         {
                             label: 'reinstall',
@@ -62,7 +62,7 @@ module.exports = {
                         },
                         {
                             label: 'sidequest',
-                            description: 'Says what Sidequest it is.',
+                            description: 'Says what SideQuest it is.',
                             value: 'sidequest',
                         },
                         {

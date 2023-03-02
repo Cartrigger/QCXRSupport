@@ -10,7 +10,7 @@ const embeds = require('../../../embeds.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('sidequest')
-        .setDescription('Says what Sidequest it is.'),
+        .setDescription('Says what SideQuest it is.'),
     async execute(interaction,client ) {
         await interaction.reply({
             embeds: [embeds.sidequest]

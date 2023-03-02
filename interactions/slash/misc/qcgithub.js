@@ -9,11 +9,11 @@ const embeds = require('../../../embeds.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('qcgithub')
-        .setDescription('Tells you where to find the QuestCraft Github.'),
+        .setName('botgithub')
+        .setDescription('Tells you where to find the bot GitHub.'),
     async execute(interaction) {
         await interaction.reply({
-            embeds: [embeds.qcgithub]
+            embeds: [embeds.botgithub]
         });
     },
 };
