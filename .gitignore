@@ -2,6 +2,7 @@
 /config.json
 .vscode/
 .node-version
+.idea
 
 # Logs
 logs
