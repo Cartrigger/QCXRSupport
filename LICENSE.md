@@ -10,4 +10,4 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 
 ADDITIONAL NOTES:
 
-Permmision to clone this software and use this code on the QuestCraft discord server without Cart [Cartrigger] or TechyGiraffe999 [TecEash1]'s permision is herby prohibited
+Permmision to clone this software and use this code on the QuestCraft/Xrcraft discord server without Cart [Cartrigger] or TechyGiraffe999 [TecEash1]'s permision is herby prohibited
