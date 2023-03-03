@@ -13,6 +13,9 @@
 
 ### 🏗️ Additional Credits
  - This bot utilizes the [Handler command template](https://github.com/NamVr/DiscordBot-Template) made by [Naman Vrati](https://github.com/NamVr)! [\[Apache License 2.0\]](https://github.com/NamVr/DiscordBot-Template/blob/master/LICENSE)
+ 
+ ### License
+  QCXR Bot © 2022 by Carson G is licensed under Attribution-NonCommercial 4.0 International 
 
 ### Updates!
 ISC --> CC
