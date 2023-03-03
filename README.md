@@ -1,6 +1,7 @@
 # QCXRsoonbot
 
-**⚠️THIS BRANCH IS CURRENTLY NOT BEING MAINTAINED UNTIL FURTHER NOTICE ⚠️**
+**⚠️THIS BRANCH IS CURRENTLY NOT BEING MAINTAINED UNTIL FURTHER NOTICE ⚠️** <br>  
+**CURRENT [MAINTAINED BRANCH](https://github.com/Cartrigger/QCXRSoonBot)** <br> <br> 
 
 A okay bot made in JS using DJS and Node.
 
