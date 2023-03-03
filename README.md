@@ -1,4 +1,7 @@
 # QCXRsoonbot
+
+**⚠️THIS BRANCH IS CURRENTLY NOT BEING MAINTAINED UNTIL FURTHER NOTICE ⚠️**
+
 A okay bot made in JS using DJS and Node.
 
 
