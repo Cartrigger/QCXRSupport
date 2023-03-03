@@ -14,3 +14,5 @@
 ### 🏗️ Additional Credits
  - This bot utilizes the [Handler command template](https://github.com/NamVr/DiscordBot-Template) made by [Naman Vrati](https://github.com/NamVr)! [\[Apache License 2.0\]](https://github.com/NamVr/DiscordBot-Template/blob/master/LICENSE)
 
+### Updates!
+The repo is now public again.
