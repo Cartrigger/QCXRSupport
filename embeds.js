@@ -145,6 +145,6 @@ const embeds = {
     .setDescription("My License is Creative-Commons-Attribution-NonCommercial 4.0 International, please check my License to see more info.")
     .setColor("White")
     .setFooter({ text: 'Written by Cart'}),
-);
+};
 
 module.exports = embeds;
