@@ -1,4 +1,4 @@
-Creative Commons License
+Creative Commons Attribution-NonCommercial 4.0 International Public License
 
 Copyright <2022>
 
