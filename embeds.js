@@ -146,5 +146,5 @@ const embeds = {
     .setColor("White")
     .setFooter({ text: 'Written by Cart'}),
 };
-
+//
 module.exports = embeds;
