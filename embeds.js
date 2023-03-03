@@ -140,6 +140,11 @@ const embeds = {
     .setDescription("Checking the <#821469293156892724> channel first can potentially help your issue get resolved quicker, please check that before messaging here")
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999'}),
-};
+  license:  new EmbedBuilder()
+    .setTitle("License Info")
+    .setDescription("My License is Creative-Commons-Attribution-NonCommercial 4.0 International, please check my License to see more info.")
+    .setColor("White")
+    .setFooter({ text: 'Written by Cart'}),
+);
 
 module.exports = embeds;
