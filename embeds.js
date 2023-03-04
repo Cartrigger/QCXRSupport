@@ -145,6 +145,23 @@ const embeds = {
     .setDescription("My License is Creative-Commons-Attribution-NonCommercial 4.0 International, please check my License to see more info.")
     .setColor("White")
     .setFooter({ text: 'Written by Cart'}),
+  addworld: new EmbedBuilder()
+    .setTitle("How to add a world:")
+    .setDescription("1. Download your world\n2. Move the world folder to `Android/data/com.qcxr.qcxr/files/.minecraft/saves` (You may need to show hidden files/folders)\n3. Open QuestCraft and see the world")
+    .setColor("Green")
+    .setFooter({ text: 'Written by DevLime'}),
+  addrp: new EmbedBuilder()
+    .setTitle("How to add a resource pack:")
+    .setDescription("1. Download your resourcepack and make sure it's in a usable format\n2. Move the resourcepack to `Android/data/com.qcxr.qcxr/files/.minecraft/resourcepacks` (You may need to show hidden files/folders)\n3. Apply the resourcepack like normal in-game")
+    .setColor("Green")
+    .setFooter({ text: 'Written by DevLime'}),
+  adddatapack: new EmbedBuilder()
+    .setTitle("How to add datapacks:")
+    .setDescription("1. Get your datapack and make sure it's in a usable format\n2. Move the datapack to `Android/data/com.qcxr.qcxr/files/.minecraft/saves/worldnamehere/datapacks` (You may need to show hidden files/folders)\n3. Load the world and see the datapack is loaded")
+    .setColor("Green")
+    .setFooter({ text: 'Written by DevLime'}),
+  //my cat would not stop annoying me while making this :cryboi:
+  //there is now hair EVERYWHERE ON MY KEYBOARD
 };
 //
 module.exports = embeds;
