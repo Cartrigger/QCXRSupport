@@ -19,4 +19,4 @@
 
 ## Updates!
 ISC --> CC
- ####  [[Future Plans]](https://github.com/Cartrigger/QCXRSoonBot/issues/24)
+ ####  [[Future Plans]](https://github.com/Cartrigger/QCXRSoonBot/issues/25)
