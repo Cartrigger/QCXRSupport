@@ -48,25 +48,14 @@ module.exports = {
 
 			// Attempts to reply and send embed
 
-            return message.channel
-                .send({ embeds: [helpEmbed] })
-
-                .then(() => {
-
-                    message.reply({
-                        embeds: [helpEmbed] ,
-                    });
-                })
-                .catch((error) => {
-                    // On failing, throw error.
-
-                    console.error(
-                        `Could not send help reply to ${message.author.tag}.\n`,
-                        error
-                    );
-
-                    message.reply({ content: "There was an error executing the command, please contact <@719815864135712799> or <@317814254336081930>!" });
-                });
+			return message.reply({
+				embeds: [helpEmbed],
+			}).catch((error) => {
+				console.error(`Could not send help reply to ${message.author.tag}.\n`, error);
+				message.reply({
+					content: "There was an error executing the command, please contact <@719815864135712799> or <@317814254336081930>!",
+				});
+			});
 		}
 
 		// If argument is provided, check if it's a command.
