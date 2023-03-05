@@ -143,8 +143,8 @@ const embeds = {
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999'}),
   license:  new EmbedBuilder()
-    .setTitle("License Info")
-    .setDescription("My License is Creative-Commons-Attribution-NonCommercial 4.0 International, please check my License to see more info.")
+    .setTitle("📜  License Info")
+    .setDescription("My License is [Creative-Commons-Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/), please check [my License](https://github.com/Cartrigger/QCXRSoonBot/blob/functionalityhandlercommandupdate/LICENSE.md) to see more info.")
     .setColor("White")
     .setFooter({ text: 'Written by Cart'}),
 };
