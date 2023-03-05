@@ -61,9 +61,9 @@ module.exports = {
                             value: 'reinstall',
                         },
                         {
-                            label: 'sidequest',
-                            description: 'Says what SideQuest it is.',
-                            value: 'sidequest',
+                            label: 'releases',
+                            description: "Says where to find QuestCraft's releases",
+                            value: 'releases',
                         },
                         {
                             label: 'unity',
