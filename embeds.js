@@ -40,9 +40,9 @@ const embeds = {
     .setColor("Green"),
   performance: new EmbedBuilder()
     .setTitle("**Better performance guide**")
-    .setDescription("QuestCraft's latest release has been released with the latest approved mods to increase performance, the chances you will find anything to improve performance more is extremely low. The QCXR developers are working on ways to improve performance, please be patient with them.")
+    .setDescription("- Make sure you are playing on the [latest version of QuestCraft](https://github.com/QuestCraftPlusPlus/QuestCraft/releases/latest), it was released <t:1677786091:R> with added performance improvements\n- Try play on 1.18.2 instead of 1.19.3\n- Play on a server instead of singleplayer, a good public server is [xrcraft](https://discord.com/channels/820767484042018829/966126967701262386), If you want a private server do ``/servers`` for a guide on how to. \n- Make sure your graphics quality is set to fast to fast in your ingame settings\n\n**Additional tips** \n\n- In the options menu, go to VR Settings/Stereo Rendering and set the resolution (NOT CAMERA RES) to 80%. This will decrease the general quality, but will give an extra performance boost.\n- The game's render distance is best at 4-6, but you *may* encounter lag spikes when using it. 9 and above is not reccomended.\n- Oceans contain LOTS of kelp that decrease framerate. Don't mine any of it all at once, as your game may CRASH if lots of entites *(in this case, kelp waiting to be picked up)* exist at once.\n- [Skyblock](https://minecraft.fandom.com/wiki/Tutorials/Skyblock) and [Oneblock](https://www.curseforge.com/minecraft/worlds/oneblock) worlds perform the best, as they require less hardware usage.")
     .setColor("Green")
-    .setFooter({ text: 'Written by CADIndie'}),
+    .setFooter({ text: 'Written by TechyGiraffe999 & Swaggio'}),
   reinstall: new EmbedBuilder()
     .setTitle("QuestCraft Reinstall Instructions:")
     .setDescription("1. Uninstall QuestCraft (3 dots or uninstall from SideQuest)\n2. Restart Headset\n3. Install QuestCraft from GitHub / SideQuest\n4. Open QuestCraft, if you have any issues with this procedure, please use /adb")
