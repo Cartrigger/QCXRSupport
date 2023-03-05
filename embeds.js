@@ -12,7 +12,7 @@ const embeds = {
     .setDescription("QuestCraft doesn't have any immediate plans to introduce Bedrock due to the Minecraft TOS.")
     .setColor("Green"),
   developers: new EmbedBuilder()
-    .setTitle("**Developers**")
+    .setTitle("**🛠️ My Developers!**")
     .setDescription("The current developers of Crafty bot are <@317814254336081930> and <@719815864135712799> \nYou can checkout the full code of Crafty Bot at the [GitHub repo](https://github.com/Cartrigger/QCXRSoonBot)")
     .setColor("Green"),
   installation: new EmbedBuilder()
