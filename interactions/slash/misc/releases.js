@@ -9,11 +9,11 @@ const embeds = require('../../../embeds.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('sidequest')
-        .setDescription('Says what SideQuest it is.'),
+        .setName('releases')
+        .setDescription("Says where to find QuestCraft's releases"),
     async execute(interaction,client ) {
         await interaction.reply({
-            embeds: [embeds.sidequest]
+            embeds: [embeds.releases]
         });
     },
 };

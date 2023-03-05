@@ -36,8 +36,8 @@ module.exports = {
 	   if (selected === "reinstall") {
 		   await interaction.reply({ embeds: [embeds.reinstall], ephemeral: true })
 	   }
-	   if (selected === "sidequest") {
-		   await interaction.reply({ embeds: [embeds.sidequest], ephemeral: true })
+	   if (selected === "releases") {
+		   await interaction.reply({ embeds: [embeds.releases], ephemeral: true })
 	   }
 	   if (selected === "unity") {
 		   await interaction.reply({ embeds: [embeds.unity], ephemeral: true })
