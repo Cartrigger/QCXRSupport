@@ -2,9 +2,11 @@ const { EmbedBuilder } = require('discord.js');
 
 const embeds = {
   adb: new EmbedBuilder()
-    .setTitle("uninstalling using ADB commands.")
+    .setTitle("Uninstalling using ADB commands.")
     .setDescription("If you're unable to reinstall and need to perform a complete uninstallation, use the command: ``adb uninstall com.qcxr.qcxr``. For advanced users, SideQuest allows running ADB commands, as shown in the image below.")
-    .setColor("Green"),
+    .setImage("https://media.discordapp.net/attachments/1079679515963432970/1081665865281445919/IMG_0691.png?width=1104&height=656")
+    .setColor("Green")
+    .setFooter({ text: 'Written by my Developers'}),
   bedrock: new EmbedBuilder()
     .setTitle("QuestCraft Bedrock Edition")
     .setDescription("QuestCraft doesn't have any immediate plans to introduce Bedrock due to the Minecraft TOS.")
