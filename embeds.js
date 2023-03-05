@@ -91,11 +91,6 @@ const embeds = {
     .setDescription("The QuestCraft GitHub is at the link [here](https://github.com/questcraftplusplus) any other GitHub is potentially dangerous and any APK should not be downloaded from it.")
     .setColor("Green"),
 //.setFooter({ text: 'Test added by Cart, Test removed by DevLime, Cart there was already a test :/'}),
-  crashes:  new EmbedBuilder()
-   .setTitle("Crash fixes")
-    .setDescription('Click the dropdown menu bellow to access all of the support presets to fix crashing issues')
-    .setColor("Red") //Made crashes red to fit the theme better
-    .setFooter({ text: 'This menu selector was made by TechyGiraffe999 - If you have any other suggestions please let them know'}),
   falling_blocks_crash:  new EmbedBuilder()
     .setTitle("Falling blocks crash my game:")
     .setDescription("You probably have the [Continuity](https://modrinth.com/mod/continuity) mod, Continuity has an conditional dependency.\nIf [Sodium](https://modrinth.com/mod/sodium) is present [Indium](https://modrinth.com/mod/indium) will have to be installed so that Continuity can be happy\n*Find the Indium for your game version and install it along with Continuity and the crash shouldn't happen no longer.\n__Feel free to let any of the support staff know if you have issues__")
