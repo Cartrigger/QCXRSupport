@@ -1,26 +1,25 @@
 name: Bug report
 description: Report a bug in the official bot or a cloned version
 
-# Input field for bot version
-- name: Bot version
-  description: Are you using the official bot or a cloned version?
-  type: checkboxes
-  options:
-    official:
-      label: Official bot
-    cloned:
-      label: Cloned version
+inputs:
+  bot_version:
+    description: 'Are you using the official bot or a cloned version?'
+    type: checkboxes
+    options:
+      official:
+        description: 'Official bot'
+      cloned:
+        description: 'Cloned version'
 
-# Input field for cloned version
-- name: Cloned version description
-  description: Please provide all the steps you followed since you installed the bot.
-  type: textarea
-  when: bot_version == 'cloned'
+  cloned_description:
+    description: 'Please provide all the steps you followed since you installed the bot.'
+    type: textarea
+    when: bot_version == 'cloned'
 
-# Input field for official version
-- name: Official version description
-  description: Please describe what you did.
-  type: textarea
-  when: bot_version == 'official'
+  official_description:
+    description: 'Please describe what you did.'
+    type: textarea
+    when: bot_version == 'official'
+
 
 
