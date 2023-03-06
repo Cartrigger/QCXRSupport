@@ -4,12 +4,12 @@ description: Report a bug in the official bot or a cloned version
 # Input field for bot version
 - name: Bot version
   description: Are you using the official bot or a cloned version?
-  type: checkbox
+  type: checkboxes
   options:
-    - label: Official bot
-      value: official
-    - label: Cloned version
-      value: cloned
+    official:
+      label: Official bot
+    cloned:
+      label: Cloned version
 
 # Input field for cloned version
 - name: Cloned version description
@@ -22,3 +22,4 @@ description: Report a bug in the official bot or a cloned version
   description: Please describe what you did.
   type: textarea
   when: bot_version == 'official'
+
