@@ -1,12 +1,12 @@
 ## 💾 Install
 
-1. fill in the token and other values in config.json.example
+1. fill in the token and other values in ``config.json.example``
 
-2. Rename the file to config.json
+2. Rename the file to ``config.json``
 
-3. run npm i
+3. run ``npm i``
 
-4. run node bot.js
+4. run ``node bot.js``
 
 - All PR's are welcome for improvements.
 
