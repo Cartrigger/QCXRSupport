@@ -20,6 +20,7 @@ module.exports = {
                 { name: 'immersive controls', value: 'immersive_controls' },
                 { name: 'voice chat', value: 'voice_chat' },
                 { name: 'Microsoft login does nothing', value: 'microsoft_login' },
+                { name: 'falling blocks crash', value: 'falling_blocks' },
 			)),
 			async execute(interaction) {
 				const categorys = interaction.options.getString('presets');
@@ -50,6 +51,10 @@ module.exports = {
                 }
                 if (categorys === 'microsoft_login') {
                     await interaction.reply({embeds: [embeds.microsoft_login]});
+                    return;
+                }
+                if (categorys === 'falling_blocks') {
+                    await interaction.reply({embeds: [embeds.falling_blocks_crash]});
                     return;
                 }
                 else{
