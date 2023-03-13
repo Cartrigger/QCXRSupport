@@ -62,10 +62,6 @@ const embeds = {
     .setTitle("Sorry but <:notsupportchannel:993043214472859778>")
     .setDescription("Support is handled in <#945502948111290498> or <#946021441298649158> and you can see the FAQ in <#821469293156892724>.\nOn top of this, you can see common issues in <#1065000467010179092>")
     .setColor("Green"),
-  test: new EmbedBuilder()
-    .setTitle("This is a test")
-    .setDescription("Test is functioning")
-    .setColor("Green"),
   versions: new EmbedBuilder()
     .setTitle("**Version info:**")
     .setDescription("You are unable to use versions on QuestCraft other than 1.19.3 and 1.18.2 at the moment - however if your friend or you own a Spigot/Paper server you can install [ViaVersion](https://www.spigotmc.org/resources/viaversion.19254/) or [ViaBackwards](https://www.spigotmc.org/resources/viabackwards.27448/) so you can join on either questcraft version. If you want to play on different versions on a Fabric server then you can see [the fabric version of this plugin](https://www.curseforge.com/minecraft/mc-mods/viafabric) or if you prefer Forge you can get the Forge version of that Fabric mod [here](https://www.curseforge.com/minecraft/mc-mods/viaforge)\nAll installation instructions are located on the SpigotMC/CurseForge page")
