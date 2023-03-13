@@ -150,17 +150,17 @@ const embeds = {
     .setColor("Greyple"),
   resource_packs: new EmbedBuilder()
     .setTitle("📂  Resource pack location")
-    .setDescription("The resource packs are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/resourcepacks``\n\n- For some good resource packs check out [Planet Minecraft](https://www.planetminecraft.com/texture-packs/) *(make sure you download the right version)* ")
+    .setDescription("The resource packs are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/resourcepacks``\n\n For some good resource packs check out [Planet Minecraft](https://www.planetminecraft.com/texture-packs/)\n*(make sure you download the right version)* ")
     .setColor("Greyple")
     .setFooter({ text: 'Written by TechyGiraffe999'}),
   location_mods: new EmbedBuilder()
     .setTitle("📂  Mods location")
-    .setDescription("The Mods are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/mods``\nFor more information on mods run ``/mods`` ")
+    .setDescription("The Mods are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/mods``\n\n*For more information on mods run ``/mods``* ")
     .setColor("Greyple")
     .setFooter({ text: 'Written by TechyGiraffe999'}),
   saves: new EmbedBuilder()
     .setTitle("📂  Saves [world] location")
-    .setDescription("The save files are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/saves``\n\n- For some good world downloads check out [Planet Minecraft](https://www.planetminecraft.com/projects/) *(make sure you download the right version)* ")
+    .setDescription("The save files are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/saves``\n\nFor some good world downloads check out [Planet Minecraft](https://www.planetminecraft.com/projects/)\n*(make sure you download the right version)* ")
     .setColor("Greyple")
     .setFooter({ text: 'Written by TechyGiraffe999'}),
 };
