@@ -60,7 +60,7 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999'}),
   support_channels: new EmbedBuilder()
     .setTitle("Sorry but <:notsupportchannel:993043214472859778>")
-    .setDescription("Support is handled in <#945502948111290498> and you can see the FAQ in <#821469293156892724> . On top of this, you can see common issues in <#1065000467010179092>")
+    .setDescription("Support is handled in <#945502948111290498> or <#946021441298649158> and you can see the FAQ in <#821469293156892724>.\nOn top of this, you can see common issues in <#1065000467010179092>")
     .setColor("Green"),
   test: new EmbedBuilder()
     .setTitle("This is a test")
