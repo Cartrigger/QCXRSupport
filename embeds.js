@@ -20,10 +20,6 @@ const embeds = {
     .setDescription("1. Download sidequest at the link [here](https://sidequestvr.com/setup-howto) (Advanced one is reccomended)\n2. Go to the QuestCraft SideQuest page which is linked [here](https://sidequestvr.com/app/7150/questcraft)\n3. Plug your quest into your computer/phone and accept the prompt on your quest to allow your computer to view the files\n4. Go back to sidequest and select 'sideload' - in the top right of sidequest you should see a running task (That is QuestCraft) - wait until it has finished\n5. Unplug your quest and go to your app library\n6. Go to 'unknown sources' (It is in the top right dropdown on your app library)\n7. Open questcraft\n8. Make sure to keep your headset on while questcraft is guiding you through the install - if you do not it may become bugged \n9. If downloading instances is taking a long time and you dont want to keep your headset on you can cover the sensor - Just make sure your quest stays on\n10. Login and go to the Microsoft website it says and enter the code it gives you\n11. Select play and enjoy!\n- make sure to keep your headset on or the sensor covered fully throughout the install, if you do not your install may become bugged\n\nAlso make sure you don't do the following:\n- Don't exit your boundry\n- Don't click any buttons\n- Don't go into passthrough\n- Don't mess with wifi settings\n\n[**Video tutorial**](https://youtu.be/cVU4ZXDXvP4):\nCredit to <@136571842906292224>")
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999'}),
-  logs: new EmbedBuilder()
-    .setTitle("Finding logs:")
-    .setDescription("You can get the logs required by Support Staff at ``Android/Data/com.qcxr.qcxr/files/latestlog.txt``. Yes you can use any file manager to get to it and no, there is no information that someone could use to hack your account.")
-    .setColor("Green"),
   mods: new EmbedBuilder()
     .setTitle("**Modding guide**")
     .setDescription("**Adding mods to QuestCraft 3.0:**\n*1. Install either the 1.18.2 or 1.19.3 fabric version of your mod to either your PC or your Quest\n2. If you are on PC, connect your Quest to SideQuest, and locate your mods folder at* ``android/data/com.qcxr.qcxr/files/.minecraft/mods.`` *If you are on your Quest, open a file manager like CX File Explorer, and locate the mods folder listed above. If you don't see the '.minecraft' folder then enable hidden files\n3. Move your mod file into that version's folder.*\n\n**Note: You MUST have launched either 1.18.2 or 1.19.3 QuestCraft PRIOR to putting your mod into the mods folder.\n\n**Where to find mods:** \n **[Modrinth](https://modrinth.com/mods?f=categories%3A%27worldgen%27&g=categories%3A%27fabric%27&v=1.18.2,1.19.3)**\n **[Curseforge](https://www.curseforge.com/minecraft/mc-mods?filter-game-version=2020709689%3A7499&filter-sort=4)**\nWhen picking mods make sure to **only download 1.18.2/1.19.3 versions** depending on what version of QuestCraft you are playing ")
@@ -80,17 +76,17 @@ const embeds = {
     .setDescription("YVR is a Chinese headset company, they have requested we port QuestCraft. We are working on both QCXR and YVRCraft at the same time.")
     .setColor("Green"),
   botgithub: new EmbedBuilder()
-    .setTitle("QuestCraft GitHub info:")
-    .setDescription("My GitHub is located in [this link](https://github.com/Cartrigger/QCXRSoonBot)! Check out my code over there!")
-    .setColor("Green"),
+    .setTitle("My GitHub info!")
+    .setDescription("My GitHub is located in [**this link**](https://github.com/Cartrigger/QCXRSoonBot)! Check out my code over there!\nYou can also see the [**future plans**](https://github.com/Cartrigger/QCXRSoonBot/issues/25) for me, suggest any others and report any [**issues**](https://github.com/Cartrigger/QCXRSoonBot/issues/new/choose)!")
+    .setColor("DarkBlue"),
   fixed: new EmbedBuilder()
     .setTitle("Was QuestCraft fixed...?")
     .setDescription("YES!!! 3.0 Was released!")
     .setColor("Green"),
   github: new EmbedBuilder()
-    .setTitle("GitHub info:")
+    .setTitle("QuestCraft Github")
     .setDescription("The QuestCraft GitHub is at the link [here](https://github.com/questcraftplusplus) any other GitHub is potentially dangerous and any APK should not be downloaded from it.")
-    .setColor("Green"),
+    .setColor("DarkBlue"),
 //.setFooter({ text: 'Test added by Cart, Test removed by DevLime, Cart there was already a test :/'}),
   falling_blocks_crash:  new EmbedBuilder()
     .setTitle("Falling blocks crash my game:")
@@ -143,6 +139,30 @@ const embeds = {
     .setDescription("My License is [Creative-Commons-Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/), please check [my License](https://github.com/Cartrigger/QCXRSoonBot/blob/functionalityhandlercommandupdate/LICENSE.md) to see more info.")
     .setColor("White")
     .setFooter({ text: 'Written by Cart'}),
+  location_questcraft:  new EmbedBuilder()
+    .setTitle("📂  Folder location for QuestCraft")
+    .setDescription("QuestCraft's data is stored in this folder path:\n``Android/Data/com.qcxr.qcxr`` ")
+    .setColor("Greyple")
+    .setFooter({ text: 'Written by TechyGiraffe999'}),
+  logs: new EmbedBuilder()
+    .setTitle("📂  Finding logs")
+    .setDescription("You can get the logs required by Support Staff at ``Android/Data/com.qcxr.qcxr/files/latestlog.txt``. Yes you can use any file manager to get to it and no, there is no information that someone could use to hack your account.")
+    .setColor("Greyple"),
+  resource_packs: new EmbedBuilder()
+    .setTitle("📂  Resource pack location")
+    .setDescription("The resource packs are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/resourcepacks``\n\n- For some good resource packs check out [Planet Minecraft](https://www.planetminecraft.com/texture-packs/) *(make sure you download the right version)* ")
+    .setColor("Greyple")
+    .setFooter({ text: 'Written by TechyGiraffe999'}),
+  location_mods: new EmbedBuilder()
+    .setTitle("📂  Mods location")
+    .setDescription("The Mods are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/mods``\nFor more information on mods run ``/mods`` ")
+    .setColor("Greyple")
+    .setFooter({ text: 'Written by TechyGiraffe999'}),
+  saves: new EmbedBuilder()
+    .setTitle("📂  Saves [world] location")
+    .setDescription("The save files are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/saves``\n\n- For some good world downloads check out [Planet Minecraft](https://www.planetminecraft.com/projects/) *(make sure you download the right version)* ")
+    .setColor("Greyple")
+    .setFooter({ text: 'Written by TechyGiraffe999'}),
 };
 //
 module.exports = embeds;

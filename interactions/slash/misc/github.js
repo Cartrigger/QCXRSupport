@@ -1,19 +1,30 @@
-// Deconstructed the constants we need in this file.
-
-const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
-
+const { SlashCommandBuilder } = require('discord.js');
 /**
  * @type {import('../../../typings').SlashInteractionCommand}
  */
 const embeds = require('../../../embeds.js');
 
 module.exports = {
-    data: new SlashCommandBuilder()
-        .setName('github')
-        .setDescription('Tells you the github for this bot.'),
-        async execute(interaction,client ) {
-            await interaction.reply({
-                embeds: [embeds.github]
-            });
-        },
-    };
+	data:  new SlashCommandBuilder()
+	.setName('github')
+	.setDescription('Github for QuestCraft and Me!')
+	.addStringOption(option =>
+		option.setName('options')
+			.setDescription('Pick a Github Repo')
+			.setRequired(true)
+			.addChoices(
+				{ name: 'QuestCraft', value: 'questcraft' },
+				{ name: 'Crafty [ME!]', value: 'crafty' },
+			)),
+			async execute(interaction) {
+				const categorys = interaction.options.getString('options');
+				if (categorys === 'questcraft') {
+                    await interaction.reply({embeds: [embeds.github]});
+                    return;
+                }
+                if (categorys === 'crafty') {
+                  await interaction.reply({embeds: [embeds.botgithub]});
+                  return;
+                }
+                }
+            }
