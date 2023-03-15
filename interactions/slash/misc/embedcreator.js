@@ -42,7 +42,7 @@ module.exports = {
                           if (!image.startsWith('http')) return await interaction.reply({ content: "You cannot make this your image", ephemeral: true})
                       }
                       if (thumbnail) {
-                          if (thumbnail.startsWith('http')) return await interaction.reply({ content: "You cannot make this your thumbnail", ephemeral: true})
+                          if (!thumbnail.startsWith('http')) return await interaction.reply({ content: "You cannot make this your thumbnail", ephemeral: true})
                       }
                       const embed = new EmbedBuilder()
                           .setTitle(title)
