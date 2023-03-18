@@ -160,6 +160,16 @@ const embeds = {
     .setDescription("The save files are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/saves``\n\nFor some good world downloads check out [Planet Minecraft](https://www.planetminecraft.com/projects/)\n*(make sure you download the right version)* ")
     .setColor("Greyple")
     .setFooter({ text: 'Written by TechyGiraffe999'}),
+  immersivemc_1_18_2:  new EmbedBuilder()
+    .setTitle("Installing ImmersiveMC on 1.18.2")
+    .setDescription("If you are having issues when running [**ImmersiveMC**](https://www.curseforge.com/minecraft/mc-mods/immersivemc) on **1.18.2** please uninstall the mod along with any related files you installed with it and then reinstall it with the all the files listed below:\n\n**- [Architectury API](https://www.curseforge.com/minecraft/mc-mods/architectury-api/files/4384408)**\n**- [Forge Config API port](https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port-fabric/files/4238520)**\n**- [MC VR API](https://www.curseforge.com/minecraft/mc-mods/mc-vr-api/files/4403503)** \n**- [ImmersiveMc](https://www.curseforge.com/minecraft/mc-mods/immersivemc/files/4430202)**\n\nWith all of these your game should work with **ImmersiveMC** on **1.18.2**")
+    .setColor("Blurple")
+    .setFooter({ text: 'Written by TechyGiraffe999'}),
+  immersivemc_1_19_3:  new EmbedBuilder()
+    .setTitle("Installing ImmersiveMC on 1.19.3")
+    .setDescription("If you are having issues when running [**ImmersiveMC**](https://www.curseforge.com/minecraft/mc-mods/immersivemc) on **1.19.3** please uninstall the mod along with any related files you installed with it and then reinstall it with the all the files listed below:\n\n**- [Architectury API](https://www.curseforge.com/minecraft/mc-mods/architectury-api/files/4384390)**\n**- [Forge Config API port](https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port-fabric/files/3943250)**\n**- [MC VR API](https://www.curseforge.com/minecraft/mc-mods/mc-vr-api/files/4403501)** \n**- [ImmersiveMc](https://www.curseforge.com/minecraft/mc-mods/immersivemc/files/4426537)**\n\nWith all of these your game should work with **ImmersiveMC** on **1.19.3**")
+    .setColor("Blurple")
+    .setFooter({ text: 'Written by TechyGiraffe999'}),
 };
 //
 module.exports = embeds;
