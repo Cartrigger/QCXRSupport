@@ -1,4 +1,4 @@
-const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
+const { EmbedBuilder, SlashCommandBuilder,PermissionsBitField } = require("discord.js");
 
 /**
  * @type {import('../../../typings').SlashInteractionCommand}
@@ -20,12 +20,22 @@ module.exports = {
         async execute (interaction) {
             const allowedRoleIds = ['945554238380048456', '820768461697318982', '820768352712523857', '820781262335508512', '834177899321360404']; 
             const member = interaction.member;
-          
+            const allowedServerId = '820767484042018829';
+            const guildId = interaction.guild.id;
+            const adminPermissions = new PermissionsBitField(PermissionsBitField.Flags.Administrator);
             const hasAllowedRole = member.roles.cache.some(role => allowedRoleIds.includes(role.id));
           
-            if (!hasAllowedRole) {
-              return await interaction.reply({ content: 'You do not have permission to use this command. Currently only [<@&945554238380048456>],[<@&820768461697318982>],[<@&820768352712523857>],[<@&820781262335508512>] and [<@&834177899321360404>] have access to this command', ephemeral: true });
+            if (guildId == allowedServerId) {
+                if (!hasAllowedRole) {
+                return await interaction.reply({ content: 'You do not have permission to use this command. Currently only [<@&945554238380048456>],[<@&820768461697318982>],[<@&820768352712523857>],[<@&820781262335508512>] and [<@&834177899321360404>] have access to this command', ephemeral: true });
+                }
             }
+            if (guildId !== allowedServerId) {
+                if (!member.permissions.has([PermissionsBitField.Administrator])) {
+                    return await interaction.reply({ content: 'Only admins of the server can use this command outside the [QuestCraft discord server.](https://discord.gg/questcraft)', ephemeral: true });
+                }
+            }
+
           
                       const { options } = interaction;
                       

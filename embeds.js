@@ -30,7 +30,7 @@ const embeds = {
     .setDescription("**QCXR does not endorse piracy in any way shape or form.** On top of this, we will not give Minecraft accounts to people who do not have such account. You need to buy Java Edition to play QuestCraft.")
     .setColor("Green"),
   otherheadsets: new EmbedBuilder()
-    .setTitle("QuestCraft on other Headsets: ")
+    .setTitle("QuestCraft on other Headsets ")
     .setDescription("QuestCraft is planned to release on other headsets in the future, however, it is required that the company contacts us first in order to do this. \n" +
       "Currently we are planned to release on **YVR** and **Pimax** headsets.")
     .setColor("Green"),
@@ -50,12 +50,12 @@ const embeds = {
     .setFooter({ text: 'This menu selector was made by TechyGiraffe999 - If you have any other suggestions please let them know'}),
   servers: new EmbedBuilder()
     .setTitle("**Server guide**")
-    .setDescription("You can host one on your computer or on [Oracle](https://blogs.oracle.com/developers/post/how-to-set-up-and-run-a-really-powerful-free-minecraft-server-in-the-cloud), which is a bit complex, or you can make a free one on [Aternos](https://aternos.org/) or [Minehut](https://minehut.com/), I would recommend making it on Fabric or Paper and installing the Vivecraft plugin/mod so you can see things like your friends movements who are also in vr\n\n```Aternos: \n\n- Create an account if you haven’t already and select ‘Create server’\n\n- Install Paper 1.19.2/1.18.2 or Fabric 1.19.3/1.18.2 using the 'Software' tab on the left and install the version you are going to be playing questcraft on\n\n- Click on the mods/plugins section on the left\n\n- Search and install Vivecraft/Vivecraft spigot extensions, (if you are installing Vivecraft spigot extensions you will need to also install [ViaVersion](https://www.spigotmc.org/resources/viaversion.19254/))\n\n- Join your server using the ip\n\n- With the 'Access’ tab on the left you can also give your friends permission to start the server if they have an Aternos account ```\n\n```(If you have any issues joining your server try joining with 'your server ip':'port' the port can be found under the connect section when your server is online - if that doesn't work, try join using the 'Dyn IP'/Direct IP (Direct IP is not available on Aternos) - this also helps connect if you have issues with other server hosting platforms - which can be found under 'Connect' as well on the main server page when the servers online, unfortunately the Dyn IP will change every time you start the server)```\n\n***Installing simple voice chat (Aternos):***\n*Next to the plugins/mods tab search it up and install it onto your aternos server, then follow this [guide](https://support.aternos.org/hc/en-us/articles/360019336497-Installing-Voice-Chat-Mods)*\n\n[Tutorial by Aternos](https://youtu.be/LOFbK1eXzqo) (This tutorial is basic, it does not guide you to install all of the QuestCraft features)")
+    .setDescription("You can host one on your computer or on [Oracle](https://blogs.oracle.com/developers/post/how-to-set-up-and-run-a-really-powerful-free-minecraft-server-in-the-cloud), which is a bit complex, or you can make a free one on [Aternos](https://aternos.org/) or [Minehut](https://minehut.com/), I would recommend making it on Fabric or Paper and installing the Vivecraft plugin/mod so you can see things like your friends movements who are also in vr\n\n```Aternos: \n\n- Create an account if you haven’t already and select ‘Create server’\n\n- Install Paper 1.19.2/1.18.2 or Fabric 1.19.3/1.18.2 using the 'Software' tab on the left and install the version you are going to be playing questcraft on\n\n- Click on the mods/plugins section on the left\n\n- Search and install Vivecraft/Vivecraft spigot extensions, (if you are installing Vivecraft spigot extensions you will need to also install ViaVersion)\n\n- Join your server using the ip\n\n- With the 'Access’ tab on the left you can also give your friends permission to start the server if they have an Aternos account ```\n\n```If you have any issues joining your server try joining with 'your server ip':'port' \n- the port can be found under the connect section when your server is online \n- if that doesn't work, try join using the 'Dyn IP'/Direct IP (Direct IP is not available on Aternos) \n- The dyn ip also helps connect if you have issues with other server hosting platforms - which can be found under 'Connect' as well on the main server page when the servers online, unfortunately the Dyn IP will change every time you start the server```\n\n***Installing simple voice chat (Aternos):***\n*Next to the plugins/mods tab search it up and install it onto your aternos server, then follow this [guide](https://support.aternos.org/hc/en-us/articles/360019336497-Installing-Voice-Chat-Mods)\n - For other servers you can find installation info [here](https://modrepo.de/minecraft/voicechat/wiki/installation)*\n\n***Allowing Bedrock players to join***\n*For Aternos, Check out this [article](https://support.aternos.org/hc/en-us/articles/360051047631-Geyser), there is also a help video by Aternos listed there\n- For other servers you can find install info at [geysermc](https://geysermc.org)* \n\n[**Tutorial by Aternos**](https://youtu.be/LOFbK1eXzqo) \n- This tutorial is basic, it does not guide you to install all of the QuestCraft features)")
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999'}),
   releases: new EmbedBuilder()
     .setTitle("Release Info")
-    .setDescription("Questcraft is distributed on [**Github**](https://github.com/QuestCraftPlusPlus/QuestCraft) and [**Sidequest**](https://sidequestvr.com/app/7150/questcraft)\n||(Do ``/installation`` for info on how to install Questcraft)||")
+    .setDescription("Questcraft is distributed on [**Github**](https://github.com/QuestCraftPlusPlus/QuestCraft/releases) and [**Sidequest**](https://sidequestvr.com/app/7150/questcraft)\n||(Do ``/installation`` for info on how to install Questcraft)||")
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999'}),
   support_channels: new EmbedBuilder()
@@ -63,12 +63,13 @@ const embeds = {
     .setDescription("Support is handled in <#945502948111290498> or <#946021441298649158> and you can see the FAQ in <#821469293156892724>.\nOn top of this, you can see common issues in <#1065000467010179092>")
     .setColor("Green"),
   versions: new EmbedBuilder()
-    .setTitle("**Version info:**")
-    .setDescription("You are unable to use versions on QuestCraft other than 1.19.3 and 1.18.2 at the moment - however if your friend or you own a Spigot/Paper server you can install [ViaVersion](https://www.spigotmc.org/resources/viaversion.19254/) or [ViaBackwards](https://www.spigotmc.org/resources/viabackwards.27448/) so you can join on either questcraft version. If you want to play on different versions on a Fabric server then you can see [the fabric version of this plugin](https://www.curseforge.com/minecraft/mc-mods/viafabric) or if you prefer Forge you can get the Forge version of that Fabric mod [here](https://www.curseforge.com/minecraft/mc-mods/viaforge)\nAll installation instructions are located on the SpigotMC/CurseForge page")
+    .setTitle("**Version info**")
+    .setDescription("You are unable to use versions on QuestCraft other than 1.19.3 and 1.18.2 at the moment - however if your friend or you own a Spigot/Paper server you can install [ViaVersion](https://www.spigotmc.org/resources/viaversion.19254/) or [ViaBackwards](https://www.spigotmc.org/resources/viabackwards.27448/) so you can join on either questcraft version.\n- Do ``/servers`` for a server setup guide \n\nIf you want to play on different versions on a Fabric server then you can see [the fabric version of this plugin](https://www.curseforge.com/minecraft/mc-mods/viafabric) or if you prefer Forge you can get the Forge version of that Fabric mod [here](https://www.curseforge.com/minecraft/mc-mods/viaforge)\nAll installation instructions are located on the SpigotMC/CurseForge page\n\nHow to switch between 1.18.2 and 1.19.3 on QuestCraft\n(click the version to change):")
     .setColor("Green")
+    .setImage("https://media.discordapp.net/attachments/1057074981135196230/1086666081244024925/version_switch.png?width=868&height=656")
     .setFooter({ text: 'Written by TechyGiraffe999, Updated by DevLime'}),
   yvr: new EmbedBuilder()
-    .setTitle("YVR info:")
+    .setTitle("YVR info")
     .setDescription("YVR is a Chinese headset company, they have requested we port QuestCraft. We are working on both QCXR and YVRCraft at the same time.")
     .setColor("Green"),
   botgithub: new EmbedBuilder()
@@ -81,7 +82,7 @@ const embeds = {
     .setColor("Green"),
   github: new EmbedBuilder()
     .setTitle("QuestCraft Github")
-    .setDescription("The QuestCraft GitHub is at the link [here](https://github.com/questcraftplusplus) any other GitHub is potentially dangerous and any APK should not be downloaded from it.")
+    .setDescription("The QuestCraft GitHub is at the link [here](https://github.com/QuestCraftPlusPlus/QuestCraft) any other GitHub is potentially dangerous and any APK should not be downloaded from it.")
     .setColor("DarkBlue"),
 //.setFooter({ text: 'Test added by Cart, Test removed by DevLime, Cart there was already a test :/'}),
   falling_blocks_crash:  new EmbedBuilder()
