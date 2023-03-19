@@ -170,6 +170,11 @@ const embeds = {
     .setDescription("If you are having issues when running [**ImmersiveMC**](https://www.curseforge.com/minecraft/mc-mods/immersivemc) on **1.19.3** please uninstall the mod along with any related files you installed with it and then reinstall it with the all the files listed below:\n\n**- [Architectury API](https://www.curseforge.com/minecraft/mc-mods/architectury-api/files/4384390)**\n**- [Forge Config API port](https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port-fabric/files/3943250)**\n**- [MC VR API](https://www.curseforge.com/minecraft/mc-mods/mc-vr-api/files/4403501)** \n**- [ImmersiveMc](https://www.curseforge.com/minecraft/mc-mods/immersivemc/files/4426537)**\n\nWith all of these your game should work with **ImmersiveMC** on **1.19.3**")
     .setColor("Blurple")
     .setFooter({ text: 'Written by TechyGiraffe999'}),
+  immersive_mc_embed: new EmbedBuilder()
+    .setTitle("Game crashes with ImmersiveMC")
+    .setDescription("Please select your Minecraft Version below to get the [ImmersiveMC](https://www.curseforge.com/minecraft/mc-mods/immersivemc) info. ")
+    .setColor("Blurple")
+    .setFooter({ text: 'Written by TechyGiraffe999'}),
 };
 //
 module.exports = embeds;
