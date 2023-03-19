@@ -2,7 +2,7 @@ const { EmbedBuilder } = require('discord.js');
 
 const embeds = {
   adb: new EmbedBuilder()
-    .setTitle("**Uninstalling using ADB commands.**")
+    .setTitle("**Uninstalling using ADB commands**")
     .setDescription("If you're unable to reinstall and need to perform a complete uninstallation, use the command: ``adb uninstall com.qcxr.qcxr``. For advanced users, SideQuest allows running ADB commands, as shown in the image below.")
     .setImage("https://media.discordapp.net/attachments/1079679515963432970/1081665865281445919/IMG_0691.png?width=1104&height=656")
     .setColor("Green")
