@@ -26,11 +26,11 @@ module.exports = {
                     return;
                 }
                 if (categorys === 'resource_packs') {
-                  await interaction.reply({embeds: [embeds.resource_packs]});
+                  await interaction.reply({embeds: [embeds.location_resource_packs]});
                   return;
                 }
                 if (categorys === 'logs') {
-                    await interaction.reply({embeds: [embeds.logs]});
+                    await interaction.reply({embeds: [embeds.location_logs]});
                     return;
                 }
                 if (categorys === 'mods') {
@@ -38,7 +38,7 @@ module.exports = {
                     return;
                 }
                 if (categorys === 'saves') {
-                    await interaction.reply({embeds: [embeds.saves]});
+                    await interaction.reply({embeds: [embeds.location_saves]});
                     return;
                 }
                 }
