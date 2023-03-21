@@ -170,10 +170,25 @@ const embeds = {
     .setColor("Blurple")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   immersive_mc_embed: new EmbedBuilder()
-    .setTitle("Game crashes with ImmersiveMC")
+    .setTitle("**Game crashes with ImmersiveMC**")
     .setDescription("Please select your Minecraft Version below to get the [ImmersiveMC](https://www.curseforge.com/minecraft/mc-mods/immersivemc) info. ")
     .setColor("Blurple")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+  renderer_gl4es: new EmbedBuilder()
+    .setTitle("**QuestCraft GL4ES Renderer**")
+    .setDescription("QuestCraft versions 3.x and below used the GL4ES renderer, which allowed for the game to run, albeit at a low framerate and with a lot of issues.")
+    .setColor("Orange")
+    .setFooter({ text: 'Written by JaffaJace'}),
+  renderer_vulkan: new EmbedBuilder()
+    .setTitle("**QuestCraft Vulkan Renderer**")
+    .setDescription("QuestCraft versions 4.0 and above will support both the Vulkan renderer and the Zink renderer.\nThe Vulkan renderer uses Vulkan (hence the name) to optimise the game rendering and significantly increase framerate, at the cost of mod compatibility.")
+    .setColor("Orange")
+    .setFooter({ text: 'Written by JaffaJace'}),
+  renderer_zink: new EmbedBuilder()
+    .setTitle("QuestCraft Zink Renderer")
+    .setDescription("QuestCraft versions 4.0 and above will support both the Vulkan renderer and the Zink renderer.\nThe Zink renderer is a custom renderer built by the QC team to optimise the rendering of QuestCraft, but also improve mod compatibility, at the cost of less performance.")
+    .setColor("Orange")
+    .setFooter({ text: 'Written by JaffaJace'}),
 };
 //
 module.exports = embeds;
