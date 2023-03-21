@@ -73,7 +73,7 @@ const embeds = {
     .setColor("Green"),
   botgithub: new EmbedBuilder()
     .setTitle("**My GitHub Info!**")
-    .setDescription("My GitHub is located in [**this link**](https://github.com/Cartrigger/QCXRSoonBot)! Check out my code over there!\nYou can also see the [**future plans**](https://github.com/Cartrigger/QCXRSoonBot/issues/25) for me, suggest any others and report any [**issues**](https://github.com/Cartrigger/QCXRSoonBot/issues/new/choose)!")
+    .setDescription("My GitHub is located in **[this link](https://github.com/Cartrigger/QCXRSoonBot)**! Check out my code over there!\nYou can also see the **[future plans](https://github.com/Cartrigger/QCXRSoonBot/issues/25)** for me, suggest any others and report any **[issues](https://github.com/Cartrigger/QCXRSoonBot/issues/new/choose)**!")
     .setColor("DarkBlue"),
   fixed: new EmbedBuilder()
     .setTitle("**Was QuestCraft fixed...?**")
@@ -95,7 +95,7 @@ const embeds = {
     .setImage('https://cdn.discordapp.com/attachments/821469293156892724/1075576744658083970/image.png')
     .setColor("Red")
     .setFooter({ text: 'Written by !DED',iconURL: 'https://images-ext-1.discordapp.net/external/qEPQWKjuG0ncB0kki1pPomJU11TFi5noe4Td0HCteFw/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?width=286&height=286'}),
-  rebdining:  new EmbedBuilder()
+  rebinding:  new EmbedBuilder()
     .setTitle("**I can't rebind keys:**")
     .setDescription("Rebinding is not officially supported at the moment.")
     .setColor("Red")
