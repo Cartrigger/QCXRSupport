@@ -13,7 +13,7 @@ module.exports = {
 			.setDescription('The different renderers')
 			.setRequired(true)
 			.addChoices(
-				{ name: 'GL4es', value: 'gl4es' },
+				{ name: 'GL4ES', value: 'gl4es' },
 				{ name: 'Vulkan', value: 'vulkan' },
                 { name: 'Zink', value: 'zink' },
 			)),

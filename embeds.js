@@ -185,7 +185,7 @@ const embeds = {
     .setColor("Orange")
     .setFooter({ text: 'Written by JaffaJace'}),
   renderer_zink: new EmbedBuilder()
-    .setTitle("QuestCraft Zink Renderer")
+    .setTitle("**QuestCraft Zink Renderer**")
     .setDescription("QuestCraft versions 4.0 and above will support both the Vulkan renderer and the Zink renderer.\nThe Zink renderer is a custom renderer built by the QC team to optimise the rendering of QuestCraft, but also improve mod compatibility, at the cost of less performance.")
     .setColor("Orange")
     .setFooter({ text: 'Written by JaffaJace'}),
