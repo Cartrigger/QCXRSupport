@@ -176,7 +176,7 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   renderer_gl4es: new EmbedBuilder()
     .setTitle("**QuestCraft GL4ES Renderer**")
-    .setDescription("All QuestCraft versions can utilize the **GL4ES renderer**, it has moderate speed with moderate mod compatability.\n- Complex mods like [Distant Horizons](https://www.curseforge.com/minecraft/mc-mods/distant-horizons/) and [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod) may not work")    
+    .setDescription("All QuestCraft versions can utilize the **GL4ES renderer**, it has moderate speed with moderate mod compatibility.\n- Complex mods like [Distant Horizons](https://www.curseforge.com/minecraft/mc-mods/distant-horizons/) and [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod) may not work")    
     .setColor("Orange")
     .setFooter({ text: 'Written by my Developers and my Contributors'}),
   renderer_vulkan: new EmbedBuilder()
