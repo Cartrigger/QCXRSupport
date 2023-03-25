@@ -176,19 +176,19 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   renderer_gl4es: new EmbedBuilder()
     .setTitle("**QuestCraft GL4ES Renderer**")
-    .setDescription("QuestCraft versions 3.x and below used the GL4ES renderer, which allowed for the game to run, albeit at a low framerate and with a lot of issues.")
+    .setDescription("All QuestCraft versions can utilize the **GL4ES renderer**, it has moderate speed with moderate mod compatability.\n- Complex mods like [Distance Horizons](https://www.curseforge.com/minecraft/mc-mods/distant-horizons/) and [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod) may not work")    
     .setColor("Orange")
-    .setFooter({ text: 'Written by JaffaJace'}),
+    .setFooter({ text: 'Written by my Developers and Contributors'}),
   renderer_vulkan: new EmbedBuilder()
     .setTitle("**QuestCraft Vulkan Renderer**")
-    .setDescription("QuestCraft versions 4.0 and above will support both the Vulkan renderer and the Zink renderer.\nThe Vulkan renderer uses Vulkan (hence the name) to optimise the game rendering and significantly increase framerate, at the cost of mod compatibility.")
+    .setDescription("QuestCraft versions 4.0 and above will support  the **Vulkan renderer**.\nThe Vulkan renderer uses Vulkan (hence the name) to optimise the game rendering and significantly increase framerate, at the cost of mod compatibility.\n- Complex mods like [Distance Horizons](https://www.curseforge.com/minecraft/mc-mods/distant-horizons/) and [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod) will work")
     .setColor("Orange")
-    .setFooter({ text: 'Written by JaffaJace'}),
+    .setFooter({ text: 'Written by my Developers and Contributors'}),
   renderer_zink: new EmbedBuilder()
     .setTitle("**QuestCraft Zink Renderer**")
-    .setDescription("QuestCraft versions 4.0 and above will support both the Vulkan renderer and the Zink renderer.\nThe Zink renderer is a custom renderer built by the QC team to optimise the rendering of QuestCraft, but also improve mod compatibility, at the cost of less performance.")
+    .setDescription("QuestCraft versions 4.0 and above will support both the **Zink renderer**.\nThe Zink renderer is a custom renderer built by the QC team to optimise the rendering of QuestCraft, but also improve mod compatibility, at the cost of less performance.\n- Complex mods like [Distance Horizons](https://www.curseforge.com/minecraft/mc-mods/distant-horizons/) and [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod) will work")
     .setColor("Orange")
-    .setFooter({ text: 'Written by JaffaJace'}),
+    .setFooter({ text: 'Written by JaffaJace and my Contributors'}),
 };
 //
 module.exports = embeds;

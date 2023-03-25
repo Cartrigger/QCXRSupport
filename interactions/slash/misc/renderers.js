@@ -6,7 +6,7 @@ const embeds = require('../../../embeds.js');
 
 module.exports = {
 	data:  new SlashCommandBuilder()
-	.setName('Renderers')
+	.setName('renderers')
 	.setDescription('Tells you about the different QuestCraft renderers')
 	.addStringOption(option =>
 		option.setName('renderer')
