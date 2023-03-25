@@ -13,9 +13,9 @@ module.exports = {
 			.setDescription('Category info options')
 			.setRequired(true)
 			.addChoices(
-				{ name: 'installation', value: 'installation' },
-				{ name: 'reinstall', value: 'reinstall' },
-                { name: 'releases', value: 'releases' },
+				{ name: 'Installation', value: 'installation' },
+				{ name: 'Reinstall', value: 'reinstall' },
+        { name: 'Releases', value: 'releases' },
 			)),
 			async execute(interaction) {
 				const categorys = interaction.options.getString('options');

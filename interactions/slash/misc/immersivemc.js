@@ -7,7 +7,7 @@ const embeds = require('../../../embeds.js');
 module.exports = {
     data:  new SlashCommandBuilder()
     .setName('immersivemc')
-    .setDescription('Lists dependencies for ImmersiveMc')
+    .setDescription('Lists dependencies for ImmersiveMC')
     .addStringOption(option =>
         option.setName('version')
             .setDescription('Your minecraft version')

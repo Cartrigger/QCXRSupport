@@ -10,7 +10,7 @@ const embeds = require('../../../embeds.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('performance')
-        .setDescription('Info on how to improve performance'),
+        .setDescription('Gives some info on how to improve QuestCraft performance'),
     async execute(interaction,client ) {
         await interaction.reply({
             embeds: [embeds.performance]
