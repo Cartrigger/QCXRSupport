@@ -5,6 +5,15 @@ const { EmbedBuilder, SlashCommandBuilder,PermissionsBitField } = require("disco
  */
 const embeds = require('../../../embeds.js');
 
+const error_embed_builder = new EmbedBuilder()
+    .setTitle('Error!')
+    .setDescription('There was an issue while sending that embed!\n\n> I may not have the required permissions to send the Embed in this channel\n> Or your Colour Hex code may be invalid\n\nIf the issue still persists please contact <@719815864135712799> or <@317814254336081930>')
+    .setColor('Red')
+
+const embed_success = new EmbedBuilder()
+    .setDescription("Your Embed was sent below")
+    .setColor('Green')
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('embedcreator')
@@ -63,14 +72,14 @@ module.exports = {
                           .addFields({ name: `${fieldn}`, value: `${fieldv}`})
                           .setFooter({ text: `${footer}`, iconURL: interaction.member.displayAvatarURL({ dynamic: true })})
                           
-                          await interaction.reply({ content: "Your embed has been sent below", ephemeral: true});
+                          await interaction.reply({ embeds: [embed_success], ephemeral: true});
 
                           try {
                               const message = await interaction.channel.send({ embeds: [embed] });
                               //console.log(`Embed sent successfully: ${message.url}`);
                           } catch (err) {
                               await interaction.editReply({
-                                  content: "There was an issue while sending that embed! \nIf the issue persists please contact <@719815864135712799> or <@317814254336081930>\n\n> I may not have permission to 'Send Messages' in this channel\n> Or your Colour Hex code may be invalid",
+                                  embeds: [error_embed_builder],
                                   ephemeral: true,
                               });
                           }
