@@ -11,6 +11,19 @@ const buttons = {
             .setCustomId('immersivemc_1_19_3')
             .setLabel('1.19.3')
             .setStyle(ButtonStyle.Danger),
+    ),
+    
+    servers: new ActionRowBuilder()
+    .addComponents(
+        new ButtonBuilder()
+            .setCustomId('simple_voice_chat')
+            .setLabel('🎤 Simple Voice Chat')
+            .setStyle(ButtonStyle.Success),
+        new ButtonBuilder()
+            .setCustomId('bedrock_geyser')
+            .setLabel('Bedrock players')
+            .setEmoji("<:bedrock:1089270506441687221>")
+            .setStyle(ButtonStyle.Danger),
     )
 };
 module.exports = buttons;
