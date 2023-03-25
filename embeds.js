@@ -181,12 +181,12 @@ const embeds = {
     .setFooter({ text: 'Written by my Developers and Contributors'}),
   renderer_vulkan: new EmbedBuilder()
     .setTitle("**QuestCraft Vulkan Renderer**")
-    .setDescription("QuestCraft versions 4.0 and above will support  the **Vulkan renderer**.\nThe Vulkan renderer uses Vulkan (hence the name) to optimise the game rendering and significantly increase framerate, at the cost of mod compatibility.\n- Complex mods like [Distance Horizons](https://www.curseforge.com/minecraft/mc-mods/distant-horizons/) and [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod) will work")
+    .setDescription("QuestCraft versions 4.0 and above will support  the **Vulkan Renderer**.\nThe Vulkan renderer uses Vulkan (hence the name) to optimise the game rendering and significantly increase framerate, at the cost of mod compatibility.\n\nThis means that more complex mods, like [Distant Horizons](https://www.curseforge.com/minecraft/mc-mods/distant-horizons/) and [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod) will not work, and instaed will crash.")
     .setColor("Orange")
     .setFooter({ text: 'Written by my Developers and Contributors'}),
   renderer_zink: new EmbedBuilder()
     .setTitle("**QuestCraft Zink Renderer**")
-    .setDescription("QuestCraft versions 4.0 and above will support both the **Zink renderer**.\nThe Zink renderer is a custom renderer built by the QC team to optimise the rendering of QuestCraft, but also improve mod compatibility, at the cost of less performance.\n- Complex mods like [Distance Horizons](https://www.curseforge.com/minecraft/mc-mods/distant-horizons/) and [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod) will work")
+    .setDescription("QuestCraft versions 4.0 and above will support both the **Zink Renderer**.\nThe Zink renderer is a custom renderer built by the QC team to optimise the rendering of QuestCraft, but also improve mod compatibility, at the cost of less performance.\n\nThis means that more complex mods, like [Distant Horizons](https://www.curseforge.com/minecraft/mc-mods/distant-horizons/) and [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod) will work in QC!")
     .setColor("Orange")
     .setFooter({ text: 'Written by JaffaJace and my Contributors'}),
 };
