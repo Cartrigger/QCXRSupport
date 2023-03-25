@@ -13,10 +13,10 @@ module.exports = {
 			.setDescription('The location presets')
 			.setRequired(true)
 			.addChoices(
-				{ name: 'logs', value: 'logs' },
-				{ name: 'resource packs', value: 'resource_packs' },
-                { name: 'mods', value: 'mods' },
-                { name: 'saves (worlds)', value: 'saves' },
+				{ name: 'Logs', value: 'logs' },
+				{ name: 'Resource Packs', value: 'resource_packs' },
+                { name: 'Mods', value: 'mods' },
+                { name: 'Saves (Worlds)', value: 'saves' },
                 { name: 'QuestCraft', value: 'questcraft' },
 			)),
 			async execute(interaction) {

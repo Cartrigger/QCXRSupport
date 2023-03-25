@@ -73,7 +73,7 @@ const embeds = {
     .setColor("Green"),
   botgithub: new EmbedBuilder()
     .setTitle("**My GitHub Info!**")
-    .setDescription("My GitHub is located in [**this link**](https://github.com/Cartrigger/QCXRSoonBot)! Check out my code over there!\nYou can also see the [**future plans**](https://github.com/Cartrigger/QCXRSoonBot/issues/25) for me, suggest any others and report any [**issues**](https://github.com/Cartrigger/QCXRSoonBot/issues/new/choose)!")
+    .setDescription("My GitHub is located in **[this link](https://github.com/Cartrigger/QCXRSoonBot)**! Check out my code over there!\nYou can also see the **[future plans](https://github.com/Cartrigger/QCXRSoonBot/issues/25)** for me, suggest any others and report any **[issues](https://github.com/Cartrigger/QCXRSoonBot/issues/new/choose)**!")
     .setColor("DarkBlue"),
   fixed: new EmbedBuilder()
     .setTitle("**Was QuestCraft fixed...?**")
@@ -95,7 +95,7 @@ const embeds = {
     .setImage('https://cdn.discordapp.com/attachments/821469293156892724/1075576744658083970/image.png')
     .setColor("Red")
     .setFooter({ text: 'Written by !DED',iconURL: 'https://images-ext-1.discordapp.net/external/qEPQWKjuG0ncB0kki1pPomJU11TFi5noe4Td0HCteFw/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?width=286&height=286'}),
-  rebdining:  new EmbedBuilder()
+  rebinding:  new EmbedBuilder()
     .setTitle("**I can't rebind keys:**")
     .setDescription("Rebinding is not officially supported at the moment.")
     .setColor("Red")
@@ -170,10 +170,25 @@ const embeds = {
     .setColor("Blurple")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   immersive_mc_embed: new EmbedBuilder()
-    .setTitle("Game crashes with ImmersiveMC")
+    .setTitle("**Game crashes with ImmersiveMC**")
     .setDescription("Please select your Minecraft Version below to get the [ImmersiveMC](https://www.curseforge.com/minecraft/mc-mods/immersivemc) info. ")
     .setColor("Blurple")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+  renderer_gl4es: new EmbedBuilder()
+    .setTitle("**QuestCraft GL4ES Renderer**")
+    .setDescription("All QuestCraft versions can utilize the **GL4ES renderer**, it has moderate speed with moderate mod compatibility.\n- Complex mods like [Distant Horizons](https://www.curseforge.com/minecraft/mc-mods/distant-horizons/) and [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod) may not work")    
+    .setColor("Orange")
+    .setFooter({ text: 'Written by my Developers and my Contributors'}),
+  renderer_vulkan: new EmbedBuilder()
+    .setTitle("**QuestCraft Vulkan Renderer**")
+    .setDescription("QuestCraft versions 4.0 and above will support  the **Vulkan Renderer**.\nThe Vulkan renderer uses Vulkan (hence the name) to optimise the game rendering and significantly increase framerate, at the cost of mod compatibility.\n\nThis means that more complex mods, like [Distant Horizons](https://www.curseforge.com/minecraft/mc-mods/distant-horizons/) and [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod) will not work, and instead will crash.")
+    .setColor("Orange")
+    .setFooter({ text: 'Written by JaffaJace and my Contributors'}),
+  renderer_zink: new EmbedBuilder()
+    .setTitle("**QuestCraft Zink Renderer**")
+    .setDescription("QuestCraft versions 4.0 and above will support both the **Zink Renderer**.\nThe Zink renderer is a custom renderer built by the QC team to optimise the rendering of QuestCraft, but also improve mod compatibility, at the cost of less performance.\n\nThis means that more complex mods, like [Distant Horizons](https://www.curseforge.com/minecraft/mc-mods/distant-horizons/) and [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod) will work in QC!")
+    .setColor("Orange")
+    .setFooter({ text: 'Written by JaffaJace and my Contributors'}),
 };
 //
 module.exports = embeds;

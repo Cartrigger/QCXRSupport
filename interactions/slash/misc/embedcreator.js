@@ -64,8 +64,15 @@ module.exports = {
                           .setFooter({ text: `${footer}`, iconURL: interaction.member.displayAvatarURL({ dynamic: true })})
                           
                           await interaction.reply({ content: "Your embed has been sent below", ephemeral: true});
-                          
-                          await interaction.channel.send({ embeds: [embed] });
-                  }
-          }
-          
+
+                          try {
+                              const message = await interaction.channel.send({ embeds: [embed] });
+                              console.log(`Embed sent successfully: ${message.url}`);
+                          } catch (err) {
+                              await interaction.editReply({
+                                  content: "There was an issue while sending that embed! \nIf the issue persists please contact <@719815864135712799> or <@317814254336081930>\n\n> I may not have permission to 'Send Messages' in this channel\n> Or your Colour Hex code may be invalid",
+                                  ephemeral: true,
+                              });
+                          }
+                        }
+                    }

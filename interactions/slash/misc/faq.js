@@ -29,7 +29,7 @@ module.exports = {
                     return;
                 }
                 if (categorys === 'rebinding') {
-                  await interaction.reply({embeds: [embeds.rebdining]});
+                  await interaction.reply({embeds: [embeds.rebinding]});
                   return;
                 }
                 if (categorys === 'lava') {
