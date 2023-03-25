@@ -181,7 +181,7 @@ const embeds = {
     .setFooter({ text: 'Written by my Developers and Contributors'}),
   renderer_vulkan: new EmbedBuilder()
     .setTitle("**QuestCraft Vulkan Renderer**")
-    .setDescription("QuestCraft versions 4.0 and above will support  the **Vulkan Renderer**.\nThe Vulkan renderer uses Vulkan (hence the name) to optimise the game rendering and significantly increase framerate, at the cost of mod compatibility.\n\nThis means that more complex mods, like [Distant Horizons](https://www.curseforge.com/minecraft/mc-mods/distant-horizons/) and [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod) will not work, and instaed will crash.")
+    .setDescription("QuestCraft versions 4.0 and above will support  the **Vulkan Renderer**.\nThe Vulkan renderer uses Vulkan (hence the name) to optimise the game rendering and significantly increase framerate, at the cost of mod compatibility.\n\nThis means that more complex mods, like [Distant Horizons](https://www.curseforge.com/minecraft/mc-mods/distant-horizons/) and [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod) will not work, and instead will crash.")
     .setColor("Orange")
     .setFooter({ text: 'Written by my Developers and Contributors'}),
   renderer_zink: new EmbedBuilder()
