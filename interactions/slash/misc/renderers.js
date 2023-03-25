@@ -18,16 +18,16 @@ module.exports = {
                 { name: 'Zink', value: 'zink' },
 			)),
 			async execute(interaction) {
-				const categorys = interaction.options.getString('renderer');
-				if (categorys === 'gl4es') {
+				const category = interaction.options.getString('renderer');
+				if (category === 'gl4es') {
                     await interaction.reply({embeds: [embeds.renderer_gl4es]});
                     return;
                 }
-                if (categorys === 'vulkan') {
+                if (category === 'vulkan') {
                   await interaction.reply({embeds: [embeds.renderer_vulkan]});
                   return;
                 }
-                if (categorys === 'zink') {
+                if (category === 'zink') {
                     await interaction.reply({embeds: [embeds.renderer_zink]});
                     return;
                 }

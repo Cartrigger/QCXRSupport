@@ -7,7 +7,7 @@ const embeds = require('../../../embeds.js');
 module.exports = {
 	data:  new SlashCommandBuilder()
 	.setName('github')
-	.setDescription('Github for QuestCraft and Me!')
+	.setDescription('Github for both QuestCraft and Me!')
 	.addStringOption(option =>
 		option.setName('options')
 			.setDescription('Pick a Github Repo')
@@ -19,11 +19,11 @@ module.exports = {
 			async execute(interaction) {
 				const categorys = interaction.options.getString('options');
 				if (categorys === 'questcraft') {
-                    await interaction.reply({embeds: [embeds.github]});
+                    await interaction.reply({embeds: [embeds.github_qc]});
                     return;
                 }
                 if (categorys === 'crafty') {
-                  await interaction.reply({embeds: [embeds.botgithub]});
+                  await interaction.reply({embeds: [embeds.github_bot]});
                   return;
                 }
                 }

@@ -10,7 +10,7 @@ const embeds = require('../../../embeds.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('supportchannels')
-        .setDescription('Says the channel for support'),
+        .setDescription('Mentions the channels for support'),
     async execute(interaction,client ) {
         await interaction.reply({
             embeds: [embeds.support_channels]

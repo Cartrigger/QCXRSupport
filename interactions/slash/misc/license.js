@@ -10,7 +10,7 @@ const embeds = require('../../../embeds.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('license')
-        .setDescription('Tells you the license of this bot.'),
+        .setDescription('Mentions the license the bot is written under.'),
         async execute(interaction,client ) {
             await interaction.reply({
                 embeds: [embeds.license]

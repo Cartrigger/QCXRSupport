@@ -10,7 +10,7 @@ const embeds = require('../../../embeds.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('unity')
-        .setDescription('Tells you information about the new launcher.'),
+        .setDescription('Gives you information about the new launcher.'),
     async execute(interaction,client ) {
         await interaction.reply({
             embeds: [embeds.unity]

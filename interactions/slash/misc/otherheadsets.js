@@ -7,17 +7,17 @@ const embeds = require('../../../embeds.js');
 module.exports = {
 	data:  new SlashCommandBuilder()
 	.setName('otherheadsets')
-	.setDescription('Tells you information about QC on other headsets.')
+	.setDescription('Gives some information about QC on other headsets.')
 	.addStringOption(option =>
 		option.setName('info')
 			.setDescription('Extra info on headsets')
 			.setRequired(false)
 			.addChoices(
-				{ name: 'YVR info', value: 'yvr_info' },
+				{ name: 'YVR', value: 'yvr' },
 			)),
 			async execute(interaction) {
 				const categorys = interaction.options.getString('info');
-				if (categorys === 'yvr_info') {
+				if (categorys === 'yvr') {
                     await interaction.reply({embeds: [embeds.yvr]});
                     return;
                 }

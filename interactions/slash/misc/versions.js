@@ -10,7 +10,7 @@ const embeds = require('../../../embeds.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('versions')
-        .setDescription('displays minecraft version info for questcraft'),
+        .setDescription('Displays minecraft version info for QuestCraft'),
     async execute(interaction,client ) {
         await interaction.reply({
             embeds: [embeds.versions]

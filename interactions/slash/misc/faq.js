@@ -13,14 +13,14 @@ module.exports = {
 			.setDescription('The FAQ presets')
 			.setRequired(false)
 			.addChoices(
-				{ name: 'cant see anything in world', value: 'world' },
-				{ name: 'rebinding', value: 'rebinding' },
-                { name: 'died in lava', value: 'lava' },
-                { name: 'game is glitched after reinstall', value: 'reinstall_glitch' },
-                { name: 'immersive controls', value: 'immersive_controls' },
-                { name: 'voice chat', value: 'voice_chat' },
+				{ name: 'Cant see anything in world', value: 'world' },
+				{ name: 'Rebinding', value: 'rebinding' },
+                { name: 'Died in lava', value: 'lava' },
+                { name: 'Game is glitched after reinstall', value: 'reinstall_glitch' },
+                { name: 'Immersive controls', value: 'immersive_controls' },
+                { name: 'Voice chat', value: 'voice_chat' },
                 { name: 'Microsoft login does nothing', value: 'microsoft_login' },
-                { name: 'falling blocks crash', value: 'falling_blocks' },
+                { name: 'Falling blocks crash the game', value: 'falling_blocks' },
 			)),
 			async execute(interaction) {
 				const categorys = interaction.options.getString('presets');

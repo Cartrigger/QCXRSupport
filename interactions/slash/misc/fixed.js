@@ -10,7 +10,7 @@ const embeds = require('../../../embeds.js');
 module.exports = {
       data: new SlashCommandBuilder()
           .setName('fixed')
-          .setDescription('Is it fixed?'),
+          .setDescription('Is QuestCraft fixed?'),
           async execute(interaction,client ) {
             await interaction.reply({
                 embeds: [embeds.fixed]

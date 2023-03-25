@@ -11,7 +11,7 @@ const embeds = require('../../../embeds.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('adb')
-        .setDescription('Says the command for ADB.'),
+        .setDescription('Tells you how to run the ADB uninstall command.'),
     async execute(interaction,client ) {
         await interaction.reply({
             embeds: [embeds.adb]

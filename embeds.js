@@ -13,7 +13,7 @@ const embeds = {
     .setColor("Green"),
   developers: new EmbedBuilder()
     .setTitle("**🛠️ My Developers!**")
-    .setDescription("The current developers of Crafty bot are <@317814254336081930> and <@719815864135712799> \nYou can checkout the full code of Crafty Bot at the [GitHub repo](https://github.com/Cartrigger/QCXRSoonBot)")
+    .setDescription("The current developers of Crafty bot are <@317814254336081930>, <@719815864135712799> and <@654048865137459261>! \nYou can checkout the full code of Crafty Bot at the [GitHub repo](https://github.com/Cartrigger/QCXRSoonBot)")
     .setColor("Green"),
   installation: new EmbedBuilder()
     .setTitle("**Installation Guide**")
@@ -71,7 +71,7 @@ const embeds = {
     .setTitle("**YVR Info**")
     .setDescription("YVR is a Chinese headset company, they have requested we port QuestCraft. We are working on both QCXR and YVRCraft at the same time.")
     .setColor("Green"),
-  botgithub: new EmbedBuilder()
+  github_bot: new EmbedBuilder()
     .setTitle("**My GitHub Info!**")
     .setDescription("My GitHub is located in **[this link](https://github.com/Cartrigger/QCXRSoonBot)**! Check out my code over there!\nYou can also see the **[future plans](https://github.com/Cartrigger/QCXRSoonBot/issues/25)** for me, suggest any others and report any **[issues](https://github.com/Cartrigger/QCXRSoonBot/issues/new/choose)**!")
     .setColor("DarkBlue"),
@@ -79,7 +79,7 @@ const embeds = {
     .setTitle("**Was QuestCraft fixed...?**")
     .setDescription("YES!!! 3.0 Was released!")
     .setColor("Green"),
-  github: new EmbedBuilder()
+  github_qc: new EmbedBuilder()
     .setTitle("**QuestCraft Github**")
     .setDescription("The QuestCraft GitHub is at the link [here](https://github.com/QuestCraftPlusPlus/QuestCraft) any other GitHub is potentially dangerous and any APK should not be downloaded from it.")
     .setColor("DarkBlue"),

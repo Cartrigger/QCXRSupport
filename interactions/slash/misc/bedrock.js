@@ -10,7 +10,7 @@ const embeds = require('../../../embeds.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('bedrock')
-        .setDescription('Tells you about bedrock'),
+        .setDescription('Tells you why QC won\'t be developed for Bedrock Edition'),
     async execute(interaction,client ) {
         await interaction.reply({
             embeds: [embeds.bedrock]
