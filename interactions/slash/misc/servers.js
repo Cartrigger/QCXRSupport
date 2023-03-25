@@ -6,6 +6,7 @@ const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
  * @type {import('../../../typings').SlashInteractionCommand}
  */
 const embeds = require('../../../embeds.js');
+const buttons = require('../../../buttons.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -13,7 +14,7 @@ module.exports = {
         .setDescription('Displays a server guide'),
     async execute(interaction,client ) {
         await interaction.reply({
-            embeds: [embeds.servers]
+            embeds: [embeds.servers], components: [buttons.servers]
         });
     },
 };
