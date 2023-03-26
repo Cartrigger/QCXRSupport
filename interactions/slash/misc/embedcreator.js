@@ -18,9 +18,9 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('embedcreator')
         .setDescription('This creates a custom embed')
-        .addStringOption (option => option.setName('title').setDescription(`This is the title of the embed`).setRequired(true))
-        .addStringOption (option => option.setName('description').setDescription(`This is the description of the embed`).setRequired(true))
         .addStringOption (option => option.setName('color').setDescription (`Use a six digit hex code for the embed color`).setRequired(true).setMaxLength(6))
+        .addStringOption (option => option.setName('title').setDescription(`This is the title of the embed`).setRequired(false))
+        .addStringOption (option => option.setName('description').setDescription(`This is the description of the embed`).setRequired(false))
         .addStringOption (option => option.setName('image').setDescription(`This is the image of the embed`).setRequired(false))
         .addStringOption (option => option.setName('thumbnail').setDescription (`This is the thumbnail of the embed`).setRequired(false))
         .addStringOption (option => option.setName("field-name").setDescription (`This is the field name`).setRequired (false))
@@ -63,25 +63,36 @@ module.exports = {
                       if (thumbnail) {
                           if (!thumbnail.startsWith('http')) return await interaction.reply({ content: "You cannot make this your thumbnail", ephemeral: true})
                       }
-                      const embed = new EmbedBuilder()
+                      try {
+                        const embed = new EmbedBuilder()
                           .setTitle(title)
                           .setDescription(description)
                           .setColor(`0x${color}`)
                           .setImage(image)
-                          .setThumbnail (thumbnail)
-                          .addFields({ name: `${fieldn}`, value: `${fieldv}`})
-                          .setFooter({ text: `${footer}`, iconURL: interaction.member.displayAvatarURL({ dynamic: true })})
-                          
-                          await interaction.reply({ embeds: [embed_success], ephemeral: true});
-
-                          try {
-                              const message = await interaction.channel.send({ embeds: [embed] });
-                              //console.log(`Embed sent successfully: ${message.url}`);
-                          } catch (err) {
-                              await interaction.editReply({
-                                  embeds: [error_embed_builder],
-                                  ephemeral: true,
+                          .setThumbnail(thumbnail)
+                          .addFields({ name: `${fieldn}`, value: `${fieldv}` })
+                          .setFooter({
+                            text: `${footer}`,
+                            iconURL: interaction.member.displayAvatarURL({ dynamic: true }),
+                          });
+                      
+                        await interaction.reply({ embeds: [embed_success], ephemeral: true });
+                      
+                        const message = await interaction.channel.send({ embeds: [embed] });
+                        //console.log(`Embed sent successfully: ${message.url}`);
+                    } catch (err) {
+                        try {
+                          await interaction.editReply({
+                            embeds: [error_embed_builder],
+                            ephemeral: true,
+                          });
+                        } catch (err) {
+                            await interaction.reply({
+                                embeds: [error_embed_builder],
+                                ephemeral: true,
                               });
-                          }
+                        }
+                      }
+                      
                         }
                     }
