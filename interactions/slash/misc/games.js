@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, Embed } = require('discord.js');
-const { Hangman, Snake, Connect4,TicTacToe, MatchPairs  } = require('discord-gamecord');
+const { Hangman, Snake, Connect4, TicTacToe, MatchPairs } = require('discord-gamecord');
 
 /**
  * @type {import('../../../typings').SlashInteractionCommand}
