@@ -204,14 +204,6 @@ const embeds = {
     .setDescription("If you require support then please visit the XRCraft Discord server, we need not provide support for issues with XRCraft here! [Click here to go to the XRCraft server.](https://discord.gg/MJCBxszBcH)")
     .setColor("Green")
     .setFooter({ text: 'Written by DevLime', iconURL: 'https://cdn.discordapp.com/attachments/957344047494725672/1081953833091080274/pfpagainbutrobo.jpg'}),
-  //Could be used for dyanmic commands such as ban, quick and simple, plus it uses the same file structure making it easy
-  custom: function (title, description, color, footertext, footericon) {
-    return new EmbedBuilder()
-      .setTitle(title)
-      .setDescription(description)
-      .setColor(color)
-      .setFooter({ text: footertext, iconURL: footericon})
-  },
 };
 
 module.exports = embeds;
