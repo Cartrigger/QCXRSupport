@@ -1,3 +1,18 @@
+</p>
+<img align="right" width="223" alt="image" src="https://user-images.githubusercontent.com/92249532/227790891-8ec082dd-b64f-484c-914a-8d02559c9c16.png">
+</p>
+
+## 🤔 What is this bot?
+
+The QCXRSoonBot (CraftyXR) is a bot made for the [QuestCraft](https://questcraft.org) [discord server](https://discord.gg/questcraft)
+
+The bot's main focus is around helping people as well as improving the overall experience on the server
+
+To test the bot out join [discord server](https://discord.gg/questcraft) and run a command in [#bot-cmds](https://discord.com/channels/820767484042018829/953383695908216843)
+- You can also invite the bot to your server by clicking on its profile and selecting 'Add to server'
+
+
+---
 ## 💾 Install
 
 1. fill in the token and other values in ``config.json.example``
