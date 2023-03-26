@@ -8,7 +8,7 @@ The QCXRSoonBot (CraftyXR) is a bot made for the [QuestCraft](https://questcraft
 
 The bot's main focus is around helping people as well as improving the overall experience on the server
 
-To test the bot out join [discord server](https://discord.gg/questcraft) and run a command in [#bot-cmds](https://discord.com/channels/820767484042018829/953383695908216843)
+To test the bot out join the [QuestCraft discord server](https://discord.gg/questcraft) and run a command in [#bot-cmds](https://discord.com/channels/820767484042018829/953383695908216843)
 - You can also invite the bot to your server by clicking on its profile and selecting 'Add to server'
 
 
