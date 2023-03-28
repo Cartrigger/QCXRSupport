@@ -16,7 +16,6 @@ module.exports = {
 				{ name: 'Cant see anything in world', value: 'world' },
 				{ name: 'Rebinding', value: 'rebinding' },
                 { name: 'Died in lava', value: 'lava' },
-                { name: 'Game is glitched after reinstall', value: 'reinstall_glitch' },
                 { name: 'Immersive controls', value: 'immersive_controls' },
                 { name: 'Voice chat', value: 'voice_chat' },
                 { name: 'Microsoft login does nothing', value: 'microsoft_login' },
@@ -34,11 +33,6 @@ module.exports = {
                 }
                 if (categorys === 'lava') {
                     await interaction.reply({embeds: [embeds.lava]});
-                    return;
-                }
-                if (categorys === 'reinstall_glitch') {
-                    await interaction.reply({embeds: [embeds.reinstall_glitch]});
-                    await interaction.channel.send("||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​|| _ _ _ _ _ _https://cdn.discordapp.com/attachments/821469293156892724/1059654608689037403/qcuninstallfix.mp4")
                     return;
                 }
                 if (categorys === 'immersive_controls') {
