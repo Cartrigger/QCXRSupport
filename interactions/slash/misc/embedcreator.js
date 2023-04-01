@@ -67,7 +67,7 @@ module.exports = {
                         const embed = new EmbedBuilder()
                           .setTitle(title)
                           .setDescription(description)
-                          .setColor(`0x${color}`)
+                          .setColor(color)
                           .setImage(image)
                           .setThumbnail(thumbnail)
                           .addFields({ name: `${fieldn}`, value: `${fieldv}` })
@@ -75,9 +75,7 @@ module.exports = {
                             text: `${footer}`,
                             iconURL: interaction.member.displayAvatarURL({ dynamic: true }),
                           });
-                      
                         await interaction.reply({ embeds: [embed_success], ephemeral: true });
-                      
                         const message = await interaction.channel.send({ embeds: [embed] });
                         //console.log(`Embed sent successfully: ${message.url}`);
                     } catch (err) {
@@ -86,7 +84,7 @@ module.exports = {
                             embeds: [error_embed_builder],
                             ephemeral: true,
                           });
-                        } catch (err) {
+                        } catch (err1) {
                             await interaction.reply({
                                 embeds: [error_embed_builder],
                                 ephemeral: true,
