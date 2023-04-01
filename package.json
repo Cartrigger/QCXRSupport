@@ -23,6 +23,6 @@
 		"@discordjs/rest": "^1.0.0",
 		"discord-api-types": "^0.36.2",
 		"discord-gamecord": "^4.3.0",
-		"discord.js": "^14.7.1"
+		"discord.js": "^14.8.0"
 	}
 }
