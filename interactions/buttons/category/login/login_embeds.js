@@ -49,7 +49,7 @@ const login_embeds = {
 
   others: new EmbedBuilder()
     .setTitle("If none of the things mentioned have worked")
-    .setDescription("If none of the things mentioned have worked you can try the following:\n\n 1. Uninstall Questcraft with ADB command, if you dont know how please run ``/adb`` and reinstall it\n2. Change your Minecraft username via the [link](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile) used earlier\n\nIf all your issue still persists, please wait for a support staff member to review your issue and if possible/you havn't already, please provide any additional information below ")
+    .setDescription("If none of the things mentioned have worked you can try the following:\n\n 1. Uninstall Questcraft with ADB commands, if you dont know how please run ``/adb`` and reinstall it\n2. Change your Minecraft username via the [link](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile) used earlier\n\nIf all your issue still persists, please wait for a support staff member to review your issue and if possible/you havn't already, please provide any additional information below ")
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),  
 };
