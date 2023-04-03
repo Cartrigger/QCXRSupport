@@ -167,24 +167,29 @@ for (const module of autocompleteInteractions) {
 /**********************************************************************/
 // Registration of Button-Command Interactions.
 
-/**
- * @type {String[]}
- * @description All button commands.
- */
 
-const buttonCommands = fs.readdirSync("./interactions/buttons");
+const buttonCommands = [];
 
-// Loop through all files and store button-commands in buttonCommands collection.
+// Define a function that recursively loops through all files in a directory and its subdirectories.
+function walk(dir) {
+  const files = fs.readdirSync(dir);
+  for (const file of files) {
+    const path = `${dir}/${file}`;
+    if (fs.statSync(path).isDirectory()) {
+      walk(path);
+    } else if (file.endsWith('.js')) {
+      const command = require(path);
+      buttonCommands.push(command);
+    }
+  }
+}
 
-for (const module of buttonCommands) {
-	const commandFiles = fs
-		.readdirSync(`./interactions/buttons/${module}`)
-		.filter((file) => file.endsWith(".js"));
+// Start the recursive loop at the root of the button commands directory.
+walk('./interactions/buttons');
 
-	for (const commandFile of commandFiles) {
-		const command = require(`./interactions/buttons/${module}/${commandFile}`);
-		client.buttonCommands.set(command.id, command);
-	}
+// Register each button command with the client.
+for (const command of buttonCommands) {
+  client.buttonCommands.set(command.id, command);
 }
 
 /**********************************************************************/
