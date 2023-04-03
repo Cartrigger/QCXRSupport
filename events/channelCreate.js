@@ -11,9 +11,12 @@ module.exports = {
             //const message = await channel.send("Testing for crafty");
             //message.edit("New login channel created: " + channel.name);
             
-            const start_message = await channel.send({embeds: [login_embeds.login]});
+            try{
+                const start_message = await channel.send({embeds: [login_embeds.login]});
             
-            const message = await channel.send({embeds: [login_embeds.v51], components: [buttons.v51] });
+                const message = await channel.send({embeds: [login_embeds.v51], components: [buttons.v51] });
+            } catch(err) {
+        }
         }
     },
 };
