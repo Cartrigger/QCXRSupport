@@ -32,12 +32,12 @@ const login_embeds = {
   account_status: new EmbedBuilder()
     .setTitle("Is your account overage?")
     .setDescription("Please check if your account is overage or not via this [link](https://account.xbox.com/Settings), if you have the same message as the image below please select ❌")
-    .setImage("https://cdn.discordapp.com/attachments/1092414068243046410/1092416692002488511/image.png")
+    .setImage("https://media.discordapp.net/attachments/1059913125308145716/1092496548543332422/image.png?width=626&height=655")
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999 - Fix found by !DED [BETA]'}),
   account_status_no: new EmbedBuilder()
     .setTitle("Please follow the steps below")
-    .setDescription("first you must have a overage account to start a Microsoft family.\n1. log into this link with the overage account:\nhttps://account.microsoft.com/family/home?refd=login.live.com\n2. add your main account as a member.\n3. accept invite you received in your main account's email.\n\n**Things to note:** \nthe overage account doesn't have to own java but can.\nthe main account has to be added to the family as a member instead of as an organizer.\nthe main account has to be added to the overage accounts family, not the other way around.\nyou cannot invite yourself as a member to a Microsoft family.\n\nOnce you have followed those steps try and login to QuestCraft again\n\nIf your issue still persists please click the button below")
+    .setDescription("first you must have a overage account to start a Microsoft family.\n1. log into this [link](https://account.microsoft.com/family/home?refd=login.live.com) with the overage account\n2. add your main account as a member.\n3. accept invite you received in your main account's email.\n\n**Things to note:** \nthe overage account doesn't have to own java but can.\nthe main account has to be added to the family as a member instead of as an organizer.\nthe main account has to be added to the overage accounts family, not the other way around.\nyou cannot invite yourself as a member to a Microsoft family.\n\nOnce you have followed those steps try and login to QuestCraft again\n\nIf your issue still persists please click the button below")
     .setColor("Green")
     .setFooter({ text: 'Written by !DED [BETA]', iconURL: 'https://cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?size=4096'}),
   
