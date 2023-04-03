@@ -3,13 +3,13 @@ const { EmbedBuilder, Embed } = require('discord.js');
 const login_embeds = {
   login: new EmbedBuilder()
     .setTitle("You have selected a [LOGIN] issue")
-    .setDescription("Please respond with the correct buttons for each of the options below - At the moment once you select an option you cannot go back, if you wish to make a new instance of the test please run ``!login`` \n\n✅ - Yes | ❌ - No\n\nIf at any point I have solved your issue, please do not select any buttons\nIf your issue is unrelated, and you can get past the login screen at any point please ignore the message sent ")
+    .setDescription("Please respond with the correct buttons for each of the options below - At the moment once you select an option you cannot go back, if you wish to make a new instance of the test please run ``/login`` \n\n✅ - Yes | ❌ - No\n\nIf at any point I have solved your issue, please do not select any buttons\nIf your issue is unrelated, and you can get past the login screen at any point please ignore the message sent ")
     .setColor("Aqua")
     .setFooter({ text: 'Developed by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   
   v51: new EmbedBuilder()
     .setTitle("Do you have Metas V51 firmware installed?")
-    .setDescription("If you do please send a screenshot below which shows proof of that and a support member will review it and send you the fixed build\n\n**If you do not know how to see this:**\n1. On your quest head to 'settings'\n2. Then head to 'system' and select 'software update'\n3. Check the first 2 digits of the number under the 'firmware' section")
+    .setDescription("If you do please send a screenshot below which shows proof of that and a support member will review it and send you the fixed build\n\n**If you do not know how to see this:**\n1. On your quest head to 'settings'\n2. Then head to 'system' and select 'software update'\n3. Check the first 2 digits of the number under the 'firmware' section.")
     .setColor("Green")
     .setFooter({ text: 'Developed by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   v51_yes: new EmbedBuilder()

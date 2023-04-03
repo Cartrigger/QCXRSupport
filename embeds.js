@@ -78,7 +78,6 @@ const embeds = {
     .setTitle("**QuestCraft Github**")
     .setDescription("The QuestCraft GitHub is at the link [here](https://github.com/QuestCraftPlusPlus/QuestCraft) any other GitHub is potentially dangerous and any APK should not be downloaded from it.")
     .setColor("DarkBlue"),
-//.setFooter({ text: 'Test added by Cart, Test removed by DevLime, Cart there was already a test :/'}),
   falling_blocks_crash:  new EmbedBuilder()
     .setTitle("**Falling blocks crash my game:**")
     .setDescription("You probably have the [Continuity](https://modrinth.com/mod/continuity) mod, Continuity has an conditional dependency.\nIf [Sodium](https://modrinth.com/mod/sodium) is present [Indium](https://modrinth.com/mod/indium) will have to be installed so that Continuity can be happy\n*Find the Indium for your game version and install it along with Continuity and the crash shouldn't happen no longer.\n__Feel free to let any of the support staff know if you have issues__")
@@ -96,7 +95,7 @@ const embeds = {
     .setColor("Red")
     .setFooter({ text: 'Written by !DED',iconURL: 'https://images-ext-1.discordapp.net/external/qEPQWKjuG0ncB0kki1pPomJU11TFi5noe4Td0HCteFw/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?width=286&height=286'}),
   lava:  new EmbedBuilder()
-    .setTitle("**After dying in lava I can’t respawn:**")
+    .setTitle("**After dying in lava I can't respawn:**")
     .setDescription("- This is a bug the only way to respawn is to log into the server on a computer, respawn and then log back in on your Quest\n\n- Alternatively you could make sure that the gamerule `/gamerule doImmediateRespawn` is enabled (set to true), this will not give you the option to respawn and you will auto respawn immediately\nI have tested the command to see if enabling it while you are dead fixes the issue, it doesn't\n\n- Another option is to delete your player data file, however **deleting this will delete everything about your player, including ender chests, bed spawn and your location, Here Be Dragons!** this file is located in ``world/playerdata/‘youruuid’`` to find your UUID just join the server and it will be displayed in the console/your Minecraft log file. Alternatively you can find it by searching for your username on [NameMC](https://namemc.com/)\n\n- Or if you really know what you're doing you could edit your player.dat file manually")
     .setColor("Red")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
@@ -180,8 +179,8 @@ const embeds = {
     .setColor("Orange")
     .setFooter({ text: 'Written by JaffaJace and my Contributors'}),
   simple_voice_chat: new EmbedBuilder()
-    .setTitle("🎤 Installing Simple voice chat")
-    .setDescription("Next to the plugins/mods tab search it up and install it onto your aternos server, then follow this [guide](https://support.aternos.org/hc/en-us/articles/360019336497-Installing-Voice-Chat-Mods)\n - For other servers you can find installation info [here](https://modrepo.de/minecraft/voicechat/wiki/installation)\nYou will also need to install the [simple voice chat mod](https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat) for it to work")
+    .setTitle("🎤 Installing Simple Voice Chat")
+    .setDescription("Next to the plugins/mods tab search it up and install it onto your aternos server, then follow this [guide](https://support.aternos.org/hc/en-us/articles/360019336497-Installing-Voice-Chat-Mods)\n - For other servers you can find installation info [here](https://modrepo.de/minecraft/voicechat/wiki/installation)\nYou will also need to install the [Simple Voice Chat mod](https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat) for it to work")
     .setColor("DarkOrange")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   bedrock_geyser: new EmbedBuilder()
