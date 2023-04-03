@@ -175,7 +175,7 @@ const embeds = {
     .setFooter({ text: 'Written by JaffaJace and my Contributors'}),
   renderer_zink: new EmbedBuilder()
     .setTitle("**QuestCraft Zink Renderer**")
-    .setDescription("QuestCraft versions 4.0 and above will support both the **Zink Renderer**.\nThe Zink renderer is a custom renderer built by the QC team to optimise the rendering of QuestCraft, but also improve mod compatibility, at the cost of less performance.\n\nThis means that more complex mods, like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) will work in QC!")
+    .setDescription("QuestCraft versions 4.0 and above will support both the **Zink Renderer**.\nThe Zink renderer is a custom renderer implemented by the QC team to optimise the rendering of QuestCraft, but also improve mod compatibility, at the cost of less performance.\n\nThis means that more complex mods, like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) will work in QC!")
     .setColor("Orange")
     .setFooter({ text: 'Written by JaffaJace and my Contributors'}),
   simple_voice_chat: new EmbedBuilder()
