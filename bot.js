@@ -41,23 +41,20 @@ const client = new Client({
 /**
  * @description All event files of the event handler.
  * @type {String[]}
+ * @author // TechyGiraffe999
  */
+client.events = new Collection();
 
-const eventFiles = fs
-	.readdirSync("./events")
-	.filter((file) => file.endsWith(".js"));
+const eventFiles = fs.readdirSync("./events").filter((file) => file.endsWith(".js"));
 
-// Loop through all files and execute the event when it is actually emmited.
 for (const file of eventFiles) {
 	const event = require(`./events/${file}`);
 	if (event.once) {
 		client.once(event.name, (...args) => event.execute(...args, client));
 	} else {
-		client.on(
-			event.name,
-			async (...args) => await event.execute(...args, client)
-		);
+		client.on(event.name, async (...args) => await event.execute(...args, client));
 	}
+	client.events.set(event.name, event);
 }
 
 /**********************************************************************/
