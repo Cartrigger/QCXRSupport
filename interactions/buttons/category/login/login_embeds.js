@@ -9,7 +9,7 @@ const login_embeds = {
   
   v51: new EmbedBuilder()
     .setTitle("Do you have Metas V51 firmware installed?")
-    .setDescription("If you do please send a screenshot below which shows proof of that and a support member will review it and send you the fixed build\n\nIf you do not know how to see this\n1. On your quest head to 'settings'\n2. Then head to 'system' and select 'software update'\n3.There your current quest firmware version will be listed")
+    .setDescription("If you do please send a screenshot below which shows proof of that and a support member will review it and send you the fixed build\n\n**If you do not know how to see this:**\n1. On your quest head to 'settings'\n2. Then head to 'system' and select 'software update'\n3. Check the first 2 digits of the number under the 'firmware' section")
     .setColor("Green")
     .setFooter({ text: 'Developed by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   v51_yes: new EmbedBuilder()
