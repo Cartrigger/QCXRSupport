@@ -135,9 +135,9 @@ const embeds = {
     .setColor("Greyple"),
   location_resource_packs: new EmbedBuilder()
     .setTitle("**📂 Resource Pack Location**")
-    .setDescription("The resource packs are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/resourcepacks``\n\n For some good resource packs check out [Planet Minecraft](https://www.planetminecraft.com/texture-packs/)\n*(make sure you download the right version)* ")
+    .setDescription("The resource packs are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/resourcepacks``\n\n For some good resource packs check out [Planet Minecraft](https://www.planetminecraft.com/texture-packs/)\n\n*Most versions should work regardless, but for maximum compatability try to download a resource pack that is listed as compatible with your Minecraft version*\n\n**Mods that state that they use optifine features require external mods to function.** Examples of these are:\nCEM\nCIT\nContinuity\netc.")
     .setColor("Greyple")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999 & Crow'}),
   location_mods: new EmbedBuilder()
     .setTitle("**📂 Mods Location**")
     .setDescription("The Mods are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/mods``\n\n*For more information on mods run ``/mods``* ")
