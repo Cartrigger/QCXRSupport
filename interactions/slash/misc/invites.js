@@ -1,0 +1,46 @@
+const { SlashCommandBuilder } = require('discord.js');
+/**
+ * @type {import('../../../typings').SlashInteractionCommand}
+ */
+const embeds = require('../../../embeds.js');
+
+module.exports = {
+	data:  new SlashCommandBuilder()
+	.setName('invites')
+	.setDescription('A list of useful discord invite links')
+	.addStringOption(option =>
+		option.setName('invites')
+			.setDescription('The invite presets')
+			.setRequired(true)
+			.addChoices(
+				{ name: 'QuestCraft Discord', value: 'questcraft' },
+                { name: 'XRCraft Discord', value: 'xrcraft' },
+                { name: 'Vivecraft Discord', value: 'vivecraft' },
+                { name: 'Vivecraft mixin Discord', value: 'vivecraft_mixin' },
+                { name: 'Digital Genesis Discord', value: 'digital_genesis' },
+
+			)),
+			async execute(interaction) {
+				const categorys = interaction.options.getString('invites');
+				if (categorys === 'questcraft') {
+                    await interaction.reply("https://discord.gg/questcraft");
+                    return;
+                }
+                if (categorys === 'xrcraft') {
+                  await interaction.reply("https://discord.gg/xrcraft");
+                  return;
+                }
+                if (categorys === 'vivecraft') {
+                    await interaction.reply("https://discord.com/invite/2x3QCk8qa9");
+                    return;
+                }
+                if (categorys === 'vivecraft_mixin') {
+                    await interaction.reply("https://discord.gg/bnatWRD8v3");
+                    return;
+                }
+                if (categorys === 'digital_genesis') {
+                    await interaction.reply("https://discord.gg/2ck7EaEQym");
+                    return;
+                }
+                }
+            }
