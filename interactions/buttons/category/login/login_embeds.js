@@ -3,54 +3,51 @@ const { EmbedBuilder, Embed } = require('discord.js');
 const login_embeds = {
   login: new EmbedBuilder()
     .setTitle("You have selected a [LOGIN] issue")
-    .setDescription("Please respond with the correct buttons for each of the options below - At the moment once you select an option you cannot go back, if you wish to make a new instance of the test please run ``/login`` \n\n✅ - Yes | ❌ - No\n\nIf at any point I have solved your issue, please do not select any more buttons and leave a notice below so a support staff member can close your ticket\nIf your issue is unrelated at any point, and you can get past the login screen at any point please ignore these messages.")
+    .setDescription("Please respond with the correct buttons for each of the options below -  if you wish to make a new instance of the test please run ``/login`` \n\n✅ - Yes | ❌ - No")
     .setColor("Aqua")
     .setFooter({ text: 'Developed by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   
-  v51: new EmbedBuilder()
-    .setTitle("Do you have Metas V51 firmware installed?")
-    .setDescription("If you do please send a screenshot below which shows proof of that and a support member will review it and send you the fixed build\n\n**If you do not know how to see this:**\n1. On your quest head to 'settings'\n2. Then head to 'system' and select 'software update'\n3. Check the first 2 digits of the number under the 'firmware' section.")
-    .setColor("Green")
-    .setFooter({ text: 'Developed by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
-  v51_yes: new EmbedBuilder()
-    .setTitle("Please bear with us")
-    .setDescription("A support member will be with you shorty to review your screenshot, if you have not sent it yet please send it below\n\n*If you are not in a ticket please make one and send the screenshot there if a support member is currently unavailable* ")
-    .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
-
   own: new EmbedBuilder()
     .setTitle("Do you own Minecraft Java Edition?")
-    .setDescription("You can check via this [link](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile)\n\n IF you do own it and havn't made a username there already, please make one")
+    .setDescription("You can check via this [link](https://www.minecraft.net/en-us/msaprofile)\nMake Sure Minecraft: Java edition looks identical to the one in the image")
+    .setImage("https://media.discordapp.net/attachments/1057074981135196230/1092925442610188369/image.png?width=1347&height=670")
     .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by !DED [BETA]'}),
   own_no: new EmbedBuilder()
     .setTitle("You must own Java Edition to play QuestCraft")
-    .setDescription("You can purchase it via this [link](https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc)\nOnce you have done that please make a username via this [link](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile) and try play again, once you have done that please try play again.\n\n*If your issue still persists please run ``/login``, and click the other button* ")
+    .setDescription("You can purchase it via this [link](https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc)\nOnce you have done that please make a username via this [link](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile) and try play again, once you have done that please try play again.\n\n*If your issue still persists please run ``/login``, and click the other button*\n\nTip to save money, Only buy the base game.")
     .setColor("Green")
+    .setImage("https://media.discordapp.net/attachments/1057074981135196230/1092942440803082420/image.png?width=990&height=670")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+
+  username: new EmbedBuilder()
+    .setTitle("Do you have a Minecraft Java username?")
+    .setDescription("Please check using this [link](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile).\n You must have a Minecraft Java username to access questcraft.")
+    .setImage("https://cdn.discordapp.com/attachments/1057074981135196230/1092940754499948644/image.png")
+    .setColor("Green")
+    .setFooter({ text: 'Written by !DED [BETA]', iconURL: 'https://cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?size=4096'}),
+  username_no: new EmbedBuilder()
+    .setTitle("Please set up a username")
+    .setDescription("[with this link.](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile) after you are done you are free to continue.")
+    .setColor("Green")
+    .setFooter({ text: 'Written by !DED [BETA]', iconURL: 'https://cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?size=4096'}),
 
   account_status: new EmbedBuilder()
     .setTitle("Is your account overage?")
-    .setDescription("Please check if your account is overage or not via this [link](https://account.xbox.com/Settings), if you have the same message as the image below please select ❌")
+    .setDescription("To sign into QuestCraft your account age must be 19+.\nPlease check if your account is overage via this [link](https://account.xbox.com/Settings), if you have the same message as the image below please select ❌")
     .setImage("https://media.discordapp.net/attachments/1059913125308145716/1092496548543332422/image.png?width=626&height=655")
     .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999 - Fix found by !DED [BETA]'}),
+    .setFooter({ text: 'Written by !DED/TechyGiraffe999 [BETA]'}),
   account_status_no: new EmbedBuilder()
     .setTitle("Please follow the steps below")
     .setDescription("first you must have a overage account to start a Microsoft family.\n1. log into this [link](https://account.microsoft.com/family/home?refd=login.live.com) with the overage account\n2. add your main account as a member.\n3. accept invite you received in your main account's email.\n\n**Things to note:** \nthe overage account doesn't have to own java but can.\nthe main account has to be added to the family as a member instead of as an organizer.\nthe main account has to be added to the overage accounts family, not the other way around.\nyou cannot invite yourself as a member to a Microsoft family.\n\nOnce you have followed those steps try and login to QuestCraft again\n\nIf your issue still persists please click the button below")
     .setColor("Green")
     .setFooter({ text: 'Written by !DED [BETA]', iconURL: 'https://cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?size=4096'}),
   
-  relink: new EmbedBuilder()
-    .setTitle("Please unlink QCXR and login again")
-    .setDescription("If your issue *still* persists please go to this [link](https://account.live.com/consent/Manage) and unlink QCXR and login, if QCXR is not listed please make sure you are using the correct Microsoft account ")
-    .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
-
   others: new EmbedBuilder()
     .setTitle("If none of the things mentioned have worked")
-    .setDescription("If none of the things mentioned have worked you can try the following:\n\n 1. Uninstall Questcraft with ADB commands, if you dont know how please run ``/adb`` and reinstall it. Then try launch QuestCraft again\n2. Try change your Minecraft username via the [link](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile) used earlier\n*- If you are not worried about changing your username, trying this first is advised*\n\nIf all your issue still persists, please wait for a support staff member to review your issue and if possible/you havn't already, please provide any additional information below or create a ticket")
+    .setDescription("Here are are the direct troubleshooting steps to resolve this. \nYou must have minecraft java.\nYou must have a username set up for minecraft java.\n your account must be overage and if it isnt it must be added to a family.\nTry reinstalling questcraft\nTry running minecraft java on a pc once.")
     .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),  
+    .setFooter({ text: 'Written by !DED/TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),  
 };
 module.exports = login_embeds;
