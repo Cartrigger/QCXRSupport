@@ -185,8 +185,7 @@ module.exports = {
                           return;
                         });
                   }
-                  }
-                      catch(err){
+                }catch(err){
                         try{
                           interaction.reply({ embeds: [error], ephemeral: true });
                         }catch(err){
