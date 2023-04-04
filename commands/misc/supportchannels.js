@@ -6,7 +6,7 @@ module.exports = {
 	// Refer to typings.d.ts for available properties.
 
 	execute(message, args) {
-		const channelExceptions = ['945502948111290498', '946021441298649158']; // Replace with your own channel IDs
+		const channelExceptions = ['945502948111290498', '946021441298649158']; 
 		
 		if (channelExceptions.includes(message.channel.id)) {
 			message.reply({ embeds: [embeds.error_channels] });
