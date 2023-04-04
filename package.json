@@ -14,9 +14,9 @@
 	"keywords": [
 		"discord-js"
 	],
-	"license": "ISC",
+	"license": "Creative Commons",
 	"bugs": {
-		"url": "https://github.com/Cartrigger/QCXRSoonBot/issues"
+		"url": "https://github.com/Cartrigger/QCXRSoonBot/issues/new?assignees=&labels=bug&template=bugs.yml&title=%5BBUG%5D+%3Ctitle%3E"
 	},
 	"homepage": "https://github.com/Cartrigger/QCXRSoonBot/blob/main/README.md",
 	"dependencies": {
