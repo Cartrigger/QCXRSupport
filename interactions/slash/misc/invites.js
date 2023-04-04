@@ -17,6 +17,7 @@ module.exports = {
                 { name: 'XRCraft Discord', value: 'xrcraft' },
                 { name: 'Vivecraft Discord', value: 'vivecraft' },
                 { name: 'Vivecraft mixin Discord', value: 'vivecraft_mixin' },
+                { name: 'PojavLauncher Discord', value: 'pojav_launcher' },
                 { name: 'Digital Genesis Discord', value: 'digital_genesis' },
 
 			)),
@@ -36,6 +37,10 @@ module.exports = {
                 }
                 if (categorys === 'vivecraft_mixin') {
                     await interaction.reply("https://discord.gg/bnatWRD8v3");
+                    return;
+                }
+                if (categorys === 'pojav_launcher') {
+                    await interaction.reply("https://discord.gg/pojavlauncher-724163890803638273");
                     return;
                 }
                 if (categorys === 'digital_genesis') {
