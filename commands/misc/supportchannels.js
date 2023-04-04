@@ -1,19 +1,18 @@
-/**
- * @file Sample ping command
- * @author Naman Vrati
- * @since 1.0.0
- * @version 3.2.2
- */
 const embeds = require('../../embeds.js');
 
-/**
- * @type {import('../../typings').LegacyCommand}
- */
+
 module.exports = {
 	name: "supportchannels",
 	// Refer to typings.d.ts for available properties.
 
 	execute(message, args) {
+		const channelExceptions = ['945502948111290498', '946021441298649158']; // Replace with your own channel IDs
+		
+		if (channelExceptions.includes(message.channel.id)) {
+			message.reply({ embeds: [embeds.error_channels] });
+			return;
+		}
+
 		message.channel.send({ embeds: [embeds.support_channels] });
 	},
 };

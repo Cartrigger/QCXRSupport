@@ -1,10 +1,6 @@
 const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
 const embeds = require('../../../embeds.js');
 
-const error = new EmbedBuilder()
-    .setTitle('Error!')
-    .setDescription('This command cannot be used in this channel ')
-    .setColor('Red')
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -15,7 +11,7 @@ module.exports = {
         
         if (channelExceptions.includes(interaction.channelId)) {
             await interaction.reply({
-                embeds: [error],
+                embeds: [embeds.error_channels],
                 ephemeral: true 
             });
             return;
