@@ -5,7 +5,7 @@
 const ingame_embeds = require('../ingame_embeds');
 
 module.exports = {
-	id: "instances_no",
+	id: "mods_no",
 
 	async execute(interaction, message) {
 		await interaction.update({embeds: [ingame_embeds.send_logs], components: []});
