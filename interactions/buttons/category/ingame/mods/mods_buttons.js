@@ -1,7 +1,7 @@
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events,EmbedBuilder, Embed } = require('discord.js');
 
-const buttons_instances = {
-    instances: new ActionRowBuilder()
+const buttons_mods = {
+    mods: new ActionRowBuilder()
     .addComponents(
         new ButtonBuilder()
             .setCustomId('mods_yes')

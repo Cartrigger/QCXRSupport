@@ -1,7 +1,7 @@
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events,EmbedBuilder, Embed } = require('discord.js');
 
-const buttons_instances = {
-    instances: new ActionRowBuilder()
+const buttons_immersivemc = {
+    immersivemc: new ActionRowBuilder()
     .addComponents(
         new ButtonBuilder()
             .setCustomId('immersivemc_yes')
