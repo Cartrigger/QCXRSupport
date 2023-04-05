@@ -1,6 +1,6 @@
 const { EmbedBuilder, Embed } = require('discord.js');
 
-const login_embeds = {
+const ingame_embeds = {
   ingame: new EmbedBuilder()
     .setTitle("You have selected an [INGAME] issue")
     .setDescription("Please respond with the correct buttons for each of the options below - At the moment once you select an option you cannot go back, if you wish to make a new instance of the test please run ``/ingame`` \n\n✅ - Yes | ❌ - No\n\nIf at any point I have solved your issue, please do not select any more buttons and leave a notice below so a support staff member can close your ticket\nIf your issue is unrelated at any point, and you can get past the login screen at any point by simply ignoring these messages.")
@@ -41,4 +41,4 @@ const login_embeds = {
     .setColor("Blue")
     .setFooter({ text: 'Developed by JaffaJace [INCOMPLETE]', iconURL: 'https://cdn.discordapp.com/avatars/654048865137459261/ec3ef49d087775eb2c26b10a4dc7c456.png?size=4096'}),
 };
-module.exports = login_embeds;
+module.exports = ingame_embeds;
