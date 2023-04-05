@@ -14,4 +14,4 @@ const buttons_immersivemc = {
     )
 };
 
-module.exports = buttons_immersivemc; //OH FUCK I BROKE SOMETHING
+module.exports = buttons_immersivemc;

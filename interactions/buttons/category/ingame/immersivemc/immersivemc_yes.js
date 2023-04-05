@@ -4,7 +4,6 @@
  */
 
 const embeds = require('../ingame_embeds');
-const buttons = require('../immersivemc/immersivemc_buttons');
 
 module.exports = {
 	id: "immersivemc_yes",
