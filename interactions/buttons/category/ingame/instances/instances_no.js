@@ -3,7 +3,6 @@
  */
 
 const ingame_embeds = require('../ingame_embeds');
-const buttons = require('../instances/instances_buttons');
 
 module.exports = {
 	id: "instances_no",

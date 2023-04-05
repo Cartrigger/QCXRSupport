@@ -3,7 +3,7 @@
  * @type {import('../../../typings').ButtonInteractionCommand}
  */
 
-const embeds = require('../ingame_embeds');
+const ingame_embeds = require('../ingame_embeds');
 
 module.exports = {
 	id: "immersivemc_yes",
