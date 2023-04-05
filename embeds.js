@@ -135,7 +135,7 @@ const embeds = {
     .setColor("Greyple"),
   location_resource_packs: new EmbedBuilder()
     .setTitle("**📂 Resource Pack Location**")
-    .setDescription("The resource packs are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/resourcepacks``\n\n For some good resource packs check out [Planet Minecraft](https://www.planetminecraft.com/texture-packs/)\n\n*Most versions should work regardless, but for maximum compatability try to download a resource pack that is listed as compatible with your Minecraft version*\n\n**Mods that state that they use optifine features require external mods to function.** Examples of these are:\nCEM\nCIT\nContinuity\netc.")
+    .setDescription("The resource packs are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/resourcepacks``\n\n For some good resource packs check out [Planet Minecraft](https://www.planetminecraft.com/texture-packs/)\n\n*Most versions should work regardless, but for maximum compatability try to download a resource pack that is listed as compatible with your Minecraft version*\n\n**Mods that state that they use optifine features require some external mods to function.** Examples of some of these mods are:\nCEM\nCIT\nContinuity\netc.")
     .setColor("Greyple")
     .setFooter({ text: 'Written by TechyGiraffe999 & Crow'}),
   location_mods: new EmbedBuilder()
