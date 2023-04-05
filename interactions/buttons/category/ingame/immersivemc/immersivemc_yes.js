@@ -10,7 +10,7 @@ module.exports = {
 	id: "instances_yes",
 
 	async execute(interaction, message) {
-		await interaction.update({embeds: [ingame_embeds.immersivemc_yes], components: [/*buttons.account_status*/]});
+		await interaction.update({embeds: [ingame_embeds.immersivemc_yes], components: []});
 		return;
 	},
 };

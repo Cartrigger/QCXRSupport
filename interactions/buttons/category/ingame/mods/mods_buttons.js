@@ -14,4 +14,4 @@ const buttons_instances = {
     )
 };
 
-module.exports = buttons_instances;
+module.exports = buttons_mods;
