@@ -10,7 +10,7 @@ module.exports = {
 	id: "instances_yes",
 
 	async execute(interaction, message) {
-		await interaction.update({embeds: [ingame_embeds.mods]/*, components: [buttons.account_status]*/});
+		await interaction.update({embeds: [ingame_embeds.mods], components: [/*buttons.account_status*/]});
 		return;
 	},
 };
