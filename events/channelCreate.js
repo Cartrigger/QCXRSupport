@@ -1,7 +1,7 @@
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events,EmbedBuilder, Embed } = require('discord.js');
 
 const login_embeds = require('../interactions/buttons/category/login/login_embeds');
-const buttons = require('../interactions/buttons/category/login/v51/v51_buttons');
+const buttons = require('../interactions/buttons/category/login/own/own_buttons');
 
 module.exports = {
     name: 'channelCreate',
@@ -16,7 +16,7 @@ module.exports = {
                 await new Promise(resolve => setTimeout(resolve, 1000)); // 1 second delay
                 const start_message = await channel.send({embeds: [login_embeds.login]});
             
-                const message = await channel.send({embeds: [login_embeds.v51], components: [buttons.v51] });
+                const message = await channel.send({embeds: [login_embeds.own], components: [buttons.own] });
             }} catch(err) {
         }
         }

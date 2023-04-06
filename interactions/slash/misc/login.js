@@ -7,7 +7,7 @@ const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
  */
 const embeds = require('../../../embeds.js');
 const login_embeds = require('../../buttons/category/login/login_embeds');
-const buttons = require('../../buttons/category/login/v51/v51_buttons')
+const buttons = require('../../buttons/category/login/own/own_buttons')
 
 
 module.exports = {
@@ -15,6 +15,6 @@ module.exports = {
         .setName('login')
         .setDescription('Info on how to solve login issues'),
     async execute(interaction,client ) {
-        await interaction.reply({embeds: [login_embeds.v51], components: [buttons.v51],ephemeral: true });
+        await interaction.reply({embeds: [login_embeds.own], components: [buttons.own],ephemeral: true });
     },
 };
