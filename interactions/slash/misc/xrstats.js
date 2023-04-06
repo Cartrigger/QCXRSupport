@@ -28,7 +28,8 @@ module.exports = {
             loadingMsg.edit({ embeds: [loadingEmbed] })
             i = (i + 1) % loadingDots.length
         }, 500)
-        axios.get(`${apiUrl}${server}`).then(response => {
+        try {
+            const response = await axios.get(`${apiUrl}${server}`, { timeout: 5000 })
             clearInterval(loadingInterval)
             const title = response.data.motd.clean[0].replace(/ii/g, '')
             const embed = new EmbedBuilder()
@@ -41,8 +42,14 @@ module.exports = {
                     { name:"Version", value:response.data.version},
                     { name:"Server IP" , value:server},
                 )
+            if (server === 'modded.xrcraftmc.com') {
+                embed.addFields(
+                    { name: "Joining", value: "To join the modded XRCraft server, you can either:\n- subscribe to their [patreon](https://patreon.com/xrcraft)\n- or purchase a server on [bisect hosting](https://bisecthosting.com/) using the code ``xrcraft`` and send proof to one of the moderators!" },
+                )
+            }
             interaction.editReply({ embeds: [embed] })
-        }).catch(error => {
+        } catch (error) {
+            clearInterval(loadingInterval)
             const em = new EmbedBuilder()
                 .setColor("Red")
                 .setDescription("**Server offline or wrong ip**")
@@ -51,6 +58,7 @@ module.exports = {
                     msg.delete();
                 }, 1000);
             });
-        })
-    }
+        }
+    }    
 }
+
