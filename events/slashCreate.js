@@ -1,10 +1,10 @@
 /**
  * @file Slash Command Interaction Handler
- * @author Naman Vrati
+ * @author Naman Vrati & TechyGiraffe999
  * @since 3.0.0
  * @version 3.3.0
  */
-
+const { Collection, EmbedBuilder } = require("discord.js");
 module.exports = {
 	name: "interactionCreate",
 
@@ -17,7 +17,6 @@ module.exports = {
 	async execute(interaction) {
 		// Deconstructed client from interaction object.
 		const { client } = interaction;
-
 		// Checks if the interaction is a command (to prevent weird bugs)
 
 		if (!interaction.isChatInputCommand()) return;
@@ -28,7 +27,31 @@ module.exports = {
 
 		if (!command) return;
 
-		// A try to executes the interaction.
+		// Cooldowns
+		const { cooldowns } = client;
+		if (!cooldowns.has(command.name)) {
+			cooldowns.set(command.name, new Collection());
+		}
+		const now = Date.now();
+		const timestamps = cooldowns.get(command.name);
+		const defaultCooldownDuration = 0;
+		const cooldownAmount = (command.cooldown ?? defaultCooldownDuration) * 1000;
+
+		if (timestamps.has(interaction.user.id)) {
+			const expirationTime = timestamps.get(interaction.user.id) + cooldownAmount;
+			const timeLeft = (expirationTime - now) / 1000;
+			const embed = new EmbedBuilder()
+				.setDescription(`Please wait \`\`${timeLeft.toFixed(1)}\`\` more second(s) before reusing the \`${interaction.commandName}\` command.`)
+				.setColor("Orange")
+			if (now < expirationTime) {
+				const expiredTimestamp = Math.round(expirationTime / 1000);
+				return interaction.reply({ embeds: [embed], ephemeral: true });
+			}
+		}
+	
+		timestamps.set(interaction.user.id, now);
+		setTimeout(() => timestamps.delete(interaction.user.id), cooldownAmount);
+	
 
 		try {
 			await command.execute(interaction);
