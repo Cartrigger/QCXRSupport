@@ -10,8 +10,8 @@ module.exports = {
                 .setDescription('The xrcraft server options')
                 .setRequired(true)
                 .addChoices(
-                    { name: 'XRCraft', value: 'modded.xrcraftmc.com'},
-                    { name: 'XRCRaft Modded', value: 'play.xrcraft.net'},
+                    { name: 'XRCraft', value: 'play.xrcraft.net'},
+                    { name: 'XRCRaft Modded', value: 'modded.xrcraftmc.com'},
                 )),
     async execute(interaction) {
         await interaction.deferReply()
