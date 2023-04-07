@@ -38,12 +38,12 @@ module.exports = {
       const footer = embedData.footer;
       if (embedData && embedData.fields) {
         // Extract the data from the original embed
-        const feature = embedData.fields.find(field => field.name === "``✨`` - Feature")?.value;
-        const feedback = embedData.fields.find(field => field.name === "``📝`` - Feedback")?.value;
-        const userInfo = embedData.fields.find(field => field.name === "``👤`` - User info")?.value;
+        const feature = embedData.fields.find(field => field.name === "``✨``・Feature")?.value;
+        const feedback = embedData.fields.find(field => field.name === "``📝``・Feedback")?.value;
+        const userInfo = embedData.fields.find(field => field.name === "``👤``・User info")?.value;
 
         embedData.fields.forEach(field => {
-            if (field.name === "``👤`` - User info") {
+            if (field.name === "``👤``・User info") {
                 const userID = field.value.match(/UserID: (\d+)/)[1];
                 const user = interaction.client.users.cache.get(userID);
                 if (user) {
@@ -56,14 +56,16 @@ module.exports = {
         const new_embed = new EmbedBuilder()
           .setTitle("⚠️ Feedback Flagged as an Alert")
           .addFields(
-            { name: "``✨`` - Feature", value: feature },
-            { name: "``📝`` - Feedback", value: feedback },
-            { name: "``👤`` - User info", value: userInfo }
+            { name: "``✨``・Feature", value: feature },
+            { name: "``📝``・Feedback", value: feedback },
+            { name: "``👤``・User info", value: userInfo }
           )
           .setFooter(footer)
           .setColor("Red")
           .setTimestamp();
 
+
+        message.delete();  
         const guild = interaction.client.guilds.cache.get(serverId);
         const channel = guild.channels.cache.get(channelId);
         channel.send({ embeds: [new_embed], components: [] });
@@ -72,7 +74,7 @@ module.exports = {
         const second_channel = second_guild.channels.cache.get(secondChannelId);
         second_channel.send({ embeds: [new_embed], components: [] });
 
-        message.delete();
+        
         interaction.reply({ embeds: [success], ephemeral: true });
       }
     } catch(err) {
