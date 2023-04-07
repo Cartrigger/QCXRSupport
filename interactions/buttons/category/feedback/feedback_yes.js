@@ -5,6 +5,7 @@
 
 
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events,EmbedBuilder, Embed } = require('discord.js');
+const {test_guild_id} = require('../../../../config.json')
 
 const embed = new EmbedBuilder()
     .setTitle("Feedback Reviewed!")
@@ -19,7 +20,10 @@ const error = new EmbedBuilder()
     .setDescription("❌ Could not dm user ")
     .setColor("Red")
 
-    
+const serverId = test_guild_id;
+const channelId = '1093819492473245777';
+
+
 module.exports = {
 	id: "feedback_yes",
 	async execute(interaction) {
@@ -43,9 +47,12 @@ module.exports = {
                   .setColor("Orange")
                   .setTimestamp();
               
+                const guild = interaction.client.guilds.cache.get(serverId);
+                const channel = guild.channels.cache.get(channelId);
 
-				// Send the new embed as a reply
-                await interaction.update({ embeds: [new_embed], components: [] });
+
+                message.delete();
+                channel.send({ embeds: [new_embed], components: [] });
 			}
 		} catch(err) {
 			try{

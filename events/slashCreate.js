@@ -4,7 +4,10 @@
  * @since 3.0.0
  * @version 3.3.0
  */
-const { Collection, EmbedBuilder } = require("discord.js");
+
+const { Collection, EmbedBuilder } = require("discord.js"),
+{ owner } = require('../config.json');
+
 module.exports = {
 	name: "interactionCreate",
 
@@ -36,8 +39,9 @@ module.exports = {
 		const timestamps = cooldowns.get(command.name);
 		const defaultCooldownDuration = 0;
 		const cooldownAmount = (command.cooldown ?? defaultCooldownDuration) * 1000;
-
-		if (timestamps.has(interaction.user.id)) {
+		
+		const isOwner = owner.includes(interaction.user.id);
+		if (!isOwner && timestamps.has(interaction.user.id)) {
 			const expirationTime = timestamps.get(interaction.user.id) + cooldownAmount;
 			const timeLeft = (expirationTime - now) / 1000;
 			const embed = new EmbedBuilder()
