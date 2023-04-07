@@ -29,7 +29,7 @@ module.exports = {
             const embedData = message.embeds[0];
             if (embedData && embedData.fields) {
             embedData.fields.forEach(field => {
-                if (field.name === "User info:") {
+                if (field.name === "``👤`` - User info") {
                     const userID = field.value.match(/UserID: (\d+)/)[1];
                     const user = interaction.client.users.cache.get(userID);
                     if (user) {

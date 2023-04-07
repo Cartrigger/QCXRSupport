@@ -33,12 +33,12 @@ module.exports = {
             const footer = embedData.footer;
 			if (embedData && embedData.fields) {
 				// Extract the data from the original embed
-                const feature = embedData.fields.find(field => field.name === "Feature:")?.value;
-                const feedback = embedData.fields.find(field => field.name === "Feedback:")?.value;
-                const userInfo = embedData.fields.find(field => field.name === "User info:")?.value;
+                const feature = embedData.fields.find(field => field.name === "``✨`` - Feature")?.value;
+                const feedback = embedData.fields.find(field => field.name === "``📝`` - Feedback")?.value;
+                const userInfo = embedData.fields.find(field => field.name === "``👤`` - User info")?.value;
               
                 embedData.fields.forEach(field => {
-                    if (field.name === "User info:") {
+                    if (field.name === "``👤`` - User info") {
                         const userID = field.value.match(/UserID: (\d+)/)[1];
                         const user = interaction.client.users.cache.get(userID);
                         if (user) {
@@ -51,9 +51,9 @@ module.exports = {
                 const new_embed = new EmbedBuilder()
                   .setTitle("✅ Feedback Accepted")
                   .addFields(
-                    { name: "Feature:", value: feature },
-                    { name: "Feedback:", value: feedback },
-                    { name: "User info:", value: userInfo }
+                    { name: "``✨`` - Feature", value: feature },
+                    { name: "``📝`` - Feedback", value: feedback },
+                    { name: "``👤`` - User info", value: userInfo }
                   )
                   .setFooter(footer)
                   .setColor("Green")
