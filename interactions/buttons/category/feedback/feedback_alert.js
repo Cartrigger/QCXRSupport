@@ -17,7 +17,7 @@ const success = new EmbedBuilder()
     .setColor("Green")
 
 const error = new EmbedBuilder()
-    .setDescription("❌ Could not dm user, or the channels stored are invalid ")
+    .setDescription("❌ Could not dm user, or could not send a message in one or more of the channels stored ")
     .setColor("Red")
 
 
@@ -35,6 +35,7 @@ module.exports = {
     try {
       const message = await interaction.message.fetch();
       const embedData = message.embeds[0];
+      const footer = embedData.footer;
       if (embedData && embedData.fields) {
         // Extract the data from the original embed
         const feature = embedData.fields.find(field => field.name === "Feature:")?.value;
@@ -59,6 +60,7 @@ module.exports = {
             { name: "Feedback:", value: feedback },
             { name: "User info:", value: userInfo }
           )
+          .setFooter(footer)
           .setColor("Red")
           .setTimestamp();
 

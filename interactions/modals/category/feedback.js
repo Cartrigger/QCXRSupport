@@ -44,10 +44,11 @@ module.exports = {
             const embed = new EmbedBuilder()
                 .setTitle('Feedback form')
                 .addFields(
-                    { name:"Feature:", value:`${feature}`},
-                    { name:"Feedback:", value:` ${feedback}`},
-                    { name:"User info:", value:`User: ${interaction.user}\nUserID: ${interaction.user.id}`},
+                    { name:"``✨`` - Feature", value:`${feature}`},
+                    { name:"``📝`` - Feedback", value:` ${feedback}`},
+                    { name:"``👤`` - User info", value:`UserID: ${interaction.user.id}`},
                 )
+                .setFooter({text: interaction.user.tag, iconURL: interaction.user.displayAvatarURL()})
                 .setColor('Orange');
 
             const guild = interaction.client.guilds.cache.get(serverId);
