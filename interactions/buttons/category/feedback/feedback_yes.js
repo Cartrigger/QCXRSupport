@@ -54,7 +54,7 @@ module.exports = {
                     { name: "Feedback:", value: feedback },
                     { name: "User info:", value: userInfo }
                   )
-                  .setColor("Orange")
+                  .setColor("Green")
                   .setTimestamp();
               
                 const guild = interaction.client.guilds.cache.get(serverId);
