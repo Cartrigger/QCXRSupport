@@ -8,7 +8,7 @@ const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events,EmbedBuilder, Embed
 
 const embed = new EmbedBuilder()
     .setTitle("Feedback Reviewed")
-    .setDescription("We have reviewed your feedback and it is not applicable for CraftyXR")
+    .setDescription("We have reviewed your feedback and it is not applicable for <@997670790604542012>")
     .setColor("Red")
 
 const success = new EmbedBuilder()
