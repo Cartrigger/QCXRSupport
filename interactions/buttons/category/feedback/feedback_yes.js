@@ -13,7 +13,7 @@ const embed = new EmbedBuilder()
     .setColor("Green")
 
 const success = new EmbedBuilder()
-    .setDescription("✅ User was send a DM ")
+    .setDescription("✅ User was send a DM and their feedback was stored ")
     .setColor("Green")
 
 const error = new EmbedBuilder()
@@ -36,6 +36,16 @@ module.exports = {
                 const feedback = embedData.fields.find(field => field.name === "Feedback:")?.value;
                 const userInfo = embedData.fields.find(field => field.name === "User info:")?.value;
               
+                embedData.fields.forEach(field => {
+                    if (field.name === "User info:") {
+                        const userID = field.value.match(/UserID: (\d+)/)[1];
+                        const user = interaction.client.users.cache.get(userID);
+                        if (user) {
+                            user.send({embeds: [embed]});
+                  }
+                }
+              });
+
                 // Create a new embed using EmbedBuilder
                 const new_embed = new EmbedBuilder()
                   .setTitle("✅ Feedback Accepted")
@@ -53,6 +63,7 @@ module.exports = {
 
                 message.delete();
                 channel.send({ embeds: [new_embed], components: [] });
+                interaction.reply({ embeds: [success], ephemeral: true })
 			}
 		} catch(err) {
 			try{

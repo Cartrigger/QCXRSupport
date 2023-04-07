@@ -1,4 +1,3 @@
-
 // Deconstructed the constants we need in this file.
 
 const { SlashCommandBuilder, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder} = require("discord.js");

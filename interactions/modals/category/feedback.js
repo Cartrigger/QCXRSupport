@@ -9,11 +9,17 @@ buttons =  new ActionRowBuilder()
         new ButtonBuilder()
             .setCustomId('feedback_yes')
             .setEmoji("✅")
+            .setLabel("Accept")
             .setStyle(ButtonStyle.Primary),
         new ButtonBuilder()
             .setCustomId('feedback_no')
             .setEmoji("❌")
+            .setLabel("Deny")
             .setStyle(ButtonStyle.Primary),
+        new ButtonBuilder()
+            .setCustomId('feedback_alert')
+            .setEmoji('⚠️')
+            .setStyle(ButtonStyle.Danger)
     )
 
 
