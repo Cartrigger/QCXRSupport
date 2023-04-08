@@ -1,9 +1,9 @@
 
 /**
- * @type {import('../../../typings').ButtonInteractionCommand}
+ * @type {import('../../../../typings').ButtonInteractionCommand}
  */
 
-const embeds = require('../../../embeds.js');
+const embeds = require('../../../../embeds.js');
 
 module.exports = {
 	id: "simple_voice_chat",

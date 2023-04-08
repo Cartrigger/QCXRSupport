@@ -38,6 +38,9 @@ module.exports = {
         const feedback = embedData.fields.find(field => field.name === "``📝``・Feedback")?.value;
         const userInfo = embedData.fields.find(field => field.name === "``👤``・User info")?.value;
 
+
+
+
       const embed = new EmbedBuilder()
         .setTitle("Feedback Reviewed.")
         .setDescription(`Your feedback regarding \`\`${feature}\`\` has been flagged as an alert, it may have violated QuestCraft's Rules.\n\nIt will be looked into, if this is incorrect you will recive a follow up dm.`)
