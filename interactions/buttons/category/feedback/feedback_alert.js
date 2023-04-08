@@ -7,10 +7,6 @@
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events,EmbedBuilder, Embed } = require('discord.js');
 const {test_guild_id} = require('../../../../config.json')
 
-const embed = new EmbedBuilder()
-    .setTitle("Feedback Reviewed.")
-    .setDescription("Your feedback has been flagged as an alert, it may have violated QuestCraft's Rules.\n\nIt will be looked into, if this is incorrect you will recive a follow up dm.")
-    .setColor("Red")
 
 const success = new EmbedBuilder()
     .setDescription("✅ Feedback was flagged as an alert and stored ")
@@ -41,6 +37,11 @@ module.exports = {
         const feature = embedData.fields.find(field => field.name === "``✨``・Feature")?.value;
         const feedback = embedData.fields.find(field => field.name === "``📝``・Feedback")?.value;
         const userInfo = embedData.fields.find(field => field.name === "``👤``・User info")?.value;
+
+      const embed = new EmbedBuilder()
+        .setTitle("Feedback Reviewed.")
+        .setDescription(`Your feedback regarding \`\`${feature}\`\` has been flagged as an alert, it may have violated QuestCraft's Rules.\n\nIt will be looked into, if this is incorrect you will recive a follow up dm.`)
+        .setColor("Red")
 
         embedData.fields.forEach(field => {
             if (field.name === "``👤``・User info") {

@@ -7,10 +7,6 @@
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events,EmbedBuilder, Embed } = require('discord.js');
 const {test_guild_id} = require('../../../../config.json')
 
-const embed = new EmbedBuilder()
-    .setTitle("Feedback Reviewed!")
-    .setDescription("Thanks for your feedback, it was accepted and we have taken it into consideration!")
-    .setColor("Green")
 
 const success = new EmbedBuilder()
     .setDescription("✅ User was send a DM and their feedback was stored ")
@@ -36,7 +32,13 @@ module.exports = {
                 const feature = embedData.fields.find(field => field.name === "``✨``・Feature")?.value;
                 const feedback = embedData.fields.find(field => field.name === "``📝``・Feedback")?.value;
                 const userInfo = embedData.fields.find(field => field.name === "``👤``・User info")?.value;
-              
+                
+
+            const embed = new EmbedBuilder()
+                .setTitle("Feedback Reviewed!")
+                .setDescription(`Thanks for your feedback regarding \`\`${feature}\`\`, it was accepted and we have taken it into consideration!`)
+                .setColor("Green")
+
                 embedData.fields.forEach(field => {
                     if (field.name === "``👤``・User info") {
                         const userID = field.value.match(/UserID: (\d+)/)[1];

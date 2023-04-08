@@ -6,10 +6,6 @@
 
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events,EmbedBuilder, Embed } = require('discord.js');
 
-const embed = new EmbedBuilder()
-    .setTitle("Feedback Reviewed")
-    .setDescription("We have reviewed your feedback and it is not applicable for <@997670790604542012>")
-    .setColor("Red")
 
 const success = new EmbedBuilder()
     .setDescription("✅ User was send a DM, and their form was removed ")
@@ -28,6 +24,13 @@ module.exports = {
             const message = await interaction.message.fetch();
             const embedData = message.embeds[0];
             if (embedData && embedData.fields) {
+            const feature = embedData.fields.find(field => field.name === "``✨``・Feature")?.value;
+
+            const embed = new EmbedBuilder()
+            .setTitle("Feedback Reviewed")
+            .setDescription(`We have reviewed your feedback regarding \`\`${feature}\`\` and it is not applicable for <@997670790604542012>`)
+            .setColor("Red")
+
             embedData.fields.forEach(field => {
                 if (field.name === "``👤``・User info") {
                     const userID = field.value.match(/UserID: (\d+)/)[1];
