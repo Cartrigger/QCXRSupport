@@ -71,19 +71,19 @@ module.exports = {
                   .setColor("Green")
                   .setTimestamp();
               
-                const guild = interaction.client.guilds.cache.get(serverId);
-                const channel = guild.channels.cache.get(channelId);
+                const guild = await interaction.client.guilds.cache.get(serverId);
+                const channel = await guild.channels.cache.get(channelId);
 
 
-                message.delete();
-                channel.send({ embeds: [new_embed], components: [feedback_update] });
-                interaction.reply({ embeds: [success], ephemeral: true })
+                await message.delete();
+                await channel.send({ embeds: [new_embed], components: [feedback_update] });
+                await interaction.reply({ embeds: [success], ephemeral: true })
 			}
 		} catch(err) {
 			try{
-                interaction.reply({ embeds: [error], ephemeral: true });
+                await interaction.reply({ embeds: [error], ephemeral: true });
             }catch(error){
-                interaction.editreply({ embeds: [error], ephemeral: true });
+                await interaction.editreply({ embeds: [error], ephemeral: true });
             }
 		}
 	}

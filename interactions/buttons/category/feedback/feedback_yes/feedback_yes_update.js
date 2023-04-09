@@ -61,14 +61,14 @@ module.exports = {
                 }
               });
 
-                message.delete();
-                interaction.reply({ embeds: [success], ephemeral: true })
+                await message.delete();
+                await interaction.reply({ embeds: [success], ephemeral: true })
 			}
 		} catch(err) {
 			try{
-                interaction.reply({ embeds: [error], ephemeral: true });
+                await interaction.reply({ embeds: [error], ephemeral: true });
             }catch(error){
-                interaction.editreply({ embeds: [error], ephemeral: true });
+                await interaction.editreply({ embeds: [error], ephemeral: true });
             }
 		}
 	}

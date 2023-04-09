@@ -34,7 +34,7 @@ module.exports = {
             embedData.fields.forEach(field => {
                 if (field.name === "``👤``・User info") {
                     const userID = field.value.match(/UserID: (\d+)/)[1];
-                    const user = interaction.client.users.cache.get(userID);
+                    const user =  interaction.client.users.cache.get(userID);
                     if (user) {
                         user.send({embeds: [embed]});
                         interaction.reply({embeds: [success], ephemeral: true})
@@ -44,7 +44,7 @@ module.exports = {
           });
         }
       } catch(err) {
-        interaction.reply({embeds: [error], ephemeral: true})
+        await interaction.reply({embeds: [error], ephemeral: true})
       }
     }
 }

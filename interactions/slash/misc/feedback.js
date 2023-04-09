@@ -43,9 +43,9 @@ module.exports = {
             const feedback_feature_ActionRow = new ActionRowBuilder().addComponents(feedback_feature)
 
             feedback.addComponents(feature_ActionRow,feedback_feature_ActionRow)
-            interaction.showModal(feedback)
+            await interaction.showModal(feedback)
         } else {
-            interaction.reply({embeds: [no_access], ephemeral: true })
+            await interaction.reply({embeds: [no_access], ephemeral: true })
         }
     },
 };
