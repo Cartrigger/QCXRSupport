@@ -5,14 +5,13 @@
 
 
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events,EmbedBuilder, Embed } = require('discord.js');
-const {test_guild_id} = require('../../../../config.json')
-
+const {test_guild_id} = require('../../../../../config.json')
 
 
 
 
 const success = new EmbedBuilder()
-    .setDescription("✅ User was send a DM and their feedback was stored ")
+    .setDescription("✅ User was send a DM and their feedback was marked as completed")
     .setColor("Green")
 
 const error = new EmbedBuilder()
@@ -24,7 +23,7 @@ const channelId = '1093819492473245777';
 
 
 module.exports = {
-	id: "feedback_yes",
+	id: "feedback_update",
 	async execute(interaction) {
 		try {
 			const message = await interaction.message.fetch();
@@ -37,9 +36,19 @@ module.exports = {
                 const userInfo = embedData.fields.find(field => field.name === "``👤``・User info")?.value;
                 
 
+            const new_embed = new EmbedBuilder()
+                .addFields(
+                  { name: "``✨``・Feature", value: feature },
+                  { name: "``📝``・Feedback", value: feedback },
+                  { name: "``👤``・User info", value: userInfo }
+                )
+                .setFooter(footer)
+                .setColor("Green")
+                .setTimestamp();
+
             const embed = new EmbedBuilder()
-                .setTitle("Feedback Reviewed!")
-                .setDescription(`Thanks for your feedback regarding \`\`${feature}\`\`, it was accepted and we have taken it into consideration!`)
+                .setTitle("✅ Feedback Completed!")
+                .setDescription(`Thanks for your feedback regarding \`\`${feature}\`\`, We took it into consideration and have done as you suggested, the changes will appear <:soon_tm:851921269871214632> ! \n*(As soon as the Github is pulled!)*`)
                 .setColor("Green")
 
                 embedData.fields.forEach(field => {
@@ -47,29 +56,12 @@ module.exports = {
                         const userID = field.value.match(/UserID: (\d+)/)[1];
                         const user = interaction.client.users.cache.get(userID);
                         if (user) {
-                            user.send({embeds: [embed]});
+                            user.send({embeds: [embed, new_embed]});
                   }
                 }
               });
 
-                // Create a new embed using EmbedBuilder
-                const new_embed = new EmbedBuilder()
-                  .setTitle("✅ Feedback Accepted")
-                  .addFields(
-                    { name: "``✨``・Feature", value: feature },
-                    { name: "``📝``・Feedback", value: feedback },
-                    { name: "``👤``・User info", value: userInfo }
-                  )
-                  .setFooter(footer)
-                  .setColor("Green")
-                  .setTimestamp();
-              
-                const guild = interaction.client.guilds.cache.get(serverId);
-                const channel = guild.channels.cache.get(channelId);
-
-
                 message.delete();
-                channel.send({ embeds: [new_embed], components: [] });
                 interaction.reply({ embeds: [success], ephemeral: true })
 			}
 		} catch(err) {
