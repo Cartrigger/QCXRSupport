@@ -4,6 +4,7 @@
 .node-version
 .idea
 config.json
+interactions\buttons\category\feedback\feedback_alert\feedback_alert_user_ids.txt
 
 # Logs
 logs
