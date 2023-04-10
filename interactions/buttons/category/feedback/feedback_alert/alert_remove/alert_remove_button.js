@@ -20,6 +20,11 @@ const not_blacklisted = new EmbedBuilder()
     .setDescription("❌ User is not blacklisted")
     .setColor("Red")
 
+const access_back = new EmbedBuilder()
+    .setTitle("You can use the ``/feedback`` command again!")
+    .setDescription("We have given you access to the ``/feedback`` command again, please remember to follow the QuestCraft rules and to not spam, or feedback on irrelevant things.")
+    .setColor("Green")
+
 
 module.exports = {
     id: "alert_remove",
@@ -83,6 +88,7 @@ module.exports = {
                                                 interaction.reply({embeds: [error], ephemeral: true});
                                             } else {
                                                 interaction.reply({embeds: [success], ephemeral: true})
+                                                user.send({embeds: [access_back]})
                                                 message.edit({embeds: [new_embed], components: [button_update]})  
                                                 channel.send({embeds: [remove]})  
                                             }

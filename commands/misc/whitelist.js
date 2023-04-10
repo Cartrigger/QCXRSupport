@@ -49,6 +49,10 @@ module.exports = {
 		  
 		  const guild = await message.client.guilds.cache.get(serverId);
 		  const channel = await guild.channels.cache.get(channelId);
+		  const access_back = new EmbedBuilder()
+    		.setTitle("You can use the ``/feedback`` command again!")
+    		.setDescription("We have given you access to the ``/feedback`` command again, please remember to follow the QuestCraft rules and to not spam, or feedback on irrelevant things.")
+    		.setColor("Green")
 
 		  // Write the updated user IDs to the file
 		  fs.writeFileSync(filePath, userIDs.join("\n"));
@@ -56,6 +60,7 @@ module.exports = {
 		  	.setDescription(`${member.user.tag} has been removed from the blacklist.`)
 		  	.setColor("d377d4")
 			.setFooter({text: `Authored by: ${message.author.username}`, iconURL:message.author.displayAvatarURL({ dynamic: true })})
+			member.send({embeds: [access_back]})
 		  await channel.send({embeds: [remove]})
 		  // Send a confirmation message
 		  message.reply({
