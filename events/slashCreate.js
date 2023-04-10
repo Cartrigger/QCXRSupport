@@ -41,10 +41,12 @@ module.exports = {
 		let cooldownAmount = command.cooldown ?? defaultCooldownDuration;
 		
 		// Check if user has a specific role and reduce cooldown accordingly
-		allowedRoleIds = ['945554238380048456', '820768461697318982', '820768352712523857', '820781262335508512', '834177899321360404',"1093330726373556344"]; 
-		if (interaction.member.roles.cache.some(role => allowedRoleIds.includes(role.id))) {
-			const cooldownPercentage = 0.5; // 50% cooldown reduction
-			cooldownAmount = Math.floor(cooldownAmount * cooldownPercentage);
+		if (interaction.inGuild()) {
+			allowedRoleIds = ['945554238380048456', '820768461697318982', '820768352712523857', '820781262335508512', '834177899321360404',"1093330726373556344"]; 
+			if (interaction.member.roles.cache.some(role => allowedRoleIds.includes(role.id))) {
+				const cooldownPercentage = 0.5; // 50% cooldown reduction
+				cooldownAmount = Math.floor(cooldownAmount * cooldownPercentage);
+			}
 		}
 		
 		const isOwner = owner.includes(interaction.user.id);
