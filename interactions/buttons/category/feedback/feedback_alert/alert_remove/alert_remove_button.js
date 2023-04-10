@@ -1,4 +1,3 @@
-
 /**
  * @type {import('../../../typings').ButtonInteractionCommand}
  */
@@ -12,6 +11,10 @@ const success = new EmbedBuilder()
 
 const error = new EmbedBuilder()
     .setDescription("❌ There was an error")
+    .setColor("Red")
+
+const notBlacklisted = new EmbedBuilder()
+    .setDescription("❌ User is not blacklisted")
     .setColor("Red")
 
 module.exports = {
@@ -47,6 +50,8 @@ module.exports = {
                                                 message.delete();
                                             }
                                         });
+                                    } else {
+                                        interaction.reply({embeds: [notBlacklisted], ephemeral: true});
                                     }
                                 }
                             });
