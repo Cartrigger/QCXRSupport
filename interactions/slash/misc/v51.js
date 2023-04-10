@@ -6,15 +6,14 @@ const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
  * @type {import('../../../typings').SlashInteractionCommand}
  */
 const embeds = require('../../../embeds.js');
-const login_embeds = require('../../buttons/category/login/login_embeds');
-const buttons = require('../../buttons/category/login/own/own_buttons')
-
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('login')
-        .setDescription('Info on how to solve login issues'),
+        .setName('v51')
+        .setDescription('Shows what to do if you have v51 installed'),
     async execute(interaction,client ) {
-        await interaction.reply({embeds: [login_embeds.own], components: [buttons.own],ephemeral: true });
+        await interaction.reply({
+            embeds: [embeds.v51]
+        });
     },
 };

@@ -6,17 +6,6 @@ const login_embeds = {
     .setDescription("Please respond with the correct buttons for each of the options below - At the moment once you select an option you cannot go back, if you wish to make a new instance of the test please run ``/login`` \n\n✅ - Yes | ❌ - No\n\nIf at any point I have solved your issue, please do not select any more buttons and leave a notice below so a support staff member can close your ticket\nIf your issue is unrelated at any point, and you can get past the login screen at any point please ignore these messages.")
     .setColor("Aqua")
     .setFooter({ text: 'Developed by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
-  
-  v51: new EmbedBuilder()
-    .setTitle("Do you have Metas V51 firmware installed?")
-    .setDescription("If you do please send a screenshot below which shows proof of that and a support member will review it and send you the fixed build\n\n**If you do not know how to see this:**\n1. On your quest head to 'settings'\n2. Then head to 'system' and select 'software update'\n3. Check the first 2 digits of the number under the 'firmware' section.")
-    .setColor("Green")
-    .setFooter({ text: 'Developed by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
-  v51_yes: new EmbedBuilder()
-    .setTitle("Please bear with us")
-    .setDescription("A support member will be with you shorty to review your screenshot, if you have not sent it yet please send it below\n\n*If you are not in a ticket please make one and send the screenshot there if a support member is currently unavailable* ")
-    .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
 
   own: new EmbedBuilder()
     .setTitle("Do you own Minecraft Java Edition?")
@@ -49,7 +38,7 @@ const login_embeds = {
 
   others: new EmbedBuilder()
     .setTitle("If none of the things mentioned have worked")
-    .setDescription("If none of the things mentioned have worked you can try the following:\n\n 1. Uninstall Questcraft with ADB commands, if you dont know how please run ``/adb`` and reinstall it. Then try launch QuestCraft again\n2. Try change your Minecraft username via the [link](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile) used earlier\n*- If you are not worried about changing your username, trying this first is advised*\n\nIf all your issue still persists, please wait for a support staff member to review your issue and if possible/you havn't already, please provide any additional information below or create a ticket")
+    .setDescription("If none of the things mentioned have worked you can try the following:\n\n 1. Uninstall Questcraft with ADB commands, if you dont know how please run ``/adb`` and reinstall it. Then try launch QuestCraft again\n2. Try change your Minecraft username via the [link](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile) used earlier\n*-This matters if you owned Java edition before the Microsoft Migration*\n\nIf all your issue still persists, please wait for a support staff member to review your issue and if possible/you havn't already, please provide any additional information below or create a ticket")
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),  
 };

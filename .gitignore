@@ -4,6 +4,7 @@
 .node-version
 .idea
 config.json
+feedback_alert_user_ids.txt
 
 # Logs
 logs
@@ -110,3 +111,4 @@ dist
 
 # TernJS port file
 .tern-port
+interactions/buttons/category/feedback/feedback_alert/feedback_alert_user_ids.txt

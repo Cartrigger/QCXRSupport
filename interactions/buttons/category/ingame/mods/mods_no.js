@@ -1,15 +1,14 @@
-
 /**
  * @type {import('../../../typings').ButtonInteractionCommand}
  */
 
-const login_embeds = require('../login_embeds');
+const ingame_embeds = require('../ingame_embeds');
 
 module.exports = {
-	id: "v51_yes",
+	id: "mods_no",
 
 	async execute(interaction, message) {
-		await interaction.update({embeds: [login_embeds.v51_yes], components: []});
+		await interaction.update({embeds: [ingame_embeds.send_logs], components: []});
 		return;
 	},
 };
