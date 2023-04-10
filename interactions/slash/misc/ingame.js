@@ -14,6 +14,6 @@ module.exports = {
         .setName('ingame')
         .setDescription('Info on how to solve ingame issues'),
     async execute(interaction,client ) {
-        await interaction.reply({embeds: [ingame_embeds.v51],components: [buttons.v51],ephemeral: true });
+        await interaction.reply({embeds: [embeds.v51],components: [buttons.v51],ephemeral: true });
     },
 };

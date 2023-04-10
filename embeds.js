@@ -1,6 +1,7 @@
 const { EmbedBuilder, Embed } = require('discord.js');
 
 const embeds = {
+  
   adb: new EmbedBuilder()
     .setTitle("**Uninstalling using ADB commands**")
     .setDescription("If you're unable to reinstall and need to perform a complete uninstallation, use the command: ``adb uninstall com.qcxr.qcxr``. For advanced users, SideQuest allows running ADB commands, as shown in the image below.")
