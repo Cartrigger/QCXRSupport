@@ -5,10 +5,17 @@ const { EmbedBuilder, SlashCommandBuilder,PermissionsBitField } = require("disco
  */
 const embeds = require('../../../embeds.js');
 
-const error_embed_builder = new EmbedBuilder()
+const error_embed_builder_channel = new EmbedBuilder()
     .setTitle('Error!')
-    .setDescription('There was an issue while sending that embed!\n\n> I may not have the required permissions to send the Embed in this channel\n> Or your Colour Hex code may be invalid\n\nIf the issue still persists please contact <@719815864135712799> or <@317814254336081930>')
+    .setDescription('There was an issue while sending that embed!\n\n> I lack the required permissions to send the Embed in this channel!\n\nIf the issue still persists please contact <@719815864135712799> or <@317814254336081930>')
     .setColor('Red')
+
+
+const error_embed_builder_hex = new EmbedBuilder()
+  .setTitle('Error!')
+  .setDescription('There was an issue while sending that embed!\n\n> Your Colour Hex code was invalid!\n\nIf the issue still persists please contact <@719815864135712799> or <@317814254336081930>')
+  .setColor('Red')
+
 
 const embed_success = new EmbedBuilder()
     .setDescription("Your Embed was sent below")
@@ -78,15 +85,18 @@ module.exports = {
                         await interaction.reply({ embeds: [embed_success], ephemeral: true });
                         const message = await interaction.channel.send({ embeds: [embed] });
                         //console.log(`Embed sent successfully: ${message.url}`);
+                   
+                   
+                   
                     } catch (err) {
                         try {
                           await interaction.editReply({
-                            embeds: [error_embed_builder],
+                            embeds: [error_embed_builder_channel],
                             ephemeral: true,
                           });
                         } catch (err1) {
                             await interaction.reply({
-                                embeds: [error_embed_builder],
+                                embeds: [error_embed_builder_hex],
                                 ephemeral: true,
                               });
                         }
