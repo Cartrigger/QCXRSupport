@@ -2,8 +2,11 @@
  * @type {import('../../../typings').ButtonInteractionCommand}
  */
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events, EmbedBuilder, Embed } = require('discord.js');
+const {test_guild_id} = require('../../../../../../config.json')
+
 const fs = require('fs');
 const path = require('path');
+const internal = require('stream');
 
 const success = new EmbedBuilder()
     .setDescription("✅ User now has access to the ``/feedback`` command again")
@@ -17,10 +20,16 @@ const not_blacklisted = new EmbedBuilder()
     .setDescription("❌ User is not blacklisted")
     .setColor("Red")
 
+
 module.exports = {
     id: "alert_remove",
 
     async execute(interaction) {
+        const serverId = test_guild_id;
+        const channelId = '1093819562799149098';
+        const guild = await interaction.client.guilds.cache.get(serverId);
+        const channel = await guild.channels.cache.get(channelId);
+
         try {
             const message = await interaction.message.fetch();
             const embedData = message.embeds[0];
@@ -49,6 +58,10 @@ module.exports = {
                     .setFooter(footer)
                     .setColor("Red")
                     .setTimestamp();
+                const remove = new EmbedBuilder()
+                    .setDescription(`${footer.text} has been removed from the blacklist.`)
+                    .setColor("d377d4")
+                    .setFooter({text: `Authored by: ${interaction.user.tag}`, iconURL:interaction.member.displayAvatarURL({ dynamic: true })});
 
                 embedData.fields.forEach(field => {
                     if (field.name === "``👤``・User info") {
@@ -70,7 +83,8 @@ module.exports = {
                                                 interaction.reply({embeds: [error], ephemeral: true});
                                             } else {
                                                 interaction.reply({embeds: [success], ephemeral: true})
-                                                message.edit({embeds: [new_embed], components: [button_update]})   
+                                                message.edit({embeds: [new_embed], components: [button_update]})  
+                                                channel.send({embeds: [remove]})  
                                             }
                                         });
                                     } else {
