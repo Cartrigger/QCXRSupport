@@ -83,15 +83,15 @@ module.exports = {
 
         const second_guild = interaction.client.guilds.cache.get(secondServerId);
         const second_channel = second_guild.channels.cache.get(secondChannelId);
-        second_channel.send({ embeds: [new_embed], components: [feedback_alert] });
+        await second_channel.send({ embeds: [new_embed], components: [feedback_alert] });
 
-        interaction.reply({ embeds: [success], ephemeral: true });
+        await interaction.reply({ embeds: [success], ephemeral: true });
       }
     } catch(err) {
       try {
-        interaction.reply({ embeds: [error], ephemeral: true });
-      } catch(error) {
-        interaction.editreply({ embeds: [error], ephemeral: true });
+        await interaction.reply({ embeds: [error], ephemeral: true });
+      } catch(error2) {
+        await interaction.editreply({ embeds: [error], ephemeral: true });
       }
     }
   }
