@@ -5,6 +5,7 @@ const buttons_relink = {
     .addComponents(
         new ButtonBuilder()
             .setCustomId('relink')
+            .setLabel("next")
             .setEmoji("➡️")
             .setStyle(ButtonStyle.Primary),
     )

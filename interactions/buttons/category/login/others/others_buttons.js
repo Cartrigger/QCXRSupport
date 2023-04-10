@@ -5,6 +5,7 @@ const buttons_others = {
     .addComponents(
         new ButtonBuilder()
             .setCustomId('others')
+            .setLabel("next")
             .setEmoji("➡️")
             .setStyle(ButtonStyle.Primary),
     )

@@ -5,10 +5,12 @@ const buttons_own = {
     .addComponents(
         new ButtonBuilder()
             .setCustomId('own_yes')
+            .setLabel("I own it")
             .setEmoji("✅")
             .setStyle(ButtonStyle.Primary),
         new ButtonBuilder()
             .setCustomId('own_no')
+            .setLabel("I do not own it")
             .setEmoji("❌")
             .setStyle(ButtonStyle.Primary),
     )
