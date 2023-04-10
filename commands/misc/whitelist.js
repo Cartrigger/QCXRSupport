@@ -7,12 +7,15 @@ const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
   name: "whitelist",
-  description: "Removes a user from the whitelist.",
+  description: "Removes a user from the feedback blacklist.",
   aliases: ["removeuser"],
   usage: "[user mention]",
   async execute(message, args) {
 	if (!owner.includes(message.author.id)) {
-		return message.reply("Only developers can use this command.");
+		const devs_only = new EmbedBuilder()
+			.setDescription("Only developers can use this command.")
+			.setColor("d377d4");
+		return message.reply({embeds: [devs_only]});
 	  }
 	
 	  // Read the user IDs from the file
@@ -29,8 +32,11 @@ module.exports = {
 	
 		  // Check if the user is whitelisted
 		  if (!userIDs.includes(userID)) {
+			const blacklist_no_member = new EmbedBuilder()
+				.setDescription(`${member.user.tag} is not blacklisted.`)
+				.setColor("d377d4");
 			return message.reply({
-			  content: `${member.user.tag} is not blacklisted.`
+			  embeds: [blacklist_no_member]
 			});
 		  }
 	
@@ -40,12 +46,17 @@ module.exports = {
 	
 		  // Write the updated user IDs to the file
 		  fs.writeFileSync(filePath, userIDs.join("\n"));
-	
+		  const remove = new EmbedBuilder()
+		  	.setDescription(`${member.user.tag} has been removed from the blacklist.`)
+		  	.setColor("d377d4");
 		  // Send a confirmation message
 		  message.reply({
-			content: `${member.user.tag} has been removed from the blacklist.`
+			embeds: [remove]
 		  });
 		} catch (err) {
+			const error_remove = new EmbedBuilder()
+				.setDescription("There are no users blacklisted")
+				.setColor("FF0000")
 		  message.reply({
 			content: "An error occurred while removing the user from the blacklist."
 		  });
@@ -73,8 +84,11 @@ module.exports = {
 			embeds: [embed]
 		  });
 		} else {
+			const no_blacklist = new EmbedBuilder()
+				.setDescription("There are no users blacklisted")
+				.setColor("d377d4");
 		  message.reply({
-			content: "There are no users blacklisted."
+			embeds: [no_blacklist]
 		  });
 		}
 	  }
