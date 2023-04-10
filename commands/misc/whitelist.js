@@ -3,6 +3,7 @@ const path = require("path");
 
 const { prefix, owner, test_guild_id } = require("../../config.json");
 const { EmbedBuilder } = require("discord.js");
+const embeds = require('../../embeds.js');
 
 const serverId = test_guild_id;
 const channelId = '1093819562799149098';
@@ -15,10 +16,7 @@ module.exports = {
   async execute(message, args) {
 
 	if (!owner.includes(message.author.id)) {
-		const devs_only = new EmbedBuilder()
-			.setDescription("Only developers can use this command.")
-			.setColor("d377d4");
-		return message.reply({embeds: [devs_only]});
+		return message.reply({embeds: [embeds.devs_only]});
 	  }
 	
 	  // Read the user IDs from the file

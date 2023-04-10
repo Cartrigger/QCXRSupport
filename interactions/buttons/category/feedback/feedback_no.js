@@ -5,7 +5,8 @@
 
 
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events,EmbedBuilder, Embed } = require('discord.js');
-const {test_guild_id} = require('../../../../config.json')
+const {test_guild_id, owner} = require('../../../../config.json')
+const embeds = require('../../../../embeds.js');
 
 
 const success = new EmbedBuilder()
@@ -23,6 +24,9 @@ const channelId = '1094639082379935784';
 module.exports = {
 	id: "feedback_no",
 	async execute(interaction) {
+    if (!owner.includes(interaction.user.id)) {
+		  return await interaction.reply({embeds: [embeds.devs_only], ephemeral: true });
+	    }
 		try {
 			const message = await interaction.message.fetch();
 			const embedData = message.embeds[0];

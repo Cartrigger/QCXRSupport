@@ -2,7 +2,8 @@
  * @type {import('../../../typings').ButtonInteractionCommand}
  */
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events, EmbedBuilder, Embed } = require('discord.js');
-const {test_guild_id} = require('../../../../../../config.json')
+const {test_guild_id, owner} = require('../../../../../../config.json')
+const embeds = require('../../../../../../embeds.js');
 
 const fs = require('fs');
 const path = require('path');
@@ -30,6 +31,9 @@ module.exports = {
     id: "alert_remove",
 
     async execute(interaction) {
+        if (!owner.includes(interaction.user.id)) {
+            return await interaction.reply({embeds: [embeds.devs_only], ephemeral: true });
+        }
         const serverId = test_guild_id;
         const channelId = '1093819562799149098';
         const guild = await interaction.client.guilds.cache.get(serverId);
