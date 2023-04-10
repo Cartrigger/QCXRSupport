@@ -23,7 +23,6 @@ const channelId = '1094639082379935784';
 module.exports = {
 	id: "feedback_no",
 	async execute(interaction) {
-    console.log(interaction.member)
 		try {
 			const message = await interaction.message.fetch();
 			const embedData = message.embeds[0];
