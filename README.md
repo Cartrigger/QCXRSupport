@@ -21,7 +21,7 @@ To test the bot out join the [QuestCraft discord server](https://discord.gg/ques
 
 3. run ``npm i``
 
-4. run ``node bot.js``
+4. run ``node bot.js`` or ``npm start``
 
 - All PR's are welcome for improvements.
 
