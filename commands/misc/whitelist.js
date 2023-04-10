@@ -36,7 +36,7 @@ module.exports = {
 		  // Check if the user is whitelisted
 		  if (!userIDs.includes(userID)) {
 			const blacklist_no_member = new EmbedBuilder()
-				.setDescription(`${member.user.tag} is not blacklisted.`)
+				.setDescription(`<@${member.user.id}> is not blacklisted.`)
 				.setColor("d377d4");
 			return message.reply({
 			  embeds: [blacklist_no_member]
