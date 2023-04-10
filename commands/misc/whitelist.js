@@ -1,9 +1,11 @@
 const fs = require("fs");
 const path = require("path");
-const { owner } = require("../../config.json");
 
-const { prefix } = require("./../../config.json");
+const { prefix, owner, test_guild_id } = require("../../config.json");
 const { EmbedBuilder } = require("discord.js");
+
+const serverId = test_guild_id;
+const channelId = '1093819562799149098';
 
 module.exports = {
   name: "whitelist",
@@ -11,6 +13,7 @@ module.exports = {
   aliases: ["removeuser"],
   usage: "[user mention]",
   async execute(message, args) {
+
 	if (!owner.includes(message.author.id)) {
 		const devs_only = new EmbedBuilder()
 			.setDescription("Only developers can use this command.")
@@ -43,22 +46,28 @@ module.exports = {
 		  // Remove the user from the whitelist
 		  const index = userIDs.indexOf(userID);
 		  userIDs.splice(index, 1);
-	
+		  
+		  const guild = await message.client.guilds.cache.get(serverId);
+		  const channel = await guild.channels.cache.get(channelId);
+
 		  // Write the updated user IDs to the file
 		  fs.writeFileSync(filePath, userIDs.join("\n"));
 		  const remove = new EmbedBuilder()
 		  	.setDescription(`${member.user.tag} has been removed from the blacklist.`)
-		  	.setColor("d377d4");
+		  	.setColor("d377d4")
+			.setFooter({text: `Authored by: ${message.author.username}`, iconURL:message.author.displayAvatarURL({ dynamic: true })})
+		  await channel.send({embeds: [remove]})
 		  // Send a confirmation message
 		  message.reply({
 			embeds: [remove]
 		  });
 		} catch (err) {
+			console.log(err)
 			const error_remove = new EmbedBuilder()
-				.setDescription("There are no users blacklisted")
+				.setDescription("An error occurred while removing the user from the blacklist.")
 				.setColor("FF0000")
 		  message.reply({
-			content: "An error occurred while removing the user from the blacklist."
+			embeds: [error_remove]
 		  });
 		}
 	  } else {
