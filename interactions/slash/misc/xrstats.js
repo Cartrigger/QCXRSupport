@@ -44,7 +44,7 @@ module.exports = {
                 )
             if (server === 'modded.xrcraftmc.com') {
                 embed.addFields(
-                    { name: "Joining", value: "To join the modded XRCraft server, you can either:\n- subscribe to their [patreon](https://patreon.com/xrcraft)\n- or purchase a server on [bisect hosting](https://bisecthosting.com/) using the code ``xrcraft`` and send proof to one of the moderators!" },
+                    { name: "Joining", value: "To join the modded XRCraft server, you must have either:\n- subscribed to their [patreon](https://patreon.com/xrcraft)\n- or purchased a server on [bisect hosting](https://bisecthosting.com/) using the code ``xrcraft`` and sent proof to one of the moderators" },
                 )
             }
             interaction.editReply({ embeds: [embed] })

@@ -35,7 +35,7 @@ const embeds = {
     .setColor("Green"),
   performance: new EmbedBuilder()
     .setTitle("**Better performance guide**")
-    .setDescription("- Make sure you are playing on the [latest version of QuestCraft](https://github.com/QuestCraftPlusPlus/QuestCraft/releases/latest), it was released <t:1677786091:R> with added performance improvements\n- Try play on 1.18.2 instead of 1.19.3\n- Play on a server instead of singleplayer, a good public server is [xrcraft](https://discord.com/channels/820767484042018829/966126967701262386), If you want a private server do ``/servers`` for a guide on how to. \n- Make sure your graphics quality is set to fast to fast in your ingame settings\n\n**Additional tips** \n\n- In the options menu, go to VR Settings/Stereo Rendering and set the resolution (NOT CAMERA RES) to 80%. This will decrease the general quality, but will give an extra performance boost.\n- The game's render distance is best at 4-6, but you *may* encounter lag spikes when using it. 9 and above is not recommended.\n- Oceans contain LOTS of kelp that decrease framerate. Don't mine any of it all at once, as your game may CRASH if lots of entites *(in this case, kelp waiting to be picked up)* exist at once.\n- [Skyblock](https://minecraft.fandom.com/wiki/Tutorials/Skyblock) and [Oneblock](https://www.curseforge.com/minecraft/worlds/oneblock) worlds perform the best, as they require less hardware usage.")
+    .setDescription("- Make sure you are playing on the [latest version of QuestCraft](https://github.com/QuestCraftPlusPlus/QuestCraft/releases/latest), it was released <t:1677786091:R> with added performance improvements\n- Try play on 1.18.2 instead of 1.19.3, 1.19.3 runs fine on servers but 1.18.2 is best for performance\n- Play on a server instead of singleplayer, a good public server is [xrcraft](https://discord.com/channels/820767484042018829/966126967701262386), If you want a private server do ``/servers`` for a guide on how to. \n- Make sure your graphics quality is set to fast to fast in your ingame settings\n\n**Additional tips** \n\n- In the options menu, go to VR Settings/Stereo Rendering and set the resolution (NOT CAMERA RES) to 80%. This will decrease the general quality, but will give an extra performance boost.\n- The game's render distance is best at 4-6, but you *may* encounter lag spikes when using it. 9 and above is not recommended.\n- Oceans contain LOTS of kelp that decrease framerate. Don't mine any of it all at once, as your game may CRASH if lots of entites *(in this case, kelp waiting to be picked up)* exist at once.\n- [Skyblock](https://minecraft.fandom.com/wiki/Tutorials/Skyblock) and [Oneblock](https://www.curseforge.com/minecraft/worlds/oneblock) worlds perform the best, as they require less hardware usage.")
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999 & Swaggio'}),
   reinstall: new EmbedBuilder()
@@ -201,7 +201,11 @@ const embeds = {
     .setTitle('Error!')
     .setDescription('This command cannot be used in this channel ')
     .setColor('Red'),
-
+  v51: new EmbedBuilder()
+    .setTitle("Do you have Metas V51 firmware installed?")
+    .setDescription("If you do please send a screenshot below which shows proof of that and a support member will review it and send you the fixed build\n\n**If you do not know how to see this:**\n1. On your quest head to 'settings'\n2. Then head to 'system' and select 'software update'\n3. Check the first 2 digits of the number under the 'firmware' section.")
+    .setColor("Green")
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
 };
 //
 module.exports = embeds;
