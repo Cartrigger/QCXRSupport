@@ -119,7 +119,6 @@ module.exports = {
                    
                    
                     } catch (err) {
-                      console.log(err)
                         try {
                           await interaction.editReply({
                             embeds: [error_embed_builder_channel],
