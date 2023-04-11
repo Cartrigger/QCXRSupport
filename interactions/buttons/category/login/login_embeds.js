@@ -3,7 +3,7 @@ const { EmbedBuilder, Embed } = require('discord.js');
 const login_embeds = {
   login: new EmbedBuilder()
     .setTitle("You have selected a [LOGIN] issue")
-    .setDescription("Please respond with the correct buttons below")
+    .setDescription("Please respond with the correct buttons below, if you want to make a new instance of the questions please run ``/login``")
     .setColor("Aqua")
     .setFooter({ text: 'Developed by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
 
@@ -30,15 +30,15 @@ const login_embeds = {
     .setColor("Green")
     .setFooter({ text: 'Written by !DED [BETA]', iconURL: 'https://cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?size=4096'}),
   
-  relink: new EmbedBuilder()
-    .setTitle("Please unlink QCXR and login again")
-    .setDescription("If your issue *still* persists please go to this [link](https://account.live.com/consent/Manage) and unlink QCXR and login, if QCXR is not listed please make sure you are using the correct Microsoft account ")
+  username_change: new EmbedBuilder()
+    .setTitle("Change your username")
+    .setDescription("If your issue *still* persists, try change your Minecraft username via the [link](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile) used earlier\n- This matters if you owned Java edition before the Microsoft Migration, if you owned it after please click the button below")
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
 
   others: new EmbedBuilder()
     .setTitle("If none of the things mentioned have worked")
-    .setDescription("If none of the things mentioned have worked you can try the following:\n\n 1. Uninstall Questcraft with ADB commands, if you dont know how please run ``/adb`` and reinstall it. Then try launch QuestCraft again\n2. Try change your Minecraft username via the [link](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile) used earlier\n*-This matters if you owned Java edition before the Microsoft Migration*\n\nIf all your issue still persists, please wait for a support staff member to review your issue and if possible/you havn't already, please provide any additional information below or create a ticket")
+    .setDescription("If none of the things mentioned have worked you can try to Uninstall Questcraft with ADB commands, if you dont know how please run ``/adb`` and reinstall it. Then try launch QuestCraft again\n\nIf your issue still persists, please wait for a support staff member to review your issue and if possible/you havn't already, please provide any additional information below or create a ticket")
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),  
 };

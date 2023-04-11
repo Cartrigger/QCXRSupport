@@ -13,9 +13,11 @@ module.exports = {
             //message.edit("New login channel created: " + channel.name);
             
             
-                await new Promise(resolve => setTimeout(resolve, 5000)); // 1 second delay
+                await new Promise(resolve => setTimeout(resolve, 1000)); // 1 second delay
                 const start_message = await channel.send({embeds: [login_embeds.login]});
-            
+                
+                await new Promise(resolve => setTimeout(resolve, 2500)); // 2.5 second delay
+
                 const message = await channel.send({embeds: [login_embeds.own], components: [buttons.own] });
             }} catch(err) {
         }

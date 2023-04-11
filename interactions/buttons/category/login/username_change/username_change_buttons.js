@@ -1,14 +1,14 @@
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events,EmbedBuilder, Embed } = require('discord.js');
 
-const buttons_relink = {
-    relink: new ActionRowBuilder()
+const buttons_username_change = {
+    username_change: new ActionRowBuilder()
     .addComponents(
         new ButtonBuilder()
-            .setCustomId('relink')
+            .setCustomId('username_change')
             .setLabel("next")
             .setEmoji("➡️")
             .setStyle(ButtonStyle.Primary),
     )
 };
 
-module.exports = buttons_relink;
+module.exports = buttons_username_change;
