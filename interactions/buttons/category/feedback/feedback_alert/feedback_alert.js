@@ -52,7 +52,7 @@ module.exports = {
         const embed = new EmbedBuilder()
           .setTitle("Feedback Reviewed.")
           .setDescription(`Your feedback regarding \`\`${feature}\`\` has been flagged as an alert, it may have violated QuestCraft's Rules.\nThere is also a high chance it may have been flagged because of spam, and continuous irrelevant pieces of feedback.  \n\nIt will be looked into, if this is incorrect you will receive a follow up dm.`)
-          .setColor("Red");
+          .setColor("Yellow");
 
         embedData.fields.forEach(field => {
           if (field.name === "``👤``・User info") {
@@ -77,7 +77,7 @@ module.exports = {
             { name: "``👤``・User info", value: userInfo }
           )
           .setFooter(footer)
-          .setColor("Red")
+          .setColor("Yellow")
           .setTimestamp();
 
         message.delete();  

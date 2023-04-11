@@ -65,7 +65,7 @@ module.exports = {
                     { name: "``👤``・User info", value: userInfo }
                     )
                     .setFooter(footer)
-                    .setColor("Red")
+                    .setColor("Yellow")
                     .setTimestamp();
                 const remove = new EmbedBuilder()
                     .setDescription(`${footer.text} has been removed from the blacklist.`)
