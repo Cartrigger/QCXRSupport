@@ -3,7 +3,7 @@ const { EmbedBuilder, Embed } = require('discord.js');
 const login_embeds = {
   login: new EmbedBuilder()
     .setTitle("You have selected a [LOGIN] issue")
-    .setDescription("Please respond with the correct buttons below, if you want to make a new instance of the questions please run ``/login``")
+    .setDescription("Please respond with the correct buttons, if you want to make a new instance of the questions please run ``/login``")
     .setColor("Aqua")
     .setFooter({ text: 'Developed by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
 
