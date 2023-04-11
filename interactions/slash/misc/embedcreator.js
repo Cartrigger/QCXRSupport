@@ -3,7 +3,10 @@ const { EmbedBuilder, SlashCommandBuilder,PermissionsBitField } = require("disco
 /**
  * @type {import('../../../typings').SlashInteractionCommand}
  */
-const embeds = require('../../../embeds.js');
+const embeds = require('../../../embeds.js'),
+{ owner } = require('../../../config.json');
+
+
 
 const error_embed_builder_channel = new EmbedBuilder()
     .setTitle('Error!')
@@ -21,6 +24,23 @@ const embed_success = new EmbedBuilder()
     .setDescription("Your Embed was sent below")
     .setColor('Green')
 
+const server_only = new EmbedBuilder()
+  .setTitle('Error!')
+  .setDescription('This command can only be executed in a server/guild')
+  .setColor('Red')
+
+const roles_only = new EmbedBuilder()
+  .setTitle('Error!')
+  .setDescription('You do not have permission to use this command. Currently only [<@&945554238380048456>],[<@&820768461697318982>],[<@&820768352712523857>],[<@&820781262335508512>] and [<@&834177899321360404>] have access to this command')
+  .setColor('Red')
+ 
+const qc_only = new EmbedBuilder()
+  .setTitle('Error!')
+  .setDescription('Only admins of the server can use this command outside the [QuestCraft discord server.](https://discord.gg/questcraft)')
+  .setColor('Red')  
+
+
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('embedcreator')
@@ -34,23 +54,29 @@ module.exports = {
         .addStringOption (option => option.setName('field-value').setDescription(`This is is the field value`).setRequired (false))
         .addStringOption (option => option.setName('footer').setDescription (`This is the footer of the embed`).setRequired (false)),
         async execute (interaction) {
-            const allowedRoleIds = ['945554238380048456', '820768461697318982', '820768352712523857', '820781262335508512', '834177899321360404']; 
-            const member = interaction.member;
-            const allowedServerId = '820767484042018829';
-            const guildId = interaction.guild.id;
-            const adminPermissions = new PermissionsBitField(PermissionsBitField.Flags.Administrator);
-            const hasAllowedRole = member.roles.cache.some(role => allowedRoleIds.includes(role.id));
+          if (!owner.includes(interaction.user.id)) {
+            if (!interaction.inGuild()){
+              return await interaction.reply({ embeds: [server_only], ephemeral: true });
+            }
+
+              const allowedRoleIds = ['945554238380048456', '820768461697318982', '820768352712523857', '820781262335508512', '834177899321360404']; 
+              const member = interaction.member;
+              const allowedServerId = '820767484042018829';
+              const guildId = interaction.guild.id;
+              const adminPermissions = new PermissionsBitField(PermissionsBitField.Flags.Administrator);
+              const hasAllowedRole = member.roles.cache.some(role => allowedRoleIds.includes(role.id));
           
-            if (guildId == allowedServerId) {
-                if (!hasAllowedRole) {
-                return await interaction.reply({ content: 'You do not have permission to use this command. Currently only [<@&945554238380048456>],[<@&820768461697318982>],[<@&820768352712523857>],[<@&820781262335508512>] and [<@&834177899321360404>] have access to this command', ephemeral: true });
-                }
-            }
-            if (guildId !== allowedServerId) {
-                if (!member.permissions.has([PermissionsBitField.Administrator])) {
-                    return await interaction.reply({ content: 'Only admins of the server can use this command outside the [QuestCraft discord server.](https://discord.gg/questcraft)', ephemeral: true });
-                }
-            }
+              if (guildId == allowedServerId) {
+                  if (!hasAllowedRole) {
+                  return await interaction.reply({ embeds: [roles_only], ephemeral: true });
+                  }
+              }
+              if (guildId !== allowedServerId) {
+                  if (!member.permissions.has([PermissionsBitField.Administrator])) {
+                      return await interaction.reply({ embeds: [qc_only], ephemeral: true });
+                  }
+              }
+          }
 
           
                       const { options } = interaction;
@@ -80,15 +106,20 @@ module.exports = {
                           .addFields({ name: `${fieldn}`, value: `${fieldv}` })
                           .setFooter({
                             text: `${footer}`,
-                            iconURL: interaction.member.displayAvatarURL({ dynamic: true }),
+                            iconURL: interaction.user.displayAvatarURL({ dynamic: true }),
                           });
                         await interaction.reply({ embeds: [embed_success], ephemeral: true });
-                        const message = await interaction.channel.send({ embeds: [embed] });
+                        try{
+                          const message = await interaction.channel.send({ embeds: [embed] });
+                        } catch(err){
+                          const message = await interaction.user.send({ embeds: [embed] });
+                        }
                         //console.log(`Embed sent successfully: ${message.url}`);
                    
                    
                    
                     } catch (err) {
+                      console.log(err)
                         try {
                           await interaction.editReply({
                             embeds: [error_embed_builder_channel],

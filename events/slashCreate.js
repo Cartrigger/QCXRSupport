@@ -37,7 +37,7 @@ module.exports = {
 		}
 		const now = Date.now();
 		const timestamps = cooldowns.get(command.name);
-		const defaultCooldownDuration = 600;
+		const defaultCooldownDuration = 0;
 		let cooldownAmount = command.cooldown ?? defaultCooldownDuration;
 		
 		// Check if user has a specific role and reduce cooldown accordingly
