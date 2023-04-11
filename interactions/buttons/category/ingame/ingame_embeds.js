@@ -10,7 +10,7 @@ const ingame_embeds = {
 // Moved V51 to the main embeds file
   v51_yes: new EmbedBuilder()
     .setTitle("Please bear with us")
-    .setDescription("A support member will be with you shorty to review your screenshot, if you have not sent it yet please send it below\n\n*If you are not in a ticket please make one and send the screenshot there if a support member is currently unavailable* ")
+    .setDescription("A support member will be with you shortly to review your screenshot, if you have not sent it yet please send it below\n\n*If you are not in a ticket please make one and send the screenshot there if a support member is currently unavailable* ")
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
     
