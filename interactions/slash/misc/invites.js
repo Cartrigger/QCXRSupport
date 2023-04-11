@@ -28,7 +28,7 @@ module.exports = {
                     return;
                 }
                 if (categorys === 'xrcraft') {
-                  await interaction.reply("https://discord.gg/xrcraft-947244318740054149\nTo see their server status run ``/xrstats``!");
+                  await interaction.reply("https://discord.gg/xrcraft see their server status run ``/xrstats``!");
                   return;
                 }
                 if (categorys === 'vivecraft') {
