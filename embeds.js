@@ -147,7 +147,7 @@ const embeds = {
     .setTitle("**📂 Mods Location**")
     .setDescription("The Mods are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/mods``\n\n*For more information on mods run ``/mods``* ")
     .setColor("Greyple")
-    .setFooter({ text: 'Written by Pixel', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   location_saves: new EmbedBuilder()
     .setTitle("**📂 Saves [Worlds] Location**")
     .setDescription("The save files are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/saves``\n\nFor some good world downloads check out [Planet Minecraft](https://www.planetminecraft.com/projects/)\n*(make sure you download the right version)* ")
