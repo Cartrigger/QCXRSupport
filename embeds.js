@@ -54,11 +54,11 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   support_channels: new EmbedBuilder()
     .setTitle("**Sorry but <:notsupportchannel:993043214472859778>**")
-    .setDescription("Support is handled in <#945502948111290498> or <#946021441298649158> and you can see the FAQ in <#821469293156892724>.\nOn top of this, you can see common issues in <#1065000467010179092>")
+    .setDescription("Support is handled in <#945502948111290498> or <#946021441298649158> and you can see the FAQ in <#821469293156892724>.\nOn top of this, you can see common issues in <#1065000467010179092>\n\nIf your issue still happens to persist even after reviewing both channels make a ticket in <#946184706486054984>")
     .setColor("Green"),
   versions: new EmbedBuilder()
     .setTitle("**Version Info**")
-    .setDescription("You are unable to use versions on QuestCraft other than 1.19.3 and 1.18.2 at the moment - however if your friend or you own a Spigot/Paper server you can install [ViaVersion](https://www.spigotmc.org/resources/viaversion.19254/) or [ViaBackwards](https://www.spigotmc.org/resources/viabackwards.27448/) so you can join on either questcraft version.\n- Do ``/servers`` for a server setup guide \n\nIf you want to play on different versions on a Fabric server then you can see [the fabric version of this plugin](https://www.curseforge.com/minecraft/mc-mods/viafabric) or if you prefer Forge you can get the Forge version of that Fabric mod [here](https://www.curseforge.com/minecraft/mc-mods/viaforge)\nAll installation instructions are located on the SpigotMC/CurseForge page\n\nHow to switch between 1.18.2 and 1.19.3 on QuestCraft\n(click the version to change):")
+    .setDescription("You are unable to use versions on QuestCraft other than 1.19.3 and 1.18.2 at the moment - however if your friend or you own a Spigot/Paper server you can install [ViaVersion](https://www.spigotmc.org/resources/viaversion.19254/) or [ViaBackwards](https://www.spigotmc.org/resources/viabackwards.27448/) so you can join on either questcraft version.\n- Do ``/servers`` for a server setup guide \n\nIf you want to play on different versions on a Fabric server then you can see [the fabric version of this plugin](https://www.curseforge.com/minecraft/mc-mods/viafabric) or if you prefer Forge you can get the Forge version of that Fabric mod [here](https://www.curseforge.com/minecraft/mc-mods/viaforge)\nAll installation instructions are located on the SpigotMC/CurseForge page\n\nHow to switch between 1.18.2 and 1.19.3 on QuestCraft\n(click the version to change):\n\n4.0 of QuestCraft is soon to release this month (as of April 2023)\nIt will come with 4 new versions\n\n1.18.2\n1.19.2\1.19.3\n1.19.4")
     .setColor("Green")
     .setImage("https://media.discordapp.net/attachments/1057074981135196230/1086666081244024925/version_switch.png?width=868&height=656")
     .setFooter({ text: 'Written by TechyGiraffe999, Updated by DevLime'}),
@@ -80,14 +80,14 @@ const embeds = {
     .setColor("DarkBlue"),
   falling_blocks_crash:  new EmbedBuilder()
     .setTitle("**Falling blocks crash my game:**")
-    .setDescription("You probably have the [Continuity](https://modrinth.com/mod/continuity) mod, Continuity has an conditional dependency.\nIf [Sodium](https://modrinth.com/mod/sodium) is present [Indium](https://modrinth.com/mod/indium) will have to be installed so that Continuity can be happy\n*Find the Indium for your game version and install it along with Continuity and the crash shouldn't happen no longer.\n__Feel free to let any of the support staff know if you have issues__")
+    .setDescription("You probably have the [Continuity](https://modrinth.com/mod/continuity) mod, Continuity has an conditional dependency.\nIf [Sodium](https://modrinth.com/mod/sodium) is present [Indium](https://modrinth.com/mod/indium) will have to be installed so that Continuity can be happy\n*Find the Indium for your game version and install it along with Continuity and the crash shouldn't happen no longer.\n__Feel free to let any of the support staff know if you have issues__\n\n**MAKE SURE TO DOWNLOAD AN OLDER VERSION OF INDIUM FOR 1.19.3**\n**THE NEWER INDIUM REQUIRES A NEW SODIUM THAT QUESTCRAFT DOESN'T USE
     .setColor("Red")
-    .setFooter({ text: 'Written by !DED',iconURL: 'https://images-ext-1.discordapp.net/external/qEPQWKjuG0ncB0kki1pPomJU11TFi5noe4Td0HCteFw/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?width=286&height=286'}),
+    .setFooter({ text: 'Written by !DED & Pixel',iconURL: 'https://images-ext-1.discordapp.net/external/qEPQWKjuG0ncB0kki1pPomJU11TFi5noe4Td0HCteFw/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?width=286&height=286'}),
   play_crash:  new EmbedBuilder()
     .setTitle("**When I press play it crashes**")
     .setDescription("you may have skipped over the instances installation.\n\nReinstall and wait 2-20 minutes after pressing Microsoft login.\n\n• Average completion time is 2-20 minutes but it depends on your internet speed.\n• it will tell you when its done. \n• The file size is around 700 megabytes\n\n**Doing any one of these things will stop the download:**\n\n• taking off the headset\n• letting the headset go idle\n• exiting your guardian\n• clicking any buttons in the app\n• going into passthrough\n• messing with wifi settings\n• quitting the app")
     .setColor("Red")
-    .setFooter({ text: 'Written by !DED - revisied with Crow',iconURL: 'https://images-ext-1.discordapp.net/external/qEPQWKjuG0ncB0kki1pPomJU11TFi5noe4Td0HCteFw/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?width=286&height=286'}),
+    .setFooter({ text: 'Written by !DED - revised with Pixel',iconURL: 'https://images-ext-1.discordapp.net/external/qEPQWKjuG0ncB0kki1pPomJU11TFi5noe4Td0HCteFw/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?width=286&height=286'}),
   faq_world:  new EmbedBuilder()
     .setTitle("**When I load into a world it doesn't show anything:**")
     .setDescription("Switch the graphics quality to fast.  ")
@@ -140,14 +140,14 @@ const embeds = {
     .setColor("Greyple"),
   location_resource_packs: new EmbedBuilder()
     .setTitle("**📂 Resource Pack Location**")
-    .setDescription("The resource packs are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/resourcepacks``\n\n For some good resource packs check out [Planet Minecraft](https://www.planetminecraft.com/texture-packs/)\n\n*Most versions should work regardless, but for maximum compatability try to download a resource pack that is listed as compatible with your Minecraft version*\n\n**Mods that state that they use optifine features require some external mods to function.** Examples of some of these mods are:\nCEM\nCIT\nContinuity\netc.")
+    .setDescription("The Resource Packs folder can be located in android/data/com.qcxr.qcxr/files/.minecraft/resourcepacks.\nAny Resource Pack for any mc version should work, but to be safe and for maximum compatiblity it is recommended you install packs for 1.18.2 or 1.19.3\n\nDo note that some resource packs state they require optifine features to function, and as QuestCraft is fabric and cannot run optifine you need to install some external mods for the packs to function.\nThese mods include:\n[CIT Resewn](https://www.curseforge.com/minecraft/mc-mods/cit-resewn)\n[CEM](https://github.com/YoungSoulluoS/Fresh-Animations-CEM-fork/releases)\n[Continuity](https://www.curseforge.com/minecraft/mc-mods/continuity)")
     .setColor("Greyple")
-    .setFooter({ text: 'Written by TechyGiraffe999 & Crow'}),
+    .setFooter({ text: 'Written by Pixel & TechyGiraffe999', iconURL: 'https://cdn.discordapp.com/avatars/796512162855125022/54d91d44b108640889109d58cf8884a3.png?size=4096'}),
   location_mods: new EmbedBuilder()
     .setTitle("**📂 Mods Location**")
     .setDescription("The Mods are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/mods``\n\n*For more information on mods run ``/mods``* ")
     .setColor("Greyple")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by Pixel', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   location_saves: new EmbedBuilder()
     .setTitle("**📂 Saves [Worlds] Location**")
     .setDescription("The save files are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/saves``\n\nFor some good world downloads check out [Planet Minecraft](https://www.planetminecraft.com/projects/)\n*(make sure you download the right version)* ")
