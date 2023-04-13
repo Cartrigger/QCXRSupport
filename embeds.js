@@ -140,7 +140,7 @@ const embeds = {
     .setColor("Greyple"),
   location_resource_packs: new EmbedBuilder()
     .setTitle("**📂 Resource Pack Location**")
-    .setDescription("You can find the Resource Packs folder in `android/data/com.qcxr.qcxr/files/.minecraft/resourcepacks`.\nAny Resource Pack made for any version of Minecraft should work, but for full usage it is recommended to install packs made for either 1.18.2 or 1.19.3\n\n Some packs may state they require certain optifine features to function.\nThis requires the use of external mods to enable those features\nList of mods:\n\n[CIT Resewn](https://www.curseforge.com/minecraft/mc-mods/cit-resewn)\n[CEM](https://github.com/YoungSoulluoS/Fresh-Animations-CEM-fork/releases)\n[Continuity](https://www.curseforge.com/minecraft/mc-mods/continuity)")
+    .setDescription("You can find the Resource Packs folder in `android/data/com.qcxr.qcxr/files/.minecraft/resourcepacks`.\nAny Resource Pack made for any version of Minecraft should work, but for full usage it is recommended to install packs made for either 1.18.2 or 1.19.3\n\n Some packs may state they require certain optifine features to function.\nThis requires the use of external mods to enable those features\nList of mods:\n\n> [CIT Resewn](https://www.curseforge.com/minecraft/mc-mods/cit-resewn) | [CEM](https://github.com/YoungSoulluoS/Fresh-Animations-CEM-fork/releases) | [Continuity](https://www.curseforge.com/minecraft/mc-mods/continuity)")
     .setColor("Greyple")
     .setFooter({ text: 'Written by Pixel'}),
   location_mods: new EmbedBuilder()
