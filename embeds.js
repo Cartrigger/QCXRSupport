@@ -106,9 +106,9 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   immersive_controls:  new EmbedBuilder()
     .setTitle("**How do I turn immersive controls on?**")
-    .setDescription("Immersive controls are on by default\nSwing at stuff to break or hit. Punching might not work as good\n\nDrinking and eating works by putting food up to your mouth\n\nYou use bows by putting the arrow in the bow and pulling back while holding right trigger\nBe sure to disable Raw Item Positions or else the bow will not work")
+    .setDescription("> Immersive controls are on by default\n\n• Swing at stuff to break or hit. Punching might not work as good\n\n• Drinking and eating works by putting food up to your mouth\n\n• You use bows by putting the arrow in the bow and pulling back while holding right trigger\n*Be sure to disable Raw Item Positions or else the bow will not work*")
     .setColor("Yellow")
-    .setFooter({ text: 'Written by !DED',iconURL: 'https://images-ext-1.discordapp.net/external/qEPQWKjuG0ncB0kki1pPomJU11TFi5noe4Td0HCteFw/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?width=286&height=286'}),
+    .setFooter({ text: 'Written by !DED and Pixel'}),
   voice_chat:  new EmbedBuilder()
     .setTitle("**How to enable Voice Chat:**")
     .setDescription("1. Go into a game\n2. Click the right controller B button, this will open radial menu.\n3. While in radial menu find the bottom option that says 'Voicechat GUI'\n4. In voicechat gui click settings.\n5. In settings switch voice activation type to 'Voice'\n\n(Optional configuration)\n6. Drag the voice activation threshold down to -127")
