@@ -27,7 +27,7 @@ const embeds = {
     .setFooter({ text: 'How to add mods written by !DED | Where to find mods written by TechyGiraffe999'}),
   nopiracy: new EmbedBuilder()
     .setTitle("**Piracy is illegal!**")
-    .setDescription("**QCXR does not endorse piracy in any way shape or form** On top of this, we will not give Minecraft accounts to people who do not have such account. You need to buy Java Edition to play QuestCraft.\nWe cannot give the gsme for free due to legal reasons")
+    .setDescription("**QCXR does not endorse piracy in any way shape or form** On top of this, we will not give Minecraft accounts to people who do not have such account. You need to buy Java Edition to play QuestCraft. We cannot give the game for free due to legal reasons.")
     .setColor("Green"),
   otherheadsets: new EmbedBuilder()
     .setTitle("**QuestCraft on other Headsets**")
