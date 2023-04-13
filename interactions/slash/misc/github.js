@@ -7,7 +7,7 @@ const embeds = require('../../../embeds.js');
 module.exports = {
 	data:  new SlashCommandBuilder()
 	.setName('github')
-	.setDescription('Github for both QuestCraft and Me!')
+	.setDescription('Githubs for both QuestCraft and Me!')
 	.addStringOption(option =>
 		option.setName('options')
 			.setDescription('Pick a Github Repo')

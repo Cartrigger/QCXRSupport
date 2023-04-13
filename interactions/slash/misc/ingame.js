@@ -6,7 +6,6 @@ const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
  * @type {import('../../../typings').SlashInteractionCommand}
  */
 const embeds = require('../../../embeds.js');
-const ingame_embeds = require('../../buttons/category/ingame/ingame_embeds');
 const buttons = require('../../buttons/category/ingame/v51/v51_buttons')
 
 module.exports = {

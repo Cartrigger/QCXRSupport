@@ -72,7 +72,7 @@ const embeds = {
     .setColor("DarkBlue"),
   fixed: new EmbedBuilder()
     .setTitle("**Was QuestCraft fixed...?**")
-    .setDescription("YES!!! 3.0 Was released!")
+    .setDescription("Yes!!! 3.0 Was released on <t:1671995040:D>! At the time of writing (13th April), QuestCraft 4.0 is soon to release!")
     .setColor("Green"),
   github_qc: new EmbedBuilder()
     .setTitle("**QuestCraft Github**")
