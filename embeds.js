@@ -27,7 +27,7 @@ const embeds = {
     .setFooter({ text: 'How to add mods written by !DED | Where to find mods written by TechyGiraffe999'}),
   nopiracy: new EmbedBuilder()
     .setTitle("**Piracy is illegal!**")
-    .setDescription("**QCXR does not endorse piracy in any way shape or form.** On top of this, we will not give Minecraft accounts to people who do not have such account. You need to buy Java Edition to play QuestCraft.")
+    .setDescription("**QCXR does not endorse piracy in any way shape or form** On top of this, we will not give Minecraft accounts to people who do not have such account. You need to buy Java Edition to play QuestCraft. We cannot give the game for free due to legal reasons.")
     .setColor("Green"),
   otherheadsets: new EmbedBuilder()
     .setTitle("**QuestCraft on other Headsets**")
@@ -57,11 +57,11 @@ const embeds = {
     .setDescription("Support is handled in <#945502948111290498> or <#946021441298649158> and you can see the FAQ in <#821469293156892724>.\nOn top of this, you can see common issues in <#1065000467010179092>")
     .setColor("Green"),
   versions: new EmbedBuilder()
-    .setTitle("**Version Info**")
-    .setDescription("You are unable to use versions on QuestCraft other than 1.19.3 and 1.18.2 at the moment - however if your friend or you own a Spigot/Paper server you can install [ViaVersion](https://www.spigotmc.org/resources/viaversion.19254/) or [ViaBackwards](https://www.spigotmc.org/resources/viabackwards.27448/) so you can join on either questcraft version.\n- Do ``/servers`` for a server setup guide \n\nIf you want to play on different versions on a Fabric server then you can see [the fabric version of this plugin](https://www.curseforge.com/minecraft/mc-mods/viafabric) or if you prefer Forge you can get the Forge version of that Fabric mod [here](https://www.curseforge.com/minecraft/mc-mods/viaforge)\nAll installation instructions are located on the SpigotMC/CurseForge page\n\nHow to switch between 1.18.2 and 1.19.3 on QuestCraft\n(click the version to change):")
+    .setTitle("**Version Info**") 
+    .setDescription("You are unable to use versions on QuestCraft other than 1.19.3 and 1.18.2 at the moment - however if your friend or you own a Spigot/Paper server you can install [ViaVersion](https://www.spigotmc.org/resources/viaversion.19254/) or [ViaBackwards](https://www.spigotmc.org/resources/viabackwards.27448/) so you can join on either questcraft version.\n- Do ``/servers`` for a server setup guide \n\nIf you want to play on different versions on a Fabric server then you can see [the fabric version of this plugin](https://www.curseforge.com/minecraft/mc-mods/viafabric) or if you prefer Forge you can get the Forge version of that Fabric mod [here](https://www.curseforge.com/minecraft/mc-mods/viaforge)\nAll installation instructions are located on the SpigotMC/CurseForge page\n\n4.0 of QuestCraft is set to release later this month *(as of April 2023)*, and it will come with the following versions:\n> 1.18.2 | 1.19.2 | 1.19.3 | 1.19.4\n\nHow to switch between 1.18.2 and 1.19.3 on QuestCraft\n(click the version to change):")
     .setColor("Green")
     .setImage("https://media.discordapp.net/attachments/1057074981135196230/1086666081244024925/version_switch.png?width=868&height=656")
-    .setFooter({ text: 'Written by TechyGiraffe999, Updated by DevLime'}),
+    .setFooter({ text: 'Written by TechyGiraffe999, Updated by Pixel'}),
   yvr: new EmbedBuilder()
     .setTitle("**YVR Info**")
     .setDescription("YVR is a Chinese headset company, they have requested we port QuestCraft. We are working on both QCXR and YVRCraft at the same time.")
@@ -72,7 +72,7 @@ const embeds = {
     .setColor("DarkBlue"),
   fixed: new EmbedBuilder()
     .setTitle("**Was QuestCraft fixed...?**")
-    .setDescription("YES!!! 3.0 Was released!")
+    .setDescription("Yes!!! 3.0 Was released on <t:1671995040:D>! At the time of writing (13th April), QuestCraft 4.0 is soon to release!")
     .setColor("Green"),
   github_qc: new EmbedBuilder()
     .setTitle("**QuestCraft Github**")
@@ -80,14 +80,14 @@ const embeds = {
     .setColor("DarkBlue"),
   falling_blocks_crash:  new EmbedBuilder()
     .setTitle("**Falling blocks crash my game:**")
-    .setDescription("You probably have the [Continuity](https://modrinth.com/mod/continuity) mod, Continuity has an conditional dependency.\nIf [Sodium](https://modrinth.com/mod/sodium) is present [Indium](https://modrinth.com/mod/indium) will have to be installed so that Continuity can be happy\n*Find the Indium for your game version and install it along with Continuity and the crash shouldn't happen no longer.\n__Feel free to let any of the support staff know if you have issues__")
+    .setDescription("You probably have the [Continuity](https://modrinth.com/mod/continuity) mod, Continuity has an conditional dependency.\nIf [Sodium](https://modrinth.com/mod/sodium) is present [Indium](https://modrinth.com/mod/indium) will have to be installed so that Continuity can be happy\n*Find the Indium for your game version and install it along with Continuity and the crash shouldn't happen no longer.\n__Feel free to let any of the support staff know if you have issues__\n\n**DOWNLOAD AN OLDER VERSION OF INDIUM**\n**THE NEWER VERSION CRASHES WITH OUR CURRENT VERSION OF SODIUM**")
     .setColor("Red")
-    .setFooter({ text: 'Written by !DED',iconURL: 'https://images-ext-1.discordapp.net/external/qEPQWKjuG0ncB0kki1pPomJU11TFi5noe4Td0HCteFw/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?width=286&height=286'}),
+    .setFooter({ text: 'Written by !DED, Updated by Pixel'}),
   play_crash:  new EmbedBuilder()
     .setTitle("**When I press play it crashes**")
     .setDescription("you may have skipped over the instances installation.\n\nReinstall and wait 2-20 minutes after pressing Microsoft login.\n\n• Average completion time is 2-20 minutes but it depends on your internet speed.\n• it will tell you when its done. \n• The file size is around 700 megabytes\n\n**Doing any one of these things will stop the download:**\n\n• taking off the headset\n• letting the headset go idle\n• exiting your guardian\n• clicking any buttons in the app\n• going into passthrough\n• messing with wifi settings\n• quitting the app")
     .setColor("Red")
-    .setFooter({ text: 'Written by !DED - revisied with Crow',iconURL: 'https://images-ext-1.discordapp.net/external/qEPQWKjuG0ncB0kki1pPomJU11TFi5noe4Td0HCteFw/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?width=286&height=286'}),
+    .setFooter({ text: 'Written by !DED - revised with Pixel',iconURL: 'https://images-ext-1.discordapp.net/external/qEPQWKjuG0ncB0kki1pPomJU11TFi5noe4Td0HCteFw/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?width=286&height=286'}),
   faq_world:  new EmbedBuilder()
     .setTitle("**When I load into a world it doesn't show anything:**")
     .setDescription("Switch the graphics quality to fast.  ")
@@ -106,9 +106,9 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   immersive_controls:  new EmbedBuilder()
     .setTitle("**How do I turn immersive controls on?**")
-    .setDescription("Immersive controls are on by default\nSwing at stuff to break or hit. Punching might not work as good\n\nDrinking and eating works by putting food up to your mouth")
+    .setDescription("> Immersive controls are on by default\n\n• Swing at stuff to break or hit. Punching might not work as good\n\n• Drinking and eating works by putting food up to your mouth\n\n• You use bows by putting the arrow in the bow and pulling back while holding right trigger\n*Be sure to disable Raw Item Positions or else the bow will not work*")
     .setColor("Yellow")
-    .setFooter({ text: 'Written by !DED',iconURL: 'https://images-ext-1.discordapp.net/external/qEPQWKjuG0ncB0kki1pPomJU11TFi5noe4Td0HCteFw/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?width=286&height=286'}),
+    .setFooter({ text: 'Written by !DED and Pixel'}),
   voice_chat:  new EmbedBuilder()
     .setTitle("**How to enable Voice Chat:**")
     .setDescription("1. Go into a game\n2. Click the right controller B button, this will open radial menu.\n3. While in radial menu find the bottom option that says 'Voicechat GUI'\n4. In voicechat gui click settings.\n5. In settings switch voice activation type to 'Voice'\n\n(Optional configuration)\n6. Drag the voice activation threshold down to -127")
@@ -140,9 +140,9 @@ const embeds = {
     .setColor("Greyple"),
   location_resource_packs: new EmbedBuilder()
     .setTitle("**📂 Resource Pack Location**")
-    .setDescription("The resource packs are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/resourcepacks``\n\n For some good resource packs check out [Planet Minecraft](https://www.planetminecraft.com/texture-packs/)\n\n*Most versions should work regardless, but for maximum compatability try to download a resource pack that is listed as compatible with your Minecraft version*\n\n**Mods that state that they use optifine features require some external mods to function.** Examples of some of these mods are:\nCEM\nCIT\nContinuity\netc.")
+    .setDescription("You can find the Resource Packs folder in `android/data/com.qcxr.qcxr/files/.minecraft/resourcepacks`.\nAny Resource Pack made for any version of Minecraft should work, but for full usage it is recommended to install packs made for either 1.18.2 or 1.19.3\n\n Some packs may state they require certain optifine features to function.\nThis requires the use of external mods to enable those features\n*Examples of those mods include:*\n\n> [CIT Resewn](https://www.curseforge.com/minecraft/mc-mods/cit-resewn) | [CEM](https://github.com/YoungSoulluoS/Fresh-Animations-CEM-fork/releases) | [Continuity](https://www.curseforge.com/minecraft/mc-mods/continuity)")
     .setColor("Greyple")
-    .setFooter({ text: 'Written by TechyGiraffe999 & Crow'}),
+    .setFooter({ text: 'Written by Pixel', iconURL: 'https://cdn.discordapp.com/avatars/796512162855125022/54d91d44b108640889109d58cf8884a3.png?size=4096'}),
   location_mods: new EmbedBuilder()
     .setTitle("**📂 Mods Location**")
     .setDescription("The Mods are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/mods``\n\n*For more information on mods run ``/mods``* ")
@@ -150,7 +150,7 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   location_saves: new EmbedBuilder()
     .setTitle("**📂 Saves [Worlds] Location**")
-    .setDescription("The save files are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/saves``\n\nFor some good world downloads check out [Planet Minecraft](https://www.planetminecraft.com/projects/)\n*(make sure you download the right version)* ")
+    .setDescription("The save files are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/saves``\n\nFor some good world downloads check out [Planet Minecraft](https://www.planetminecraft.com/projects/)\n*(make sure you download the right version)*\n\nYou can also use this directory to backup any worlds you may have whilst reinstalling or updating QuestCraft")
     .setColor("Greyple")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   immersivemc_1_19_3:  new EmbedBuilder()
@@ -170,7 +170,7 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   renderer_gl4es: new EmbedBuilder()
     .setTitle("**QuestCraft GL4ES Renderer**")
-    .setDescription("All QuestCraft versions can utilize the **GL4ES renderer**, it has moderate speed with moderate mod compatibility.\n- Complex mods like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) may not work, test at your own risk.\n\nPlease note moving forwards, on QuestCraft versions 4.0 and above, GL4ES will no longer be toggled by default and will most likely be removed in later versions. ")    
+    .setDescription("All QuestCraft versions can utilize the **GL4ES renderer**, it has moderate speed with moderate mod compatibility.\n- Complex mods like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) may not work, test at your own risk.\n\nPlease note moving forwards, on QuestCraft versions 4.0 and above, GL4ES will no longer be toggled by default and will be removed in later versions. ")    
     .setColor("Orange")
     .setFooter({ text: 'Written by my Developers and my Contributors'}),
   renderer_vulkan: new EmbedBuilder()
@@ -208,7 +208,7 @@ const embeds = {
     .setColor('Red'),
   v51: new EmbedBuilder()
     .setTitle("Do you have Metas V51 firmware installed?")
-    .setDescription("If you do please send a screenshot below which shows proof of that and a support member will review it and send you the fixed build\n\n**If you do not know how to see this:**\n1. On your quest head to 'settings'\n2. Then head to 'system' and select 'software update'\n3. Check the first 2 digits of the number under the 'firmware' section.")
+    .setDescription("If you do please send a screenshot below which shows proof of that and a support member will review it and send you the fixed build\n\n**If you do not know how to see this:**\n1. On your quest head to 'settings'\n2. Then head to 'system' and select 'software update'\n3. Check the first 4 digits of the number under the 'firmware' section.")
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   devs_only: new EmbedBuilder()

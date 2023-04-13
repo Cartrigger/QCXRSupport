@@ -34,7 +34,7 @@ module.exports = {
     .addUserOption(option =>
         option
             .setName('opponent')
-            .setDescription('Challenge your oponent [ONLY SPECIFIC GAMEMODES]')
+            .setDescription('Challenge your opponent [ONLY SPECIFIC GAMEMODES]')
             .setRequired(false)),
 			async execute(interaction) {
 				try{
