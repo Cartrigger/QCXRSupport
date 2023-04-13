@@ -298,8 +298,17 @@ for (const folder of triggerFolders) {
 	}
 }
 
-
-
 // Login into your client application with bot's token.
 
 client.login(token);
+
+
+/**********************************************************************/
+// Anti Crash script
+
+process.on('unhandRejection', (reason, promise) => {
+    console.log(`🚫 Critical Error detected:\n\n`, reason, promise)
+});
+process.on('uncaughtException', (error, origin) => {
+    console.log(`🚫 Critical Error detected:\n\n`, error, origin)
+});
