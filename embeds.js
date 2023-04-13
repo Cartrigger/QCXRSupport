@@ -80,7 +80,7 @@ const embeds = {
     .setColor("DarkBlue"),
   falling_blocks_crash:  new EmbedBuilder()
     .setTitle("**Falling blocks crash my game:**")
-    .setDescription("You probably have the [Continuity](https://modrinth.com/mod/continuity) mod, Continuity has an conditional dependency.\nIf [Sodium](https://modrinth.com/mod/sodium) is present [Indium](https://modrinth.com/mod/indium) will have to be installed so that Continuity can be happy\n*Find the Indium for your game version and install it along with Continuity and the crash shouldn't happen no longer.\n__Feel free to let any of the support staff know if you have issues__\n\n**DOWNLOAD AN OLDER VERSION OF INDIUM**\n**THE NEWER VERSION CRASHES WITH OUR CURRENT VERSION OF SODIUM**")
+    .setDescription("You probably have the [Continuity](https://modrinth.com/mod/continuity) mod, Continuity has an conditional dependency.\nIf [Sodium](https://modrinth.com/mod/sodium) is present [Indium](https://modrinth.com/mod/indium) will have to be installed so that Continuity can be happy\n*Find the Indium for your game version and install it along with Continuity and the crash shouldn't happen no longer.\n__Feel free to let any of the support staff know if you have issues__\n\n**DOWNLOAD AN [OLDER VERSION OF INDIUM](https://www.curseforge.com/minecraft/mc-mods/indium/download/4291875)**\n**THE NEWER VERSION CRASHES WITH OUR CURRENT VERSION OF SODIUM**")
     .setColor("Red")
     .setFooter({ text: 'Written by !DED, Updated by Pixel'}),
   play_crash:  new EmbedBuilder()
