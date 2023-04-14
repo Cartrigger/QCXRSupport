@@ -13,7 +13,7 @@ const embeds = {
     .setColor("Green"),
   developers: new EmbedBuilder()
     .setTitle("**🛠️ My Developers!**")
-    .setDescription("The current developers of Crafty bot are <@317814254336081930>, <@719815864135712799> and <@654048865137459261>! \nYou can checkout the full code of Crafty Bot at the [GitHub repo](https://github.com/Cartrigger/QCXRSoonBot)")
+    .setDescription("The current developers of CraftyXR are <@317814254336081930>, <@719815864135712799> and <@654048865137459261>! \nYou can checkout the full code of CraftyXR at the [GitHub repo](https://github.com/Cartrigger/QCXRSoonBot)")
     .setColor("Green"),
   installation: new EmbedBuilder()
     .setTitle("**Installation Guide**")
@@ -22,7 +22,7 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   mods: new EmbedBuilder()
     .setTitle("**Modding Guide**")
-    .setDescription("**Adding mods to QuestCraft 3.0:**\n*1. Install either the 1.18.2 or 1.19.3 fabric version of your mod to either your PC/Quest\n2. If you are on PC, connect your Quest to SideQuest, and locate your mods folder at* ``android/data/com.qcxr.qcxr/files/.minecraft/mods.``\n*If you are on your Quest, open a file manager like CX File Explorer, and locate the mods folder listed above. (If you don't see the '.minecraft' folder then enable hidden files)\n3. Move your mod file into that version's folder.*\n\n**Note: You MUST have launched either 1.18.2 or 1.19.3 QuestCraft PRIOR to putting your mod into the mods folder.\n\n**Where to find mods:** \n **[Modrinth](https://modrinth.com/mods?f=categories%3A%27worldgen%27&g=categories%3A%27fabric%27&v=1.18.2,1.19.3)**\n **[Curseforge](https://www.curseforge.com/minecraft/mc-mods?filter-game-version=2020709689%3A7499&filter-sort=4)**\nWhen picking mods make sure to **only download 1.18.2/1.19.3 versions downloading versions that are not those will cause the game to crash depending on what version of QuestCraft you are playing**")
+    .setDescription("**Adding mods to QuestCraft 3.0:**\n*1. Install either the 1.18.2 or 1.19.3 fabric version of your mod to either your PC/Quest\n2. If you are on PC, connect your Quest to SideQuest, and locate your mods folder at* ``android/data/com.qcxr.qcxr/files/.minecraft/mods.``\n*If you are on your Quest, open a file manager like CX File Explorer, and locate the mods folder listed above. (If you don't see the '.minecraft' folder then enable hidden files)\n3. Move your mod file into that version's folder.*\n\n**Note: You MUST have launched either 1.18.2 or 1.19.3 QuestCraft PRIOR to putting your mod into the mods folder.\n\n**Where to find mods:** \n **[Modrinth](https://modrinth.com/mods?f=categories%3A%27worldgen%27&g=categories%3A%27fabric%27&v=1.18.2,1.19.3)**\n **[Curseforge](https://www.curseforge.com/minecraft/mc-mods?filter-game-version=2020709689%3A7499&filter-sort=4)**\nWhen picking mods make sure to **only download 1.18.2/1.19.3 versions, downloading versions that are not those will cause the game to crash depending on what version of QuestCraft you are playing**")
     .setColor("Green")
     .setFooter({ text: 'How to add mods written by !DED | Where to find mods written by TechyGiraffe999'}),
   nopiracy: new EmbedBuilder()
