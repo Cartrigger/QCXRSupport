@@ -7,7 +7,7 @@ const embeds = require('../../../embeds.js');
 module.exports = {
 	data:  new SlashCommandBuilder()
 	.setName('invites')
-	.setDescription('A list of useful discord invite links')
+	.setDescription('A list of useful Discord invite links')
 	.addStringOption(option =>
 		option.setName('invites')
 			.setDescription('The invite presets')

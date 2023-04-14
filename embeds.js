@@ -170,17 +170,17 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   renderer_gl4es: new EmbedBuilder()
     .setTitle("**QuestCraft GL4ES Renderer**")
-    .setDescription("All QuestCraft versions can utilize the **GL4ES renderer**, it has moderate speed with moderate mod compatibility.\n- Complex mods like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) may not work, test at your own risk.\n\nPlease note moving forwards, on QuestCraft versions 4.0 and above, GL4ES will no longer be toggled by default and will be removed in later versions. ")    
+    .setDescription("All QuestCraft versions can utilize the **GL4ES renderer**, it has moderate speed with moderate mod compatibility.\n- Complex mods like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) may not work, test at your own risk.\n\nPlease note moving forwards, on QuestCraft versions 4.0 and above, GL4ES will no longer be toggled by default and will be removed in later versions.")    
     .setColor("Orange")
     .setFooter({ text: 'Written by my Developers and my Contributors'}),
   renderer_vulkan: new EmbedBuilder()
     .setTitle("**QuestCraft Vulkan Renderer**")
-    .setDescription("QuestCraft versions 4.0 and above will support  the **Vulkan Renderer**.\nThe Vulkan renderer uses Vulkan (hence the name) to optimise the game rendering and significantly increase framerate, at the cost of mod compatibility.\n\nThis means that more complex mods, like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) will not work, and instead will crash.")
+    .setDescription("QuestCraft versions 4.0 and above will support the **Vulkan Renderer**.\nThe Vulkan renderer uses Vulkan (hence the name) to optimise the game rendering and significantly increase framerate, at the cost of mod compatibility.\n\nThis means that more complex mods, like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) will not work, and instead will crash.")
     .setColor("Orange")
     .setFooter({ text: 'Written by JaffaJace and my Contributors'}),
   renderer_zink: new EmbedBuilder()
     .setTitle("**QuestCraft Zink Renderer**")
-    .setDescription("QuestCraft versions 4.0 and above will support both the **Zink Renderer**.\nThe Zink renderer is a custom renderer implemented by the QC team to optimise the rendering of QuestCraft, but also improve mod compatibility, at the cost of less performance.\n\nThis means that more complex mods, like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) will work in QC!")
+    .setDescription("QuestCraft versions 4.0 and above will support the **Zink Renderer**.\nThe Zink renderer is a custom renderer implemented by the QC team to optimise the rendering of QuestCraft, but also improve mod compatibility, at the cost of less performance.\n\nThis means that more complex mods, like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) will work in QC!")
     .setColor("Orange")
     .setFooter({ text: 'Written by JaffaJace and my Contributors'}),
   simple_voice_chat: new EmbedBuilder()
@@ -190,7 +190,7 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   bedrock_geyser: new EmbedBuilder()
     .setTitle("<:bedrock:1089270506441687221> Allowing Bedrock players to join")
-    .setDescription("For Aternos, Check out this [article](https://support.aternos.org/hc/en-us/articles/360051047631-Geyser), there is also a help video by Aternos listed there\n- For other servers you can find install info at [geysermc](https://geysermc.org)")
+    .setDescription("For Aternos, Check out this [article](https://support.aternos.org/hc/en-us/articles/360051047631-Geyser), there is also a help video by Aternos listed there\n- For other servers you can find install info at [the GeyserMC website.](https://geysermc.org)")
     .setColor("DarkOrange")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   servers: new EmbedBuilder()
@@ -204,7 +204,7 @@ const embeds = {
     .setFooter({ text: 'Written by Reality', iconURL: 'https://cdn.discordapp.com/avatars/251735485884530689/50020f1de3cf0117abb1510d167f9413.png?size=4096'}),
   error_channels: new EmbedBuilder()
     .setTitle('Error!')
-    .setDescription('This command cannot be used in this channel ')
+    .setDescription('This command cannot be used in this channel.')
     .setColor('Red'),
   v51: new EmbedBuilder()
     .setTitle("Do you have Metas V51 firmware installed?")
@@ -213,7 +213,11 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   devs_only: new EmbedBuilder()
     .setDescription("Only developers of <@997670790604542012> can use this ")
-    .setColor("ED4245")
+    .setColor("ED4245"),
+  insupport: new EmbedBuilder()
+    .setTitle("You are already in the support channel!")
+    .setDescription("There is no need to mention any support channels 😁")
+    .setColor("Red")
 };
 //
 module.exports = embeds;

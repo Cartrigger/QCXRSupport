@@ -17,7 +17,7 @@ module.exports = {
     cooldown: 600,
     data: new SlashCommandBuilder()
         .setName('feedback')
-        .setDescription('submit feedback about me!'),
+        .setDescription('Submit feedback about me!'),
     async execute(interaction, client) {
         const userIDs = feedbackAlertUserIds.getUserIDs();
         const userID = interaction.user.id;

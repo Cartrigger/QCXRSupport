@@ -10,7 +10,7 @@ const embeds = require('../../../embeds.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('developers')
-        .setDescription('States the Developers of Me (The Crafty bot)'),
+        .setDescription('Tells you the developers of Me (The Crafty bot)'),
     async execute(interaction,client ) {
         await interaction.reply({
             embeds: [embeds.developers]

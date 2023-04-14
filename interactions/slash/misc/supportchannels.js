@@ -11,7 +11,7 @@ module.exports = {
         
         if (channelExceptions.includes(interaction.channelId)) {
             await interaction.reply({
-                embeds: [embeds.error_channels],
+                embeds: [embeds.insupport],
                 ephemeral: true 
             });
             return;

@@ -11,7 +11,7 @@ module.exports = {
                 .setRequired(true)
                 .addChoices(
                     { name: 'XRCraft', value: 'play.xrcraft.net'},
-                    { name: 'XRCRaft Modded', value: 'modded.xrcraftmc.com'},
+                    { name: 'XRCraft Modded', value: 'modded.xrcraftmc.com'},
                 )),
     async execute(interaction) {
         try{
@@ -61,7 +61,7 @@ module.exports = {
                 });
             }
         } catch(err){
-
+            interaction.reply("Something went wrong, if the issue persists then ping one of my developers!") //if your gonna add error handling then handle the error lmao
         }
 }
 }

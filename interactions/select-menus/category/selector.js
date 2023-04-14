@@ -28,7 +28,7 @@ module.exports = {
 		   await interaction.reply({ embeds: [embeds.github], ephemeral: true })
 	   }
 	   if (selected === "otherheadsets") {
-		  await interaction.reply({ embeds: [embeds.otherheadsets], ephemeral: true })
+		   await interaction.reply({ embeds: [embeds.otherheadsets], ephemeral: true })
 	   }
 	   if (selected === "botgithub") {
 		   await interaction.reply({ embeds: [embeds.botgithub], ephemeral: true })
