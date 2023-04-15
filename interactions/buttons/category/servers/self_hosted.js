@@ -9,7 +9,7 @@ module.exports = {
 	id: "self_hosted",
 
 	async execute(interaction) {
-		await interaction.editReply({embeds: [embeds.selfhostserver]});
+		await interaction.reply({embeds: [embeds.selfhostserver]});
 		return;
 	},
 };
