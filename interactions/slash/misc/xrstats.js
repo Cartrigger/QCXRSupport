@@ -61,7 +61,7 @@ module.exports = {
                 });
             }
         } catch(err){
-            interaction.reply("Something went wrong, if the issue persists then ping one of my developers!") //if your gonna add error handling then handle the error lmao
+        
         }
 }
 }
