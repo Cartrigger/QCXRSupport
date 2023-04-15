@@ -3,8 +3,8 @@ const { EmbedBuilder, Embed } = require('discord.js');
 const embeds = {
   adb: new EmbedBuilder()
     .setTitle("**Uninstalling using ADB commands**")
-    .setDescription("If you're unable to reinstall and need to perform a complete uninstallation, use the command: ``adb uninstall com.qcxr.qcxr``, Sidequest Advanced allows running ADB commands, as shown in the image below, although a PC is required")
-    .setImage("https://media.discordapp.net/attachments/1079679515963432970/1081665865281445919/IMG_0691.png?width=1104&height=656")
+    .setDescription("If you're having an issue with uninstalling and need to perform a force uninstallation, Please make sure you have **Sidequest Advanced** from [over here](https://sidequestvr.com/setup-howto) as basic SideQuest wont work. Run the command: ``adb uninstall com.qcxr.qcxr``, as shown in the image below.")
+    .setImage("https://media.discordapp.net/attachments/1086923171447451681/1096655646650277898/image.png?width=1128&height=670")
     .setColor("Green")
     .setFooter({ text: 'Written by my Developers'}),
   bedrock: new EmbedBuilder()
