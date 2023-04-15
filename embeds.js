@@ -251,7 +251,7 @@ const embeds = {
         value: "- Create an account at [playit](https://playit.gg)\n- Download the playit agent at [the download link](https://playit.gg/download)\n- Find your port in `server.properties` (Hint: it starts with \"server-port=\")\n- Create a new tunnel and set the \"Local IPv4\" to \"127.0.0.1\" then set the port is the port you previously found and also make sure the tunnel type is set to Minecraft Java\n- Find the address and the port in the details of your tunnel\n- Join by putting the address and the port together like this `ip:port`\n- Click join!",
       },
     )
-    .setColor("#00b0f4")
+    .setColor("Green")
     .setFooter({
       text: "Created by DevLime",
       iconURL: "https://cdn.discordapp.com/avatars/779054724543414324/e7ea58b047a539b15a388e8d32f8e2ca.png?size=4096",
