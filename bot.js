@@ -96,24 +96,34 @@ for (const folder of commandFolders) {
 /**********************************************************************/
 // Registration of Slash-Command Interactions.
 
+// Registration of Slash-Command Interactions.
+
 /**
  * @type {String[]}
  * @description All slash commands.
  */
 
-const slashCommands = fs.readdirSync("./interactions/slash");
+const slashCommands = getSlashCommands("./interactions/slash");
 
-// Loop through all files and store slash-commands in slashCommands collection.
+function getSlashCommands(path) {
+  let slashCommands = [];
 
-for (const module of slashCommands) {
-	const commandFiles = fs
-		.readdirSync(`./interactions/slash/${module}`)
-		.filter((file) => file.endsWith(".js"));
+  const commandFiles = fs.readdirSync(path);
 
-	for (const commandFile of commandFiles) {
-		const command = require(`./interactions/slash/${module}/${commandFile}`);
-		client.slashCommands.set(command.data.name, command);
-	}
+  for (const commandFile of commandFiles) {
+    const fullCommandPath = `${path}/${commandFile}`;
+    const commandStats = fs.statSync(fullCommandPath);
+
+    if (commandStats.isDirectory()) {
+      slashCommands = slashCommands.concat(getSlashCommands(fullCommandPath));
+    } else if (commandFile.endsWith(".js")) {
+      const command = require(fullCommandPath);
+      client.slashCommands.set(command.data.name, command);
+      slashCommands.push(fullCommandPath);
+    }
+  }
+
+  return slashCommands;
 }
 
 /**********************************************************************/
