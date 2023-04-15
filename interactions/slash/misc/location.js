@@ -15,7 +15,6 @@ module.exports = {
 			.addChoices(
 				{ name: 'Logs', value: 'logs' },
 				{ name: 'Resource Packs', value: 'resource_packs' },
-                { name: 'Mods', value: 'mods' },
                 { name: 'Saves (Worlds)', value: 'saves' },
                 { name: 'QuestCraft', value: 'questcraft' },
 			)),
@@ -31,10 +30,6 @@ module.exports = {
                 }
                 if (categorys === 'logs') {
                     await interaction.reply({embeds: [embeds.location_logs]});
-                    return;
-                }
-                if (categorys === 'mods') {
-                    await interaction.reply({embeds: [embeds.location_mods]});
                     return;
                 }
                 if (categorys === 'saves') {
