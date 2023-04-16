@@ -201,6 +201,23 @@ const embeds = {
     .setTitle('Error!')
     .setDescription('This command cannot be used in this channel ')
     .setColor('Red'),
+  sideload_pc: new EmbedBuilder()
+    .setTitle("**Sideloading PC Guide**")
+    .setDescription("**How to sideload APKs with SideQuest Advanced:**\n\n1) Open up SideQuest.\n2) Go to the Apps tab of SideQuest.\n3) Drag in the APK from a folder on your computer.\n4) Wait for the APK to finish installing.")
+    .setImage("https://cdn.discordapp.com/attachments/1078126187064332359/1096999716509712435/SideQuest.gif")
+    .setColor("DarkOrange")
+    .setFooter({ text: 'Written by !DED', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
+   quest_logs: new EmbedBuilder()
+    .setTitle("**Getting logs on Quest Guide**")
+    .setDescription("**Sending logs from Quest:**\n\n1) Find the log located in `android/data/com.qcxr.qcxr/files/latestlog.txt`.\n2) Copy and Paste the log in `downloads`.\n3) Open Discord on the Meta Browser and click the + next to the chat box.\n4) Click `Upload a file` and in the top right, change the filter `Media` to `All`.\n5) Locate `latestlog.txt` and send it.")
+    .setImage("https://cdn.discordapp.com/attachments/1078126187064332359/1097009784944873533/ezgif.com-video-to-gif.gif")
+    .setColor("DarkOrange")
+    .setFooter({ text: 'Written by Pixel', iconURL: 'https://cdn.discordapp.com/attachments/1078126187064332359/1097014341259235408/54d91d44b108640889109d58cf8884a3.webp'}),
+  sideload_bugjaeger: new EmbedBuilder()
+    .setTitle("**Sideloading using Bugjaeger Guide**")
+    .setDescription("**How to Sideload APKs using Bugjaeger:**\n\n1) Connect your headset to your phone using a USB-C wire.\n2) Allow Bugjaeger to Access Quest 2.\n3) Allow USB debugging within the Quest headset\n4) Click on the the 3rd tab which looks like a box with an arrow pointing downwards.\n5) At the very top right of the screen click the `+` icon which will open the `Install new APK` menu.\n6) Allow Bugjaeger to access phone files.\n7) Locate the APK and select it.\n\nBugjaeger will install the APK, it will tell you when its done by closing its prompt and showing `Package Installed` at the bottom of the screen.\n**ʷᵃʳⁿᶦⁿᵍ: ᵗʰᶦˢ ˢʰᵒᵘˡᵈ ᵇᵉ ᵗʳᶦᵉᵈ ᵃˢ ᵃ ˡᵃˢᵗ ʳᵉˢᵒʳᵗ ᵃˢ ᶦᵗ ʰᵃˢ ᵃ ᵖᵒˢˢᶦᵇᶦˡᶦᵗʸ ᵒᶠ ⁿᵒᵗ ʷᵒʳᵏᶦⁿᵍ.**")
+    .setColor("DarkOrange")
+    .setFooter({ text: 'Written by !DED', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
   v51: new EmbedBuilder()
     .setTitle("Do you have Metas V51 firmware installed?")
     .setDescription("If you do, please send a screenshot below which shows proof of that, and a support member will review it shortly and send you the fixed build.\n\n**If you do not know how to see this:**\n1. On your quest head to 'settings'\n2. Then head to 'system' and select 'software update'\n3. Check the first 4 digits of the number under the 'firmware' section.")
