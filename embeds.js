@@ -220,9 +220,14 @@ const embeds = {
     .setDescription("**How to Sideload APKs using Bugjaeger:**\n\n1) Connect your headset to your phone using a USB-C wire.\n2) Allow Bugjaeger to Access Quest 2.\n3) Allow USB debugging within the Quest headset\n4) Click on the the 3rd tab which looks like a box with an arrow pointing downwards.\n5) At the very top right of the screen click the `+` icon which will open the `Install new APK` menu.\n6) Allow Bugjaeger to access phone files.\n7) Locate the APK and select it.\n\nBugjaeger will install the APK, it will tell you when its done by closing its prompt and showing `Package Installed` at the bottom of the screen.\n**ʷᵃʳⁿᶦⁿᵍ ᵗʰᶦˢ ˢʰᵒᵘˡᵈ ᵇᵉ ᵗʳᶦᵉᵈ ᵃˢ ᵃ ˡᵃˢᵗ ʳᵉˢᵒʳᵗ ᵃˢ ᶦᵗ ʰᵃˢ ᵃ ᵖᵒˢˢᶦᵇᶦˡᶦᵗʸ ᵒᶠ ⁿᵒᵗ ʷᵒʳᵏᶦⁿᵍ**")
     .setColor("DarkOrange")
     .setFooter({ text: 'Written by !DED', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
+  backup_saves: new EmbedBuilder()
+    .setTitle("**How to backup Worlds**")
+    .setDescription("**How to backup worlds**\n\n1) Navigate to `android/data/com.qcxr.qcxr/files/.minecraft`\n2) Locate the `Saves` folder\n3) Copy the folder \n4) Paste it into your `Downloads` folder if on Quest (If on pc just download it from sidequest)\n5) Reinstall Questcraft to update or to fix an issue\n6) Paste the folder back into `android/data/com.qcxr.qcxr/files/.minecraft`.")
+    .setColor("Green")
+    .setFooter({ text: 'Written by Pixel', iconURL: 'https://cdn.discordapp.com/attachments/1078126187064332359/1097014341259235408/54d91d44b108640889109d58cf8884a3.webp'}),
   v51: new EmbedBuilder()
     .setTitle("Do you have Metas V51 firmware installed?")
-    .setDescription("If you do, please send a screenshot below which shows proof of that, and a support member will review it shortly and send you the fixed build.\n\n**If you do not know how to see this:**\n1. On your quest head to 'settings'\n2. Then head to 'system' and select 'software update'\n3. Check the first 4 digits of the number under the 'firmware' section.")
+    .setDescription("If you do, please send a screenshot below which shows proof of that, and a support member will review it shortly and send you the fixed build.\n\n**If you do not know how to see this:**\n1. On your quest head to 'settings'\n2. Then head to 'system' and select 'software update'\n3. Check the first 4 digits of the number under the 'version' section.")
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   devs_only: new EmbedBuilder()
