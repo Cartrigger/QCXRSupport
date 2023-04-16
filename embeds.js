@@ -9,7 +9,7 @@ const embeds = {
     .setFooter({ text: 'Written by my Developers'}),
   bedrock: new EmbedBuilder()
     .setTitle("**QuestCraft Bedrock Edition**")
-    .setDescription("QuestCraft doesn't have any immediate plans to introduce Bedrock due to the Minecraft TOS.\n\nIt is also incredibly difficult to reverse eningeer games coded in C++, which bedrock is coded in.\n If you want bedrock vr, it does exist for pcvr. You can find info [here](https://www.minecraft.net/en-us/vr)")
+    .setDescription("QuestCraft doesn't have any immediate plans to introduce Bedrock due to the Minecraft TOS.\n\nIt is also incredibly difficult to reverse eningeer games coded in C++, which bedrock is coded in.\nIf you want bedrock vr, it does exist for pcvr. You can find info [here](https://www.minecraft.net/en-us/vr).")
     .setColor("Green"),
   developers: new EmbedBuilder()
     .setTitle("**🛠️ My Developers!**")
