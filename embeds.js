@@ -117,7 +117,7 @@ const embeds = {
     .setColor("Yellow")
     .setFooter({ text: 'Written by !DED', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
   gamma:  new EmbedBuilder()
-    .setTitle("**Gammma issues**")
+    .setTitle("**Gamma issues**")
     .setDescription("**Why is my Gamma/Saturation off?**\n\nQuest currently has Gamma/Saturation issues (We don't know the reason why)\nYou can try using a mod called [Gamma Utils](https://www.curseforge.com/minecraft/mc-mods/gamma-utils) to try and help, though it only helps slightly")
     .setColor("Yellow")
     .setFooter({ text: 'Written by Pixel', iconURL: 'https://cdn.discordapp.com/attachments/1078126187064332359/1097014341259235408/54d91d44b108640889109d58cf8884a3.webp'}),
