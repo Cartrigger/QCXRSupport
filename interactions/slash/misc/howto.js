@@ -9,7 +9,7 @@ module.exports = {
 	.setName('howto')
 	.setDescription('Gives info on how to do certain things')
 	.addStringOption(option =>
-		option.setName('Tutorial')
+		option.setName('howto')
 			.setDescription('The different tutorials')
 			.setRequired(true)
 			.addChoices(
