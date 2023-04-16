@@ -28,7 +28,8 @@ const embeds = {
   nopiracy: new EmbedBuilder()
     .setTitle("**Piracy is illegal!**")
     .setDescription("**QCXR does not endorse piracy in any way shape or form** On top of this, we will not give Minecraft accounts to people who do not have such account. You need to buy Java Edition to play QuestCraft. We cannot give the game for free due to legal reasons and ANY attempt to ask us to could result in a mute or even a ban.")
-    .setColor("Green"),
+    .setColor("Green")
+    .setFooter({ text: 'Written by Cart'}),
   otherheadsets: new EmbedBuilder()
     .setTitle("**QuestCraft on other Headsets**")
     .setDescription("QuestCraft is planned to release on other headsets in the future, however, it is required that the company contacts us first in order to do this. \n Currently we are planned to release on **YVR** and **Pimax** headsets.")
@@ -64,8 +65,9 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999, Updated by Pixel' }),
   yvr: new EmbedBuilder()
     .setTitle("**YVR Info**")
-    .setDescription("YVR is a Chinese headset company, they have requested we port QuestCraft. We are working on both QCXR and YVRCraft at the same time.")
-    .setColor("Green"),
+    .setDescription("YVR, a headset company from China, has expressed interest in having QuestCraft on their platform. We are currently developing both QCXR and YVRCraft simultaneously to accommodate their request.")
+    .setColor("Green")
+    .setFooter({ text: 'Written by Cart, Updated by ChatGPT'}),
   github_bot: new EmbedBuilder()
     .setTitle("**My GitHub Info!**")
     .setDescription("My GitHub is located in **[this link](https://github.com/Cartrigger/QCXRSoonBot)**! Check out my code over there!\nYou can also see the **[future plans](https://github.com/Cartrigger/QCXRSoonBot/issues/25)** for me, suggest any others and report any **[issues](https://github.com/Cartrigger/QCXRSoonBot/issues/new/choose)**!")
@@ -170,6 +172,7 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303' }),
   renderer_gl4es: new EmbedBuilder()
     .setTitle("**QuestCraft GL4ES Renderer**")
+functionalityhandlercommandupdate
     .setDescription("All QuestCraft versions can utilize the **GL4ES renderer**, it has moderate speed with moderate mod compatibility.\n- Complex mods like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) may not work, test at your own risk.\n\nPlease note moving forwards, on QuestCraft versions 4.0 and above, GL4ES will no longer be toggled by default and will be removed in later versions.")
     .setColor("Orange")
     .setFooter({ text: 'Written by my Developers and my Contributors' }),
