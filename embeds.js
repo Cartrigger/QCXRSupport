@@ -65,8 +65,9 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999, Updated by Pixel'}),
   yvr: new EmbedBuilder()
     .setTitle("**YVR Info**")
-    .setDescription("YVR is a Chinese headset company, they have requested we port QuestCraft. We are working on both QCXR and YVRCraft at the same time.")
-    .setColor("Green"),
+    .setDescription("YVR, a headset company from China, has expressed interest in having QuestCraft on their platform. We are currently developing both QCXR and YVRCraft simultaneously to accommodate their request.")
+    .setColor("Green")
+    .setFooter({ text: 'Written by Cart, Updated by ChatGPT'}),
   github_bot: new EmbedBuilder()
     .setTitle("**My GitHub Info!**")
     .setDescription("My GitHub is located in **[this link](https://github.com/Cartrigger/QCXRSoonBot)**! Check out my code over there!\nYou can also see the **[future plans](https://github.com/Cartrigger/QCXRSoonBot/issues/25)** for me, suggest any others and report any **[issues](https://github.com/Cartrigger/QCXRSoonBot/issues/new/choose)**!")
