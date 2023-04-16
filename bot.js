@@ -94,6 +94,7 @@ for (const folder of commandFolders) {
 }
 
 /**********************************************************************/
+// Registration of Slash-Command Interactions.
 /**
  * @type {String[]}
  * @description All slash commands.
