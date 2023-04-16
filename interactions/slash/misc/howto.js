@@ -23,7 +23,7 @@ module.exports = {
                     await interaction.reply({embeds: [embeds.sideload_pc]});
                     return;
                 }
-                if (category === 'Sideload(Android/Quest)') {
+                if (category === 'sideloadbugjaeger') {
                   await interaction.reply({embeds: [embeds.sideload_bugjaeger]});
                   return;
                 }
