@@ -15,6 +15,7 @@ module.exports = {
 			.addChoices(
 				{ name: 'Sideload(PC)', value: 'sideloadpc' },
 				{ name: 'Sideload(Android/Quest)', value: 'sideloadbugjaeger' },
+				{ name: 'Back Up Worlds', value: 'backupsaves' },
                 { name: 'QuestLogs', value: 'questlogs' },
 			)),
 			async execute(interaction) {
@@ -25,6 +26,10 @@ module.exports = {
                 }
                 if (category === 'sideloadbugjaeger') {
                   await interaction.reply({embeds: [embeds.sideload_bugjaeger]});
+                  return;
+                }
+		if (category === 'backupsaves') {
+                  await interaction.reply({embeds: [embeds.backup_saves]});
                   return;
                 }
                 if (category === 'questlogs') {
