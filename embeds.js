@@ -225,11 +225,6 @@ const embeds = {
     .setDescription("**How to backup worlds**\n\n1) Navigate to `android/data/com.qcxr.qcxr/files/.minecraft`\n2) Locate the `Saves` folder\n3) Copy the folder \n4) Paste it into your `Downloads` folder if on Quest (If on pc just download it from sidequest)\n5) Reinstall Questcraft to update or to fix an issue\n6) Paste the folder back into `android/data/com.qcxr.qcxr/files/.minecraft`.")
     .setColor("Green")
     .setFooter({ text: 'Written by Pixel', iconURL: 'https://cdn.discordapp.com/attachments/1078126187064332359/1097014341259235408/54d91d44b108640889109d58cf8884a3.webp'}),
-  v51: new EmbedBuilder()
-    .setTitle("Do you have Metas V51 firmware installed?")
-    .setDescription("If you do, please send a screenshot below which shows proof of that, or send the first four numbers under version, and a support member will review it shortly and send you the fixed build ASAP.\n\n**If you do not know how to see this:**\n1. On your quest head to 'settings'\n2. Then head to 'system' and select 'software update'\n3. Check the first 4 digits of the number under the 'version' section.")
-    .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   devs_only: new EmbedBuilder()
     .setDescription("Only developers of <@997670790604542012> can use this ")
     .setColor("ED4245")
