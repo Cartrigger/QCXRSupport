@@ -95,9 +95,6 @@ for (const folder of commandFolders) {
 
 /**********************************************************************/
 // Registration of Slash-Command Interactions.
-
-// Registration of Slash-Command Interactions.
-
 /**
  * @type {String[]}
  * @description All slash commands.
@@ -125,6 +122,7 @@ function getSlashCommands(path) {
 
 	return slashCommands;
 }
+
 
 /**********************************************************************/
 // Registration of Autocomplete Interactions.
