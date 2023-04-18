@@ -206,7 +206,7 @@ const embeds = {
     .setFooter({ text: 'Written by Reality', iconURL: 'https://cdn.discordapp.com/avatars/251735485884530689/50020f1de3cf0117abb1510d167f9413.png?size=4096'}),
   error_channels: new EmbedBuilder()
     .setTitle('Error!')
-    .setDescription('This command cannot be used in this channel ')
+    .setDescription('This command cannot be used in this channel.')
     .setColor('Red'),
   sideload_pc: new EmbedBuilder()
     .setTitle("**Sideloading PC Guide**")
@@ -231,8 +231,8 @@ const embeds = {
     .setColor("Green")
     .setFooter({ text: 'Written by Pixel', iconURL: 'https://cdn.discordapp.com/attachments/1078126187064332359/1097014341259235408/54d91d44b108640889109d58cf8884a3.webp'}),
   devs_only: new EmbedBuilder()
-    .setDescription("Only developers of <@997670790604542012> can use this ")
+    .setDescription("Only developers of <@997670790604542012> can use this.")
     .setColor("ED4245")
 };
-//
+
 module.exports = embeds;

@@ -8,7 +8,7 @@ The QCXRSoonBot (CraftyXR) is a bot made for the [QuestCraft](https://questcraft
 
 The bot's main focus is around helping people as well as improving the overall experience on the server
 
-To test the bot out join the [QuestCraft discord server](https://discord.gg/questcraft) and run a command in [#bot-cmds](https://discord.com/channels/820767484042018829/953383695908216843)
+To test the bot out join the [QuestCraft discord server](https://discord.gg/questcraft) and run a command in [#bot-commands](https://discord.com/channels/820767484042018829/953383695908216843)
 - You can also invite the bot to your server by clicking on its profile and selecting 'Add to server'
 
 
@@ -30,7 +30,9 @@ To test the bot out join the [QuestCraft discord server](https://discord.gg/ques
 
 ### 🏗️ Additional Credits
  - This bot utilizes a modified version of the [discord bot template](https://github.com/NamVr/DiscordBot-Template) made by [Naman Vrati](https://github.com/NamVr)! [\[Apache License 2.0\]](https://github.com/NamVr/DiscordBot-Template/blob/master/LICENSE)
- 
+
+
+
 ## 📝 [License](https://github.com/Cartrigger/QCXRSoonBot/blob/functionalityhandlercommandupdate/LICENSE.md)
   QCXR Bot © 2022 by [Carson G](https://github.com/Cartrigger) and [TechyGiraffe999](https://github.com/TecEash1) is licensed under [Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/) (CREATIVE COMMONS)
 
