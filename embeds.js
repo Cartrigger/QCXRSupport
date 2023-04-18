@@ -29,7 +29,7 @@ const embeds = {
     .setTitle("**Piracy is illegal!**")
     .setDescription("**QCXR does not endorse piracy in any way shape or form** On top of this, we will not give Minecraft accounts to people who do not have such account. You need to buy Java Edition to play QuestCraft. We cannot give the game for free due to legal reasons and ANY attempt to ask us to could result in a mute or even a ban.")
     .setColor("Green")
-    .setFooter({ text: 'Written by Cart'}),
+    .setFooter({ text: 'Written by Cart', iconURL: 'https://images-ext-1.discordapp.net/external/aTyGSUOhnDS_8fX4GGP9UfztBpotA7axEqb0ujMNz0U/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?width=372&height=372'}),
   otherheadsets: new EmbedBuilder()
     .setTitle("**QuestCraft on other Headsets**")
     .setDescription("QuestCraft is planned to release on other headsets in the future, however, it is required that the company contacts us first in order to do this. \n Currently we are planned to release on **YVR** and **Pimax** headsets.")
@@ -67,7 +67,7 @@ const embeds = {
     .setTitle("**YVR Info**")
     .setDescription("YVR, a headset company from China, has expressed interest in having QuestCraft on their platform. We are currently developing both QCXR and YVRCraft simultaneously to accommodate their request.")
     .setColor("Green")
-    .setFooter({ text: 'Written by Cart, Updated by ChatGPT'}),
+    .setFooter({ text: 'Written by Cart, Updated by ChatGPT', iconURL: 'https://images-ext-1.discordapp.net/external/aTyGSUOhnDS_8fX4GGP9UfztBpotA7axEqb0ujMNz0U/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?width=372&height=372'}),
   github_bot: new EmbedBuilder()
     .setTitle("**My GitHub Info!**")
     .setDescription("My GitHub is located in **[this link](https://github.com/Cartrigger/QCXRSoonBot)**! Check out my code over there!\nYou can also see the **[future plans](https://github.com/Cartrigger/QCXRSoonBot/issues/25)** for me, suggest any others and report any **[issues](https://github.com/Cartrigger/QCXRSoonBot/issues/new/choose)**!")
@@ -226,7 +226,7 @@ const embeds = {
     .setColor("DarkOrange")
     .setFooter({ text: 'Written by !DED - **ʷᵃʳⁿᶦⁿᵍ ᵗʰᶦˢ ˢʰᵒᵘˡᵈ ᵇᵉ ᵗʳᶦᵉᵈ ᵃˢ ᵃ ˡᵃˢᵗ ʳᵉˢᵒʳᵗ ᵃˢ ᶦᵗ ʰᵃˢ ᵃ ᵖᵒˢˢᶦᵇᶦˡᶦᵗʸ ᵒᶠ ⁿᵒᵗ ʷᵒʳᵏᶦⁿᵍ**', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
   backup_saves: new EmbedBuilder()
-    .setTitle("**Backing Up Worlds**")
+    .setTitle("**Backing Up Worlds Guide**")
     .setDescription("**How to backup worlds**\n\n1) Navigate to `android/data/com.qcxr.qcxr/files/.minecraft`\n2) Locate the `Saves` folder\n3) Copy the folder \n4) Paste it into your `Downloads` folder if on Quest (If on pc just download it from sidequest)\n5) Reinstall Questcraft to update or to fix an issue\n6) Paste the folder back into `android/data/com.qcxr.qcxr/files/.minecraft`.")
     .setColor("Green")
     .setFooter({ text: 'Written by Pixel', iconURL: 'https://cdn.discordapp.com/attachments/1078126187064332359/1097014341259235408/54d91d44b108640889109d58cf8884a3.webp'}),
