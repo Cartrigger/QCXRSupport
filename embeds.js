@@ -50,7 +50,7 @@ const embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   releases: new EmbedBuilder()
     .setTitle("**Release Info**")
-    .setDescription("Questcraft is distributed on [**Github**](https://github.com/QuestCraftPlusPlus/QuestCraft/releases) and [**Sidequest**](https://sidequestvr.com/app/7150/questcraft)\n||(Do ``/installation`` for info on how to install Questcraft)||")
+    .setDescription("Questcraft is distributed on **[Github](https://github.com/QuestCraftPlusPlus/QuestCraft/releases)** and **[Sidequest](https://sidequestvr.com/app/7150/questcraft)**\n||(Do ``/installation`` for info on how to install Questcraft)||")
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   support_channels: new EmbedBuilder()
