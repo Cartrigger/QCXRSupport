@@ -1,12 +1,12 @@
 const { EmbedBuilder, Embed } = require('discord.js');
 
 const embeds = {
-  adb: new EmbedBuilder()
+    adb: new EmbedBuilder()
     .setTitle("**Uninstalling using ADB commands**")
     .setDescription("If you're having an issue with uninstalling and need to perform a force uninstallation, Please make sure you are using [**Sidequest Advanced**](https://sidequestvr.com/setup-howto) as basic SideQuest wont work. Run the command: ``adb uninstall com.qcxr.qcxr``, as shown in the image below.")
     .setImage("https://media.discordapp.net/attachments/1086923171447451681/1096655646650277898/image.png?width=1128&height=670")
     .setColor("Green")
-    .setFooter({ text: 'Written by my Developers'}),
+    .setFooter({ text: 'Written by my Developers', iconURL: 'https://images-ext-1.discordapp.net/external/5cPanAYF2wOpIhmzrCkina2UpawRtHHU4y2KjFviqCI/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/997670790604542012/92a28b5bb82c7512fe8711fa2fd63163.png?width=633&height=633'}),
   
     bedrock: new EmbedBuilder()
     .setTitle("**QuestCraft Bedrock Edition**")
@@ -26,7 +26,7 @@ const embeds = {
   
     mods_manual: new EmbedBuilder()
     .setTitle("**Manual Modding Guide**")
-    .setDescription("Placehold")
+    .setDescription("**Modding QuestCraft Manually:**\n\n**NOTE: Launch the Minecraft version you are trying to mod first, as this will create the mods folder necessary**\n\n1) Search for the mod you would like to install. We suggest getting mods from [Modrinth](https://modrinth.com/mods?g=categories:%27fabric%27&v=1.19.4&v=1.19.3&v=1.19.2&v=1.18.2)\n\n2) Open a file explorer of your choice. It's recommended you use Windows File Explorer but you could use side-loadable alternative like [CX File Explorer](https://cdn.discordapp.com/attachments/1057074981135196230/1098727942500134922/Cx_File_Explorer_1.9.8.apk) to do this directly standalone. (If you use sideloaded file explorer you must enable hidden files in file explorer settings.)\n\n3) Copy and paste the mod file to the directory `android/data/com.qcxr.qcxr/files/.minecraft/mods/mcversion#`\n\n4) Launch the game! The mods should work. If the game crashes, feel free to come to ⁠https://discord.com/channels/820767484042018829/945502948111290498 with a Log so that a support member could look over it.")
     .setFooter({ text: 'Written by !DED', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
     
     mods_manager: new EmbedBuilder()
@@ -74,10 +74,10 @@ const embeds = {
   
     versions: new EmbedBuilder()
     .setTitle("**Version Info**")
-    .setDescription("You are unable to use versions on QuestCraft other than 1.19.3 and 1.18.2 at the moment - however if your friend or you own a Spigot/Paper server you can install [ViaVersion](https://www.spigotmc.org/resources/viaversion.19254/) or [ViaBackwards](https://www.spigotmc.org/resources/viabackwards.27448/) so you can join on either questcraft version.\n- Do ``/servers`` for a server setup guide \n\nIf you want to play on different versions on a Fabric server then you can see [the fabric version of this plugin](https://www.curseforge.com/minecraft/mc-mods/viafabric) or if you prefer Forge you can get the Forge version of that Fabric mod [here](https://www.curseforge.com/minecraft/mc-mods/viaforge)\nAll installation instructions are located on the SpigotMC/CurseForge page\n\n4.0 of QuestCraft is set to release later this month *(as of April 2023)*, and it will come with the following versions:\n> 1.18.2 | 1.19.2 | 1.19.3 | 1.19.4\n\nHow to switch between 1.18.2 and 1.19.3 on QuestCraft\n(click the version to change):")
+    .setDescription("**Changing versions:**\n\nQuestcraft currently supports Minecraft versions:\n> 1.18.2\n> 1.19.2\n> 1.19.3\n> 1.19.4\n\nYou are unable to use any versions below 1.18.2\nTo change versions, Click on the version number in the bottom left of the play screen (As shown in the image below)
     .setColor("Green")
     .setImage("https://media.discordapp.net/attachments/1057074981135196230/1086666081244024925/version_switch.png?width=868&height=656")
-    .setFooter({ text: 'Written by TechyGiraffe999, Updated by Pixel', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by Pixel', iconURL: 'https://cdn.discordapp.com/attachments/1078126187064332359/1097014341259235408/54d91d44b108640889109d58cf8884a3.webp'}),
   
     yvr: new EmbedBuilder()
     .setTitle("**YVR Info**")
@@ -145,7 +145,7 @@ const embeds = {
   
     gamma:  new EmbedBuilder()
     .setTitle("**Gamma issues**")
-    .setDescription("**Why is my Gamma/Saturation off?**\n\nQuest currently has Gamma/Saturation issues (We don't know the reason why)\nYou can try using a mod called [Gamma Utils](https://www.curseforge.com/minecraft/mc-mods/gamma-utils) to try and help, though it only helps slightly")
+    .setDescription("**Why is my Gamma/Saturation off?**\n\nQuest currently has Gamma/Saturation issues (We don't know the reason why)\nYou can try using a mod called [Gamma Utils](https://www.curseforge.com/minecraft/mc-mods/gamma-utils) to try and help, though it only helps slightly and only lowers the brightness")
     .setColor("Yellow")
     .setFooter({ text: 'Written by Pixel', iconURL: 'https://cdn.discordapp.com/attachments/1078126187064332359/1097014341259235408/54d91d44b108640889109d58cf8884a3.webp'}),
   
@@ -212,7 +212,7 @@ const embeds = {
     .setTitle("**QuestCraft GL4ES Renderer**")
     .setDescription("All QuestCraft versions can utilize the **GL4ES renderer**, it has moderate speed with moderate mod compatibility.\n- Complex mods like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) may not work, test at your own risk.\n\nPlease note moving forwards, on QuestCraft versions 4.0 and above, GL4ES will no longer be toggled by default and will be removed in later versions. ")
     .setColor("Orange")
-    .setFooter({ text: 'Written by my Developers and my Contributors'}),
+    .setFooter({ text: 'Written by my Developers and my Contributors', iconURL:'https://media.discordapp.net/attachments/1078126187064332359/1098737664754192545/IMG_8202.png?width=633&height=633'}),
   
     renderer_vulkan: new EmbedBuilder()
     .setTitle("**QuestCraft Vulkan Renderer**")
