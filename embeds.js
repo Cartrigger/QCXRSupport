@@ -26,20 +26,17 @@ const embeds = {
   
     mods_manual: new EmbedBuilder()
     .setTitle("**Manual Modding Guide**")
-    .setDescription("*1. Install either the 1.18.2 or 1.19.3 fabric version of your mod to either your PC/Quest\n2. If you are on PC, connect your Quest to SideQuest, and locate your mods folder at* ``android/data/com.qcxr.qcxr/files/.minecraft/mods.``\n*If you are on your Quest, open a file manager like CX File Explorer, and locate the mods folder listed above.* (If you don't see the '.minecraft' folder, enable hidden files)\n3. Move your mod file into that version's folder.*\n\n**Note: You MUST have launched either 1.18.2 or 1.19.3 QuestCraft PRIOR to putting your mod into the mods folder.\n\n**Where to find mods:** \n **[Modrinth](https://modrinth.com/mods?f=categories%3A%27worldgen%27&g=categories%3A%27fabric%27&v=1.18.2,1.19.3)**\n **[Curseforge](https://www.curseforge.com/minecraft/mc-mods?filter-game-version=2020709689%3A7499&filter-sort=4)**\nWhen picking mods make sure to **only download 1.18.2/1.19.3 versions. Downloading versions that are not either those will cause the game to crash depending on what version of QuestCraft you are playing**")
-    .setColor("Green")
-    .setFooter({ text: 'How to add mods written by !DED | Where to find mods written by TechyGiraffe999'}),
+    .setDescription("Placehold")
+    .setFooter({ text: 'Written by !DED', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
     
     mods_manager: new EmbedBuilder()
-    .setTitle("**ModManager Modding Guide**")
-    .setDescription("Placeholder")
-    .setColor("Green")
-    .setFooter({text:'Written by Pixel?'}),
+    .setTitle("**Mod Manager Guide**")
+    .setDescription("**How to install mods using Mod Manager**\n\n1) On the play screen, click on `Mod Manager`\n2) Scroll down or search for the mod you wish to install\n3) Select the version you want to install and press the `Install` button")
+    .setFooter({text:'Written by Pixel', iconURL: 'https://cdn.discordapp.com/attachments/1078126187064332359/1097014341259235408/54d91d44b108640889109d58cf8884a3.webp'}),
 
     nopiracy: new EmbedBuilder()
     .setTitle("**Piracy is illegal!**")
     .setDescription("**QCXR does not endorse piracy in any way shape or form** On top of this, we will not give Minecraft accounts to people who do not have such account. You need to buy Java Edition to play QuestCraft. We cannot give the game for free due to legal reasons and ANY attempt to ask us to could result in a mute or even a ban.")
-    .setColor("Green")
     .setFooter({ text: 'Written by Cart', iconURL: 'https://images-ext-1.discordapp.net/external/aTyGSUOhnDS_8fX4GGP9UfztBpotA7axEqb0ujMNz0U/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?width=372&height=372'}),
   
     otherheadsets: new EmbedBuilder()
