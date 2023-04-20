@@ -17,7 +17,7 @@ module.exports = {
 				{ name: 'Mod Manager', value: 'managermods' },
 			)),
 			async execute(interaction) {
-				const category = interaction.options.getString('renderer');
+				const category = interaction.options.getString('method');
 				if (category === 'manualmods') {
                     await interaction.reply({embeds: [embeds.mods_manual]});
                     return;
@@ -26,5 +26,5 @@ module.exports = {
                   await interaction.reply({embeds: [embeds.mods_manager]});
                   return;
                 }
-                }
-            }
+			}
+		}

@@ -24,12 +24,18 @@ const embeds = {
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
   
-    mods: new EmbedBuilder()
-    .setTitle("**Modding Guide**")
+    mods_manual: new EmbedBuilder()
+    .setTitle("**Manual Modding Guide**")
     .setDescription("*1. Install either the 1.18.2 or 1.19.3 fabric version of your mod to either your PC/Quest\n2. If you are on PC, connect your Quest to SideQuest, and locate your mods folder at* ``android/data/com.qcxr.qcxr/files/.minecraft/mods.``\n*If you are on your Quest, open a file manager like CX File Explorer, and locate the mods folder listed above.* (If you don't see the '.minecraft' folder, enable hidden files)\n3. Move your mod file into that version's folder.*\n\n**Note: You MUST have launched either 1.18.2 or 1.19.3 QuestCraft PRIOR to putting your mod into the mods folder.\n\n**Where to find mods:** \n **[Modrinth](https://modrinth.com/mods?f=categories%3A%27worldgen%27&g=categories%3A%27fabric%27&v=1.18.2,1.19.3)**\n **[Curseforge](https://www.curseforge.com/minecraft/mc-mods?filter-game-version=2020709689%3A7499&filter-sort=4)**\nWhen picking mods make sure to **only download 1.18.2/1.19.3 versions. Downloading versions that are not either those will cause the game to crash depending on what version of QuestCraft you are playing**")
     .setColor("Green")
     .setFooter({ text: 'How to add mods written by !DED | Where to find mods written by TechyGiraffe999'}),
-  
+    
+    mods_manager: new EmbedBuilder()
+    .setTitle("**ModManager Modding Guide**")
+    .setDescription("Placeholder")
+    .setColor("Green")
+    .setFooter({text:'Written by Pixel?'}),
+
     nopiracy: new EmbedBuilder()
     .setTitle("**Piracy is illegal!**")
     .setDescription("**QCXR does not endorse piracy in any way shape or form** On top of this, we will not give Minecraft accounts to people who do not have such account. You need to buy Java Edition to play QuestCraft. We cannot give the game for free due to legal reasons and ANY attempt to ask us to could result in a mute or even a ban.")

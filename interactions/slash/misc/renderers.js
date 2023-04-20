@@ -31,5 +31,5 @@ module.exports = {
                     await interaction.reply({embeds: [embeds.renderer_zink]});
                     return;
                 }
-                }
             }
+        }
