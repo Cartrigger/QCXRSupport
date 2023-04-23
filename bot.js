@@ -103,24 +103,24 @@ for (const folder of commandFolders) {
 const slashCommands = getSlashCommands("./interactions/slash");
 
 function getSlashCommands(path) {
-	let slashCommands = [];
+  let slashCommands = [];
 
-	const commandFiles = fs.readdirSync(path);
+  const commandFiles = fs.readdirSync(path);
 
-	for (const commandFile of commandFiles) {
-		const fullCommandPath = `${path}/${commandFile}`;
-		const commandStats = fs.statSync(fullCommandPath);
+  for (const commandFile of commandFiles) {
+    const fullCommandPath = `${path}/${commandFile}`;
+    const commandStats = fs.statSync(fullCommandPath);
 
-		if (commandStats.isDirectory()) {
-			slashCommands = slashCommands.concat(getSlashCommands(fullCommandPath));
-		} else if (commandFile.endsWith(".js")) {
-			const command = require(fullCommandPath);
-			client.slashCommands.set(command.data.name, command);
-			slashCommands.push(fullCommandPath);
-		}
-	}
+    if (commandStats.isDirectory()) {
+      slashCommands = slashCommands.concat(getSlashCommands(fullCommandPath));
+    } else if (commandFile.endsWith(".js")) {
+      const command = require(fullCommandPath);
+      client.slashCommands.set(command.data.name, command);
+      slashCommands.push(fullCommandPath);
+    }
+  }
 
-	return slashCommands;
+  return slashCommands;
 }
 
 
@@ -178,16 +178,16 @@ const buttonCommands = [];
 
 // Define a function that recursively loops through all files in a directory and its subdirectories.
 function walk(dir) {
-	const files = fs.readdirSync(dir);
-	for (const file of files) {
-		const path = `${dir}/${file}`;
-		if (fs.statSync(path).isDirectory()) {
-			walk(path);
-		} else if (file.endsWith('.js')) {
-			const command = require(path);
-			buttonCommands.push(command);
-		}
-	}
+  const files = fs.readdirSync(dir);
+  for (const file of files) {
+    const path = `${dir}/${file}`;
+    if (fs.statSync(path).isDirectory()) {
+      walk(path);
+    } else if (file.endsWith('.js')) {
+      const command = require(path);
+      buttonCommands.push(command);
+    }
+  }
 }
 
 // Start the recursive loop at the root of the button commands directory.
@@ -195,7 +195,7 @@ walk('./interactions/buttons');
 
 // Register each button command with the client.
 for (const command of buttonCommands) {
-	client.buttonCommands.set(command.id, command);
+  client.buttonCommands.set(command.id, command);
 }
 
 /**********************************************************************/
@@ -229,24 +229,18 @@ for (const module of modalCommands) {
  * @description All Select Menu commands.
  */
 
-try {
-	const selectMenus = fs.readdirSync("./interactions/select-menus");
-} catch (err) {
-	const selectMenus = []
-} finally {
+const selectMenus = fs.readdirSync("./interactions/select-menus");
 
-	// Loop through all files and store select-menus in selectMenus collection.
+// Loop through all files and store select-menus in selectMenus collection.
 
-	for (const module of selectMenus) {
-		const commandFiles = fs
-			.readdirSync(`./interactions/select-menus/${module}`)
-			.filter((file) => file.endsWith(".js"));
-		for (const commandFile of commandFiles) {
-			const command = require(`./interactions/select-menus/${module}/${commandFile}`);
-			client.selectCommands.set(command.id, command);
-		}
+for (const module of selectMenus) {
+	const commandFiles = fs
+		.readdirSync(`./interactions/select-menus/${module}`)
+		.filter((file) => file.endsWith(".js"));
+	for (const commandFile of commandFiles) {
+		const command = require(`./interactions/select-menus/${module}/${commandFile}`);
+		client.selectCommands.set(command.id, command);
 	}
-
 }
 
 /**********************************************************************/
@@ -321,8 +315,8 @@ client.login(token);
 // Anti Crash script
 
 process.on('unhandRejection', (reason, promise) => {
-	console.log(`🚫 Critical Error detected:\n\n`, reason, promise)
+    console.log(`🚫 Critical Error detected:\n\n`, reason, promise)
 });
 process.on('uncaughtException', (error, origin) => {
-	console.log(`🚫 Critical Error detected:\n\n`, error, origin)
+    console.log(`🚫 Critical Error detected:\n\n`, error, origin)
 });

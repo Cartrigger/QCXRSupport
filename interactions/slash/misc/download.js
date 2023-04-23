@@ -7,7 +7,7 @@ const embeds = require('../../../embeds.js');
 module.exports = {
 	data:  new SlashCommandBuilder()
 	.setName('download')
-	.setDescription('Info on how to download and install QuestCraft')
+	.setDescription('Info on how to get QuestCraft')
 	.addStringOption(option =>
 		option.setName('options')
 			.setDescription('Category info options')
