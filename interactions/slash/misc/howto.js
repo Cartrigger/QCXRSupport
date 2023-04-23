@@ -16,8 +16,8 @@ module.exports = {
 				{ name: 'Sideload(PC)', value: 'sideloadpc' },
 				{ name: 'Sideload(Android/Quest)', value: 'sideloadbugjaeger' },
 				{ name: 'Back Up Worlds', value: 'backupsaves' },
-				{ name: 'PCLogs', value: 'pclogs' },
-                { name: 'QuestLogs', value: 'questlogs' },
+				{ name: 'PC Logs', value: 'pclogs' },
+    { name: 'Quest Logs', value: 'questlogs' },
 			)),
 			async execute(interaction) {
 				const category = interaction.options.getString('tutorial')
