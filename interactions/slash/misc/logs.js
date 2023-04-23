@@ -13,7 +13,7 @@ const error = new EmbedBuilder()
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("logs")
-    .setDescription("Analyse logs (mod issues)")
+    .setDescription("Analyse logs (mainly mod issues)")
     .addAttachmentOption(option => option
       .setRequired(true)
       .setName("file")
