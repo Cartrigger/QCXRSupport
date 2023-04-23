@@ -9,7 +9,7 @@ module.exports = {
 	.setName('howto')
 	.setDescription('Gives info on how to do certain things')
 	.addStringOption(option =>
-		option.setName('howto')
+		option.setName('tutorial')
 			.setDescription('The different tutorials')
 			.setRequired(true)
 			.addChoices(
@@ -20,7 +20,7 @@ module.exports = {
                 { name: 'QuestLogs', value: 'questlogs' },
 			)),
 			async execute(interaction) {
-				const category = interaction.options.getString('howto');
+				const category = interaction.options.getString('tutorial')
 				if (category === 'sideloadpc') {
                     await interaction.reply({embeds: [embeds.sideload_pc]});
                     return;
