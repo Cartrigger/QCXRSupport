@@ -6,7 +6,7 @@ const embeds = {
     .setDescription("If you're having an issue with uninstalling and need to perform a force uninstallation, Please make sure you are using [**Sidequest Advanced**](https://sidequestvr.com/setup-howto) as basic SideQuest wont work. Run the command: ``adb uninstall com.qcxr.qcxr``, as shown in the image below.")
     .setImage("https://media.discordapp.net/attachments/1086923171447451681/1096655646650277898/image.png?width=1128&height=670")
     .setColor("Green")
-    .setFooter({ text: 'Written by my Developers'}),
+    .setFooter({ text: 'Written by my Developers' }),
   bedrock: new EmbedBuilder()
     .setTitle("**QuestCraft Bedrock Edition**")
     .setDescription("QuestCraft doesn't have any immediate plans to introduce Bedrock due to the Minecraft TOS.\n\nIt is also incredibly difficult to reverse eningeer games coded in C++, which bedrock is coded in.\n If you want bedrock vr, it does exist for pcvr. You can find info [here](https://www.minecraft.net/en-us/vr)")
@@ -19,12 +19,12 @@ const embeds = {
     .setTitle("**Installation Guide**")
     .setDescription("1. Download sidequest at the link [here](https://sidequestvr.com/setup-howto) (Advanced one is reccomended)\n2. Go to the QuestCraft SideQuest page which is linked [here](https://sidequestvr.com/app/7150/questcraft)\n3. Plug your quest into your computer/phone and accept the prompt on your quest to allow your computer to view the files\n4. Go back to sidequest and select 'sideload' - in the top right of sidequest you should see a running task (That is QuestCraft) - wait until it has finished\n5. Unplug your quest and go to your app library\n6. Go to 'unknown sources' (It is in the top right dropdown on your app library)\n7. Open QuestCraft\n8. Make sure to keep your headset on while QuestCraft is guiding you through the install - if you do not it may become bugged \n9. If downloading instances is taking a long time and you dont want to keep your headset on you can cover the sensor - Just make sure your quest stays on\n10. Login and go to the Microsoft website it says and enter the code it gives you\n11. Select play and enjoy!\n- make sure to keep your headset on or the sensor covered fully throughout the install, if you do not your install may become bugged\n\nAlso make sure you don't do the following:\n- Don't exit your boundry\n- Don't click any buttons\n- Don't go into passthrough\n- Don't mess with wifi settings\n\n[**Video tutorial**](https://youtu.be/cVU4ZXDXvP4):\nCredit to <@136571842906292224>")
     .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303' }),
   mods: new EmbedBuilder()
     .setTitle("**Modding Guide**")
     .setDescription("**Adding mods to QuestCraft 3.0:**\n*1. Install either the 1.18.2 or 1.19.3 fabric version of your mod to either your PC/Quest\n2. If you are on PC, connect your Quest to SideQuest, and locate your mods folder at* ``android/data/com.qcxr.qcxr/files/.minecraft/mods.``\n*If you are on your Quest, open a file manager like CX File Explorer, and locate the mods folder listed above. (If you don't see the '.minecraft' folder then enable hidden files)\n3. Move your mod file into that version's folder.*\n\n**Note: You MUST have launched either 1.18.2 or 1.19.3 QuestCraft PRIOR to putting your mod into the mods folder.\n\n**Where to find mods:** \n **[Modrinth](https://modrinth.com/mods?f=categories%3A%27worldgen%27&g=categories%3A%27fabric%27&v=1.18.2,1.19.3)**\nWhen picking mods make sure to **only download 1.18.2/1.19.3 versions, downloading versions that are not those will cause the game to crash depending on what version of QuestCraft you are playing**")
     .setColor("Green")
-    .setFooter({ text: 'How to add mods written by !DED | Where to find mods written by TechyGiraffe999'}),
+    .setFooter({ text: 'How to add mods written by !DED | Where to find mods written by TechyGiraffe999' }),
   nopiracy: new EmbedBuilder()
     .setTitle("**Piracy is illegal!**")
     .setDescription("**QCXR does not endorse piracy in any way shape or form** On top of this, we will not give Minecraft accounts to people who do not have such account. You need to buy Java Edition to play QuestCraft. We cannot give the game for free due to legal reasons and ANY attempt to ask us to could result in a mute or even a ban.")
@@ -43,16 +43,16 @@ const embeds = {
     .setTitle("**QuestCraft Reinstall Instructions**")
     .setDescription("1. Uninstall QuestCraft (3 dots in unknown sources, or uninstall from SideQuest)\n2. Restart Headset\n3. Install QuestCraft from [GitHub](https://github.com/QuestCraftPlusPlus/QuestCraft/releases/latest) / [SideQuest](https://sidequestvr.com/app/7150/questcraft)\n4. Open QuestCraft, if you have any issues with this procedure, please uninstall using ``/adb``")
     .setColor("Green"),
-  support_menu:  new EmbedBuilder()
+  support_menu: new EmbedBuilder()
     .setTitle("**Support Requestinator**")
     .setDescription('Click the dropdown menu bellow to access all of the support presets')
     .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303' }),
   releases: new EmbedBuilder()
     .setTitle("**Release Info**")
     .setDescription("Questcraft is distributed on [**Github**](https://github.com/QuestCraftPlusPlus/QuestCraft/releases) and [**Sidequest**](https://sidequestvr.com/app/7150/questcraft)\n||(Do ``/installation`` for info on how to install Questcraft)||")
     .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303' }),
   support_channels: new EmbedBuilder()
     .setTitle("**Sorry but <:notsupportchannel:993043214472859778>**")
     .setDescription("Support is handled in <#945502948111290498> or <#946021441298649158> and you can see the FAQ in <#821469293156892724>.\nOn top of this, you can see common issues in <#1065000467010179092>\n\nFor more guided support, you can make a ticket in <#946184706486054984>, and a support member will be with you shortly.")
@@ -80,7 +80,7 @@ const embeds = {
     .setTitle("**QuestCraft Github**")
     .setDescription("The QuestCraft GitHub is at the link [here](https://github.com/QuestCraftPlusPlus/QuestCraft) any other GitHub is potentially dangerous and any APK should not be downloaded from it.")
     .setColor("DarkBlue"),
-  falling_blocks_crash:  new EmbedBuilder()
+  falling_blocks_crash: new EmbedBuilder()
     .setTitle("**Falling blocks crash my game:**")
     .setDescription("You probably have the [Continuity](https://modrinth.com/mod/continuity) mod, Continuity has an conditional dependency.\nIf [Sodium](https://modrinth.com/mod/sodium) is present [Indium](https://modrinth.com/mod/indium) will have to be installed so that Continuity can be happy\n*Find the Indium for your game version and install it along with Continuity and the crash shouldn't happen no longer.\n__Feel free to let any of the support staff know if you have issues__\n\n**DOWNLOAD AN [OLDER VERSION OF INDIUM](https://www.curseforge.com/minecraft/mc-mods/indium/download/4291875)**\n**THE NEWER VERSION CRASHES WITH OUR CURRENT VERSION OF SODIUM**")
     .setColor("Red")
@@ -105,8 +105,8 @@ const embeds = {
     .setTitle("**After dying in lava I can't respawn:**")
     .setDescription("- This is a bug. The only way to respawn is to log into the server on a computer, respawn, and then log back in on your Quest\n\n- Alternatively you could make sure that the gamerule `/gamerule doImmediateRespawn` is enabled (set to true), this will not give you the option to respawn and you will auto respawn immediately\nI have tested the command to see if enabling it while you are dead fixes the issue, it doesn't\n\n- Another option is to delete your player data file, however **deleting this will delete everything about your player, including ender chests, bed spawn and your location,** this file is located in ``world/playerdata/‘youruuid’`` to find your UUID just join the server and it will be displayed in the console/your Minecraft log file. Alternatively you can find it by searching for your username on [NameMC](https://namemc.com/)\n\n- Or if you really know what you're doing you could edit your player.dat file manually")
     .setColor("Red")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
-  immersive_controls:  new EmbedBuilder()
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303' }),
+  immersive_controls: new EmbedBuilder()
     .setTitle("**How do I turn immersive controls on?**")
     .setDescription("> Immersive controls are on by default\n\n• Swing at stuff to break or hit. Punching might not work as good\n\n• Drinking and eating works by putting food up to your mouth\n\n• You use bows by putting the arrow in the bow and pulling back while holding right trigger\n*Be sure to disable Raw Item Positions or else the bow will not work*")
     .setColor("Yellow")
@@ -125,17 +125,17 @@ const embeds = {
     .setTitle("**FAQ Info**")
     .setDescription("Checking the <#821469293156892724> channel first can potentially help your issue get resolved quicker. Please check that before messaging here")
     .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
-  license:  new EmbedBuilder()
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303' }),
+  license: new EmbedBuilder()
     .setTitle("**📜 License Info**")
     .setDescription("My License is [Creative-Commons-Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/), please check [my License](https://github.com/Cartrigger/QCXRSoonBot/blob/functionalityhandlercommandupdate/LICENSE.md) to see more info.")
     .setColor("White")
-    .setFooter({ text: 'Written by Cart', iconURL: 'https://images-ext-1.discordapp.net/external/aTyGSUOhnDS_8fX4GGP9UfztBpotA7axEqb0ujMNz0U/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?width=310&height=310'}),
-  location_questcraft:  new EmbedBuilder()
+    .setFooter({ text: 'Written by Cart', iconURL: 'https://images-ext-1.discordapp.net/external/aTyGSUOhnDS_8fX4GGP9UfztBpotA7axEqb0ujMNz0U/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?width=310&height=310' }),
+  location_questcraft: new EmbedBuilder()
     .setTitle("**📂 Folder location for QuestCraft**")
     .setDescription("QuestCraft's data is stored in this folder path:\n``Android/Data/com.qcxr.qcxr`` ")
     .setColor("Greyple")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303' }),
   location_logs: new EmbedBuilder()
     .setTitle("**📂 Logs Location**")
     .setDescription("You can get the logs required by Support Staff at ``Android/Data/com.qcxr.qcxr/files/latestlog.txt``. Yes you can use any file manager to get to it and no, there is no information that someone could use to hack your account.")
@@ -144,73 +144,121 @@ const embeds = {
     .setTitle("**📂 Resource Pack Location**")
     .setDescription("You can find the Resource Packs folder in `android/data/com.qcxr.qcxr/files/.minecraft/resourcepacks`.\nAny Resource Pack made for any version of Minecraft should work, but for full usage it is recommended to install packs made for either 1.18.2 or 1.19.3\n\n Some packs may state they require certain optifine features to function.\nThis requires the use of external mods to enable those features\n*Examples of those mods include:*\n\n> [CIT Resewn](https://www.curseforge.com/minecraft/mc-mods/cit-resewn) | [CEM](https://github.com/YoungSoulluoS/Fresh-Animations-CEM-fork/releases) | [Continuity](https://www.curseforge.com/minecraft/mc-mods/continuity)")
     .setColor("Greyple")
-    .setFooter({ text: 'Written by Pixel', iconURL: 'https://cdn.discordapp.com/avatars/796512162855125022/54d91d44b108640889109d58cf8884a3.png?size=4096'}),
+    .setFooter({ text: 'Written by Pixel', iconURL: 'https://cdn.discordapp.com/avatars/796512162855125022/54d91d44b108640889109d58cf8884a3.png?size=4096' }),
+  location_mods: new EmbedBuilder()
+    .setTitle("**📂 Mods Location**")
+    .setDescription("The Mods are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/mods``\n\n*For more information on mods run ``/mods``* ")
+    .setColor("Greyple")
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303' }),
   location_saves: new EmbedBuilder()
     .setTitle("**📂 Saves [Worlds] Location**")
     .setDescription("The save files are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/saves``\n\nFor some good world downloads check out [Planet Minecraft](https://www.planetminecraft.com/projects/)\n*(make sure you download the right version)*\n\nYou can also use this directory to backup any worlds you may have whilst reinstalling or updating QuestCraft")
     .setColor("Greyple")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
-  immersivemc_1_19_3:  new EmbedBuilder()
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303' }),
+  immersivemc_1_19_3: new EmbedBuilder()
     .setTitle("**Installing ImmersiveMC on 1.19.3**")
     .setDescription("If you are having issues when running [**ImmersiveMC**](https://www.curseforge.com/minecraft/mc-mods/immersivemc) on **1.19.3** please uninstall the mod along with any related files you installed with it and then reinstall it with the all the files listed below:\n\n**- [Architectury API](https://www.curseforge.com/minecraft/mc-mods/architectury-api/download/4384408)**\n**- [Forge Config API port](https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port-fabric/download/4238520)**\n**- [MC VR API](https://www.curseforge.com/minecraft/mc-mods/mc-vr-api/download/4403503)** \n**- [ImmersiveMc](https://www.curseforge.com/minecraft/mc-mods/immersivemc/download/4430202)**\n\nWith all of these your game should work with **ImmersiveMC** on **1.19.3**\n\n*- Alternatively if your on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
     .setColor("Blurple")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
-  immersivemc_1_18_2:  new EmbedBuilder()
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303' }),
+  immersivemc_1_18_2: new EmbedBuilder()
     .setTitle("**Installing ImmersiveMC on 1.18.2**")
     .setDescription("If you are having issues when running [**ImmersiveMC**](https://www.curseforge.com/minecraft/mc-mods/immersivemc) on **1.18.2** please uninstall the mod along with any related files you installed with it and then reinstall it with the all the files listed below:\n\n**- [Architectury API](https://www.curseforge.com/minecraft/mc-mods/architectury-api/download/4384408)**\n**- [Forge Config API port](https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port-fabric/download/3943250)**\n**- [MC VR API](https://www.curseforge.com/minecraft/mc-mods/mc-vr-api/download/4403501)** \n**- [ImmersiveMc](https://www.curseforge.com/minecraft/mc-mods/immersivemc/download/4426537)**\n\nWith all of these your game should work with **ImmersiveMC** on **1.18.2**\n\n*- Alternatively if your on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
     .setColor("Blurple")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303' }),
   immersive_mc_embed: new EmbedBuilder()
     .setTitle("**Game crashes with ImmersiveMC**")
     .setDescription("Please select your Minecraft Version below to get the [ImmersiveMC](https://www.curseforge.com/minecraft/mc-mods/immersivemc) info. \n*- Alternatively if your on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
     .setColor("Blurple")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303' }),
   renderer_gl4es: new EmbedBuilder()
     .setTitle("**QuestCraft GL4ES Renderer**")
-    .setDescription("All QuestCraft versions can utilize the **GL4ES renderer**, it has moderate speed with moderate mod compatibility.\n- Complex mods like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) may not work, test at your own risk.\n\nPlease note moving forwards, on QuestCraft versions 4.0 and above, GL4ES will no longer be toggled by default and will be removed in later versions. ")
+functionalityhandlercommandupdate
+    .setDescription("All QuestCraft versions can utilize the **GL4ES renderer**, it has moderate speed with moderate mod compatibility.\n- Complex mods like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) may not work, test at your own risk.\n\nPlease note moving forwards, on QuestCraft versions 4.0 and above, GL4ES will no longer be toggled by default and will be removed in later versions.")
     .setColor("Orange")
-    .setFooter({ text: 'Written by my Developers and my Contributors'}),
+    .setFooter({ text: 'Written by my Developers and my Contributors' }),
   renderer_vulkan: new EmbedBuilder()
     .setTitle("**QuestCraft Vulkan Renderer**")
-    .setDescription("QuestCraft versions 4.0 and above will support  the **Vulkan Renderer**.\nThe Vulkan renderer uses Vulkan (hence the name) to optimise the game rendering and significantly increase framerate, at the cost of mod compatibility.\n\nThis means that more complex mods, like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) will not work, and instead will crash.")
+    .setDescription("QuestCraft versions 4.0 and above will support the **Vulkan Renderer**.\nThe Vulkan renderer uses Vulkan (hence the name) to optimise the game rendering and significantly increase framerate, at the cost of mod compatibility.\n\nThis means that more complex mods, like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) will not work, and instead will crash.")
     .setColor("Orange")
     .setFooter({ text: 'Written by JaffaJace and my Contributors'}),
   renderer_zink: new EmbedBuilder()
     .setTitle("**QuestCraft Zink Renderer**")
-    .setDescription("QuestCraft versions 4.0 and above will support both the **Zink Renderer**.\nThe Zink renderer is a custom renderer implemented by the QC team to optimise the rendering of QuestCraft, but also improve mod compatibility, at the cost of less performance.\n\nThis means that more complex mods, like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) will work in QC!")
+    .setDescription("QuestCraft versions 4.0 and above will support the **Zink Renderer**.\nThe Zink renderer is a custom renderer implemented by the QC team to optimise the rendering of QuestCraft, but also improve mod compatibility, at the cost of less performance.\n\nThis means that more complex mods, like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) will work in QC!")
     .setColor("Orange")
     .setFooter({ text: 'Written by JaffaJace and my Contributors'}),
   simple_voice_chat: new EmbedBuilder()
     .setTitle("🎤 Installing Simple Voice Chat")
     .setDescription("Next to the plugins/mods tab search it up and install it onto your aternos server, then follow this [guide](https://support.aternos.org/hc/en-us/articles/360019336497-Installing-Voice-Chat-Mods)\n - For other servers you can find installation info [here](https://modrepo.de/minecraft/voicechat/wiki/installation)\nYou will also need to install the [Simple Voice Chat mod](https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat) for it to work")
     .setColor("DarkOrange")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303' }),
   bedrock_geyser: new EmbedBuilder()
     .setTitle("<:bedrock:1089270506441687221> Allowing Bedrock players to join")
-    .setDescription("For Aternos, Check out this [article](https://support.aternos.org/hc/en-us/articles/360051047631-Geyser), there is also a help video by Aternos listed there\n- For other servers you can find install info at [geysermc](https://geysermc.org)")
+    .setDescription("For Aternos, Check out this [article](https://support.aternos.org/hc/en-us/articles/360051047631-Geyser), there is also a help video by Aternos listed there\n- For other servers you can find install info at [the GeyserMC website.](https://geysermc.org)")
     .setColor("DarkOrange")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303' }),
   servers: new EmbedBuilder()
     .setTitle("**Server Guide**")
     .setDescription("You can host one on your computer or on [Oracle](https://blogs.oracle.com/developers/post/how-to-set-up-and-run-a-really-powerful-free-minecraft-server-in-the-cloud), which is a bit complex, or you can make a free one on [Aternos](https://aternos.org/) or [Minehut](https://minehut.com/), I would recommend making it on Fabric or Paper and installing the Vivecraft plugin/mod so you can see things like your friends movements who are also in vr\n\n```Aternos: \n\n- Create an account if you haven’t already and select ‘Create server’\n\n- Install Paper 1.19.2/1.18.2 or Fabric 1.19.3/1.18.2 using the 'Software' tab on the left and install the version you are going to be playing questcraft on\n\n- Click on the mods/plugins section on the left\n\n- Search and install Vivecraft/Vivecraft spigot extensions, (if you are installing Vivecraft spigot extensions you will need to also install ViaVersion)\n\n- Join your server using the ip\n\n- With the 'Access' tab on the left you can also give your friends permission to start the server if they have an Aternos account ```\n\n```If you have any issues joining your server try joining with 'your server ip':'port' \n- the port can be found under the connect section when your server is online \n- if that doesn't work, try join using the 'Dyn IP'/Direct IP (Direct IP is not available on Aternos) \n- The dyn ip also helps connect if you have issues with other server hosting platforms - which can be found under 'Connect' as well on the main server page when the servers online, unfortunately the Dyn IP will change every time you start the server```\n\n[**Tutorial by Aternos**](https://youtu.be/LOFbK1eXzqo) \n- This tutorial is basic, it does not guide you to install all of the QuestCraft features")
     .setColor("DarkOrange")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303' }),
   essentials_questcraft: new EmbedBuilder()
     .setTitle("**Essentials Mod on QuestCraft**")
-    .setDescription("The mod does technically function **but does not work properly**\nIt is best to avoid the mod due to the UI issues that are on QuestCraft, and when it's fixed it will most likely not have fully functional networking\n\nWe suggest either creating your own server or using XRCraft for most networking in VR, <#966126967701262386> or run ``/servers`` for info to create your own server")    .setColor("Green")
-    .setFooter({ text: 'Written by Reality', iconURL: 'https://cdn.discordapp.com/avatars/251735485884530689/50020f1de3cf0117abb1510d167f9413.png?size=4096'}),
+    .setDescription("The mod does technically function **but does not work properly**\nIt is best to avoid the mod due to the UI issues that are on QuestCraft, and when it's fixed it will most likely not have fully functional networking\n\nWe suggest either creating your own server or using XRCraft for most networking in VR, <#966126967701262386> or run ``/servers`` for info to create your own server").setColor("Green")
+    .setFooter({ text: 'Written by Reality', iconURL: 'https://cdn.discordapp.com/avatars/251735485884530689/50020f1de3cf0117abb1510d167f9413.png?size=4096' }),
   error_channels: new EmbedBuilder()
     .setTitle('Error!')
-    .setDescription('This command cannot be used in this channel ')
+    .setDescription('This command cannot be used in this channel.')
     .setColor('Red'),
   v51: new EmbedBuilder()
     .setTitle("Do you have Metas V51 firmware installed?")
     .setDescription("If you do please send a screenshot below which shows proof of that and a support member will review it and send you the fixed build\n\n**If you do not know how to see this:**\n1. On your quest head to 'settings'\n2. Then head to 'system' and select 'software update'\n3. Check the first 4 digits of the number under the 'firmware' section.")
     .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303' }),
   devs_only: new EmbedBuilder()
     .setDescription("Only developers of <@997670790604542012> can use this ")
-    .setColor("ED4245")
+    .setColor("ED4245"),
+  insupport: new EmbedBuilder()
+    .setTitle("You are already in the support channel!")
+    .setDescription("There is no need to mention any support channels 😁")
+    .setColor("Red"),
+  selfhostserver: new EmbedBuilder() //If you want to make more complex embeds like this I recommend https://embed.dan.onl/ a-m-a-z-i-n-g
+    .setTitle("Self-hosted server tutorial")
+    .setDescription("Here is a full tutorial on how to set-up a full server that supports Vivecraft (QuestCraft's base mod)")
+    .addFields(
+      {
+        name: "Step 1 - Downloading your server type:",
+        value: "This part can be done many different ways, here I have provided most of the ways you can set-up a server with Vivecraft.\n\nHere are the following types:\n- PaperMC (Recommended over it's slower cousin SpigotMC)\n- FabricMC (Great for server-side mods and has great performance)\n- Forge (Least recommended as it performs bad, however it has the most mods)\n\nNote:\nFor the purpose of this tutorial you can swap Fabric and Quilt as Quilt is just a Fabric fork.",
+      },
+      {
+        name: "Step 2 - Finding the right files (PaperMC):",
+        value: "You can find the plugin at [spigotmc.org](https://www.spigotmc.org/resources/vivecraft-spigot-extensions.33166/)\n\nHowever the latest ***EXPERIMENTAL*** plugin can be found in [the Vivecraft Discord server](https://discord.com/invite/2x3QCk8qa9)\n\nIf your server is 1.19.4 then you will also need the following:\n- [ViaVersion](https://www.spigotmc.org/resources/viaversion.19254/) (Required for ViaBackwards to function)\n- [ViaBackwards](https://www.spigotmc.org/resources/viabackwards.27448/)\n\nThese can also be used to support newer and older versions if required, you don't have to be on 1.19.4 to add these.\n\nAll these plugins now go in the `plugins` folder in your server.\nAfter starting your server you should be able to join on your headset and other devices.",
+      },
+      {
+        name: "Step 2 - Finding the right files (FabricMC):",
+        value: "FabricMC has a much simpler set-up then PaperMC\n\nYou can download the mod on [Modrinth](https://modrinth.com/mod/vivecraft)\n\nNow supporting older and newer versions is similar to PaperMC, you just need the following:\n- [ViaFabric](https://modrinth.com/mod/viafabric) (Required for ViaBackwards to function)\n- [ViaBackwards (Fabric version)](https://beta.curseforge.com/minecraft/mc-mods/viabackwards)\n\nAll these mods now go in the `mods` folder in your server.\nAfter starting your server you should be able to join on your headset and other devices.",
+      },
+      {
+        name: "Step 2 - Finding the right file (Forge):",
+        value: "You can find the mod at [Modrinth](https://modrinth.com/mod/vivecraft)\n\nUnfortunately there is no good known alternative to ViaVersion and ViaFabric, you may be able to find something that suits your needs on [Modrinth](https://modrinth.com/) or [CurseForge](https://www.curseforge.com/)\n\nAfter putting all mods in the `mods` folder you should be good to go and you can start your server.\n\nIf everything went well you should be able to join on your headset and other devices",
+      },
+      {
+        name: "Step 3 - Joining your server (Locally):",
+        value: "**Find your local IP of your server:***[Windows](https://support.microsoft.com/en-us/windows/find-your-ip-address-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9)\n[Linux](https://stackoverflow.com/questions/13322485/how-to-get-the-primary-ip-address-of-the-local-machine-on-linux-and-os-x)\n[MacOS](https://apple.stackexchange.com/questions/20547/how-do-i-find-my-ip-address-from-the-command-line)\n\n**Find your port:**\nFind your `server.properties` and search for \"server-port=\"\nThe numbers after that is the port\n\n**Joining:**\n- Click add server\n- In the server address type in your local IP followed by a colon the your port (`ip:port`)\n- Hit join!",
+      },
+      {
+        name: "Step 3 - Joining your server (Globally):",
+        value: "***Forwarding:***\n**Find your port:**\nFind your `server.properties` and search for \"server-port=\"\nThe numbers after that is the port\n\n**Forward your port:**\n[Guide](https://portforward.com/)\n\n**Getting your public IP:**\n[Google](https://lmgtfy.app/?q=What+is+my+ip)\n\n**Joining:**\n- Click add server\n- In the server address type in your public IP followed by a colon the your port (`ip:port`)\n- Hit join!",
+      },
+      {
+        name: "Step 3 - Joining your server (playit)",
+        value: "- Create an account at [playit](https://playit.gg)\n- Download the playit agent at [the download link](https://playit.gg/download)\n- Find your port in `server.properties` (Hint: it starts with \"server-port=\")\n- Create a new tunnel and set the \"Local IPv4\" to \"127.0.0.1\" then set the port is the port you previously found and also make sure the tunnel type is set to Minecraft Java\n- Find the address and the port in the details of your tunnel\n- Join by putting the address and the port together like this `ip:port`\n- Click join!",
+      },
+    )
+    .setColor("Green")
+    .setFooter({
+      text: "Created by DevLime",
+      iconURL: "https://cdn.discordapp.com/avatars/779054724543414324/e7ea58b047a539b15a388e8d32f8e2ca.png?size=4096",
+    })
 };
 //
 module.exports = embeds;

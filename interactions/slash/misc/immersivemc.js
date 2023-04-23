@@ -11,7 +11,7 @@ module.exports = {
     .setDescription('Lists dependencies for ImmersiveMC')
     .addStringOption(option =>
         option.setName('version')
-            .setDescription('Your minecraft version')
+            .setDescription('Your Minecraft version')
             .setRequired(false)
             .addChoices(
                 { name: '1.18.2', value: '1.18.2' },

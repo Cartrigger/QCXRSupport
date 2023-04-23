@@ -7,7 +7,7 @@ const embeds = require('../../../embeds.js');
 module.exports = {
 	data:  new SlashCommandBuilder()
 	.setName('otherheadsets')
-	.setDescription('Gives some information about QC on other headsets.')
+	.setDescription('Gives some information about QuestCraft on other headsets.')
 	.addStringOption(option =>
 		option.setName('info')
 			.setDescription('Extra info on headsets')
