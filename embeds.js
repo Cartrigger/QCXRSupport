@@ -167,29 +167,6 @@ const embeds = {
     .setColor("White")
     .setFooter({ text: 'Written by Cart', iconURL: 'https://images-ext-1.discordapp.net/external/aTyGSUOhnDS_8fX4GGP9UfztBpotA7axEqb0ujMNz0U/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?width=310&height=310'}),
   
-    location_questcraft:  new EmbedBuilder()
-    .setTitle("**📂 Folder location for QuestCraft**")
-    .setDescription("QuestCraft's data is stored in this folder path:\n``Android/Data/com.qcxr.qcxr`` ")
-    .setColor("Greyple")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
-  
-    location_logs: new EmbedBuilder()
-    .setTitle("**📂 Logs Location**")
-    .setDescription("You can get the logs asked for by Support Staff at ``Android/Data/com.qcxr.qcxr/files/latestlog.txt``. Yes you can use any file manager to get to it and no, there is no information that someone could use to hack your account.")
-    .setColor("Greyple"),
-  
-    location_resource_packs: new EmbedBuilder()
-    .setTitle("**📂 Resource Pack Location**")
-    .setDescription("You can find the Resource Packs folder in `android/data/com.qcxr.qcxr/files/.minecraft/resourcepacks`.\nAny Resource Pack made for any version of Minecraft should work, but for full usage it is recommended to install packs made for either 1.18.2 or 1.19.3\n\n Some packs may state they require certain optifine features to function.\nThis requires the use of external mods to enable those features\n*Examples of those mods include:*\n\n> [CIT Resewn](https://www.curseforge.com/minecraft/mc-mods/cit-resewn) | [CEM](https://github.com/YoungSoulluoS/Fresh-Animations-CEM-fork/releases) | [Continuity](https://www.curseforge.com/minecraft/mc-mods/continuity)")
-    .setColor("Greyple")
-    .setFooter({ text: 'Written by Pixel', iconURL: 'https://cdn.discordapp.com/attachments/1078126187064332359/1097014341259235408/54d91d44b108640889109d58cf8884a3.webp'}),
-  
-    location_saves: new EmbedBuilder()
-    .setTitle("**📂 Saves [Worlds] Location**")
-    .setDescription("The save files are stored in this folder path:\n``Android/Data/com.qcxr.qcxr/.minecraft/saves``\n\nFor some good world downloads check out [Planet Minecraft](https://www.planetminecraft.com/projects/)\n*(make sure you download the right version)*\n\nYou can also use this directory to backup any worlds you may have whilst reinstalling or updating QuestCraft")
-    .setColor("Greyple")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
-  
     immersivemc_1_19_3:  new EmbedBuilder()
     .setTitle("**Installing ImmersiveMC on 1.19.3**")
     .setDescription("If you are having issues when running [**ImmersiveMC**](https://www.curseforge.com/minecraft/mc-mods/immersivemc) on **1.19.3** please uninstall the mod along with any related files you installed with it and then reinstall it with the all the files listed below:\n\n**- [Architectury API](https://www.curseforge.com/minecraft/mc-mods/architectury-api/download/4384408)**\n**- [Forge Config API port](https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port-fabric/download/4238520)**\n**- [MC VR API](https://www.curseforge.com/minecraft/mc-mods/mc-vr-api/download/4403503)** \n**- [ImmersiveMc](https://www.curseforge.com/minecraft/mc-mods/immersivemc/download/4430202)**\n\nWith all of these your game should work with **ImmersiveMC** on **1.19.3**\n\n*- Alternatively if your on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
