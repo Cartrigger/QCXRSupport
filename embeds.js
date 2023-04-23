@@ -212,7 +212,7 @@ const embeds = {
     .setTitle("**QuestCraft GL4ES Renderer**")
     .setDescription("All QuestCraft versions can utilize the **GL4ES renderer**, it has moderate speed with moderate mod compatibility.\n- Complex mods like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) may not work, test at your own risk.\n\nPlease note moving forwards, on QuestCraft versions 4.0 and above, GL4ES will no longer be toggled by default and will be removed in later versions. ")
     .setColor("Orange")
-    .setFooter({ text: 'Written by my Developers and my Contributors', iconURL:'https://media.discordapp.net/attachments/1078126187064332359/1098737664754192545/IMG_8202.png?width=633&height=633'}),
+    .setFooter({ text: 'Written by my Developers and my Contributors', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1098737664754192545/IMG_8202.png?width=633&height=633'}),
   
     renderer_vulkan: new EmbedBuilder()
     .setTitle("**QuestCraft Vulkan Renderer**")
@@ -280,6 +280,12 @@ const embeds = {
     .setColor("Green")
     .setFooter({ text: 'Written by Pixel', iconURL: 'https://cdn.discordapp.com/attachments/1078126187064332359/1097014341259235408/54d91d44b108640889109d58cf8884a3.webp'}),
   
+    pc_logs: new EmbedBuilder()
+    .setTitle("**Pc Logs Guide**")
+    .setDescription("**Sending a QuestCraft Log on PC:**\n\n1) Connect your headset to your pc via a cable that supports data transfer.\n2) Go into your headset and accept the file access prompt.\n3) Look onto your pc and find the new device that was recognized in windows explorer.\n4) On the device go to android/data/com.qcxr.qcxr/files/latestlog.txt.\n5) Once you found this file, drag it into a different folder on your pc, then drag it into discord.\n\n**Note: if there was no file access prompt, you may have file access prompts disabled in headset developer settings. If that doesn't work, try using a different cable.**")
+    .setColor("Green")
+    .setFooter({ text: 'Written by !DED', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
+    
     devs_only: new EmbedBuilder()
     .setDescription("Only developers of <@997670790604542012> can use this.")
     .setColor("ED4245")
