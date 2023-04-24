@@ -32,7 +32,7 @@ const embeds = {
     mods_manager: new EmbedBuilder()
     .setTitle("**Mod Manager Guide**")
     .setDescription("**How to install mods using Mod Manager**\n\n1) On the play screen, click on `Mod Manager`\n2) Scroll down or search for the mod you wish to install\n3) Select the version you want to install and press the `Install` button")
-    .setFooter({text:'Written by Pixel', iconURL: 'https://cdn.discordapp.com/attachments/1078126187064332359/1097014341259235408/54d91d44b108640889109d58cf8884a3.webp'}),
+    .setFooter({text:'Written by Pixel', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100075208498487356/Crowpixel.webp'}),
 
     nopiracy: new EmbedBuilder()
     .setTitle("**Piracy is illegal!**")
@@ -77,7 +77,7 @@ const embeds = {
     .setDescription("**Changing versions:**\n\nQuestcraft currently supports Minecraft versions:\n> 1.18.2\n> 1.19.2\n> 1.19.3\n> 1.19.4\n\nYou are unable to use any versions below 1.18.2\nTo change versions, Click on the version number in the bottom left of the play screen (As shown in the image below)")
     .setColor("Green")
     .setImage("https://media.discordapp.net/attachments/1057074981135196230/1086666081244024925/version_switch.png?width=868&height=656")
-    .setFooter({ text: 'Written by Pixel', iconURL: 'https://cdn.discordapp.com/attachments/1078126187064332359/1097014341259235408/54d91d44b108640889109d58cf8884a3.webp'}),
+    .setFooter({ text: 'Written by Pixel', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100075208498487356/Crowpixel.webp'}),
   
     yvr: new EmbedBuilder()
     .setTitle("**YVR Info**")
@@ -147,7 +147,7 @@ const embeds = {
     .setTitle("**Gamma issues**")
     .setDescription("**Why is my Gamma/Saturation off?**\n\nQuest currently has Gamma/Saturation issues (We don't know the reason why)\nYou can try using a mod called [Gamma Utils](https://www.curseforge.com/minecraft/mc-mods/gamma-utils) to try and help, though it only helps slightly and only lowers the brightness")
     .setColor("Yellow")
-    .setFooter({ text: 'Written by Pixel', iconURL: 'https://cdn.discordapp.com/attachments/1078126187064332359/1097014341259235408/54d91d44b108640889109d58cf8884a3.webp'}),
+    .setFooter({ text: 'Written by Pixel', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100075208498487356/Crowpixel.webp'}),
   
     microsoft_login:  new EmbedBuilder()
     .setTitle("**Microsoft login does nothing:**")
@@ -243,7 +243,7 @@ const embeds = {
     .setDescription("**Sending logs from Quest:**\n\n1) Find the log located in `android/data/com.qcxr.qcxr/files/latestlog.txt`.\n2) Copy and Paste the log in `downloads`.\n3) Open Discord on the Meta Browser and click the + next to the chat box.\n4) Click `Upload a file` and in the top right, change the filter `Media` to `All`.\n5) Locate `latestlog.txt` and send it.")
     .setImage("https://cdn.discordapp.com/attachments/1078126187064332359/1097009784944873533/ezgif.com-video-to-gif.gif")
     .setColor("DarkOrange")
-    .setFooter({ text: 'Written by Pixel', iconURL: 'https://cdn.discordapp.com/attachments/1078126187064332359/1097014341259235408/54d91d44b108640889109d58cf8884a3.webp'}),
+    .setFooter({ text: 'Written by Pixel', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100075208498487356/Crowpixel.webp'}),
   
     sideload_bugjaeger: new EmbedBuilder()
     .setTitle("**Sideloading using Bugjaeger Guide**")
@@ -255,7 +255,7 @@ const embeds = {
     .setTitle("**Backing Up Worlds Guide**")
     .setDescription("**How to backup worlds**\n\n1) Navigate to `android/data/com.qcxr.qcxr/files/.minecraft`\n2) Locate the `Saves` folder\n3) Copy the folder \n4) Paste it into your `Downloads` folder if on Quest (If on pc just download it from sidequest)\n5) Reinstall Questcraft to update or to fix an issue\n6) Paste the folder back into `android/data/com.qcxr.qcxr/files/.minecraft`.")
     .setColor("Green")
-    .setFooter({ text: 'Written by Pixel', iconURL: 'https://cdn.discordapp.com/attachments/1078126187064332359/1097014341259235408/54d91d44b108640889109d58cf8884a3.webp'}),
+    .setFooter({ text: 'Written by Pixel', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100075208498487356/Crowpixel.webp'}),
   
     pc_logs: new EmbedBuilder()
     .setTitle("**Pc Logs Guide**")
