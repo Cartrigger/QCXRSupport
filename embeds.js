@@ -22,7 +22,7 @@ const embeds = {
     .setTitle("**Installation Guide**")
     .setDescription("1. Download sidequest at the link [here](https://sidequestvr.com/setup-howto) (Advanced one is reccomended)\n2. Go to the QuestCraft SideQuest page which is linked [here](https://sidequestvr.com/app/7150/questcraft)\n3. Plug your quest into your computer/phone and accept the prompt on your quest to allow your computer to view the files\n4. Go back to sidequest and select 'sideload' - in the top right of sidequest you should see a running task (That is QuestCraft) - wait until it has finished\n5. Unplug your quest and go to your app library\n6. Go to 'unknown sources' (It is in the top right dropdown on your app library)\n7. Open QuestCraft\n8. Make sure to keep your headset on while QuestCraft is guiding you through the install - if you do not it may become bugged \n9. If downloading instances is taking a long time and you dont want to keep your headset on you can cover the sensor - Just make sure your quest stays on\n10. Login and go to the Microsoft website it says and enter the code it gives you\n11. Select play and enjoy!\n- make sure to keep your headset on or the sensor covered fully throughout the install, if you do not your install may become bugged\n\nAlso make sure you don't do the following:\n- Don't exit your boundry\n- Don't click any buttons\n- Don't go into passthrough\n- Don't mess with wifi settings\n\n[**Video tutorial**](https://youtu.be/cVU4ZXDXvP4):\nCredit to <@136571842906292224>")
     .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
   
     mods_manual: new EmbedBuilder()
     .setTitle("**Manual Modding Guide**")
@@ -48,7 +48,7 @@ const embeds = {
     .setTitle("**Better performance guide**")
     .setDescription("- Make sure you are playing on the [latest version of QuestCraft](https://github.com/QuestCraftPlusPlus/QuestCraft/releases/latest), it was released <t:1681672220:R> with added performance improvements\n- Try play on 1.18.2 instead of 1.19.3, 1.19.3 runs fine on servers but 1.18.2 is best for performance\n- Play on a server instead of singleplayer, a good public server is [xrcraft](https://discord.com/channels/820767484042018829/966126967701262386), If you want a private server do ``/servers`` for a guide on how to. \n- Make sure your graphics quality is set to fast in your ingame settings\n\n**Additional tips** \n\n- In the options menu, go to VR Settings/Stereo Rendering and set the resolution (NOT CAMERA RES) to 80%. This will decrease the general quality, but will give an extra performance boost.\n- The game's render distance is best at 4-6, but you *may* encounter lag spikes when using it. 9 and above is not recommended.\n- Oceans contain LOTS of kelp that decrease framerate. Don't mine any of it all at once, as your game may CRASH if lots of entites *(in this case, kelp waiting to be picked up)* exist at once.\n- [Skyblock](https://minecraft.fandom.com/wiki/Tutorials/Skyblock) and [Oneblock](https://www.curseforge.com/minecraft/worlds/oneblock) worlds perform the best, as they require less hardware usage.")
     .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999 & Swaggio', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999 & Swaggio', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
   
     reinstall: new EmbedBuilder()
     .setTitle("**QuestCraft Reinstall Instructions**")
@@ -59,13 +59,13 @@ const embeds = {
     .setTitle("**Support Requestinator**")
     .setDescription('Click the dropdown menu bellow to access all of the support presets')
     .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
   
     releases: new EmbedBuilder()
     .setTitle("**Release Info**")
     .setDescription("Questcraft is distributed on **[Github](https://github.com/QuestCraftPlusPlus/QuestCraft/releases)** and **[Sidequest](https://sidequestvr.com/app/7150/questcraft)**\n||(Do ``/installation`` for info on how to install Questcraft)||")
     .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
   
     support_channels: new EmbedBuilder()
     .setTitle("**Sorry but <:notsupportchannel:993043214472859778>**")
@@ -121,7 +121,7 @@ const embeds = {
   
     rebinding:  new EmbedBuilder()
     .setTitle("**I can't rebind keys:**")
-    .setDescription("Rebinding is not officially supported (and most likely never will be).")
+    .setDescription("Rebinding is not officially supported (and most likely never will be). There is a mod called [QuestBind](https://modrinth.com/mod/questbind)(Credit to <@815788241168367656> for creating the mod! For any questions feel free to ask them!) that allows you to rebind keys, but it is a bit lengthy to set up. A UI element is being developed to make it more convenient, so stay tuned!.")
     .setColor("Red")
     .setFooter({ text: 'Written by !DED', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
   
@@ -129,7 +129,7 @@ const embeds = {
     .setTitle("**After dying in lava I can't respawn:**")
     .setDescription("- This is a bug. The only way to respawn is to log into the server on a computer, respawn, and then log back in on your Quest\n\n- Alternatively you could make sure that the gamerule `/gamerule doImmediateRespawn` is enabled (set to true), this will not give you the option to respawn and you will auto respawn immediately\nI have tested the command to see if enabling it while you are dead fixes the issue, it doesn't\n\n- Another option is to delete your player data file, however **deleting this will delete everything about your player, including ender chests, bed spawn and your location,** this file is located in ``world/playerdata/‘youruuid’`` to find your UUID just join the server and it will be displayed in the console/your Minecraft log file. Alternatively you can find it by searching for your username on [NameMC](https://namemc.com/)\n\n- Or if you really know what you're doing you could edit your player.dat file manually")
     .setColor("Red")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
   
     immersive_controls:  new EmbedBuilder()
     .setTitle("**How do I turn immersive controls on?**")
@@ -159,7 +159,7 @@ const embeds = {
     .setTitle("**FAQ Info**")
     .setDescription("Checking the <#821469293156892724> channel first can potentially help your issue get resolved quicker. Please check that before messaging here")
     .setColor("Green")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
   
     license:  new EmbedBuilder()
     .setTitle("**📜 License Info**")
@@ -171,19 +171,19 @@ const embeds = {
     .setTitle("**Installing ImmersiveMC on 1.19.3**")
     .setDescription("If you are having issues when running [**ImmersiveMC**](https://www.curseforge.com/minecraft/mc-mods/immersivemc) on **1.19.3** please uninstall the mod along with any related files you installed with it and then reinstall it with the all the files listed below:\n\n**- [Architectury API](https://www.curseforge.com/minecraft/mc-mods/architectury-api/download/4384408)**\n**- [Forge Config API port](https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port-fabric/download/4238520)**\n**- [MC VR API](https://www.curseforge.com/minecraft/mc-mods/mc-vr-api/download/4403503)** \n**- [ImmersiveMc](https://www.curseforge.com/minecraft/mc-mods/immersivemc/download/4430202)**\n\nWith all of these your game should work with **ImmersiveMC** on **1.19.3**\n\n*- Alternatively if your on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
     .setColor("Blurple")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
   
     immersivemc_1_18_2:  new EmbedBuilder()
     .setTitle("**Installing ImmersiveMC on 1.18.2**")
     .setDescription("If you are having issues when running [**ImmersiveMC**](https://www.curseforge.com/minecraft/mc-mods/immersivemc) on **1.18.2** please uninstall the mod along with any related files you installed with it and then reinstall it with the all the files listed below:\n\n**- [Architectury API](https://www.curseforge.com/minecraft/mc-mods/architectury-api/download/4384408)**\n**- [Forge Config API port](https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port-fabric/download/3943250)**\n**- [MC VR API](https://www.curseforge.com/minecraft/mc-mods/mc-vr-api/download/4403501)** \n**- [ImmersiveMc](https://www.curseforge.com/minecraft/mc-mods/immersivemc/download/4426537)**\n\nWith all of these your game should work with **ImmersiveMC** on **1.18.2**\n\n*- Alternatively if your on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
     .setColor("Blurple")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
   
     immersive_mc_embed: new EmbedBuilder()
     .setTitle("**Game crashes with ImmersiveMC**")
     .setDescription("Please select your Minecraft Version below to get the [ImmersiveMC](https://www.curseforge.com/minecraft/mc-mods/immersivemc) info. \n*- Alternatively if your on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
     .setColor("Blurple")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
   
     renderer_gl4es: new EmbedBuilder()
     .setTitle("**QuestCraft GL4ES Renderer**")
@@ -207,7 +207,7 @@ const embeds = {
     .setTitle("🎤 Installing Simple Voice Chat")
     .setDescription("Next to the plugins/mods tab search it up and install it onto your aternos server, then follow this [guide](https://support.aternos.org/hc/en-us/articles/360019336497-Installing-Voice-Chat-Mods)\n - For other servers you can find installation info [here](https://modrepo.de/minecraft/voicechat/wiki/installation)\nYou will also need to install the [Simple Voice Chat mod](https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat) for it to work")
     .setColor("DarkOrange")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
   
     bedrock_geyser: new EmbedBuilder()
     .setTitle("<:bedrock:1089270506441687221> Allowing Bedrock players to join")
@@ -219,7 +219,7 @@ const embeds = {
     .setTitle("**Server Guide**")
     .setDescription("You can host one on your computer or on [Oracle](https://blogs.oracle.com/developers/post/how-to-set-up-and-run-a-really-powerful-free-minecraft-server-in-the-cloud), which is a bit complex, or you can make a free one on [Aternos](https://aternos.org/) or [Minehut](https://minehut.com/), I would recommend making it on Fabric or Paper and installing the Vivecraft plugin/mod so you can see things like your friends movements who are also in vr\n\n```Aternos: \n\n- Create an account if you haven’t already and select ‘Create server’\n\n- Install Paper 1.19.2/1.18.2 or Fabric 1.19.3/1.18.2 using the 'Software' tab on the left and install the version you are going to be playing questcraft on\n\n- Click on the mods/plugins section on the left\n\n- Search and install Vivecraft/Vivecraft spigot extensions, (if you are installing Vivecraft spigot extensions you will need to also install ViaVersion)\n\n- Join your server using the ip\n\n- With the 'Access' tab on the left you can also give your friends permission to start the server if they have an Aternos account ```\n\n```If you have any issues joining your server try joining with 'your server ip':'port' \n- the port can be found under the connect section when your server is online \n- if that doesn't work, try join using the 'Dyn IP'/Direct IP (Direct IP is not available on Aternos) \n- The dyn ip also helps connect if you have issues with other server hosting platforms - which can be found under 'Connect' as well on the main server page when the servers online, unfortunately the Dyn IP will change every time you start the server```\n\n[**Tutorial by Aternos**](https://youtu.be/LOFbK1eXzqo) \n- This tutorial is basic, it does not guide you to install all of the QuestCraft features")
     .setColor("DarkOrange")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
   
     essentials_questcraft: new EmbedBuilder()
     .setTitle("**Essentials Mod on QuestCraft**")
