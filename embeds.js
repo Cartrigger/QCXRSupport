@@ -121,7 +121,7 @@ const embeds = {
   
     rebinding:  new EmbedBuilder()
     .setTitle("**I can't rebind keys:**")
-    .setDescription("Rebinding is not officially supported (and most likely never will be). There is a mod called [QuestBind](https://modrinth.com/mod/questbind)(Credit to <@815788241168367656> for creating the mod! For any questions feel free to ask them!) that allows you to rebind keys, but it is a bit lengthy to set up. A UI element is being developed to make it more convenient, so stay tuned!.")
+    .setDescription("Rebinding is not officially supported (and most likely never will be). There is a mod called [QuestBind](https://modrinth.com/mod/questbind)(Credit to <@815788241168367656> for creating the mod!) that allows you to rebind keys, but it is a bit lengthy to set up. A UI element is being developed to make it more convenient, so stay tuned!.")
     .setColor("Red")
     .setFooter({ text: 'Written by !DED', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
   
