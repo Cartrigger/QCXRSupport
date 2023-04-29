@@ -35,14 +35,11 @@ To test the bot out join the [QuestCraft discord server](https://discord.gg/ques
 Thank you to all these amazing contributors for helping with the bot!
 <nobr>
 <div style="display: flex; align-items: center; text-align: center;">
-  <div>
-    <!---
-      Do not modify this P element, it fixes the bullet point!
-    -->
+  <div style="display: inline;">
     <p style="display: inline;">-  </p>
   </div>
     <img src="https://avatars.githubusercontent.com/u/94018839?v=4&s=48" alt="JaffaJace" style="display: inline; margin-right: 10px;">
-  <div>
+  <div style="display: inline;">
     <a href="https://github.com/JaffaJace" style="display: inline;">  JaffaJace</a>
   </div>
 </div>
