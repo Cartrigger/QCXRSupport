@@ -47,5 +47,5 @@ module.exports = {
                     await interaction.reply("https://discord.gg/2ck7EaEQym");
                     return;
                 }
-                }
             }
+        }
