@@ -272,7 +272,7 @@ const embeds = {
     .setDescription("The Quest firmware v53 has caused QuestCraft to have many issues\n\nMeta did it again...\n\nYou may experience bad lag spikes\nWe do not have this under our control please be patient")
     .setColor("Red")
     .setFooter({
-      text: "By DevLime (ASAP)",
+      text: "Written By DevLime (ASAP)",
       iconURL: "https://cdn.discordapp.com/avatars/779054724543414324/e7ea58b047a539b15a388e8d32f8e2ca?size=1024",
     })
 };
