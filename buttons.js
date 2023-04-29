@@ -24,6 +24,10 @@ const buttons = {
             .setLabel('Bedrock players')
             .setEmoji("<:bedrock:1089270506441687221>")
             .setStyle(ButtonStyle.Danger),
+        new ButtonBuilder()
+            .setCustomId('self_hosted')
+            .setLabel('Self Hosted server')
+            .setStyle(ButtonStyle.Primary),
     )
 };
 module.exports = buttons;

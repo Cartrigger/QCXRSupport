@@ -266,7 +266,45 @@ const embeds = {
     
     devs_only: new EmbedBuilder()
     .setDescription("Only developers of <@997670790604542012> can use this.")
-    .setColor("ED4245")
+    .setColor("ED4245"),
+    selfhostserver: new EmbedBuilder() //If you want to make more complex embeds like this I recommend https://embed.dan.onl/ a-m-a-z-i-n-g
+    .setTitle("Self-hosted server tutorial")
+    .setDescription("Here is a full tutorial on how to set-up a full server that supports Vivecraft (QuestCraft's base mod)")
+    .addFields(
+      {
+        name: "Step 1 - Downloading your server type:",
+        value: "This part can be done many different ways, here I have provided most of the ways you can set-up a server with Vivecraft.\n\nHere are the following types:\n- PaperMC (Recommended over it's slower cousin SpigotMC)\n- FabricMC (Great for server-side mods and has great performance)\n- Forge (Least recommended as it performs bad, however it has the most mods)\n\nNote:\nFor the purpose of this tutorial you can swap Fabric and Quilt as Quilt is just a Fabric fork.",
+      },
+      {
+        name: "Step 2 - Finding the right files (PaperMC):",
+        value: "You can find the plugin at [spigotmc.org](https://www.spigotmc.org/resources/vivecraft-spigot-extensions.33166/)\n\nHowever the latest ***EXPERIMENTAL*** plugin can be found in [the Vivecraft Discord server](https://discord.com/invite/2x3QCk8qa9)\n\nIf your server is 1.19.4 then you will also need the following:\n- [ViaVersion](https://www.spigotmc.org/resources/viaversion.19254/) (Required for ViaBackwards to function)\n- [ViaBackwards](https://www.spigotmc.org/resources/viabackwards.27448/)\n\nThese can also be used to support newer and older versions if required, you don't have to be on 1.19.4 to add these.\n\nAll these plugins now go in the `plugins` folder in your server.\nAfter starting your server you should be able to join on your headset and other devices.",
+      },
+      {
+        name: "Step 2 - Finding the right files (FabricMC):",
+        value: "FabricMC has a much simpler set-up then PaperMC\n\nYou can download the mod on [Modrinth](https://modrinth.com/mod/vivecraft)\n\nNow supporting older and newer versions is similar to PaperMC, you just need the following:\n- [ViaFabric](https://modrinth.com/mod/viafabric) (Required for ViaBackwards to function)\n- [ViaBackwards (Fabric version)](https://beta.curseforge.com/minecraft/mc-mods/viabackwards)\n\nAll these mods now go in the `mods` folder in your server.\nAfter starting your server you should be able to join on your headset and other devices.",
+      },
+      {
+        name: "Step 2 - Finding the right file (Forge):",
+        value: "You can find the mod at [Modrinth](https://modrinth.com/mod/vivecraft)\n\nUnfortunately there is no good known alternative to ViaVersion and ViaFabric, you may be able to find something that suits your needs on [Modrinth](https://modrinth.com/) or [CurseForge](https://www.curseforge.com/)\n\nAfter putting all mods in the `mods` folder you should be good to go and you can start your server.\n\nIf everything went well you should be able to join on your headset and other devices",
+      },
+      {
+        name: "Step 3 - Joining your server (Locally):",
+        value: "**Find your local IP of your server:***[Windows](https://support.microsoft.com/en-us/windows/find-your-ip-address-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9)\n[Linux](https://stackoverflow.com/questions/13322485/how-to-get-the-primary-ip-address-of-the-local-machine-on-linux-and-os-x)\n[MacOS](https://apple.stackexchange.com/questions/20547/how-do-i-find-my-ip-address-from-the-command-line)\n\n**Find your port:**\nFind your `server.properties` and search for \"server-port=\"\nThe numbers after that is the port\n\n**Joining:**\n- Click add server\n- In the server address type in your local IP followed by a colon the your port (`ip:port`)\n- Hit join!",
+      },
+      {
+        name: "Step 3 - Joining your server (Globally):",
+        value: "***Forwarding:***\n**Find your port:**\nFind your `server.properties` and search for \"server-port=\"\nThe numbers after that is the port\n\n**Forward your port:**\n[Guide](https://portforward.com/)\n\n**Getting your public IP:**\n[Google](https://lmgtfy.app/?q=What+is+my+ip)\n\n**Joining:**\n- Click add server\n- In the server address type in your public IP followed by a colon the your port (`ip:port`)\n- Hit join!",
+      },
+      {
+        name: "Step 3 - Joining your server (playit)",
+        value: "- Create an account at [playit](https://playit.gg)\n- Download the playit agent at [the download link](https://playit.gg/download)\n- Find your port in `server.properties` (Hint: it starts with \"server-port=\")\n- Create a new tunnel and set the \"Local IPv4\" to \"127.0.0.1\" then set the port is the port you previously found and also make sure the tunnel type is set to Minecraft Java\n- Find the address and the port in the details of your tunnel\n- Join by putting the address and the port together like this `ip:port`\n- Click join!",
+      },
+    )
+    .setColor("#00b0f4")
+    .setFooter({
+      text: "Created by DevLime",
+      iconURL: "https://cdn.discordapp.com/avatars/779054724543414324/e7ea58b047a539b15a388e8d32f8e2ca.png?size=4096",
+    })
 };
 
 module.exports = embeds;
