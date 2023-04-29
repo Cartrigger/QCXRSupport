@@ -266,7 +266,15 @@ const embeds = {
     
     devs_only: new EmbedBuilder()
     .setDescription("Only developers of <@997670790604542012> can use this.")
-    .setColor("ED4245")
+    .setColor("ED4245"),
+    v53: new EmbedBuilder()
+    .setTitle("Quest firmware v53 issues")
+    .setDescription("The Quest firmware v53 has caused QuestCraft to have many issues\n\nMeta did it again...\n\nYou may experience bad lag spikes\nWe do not have this under our control please be patient")
+    .setColor("Red")
+    .setFooter({
+      text: "Written By DevLime",
+      iconURL: "https://cdn.discordapp.com/avatars/779054724543414324/e7ea58b047a539b15a388e8d32f8e2ca?size=1024",
+    })
 };
 
 module.exports = embeds;
