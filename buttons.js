@@ -27,6 +27,7 @@ const buttons = {
         new ButtonBuilder()
             .setCustomId('self_hosted')
             .setLabel('Self Hosted server')
+            .setEmoji("<:log:1096054676903956560>")
             .setStyle(ButtonStyle.Primary),
     )
 };
