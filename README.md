@@ -36,7 +36,7 @@ Thank you to all these amazing contributors for helping with the bot!
 
 - <div style="display: flex; align-items: center;">
     <p></p>
-    <img src="https://avatars.githubusercontent.com/u/94018839?v=4&s=48" alt="JaffaJace" style="margin-right: 10px; padding-top: 0px;">
+    <img src="https://avatars.githubusercontent.com/u/94018839?v=4&s=48" alt="JaffaJace" style="margin-right: 10px; padding-top: 12px;">
     <a href="https://github.com/JaffaJace">JaffaJace</a>
   </div>
 - [TheJudge156](https://github.com/thejudge156)
