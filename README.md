@@ -34,7 +34,7 @@ To test the bot out join the [QuestCraft discord server](https://discord.gg/ques
 ### 🧩 Contributors
 Thank you to all these amazing contributors for helping with the bot!
 
-- <div style="display: flex; align-items: center;"><img src="https://avatars.githubusercontent.com/u/94018839?v=4&s=48" alt="JaffaJace" style="margin-right: 10px;"><a href="https://github.com/JaffaJace">JaffaJace</a></div>
+- <div style="display: flex; align-items: center;"><img src="https://avatars.githubusercontent.com/u/94018839?v=4&s=48" alt="JaffaJace" style="margin-right: 10px;"><div><a href="https://github.com/JaffaJace" style="display: block;">JaffaJace</a></div></div>
 - [TheJudge156](https://github.com/thejudge156)
 - [CADIndie](https://github.com/CADIndie)
 - [Flamgop](https://github.com/Flopgop)
