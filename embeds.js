@@ -224,7 +224,7 @@ const embeds = {
     essentials_questcraft: new EmbedBuilder()
     .setTitle("**Essentials Mod on QuestCraft**")
     .setDescription("The mod does technically function **but does not work properly**\nIt is best to avoid the mod due to the UI issues that are on QuestCraft, and when it's fixed it will most likely not have fully functional networking\n\nWe suggest either creating your own server or using XRCraft for most networking in VR, <#966126967701262386> or run ``/servers`` for info to create your own server")    .setColor("Green")
-    .setFooter({ text: 'Written by Reality', iconURL: 'https://cdn.discordapp.com/avatars/251735485884530689/50020f1de3cf0117abb1510d167f9413.png?size=4096'}),
+    .setFooter({ text: 'Written by Reality', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1101871444008374444/df17a2dbbe4fcd2de4f3bfb9f580b943.png?width=324&height=324'}),
   
     error_channels: new EmbedBuilder()
     .setTitle('Error!')
