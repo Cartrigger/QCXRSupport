@@ -33,14 +33,10 @@ To test the bot out join the [QuestCraft discord server](https://discord.gg/ques
 
 ### 🧩 Contributors
 Thank you to all these amazing contributors for helping with the bot!
+<a href="https://github.com/Cartrigger/QCXRSoonBot/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Cartrigger/QCXRSoonBot" />
+</a>
 
-- [JaffaJace](https://github.com/JaffaJace)
-- [TheJudge156](https://github.com/thejudge156)
-- [CADIndie](https://github.com/CADIndie)
-- [Flamgop](https://github.com/Flopgop)
-- [DED0026](https://github.com/DED0026)
-- [Swaggio](https://github.com/swaggio7)
-- [DevLime](https://github.com/DevLimeAtSkyo)
 
 ## 📝 [License](https://github.com/Cartrigger/QCXRSoonBot/blob/main/LICENSE.md)
   QCXR Bot © 2022 by [Carson G](https://github.com/Cartrigger) and [TechyGiraffe999](https://github.com/TecEash1) is licensed under [Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/) (CREATIVE COMMONS)
