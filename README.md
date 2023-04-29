@@ -40,7 +40,7 @@ Thank you to all these amazing contributors for helping with the bot!
     -->
     <p style="display: inline;">-  </p>
   </div>
-    <img src="https://avatars.githubusercontent.com/u/94018839?v=4&s=48" alt="JaffaJace" style="margin-right: 10px;">
+    <img src="https://avatars.githubusercontent.com/u/94018839?v=4&s=48" alt="JaffaJace" style="display: inline; margin-right: 10px;">
   <div>
     <a href="https://github.com/JaffaJace" style="display: inline;">  JaffaJace</a>
   </div>
