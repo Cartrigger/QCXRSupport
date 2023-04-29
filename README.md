@@ -33,7 +33,7 @@ To test the bot out join the [QuestCraft discord server](https://discord.gg/ques
 
 ### 🧩 Contributors
 Thank you to all these amazing contributors for helping with the bot!
-<div style="display: flex; align-items: center;">
+<div style="display: flex; align-items: center; text-align: center;">
   <div>
     <!---
       Do not modify this P element, it fixes the bullet point!
