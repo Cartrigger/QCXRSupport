@@ -163,7 +163,7 @@ const embeds = {
   
     license:  new EmbedBuilder()
     .setTitle("**📜 License Info**")
-    .setDescription("My License is [Creative-Commons-Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/), please check [my License](https://github.com/Cartrigger/QCXRSoonBot/blob/functionalityhandlercommandupdate/LICENSE.md) to see more info.")
+    .setDescription("My License is [Creative-Commons-Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/), please check [my License]https://github.com/Cartrigger/QCXRSoonBot/blob/main/LICENSE.md) to see more info.")
     .setColor("White")
     .setFooter({ text: 'Written by Cart', iconURL: 'https://images-ext-1.discordapp.net/external/aTyGSUOhnDS_8fX4GGP9UfztBpotA7axEqb0ujMNz0U/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?width=310&height=310'}),
   
