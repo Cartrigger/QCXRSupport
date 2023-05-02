@@ -39,7 +39,7 @@ Thank you to all these amazing contributors for helping with the bot!
 
 
 ## 📝 [License](https://github.com/Cartrigger/QCXRSoonBot/blob/main/LICENSE.md)
-  QCXR Bot © 2022 by [Carson G](https://github.com/Cartrigger) and [TechyGiraffe999](https://github.com/TecEash1) is licensed under [Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/) (CREATIVE COMMONS)
+  QCXR Bot © 2022 by [Carson G](https://github.com/Cartrigger) is licensed under [Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/) (CREATIVE COMMONS)
 
 ## 🔄 Updates!
 🆕 ``/logs`` command!
