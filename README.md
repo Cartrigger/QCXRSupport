@@ -38,7 +38,7 @@ Thank you to all these amazing contributors for helping with the bot!
 </a>
 
 
-## 📝 [License](https://github.com/Cartrigger/QCXRSoonBot/blob/main/LICENSE.md)
+## 📝 [License](LICENSE)
   QCXR Bot © 2023 by [Carson G](https://github.com/Cartrigger) is licensed under [GPLv3](LICENSE) (GNU Public License v3)
 
 ## 🔄 Updates!
