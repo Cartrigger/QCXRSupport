@@ -1,6 +1,6 @@
 /**
  * @file Slash Command Interaction Handler
- * @author Naman Vrati & TechyGiraffe999
+ * @author Naman Vrati
  * @since 3.0.0
  * @version 3.3.0
  */
