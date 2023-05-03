@@ -61,7 +61,11 @@ module.exports = {
 
             interaction.reply({embeds:[success], ephemeral: true})
         }catch(err){
-            interaction.reply({embeds: [error], ephemeral: true})
+            try {
+                interaction.reply({embeds: [error], ephemeral: true})
+            } catch(err) {
+                interaction.editReply({embeds: [error], ephemeral: true})
+            }
         }
 }
 }
