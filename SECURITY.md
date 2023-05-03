@@ -11,6 +11,6 @@ If you find a vunerability on one of the branches please file an  **[issue](http
 
 ### 📜 License
 
-Please also be aware of our current [license](https://github.com/Cartrigger/QCXRSoonBot/blob/functionalityhandlercommandupdate/LICENSE.md) (CC)
+Please also be aware of our current [license](LICENSE) (CC)
 
 

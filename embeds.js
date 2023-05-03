@@ -31,7 +31,7 @@ const embeds = {
     
     mods_manager: new EmbedBuilder()
     .setTitle("**Mod Manager Guide**")
-    .setDescription("**How to install mods using Mod Manager**\n\n1) On the play screen, click on `Mod Manager`\n2) Scroll down or search for the mod you wish to install\n3) Select the version you want to install and press the `Install` button")
+    .setDescription("**How to install mods using Mod Manager**\n**BE SURE TO LAUNCH THE VERSION YOU ARE DOWNLOADING MODS FOR AT LEAST ONCE, OR MOD MANAGER WILL GIVE YOU AN ERROR TELLING YOU TO DO SO**\n\n1) On the play screen, click `Mod Manager`\n2)On the right of the search bar, click the version number until it is the version you are installing mods for.\n3) Search for the mod you want to install\n4) Wait a minute for the game to load the mod icon, then click the mod\n5) Click the big install button, and your mod will be downloaded!\n\nNOTE: Managing Instances will be released soon at a later date")
     .setFooter({text:'Written by Pixel', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100075208498487356/Crowpixel.webp'}),
 
     nopiracy: new EmbedBuilder()
@@ -41,12 +41,12 @@ const embeds = {
   
     otherheadsets: new EmbedBuilder()
     .setTitle("**QuestCraft on other Headsets**")
-    .setDescription("QuestCraft is planned to release on other headsets in the future, however, it is required that the company contacts us first in order to do this. \n Currently we are planned to release on **YVR** and **Pimax** headsets.")
+    .setDescription("QuestCraft is planned to release on other headsets in the future, however, it is required that the company contacts us first in order to do this. \n Currently we are planned to release on **YVR**, **Pico**, and **Pimax** headsets.")
     .setColor("Green"),
   
     performance: new EmbedBuilder()
     .setTitle("**Better performance guide**")
-    .setDescription("- Make sure you are playing on the [latest version of QuestCraft](https://github.com/QuestCraftPlusPlus/QuestCraft/releases/latest), it was released <t:1681672220:R> with added performance improvements\n- Try play on 1.18.2 instead of 1.19.3, 1.19.3 runs fine on servers but 1.18.2 is best for performance\n- Play on a server instead of singleplayer, a good public server is [xrcraft](https://discord.com/channels/820767484042018829/966126967701262386), If you want a private server do ``/servers`` for a guide on how to. \n- Make sure your graphics quality is set to fast in your ingame settings\n\n**Additional tips** \n\n- In the options menu, go to VR Settings/Stereo Rendering and set the resolution (NOT CAMERA RES) to 80%. This will decrease the general quality, but will give an extra performance boost.\n- The game's render distance is best at 4-6, but you *may* encounter lag spikes when using it. 9 and above is not recommended.\n- Oceans contain LOTS of kelp that decrease framerate. Don't mine any of it all at once, as your game may CRASH if lots of entites *(in this case, kelp waiting to be picked up)* exist at once.\n- [Skyblock](https://minecraft.fandom.com/wiki/Tutorials/Skyblock) and [Oneblock](https://www.curseforge.com/minecraft/worlds/oneblock) worlds perform the best, as they require less hardware usage.")
+    .setDescription("- Make sure you are playing on the [latest version of QuestCraft](https://github.com/QuestCraftPlusPlus/QuestCraft/releases/latest), it was released with added performance improvements\n- Try playing on 1.18.2 or 1.19.2 instead of 1.19.3 or 1.19.4, 1.19.3 and 1.19.4 run fine on servers but 1.18.2 and 1.19.2 is best for performance\n- Play on a server instead of singleplayer, a good public server is [xrcraft](https://discord.com/channels/820767484042018829/966126967701262386), If you want a private server do ``/servers`` for a guide on how to. \n- Make sure your graphics quality is set to fast in your ingame settings\n\n**Additional tips** \n\n- In the options menu, go to VR Settings/Stereo Rendering and set the resolution (NOT CAMERA RES) to 80%. This will decrease the general quality, but will give an extra performance boost.\n- The game's render distance is best at 4-6, but you *may* encounter lag spikes when using it. 9 and above is not recommended.\n- Oceans contain LOTS of kelp that decrease framerate. Don't mine any of it all at once, as your game may CRASH if lots of entites *(in this case, kelp waiting to be picked up)* exist at once.\n- [Skyblock](https://minecraft.fandom.com/wiki/Tutorials/Skyblock) and [Oneblock](https://www.curseforge.com/minecraft/worlds/oneblock) worlds perform the best, as they require less hardware usage.")
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999 & Swaggio', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
   
@@ -92,7 +92,7 @@ const embeds = {
   
     fixed: new EmbedBuilder()
     .setTitle("**Was QuestCraft fixed...?**")
-    .setDescription("Yes!!! 3.0 Was released on <t:1671995040:D>! At the time of writing (13th April), QuestCraft 4.0 is soon to release!")
+    .setDescription("Yes!!! 3.0 Was released on <t:1671995040:D>! 4.0 was released on (insert time here)")
     .setColor("Green"),
   
     github_qc: new EmbedBuilder()
@@ -102,7 +102,7 @@ const embeds = {
   
     falling_blocks_crash:  new EmbedBuilder()
     .setTitle("**Falling blocks crash my game:**")
-    .setDescription("You probably have the [Continuity](https://modrinth.com/mod/continuity) mod, Continuity has an conditional dependency.\nIf [Sodium](https://modrinth.com/mod/sodium) is present [Indium](https://modrinth.com/mod/indium) will have to be installed so that Continuity can be happy\n*Find the Indium for your game version and install it along with Continuity and the crash shouldn't happen no longer.\n__Feel free to let any of the support staff know if you have issues__\n\n**DOWNLOAD AN [OLDER VERSION OF INDIUM](https://www.curseforge.com/minecraft/mc-mods/indium/download/4291875)**\n**THE NEWER VERSION CRASHES WITH OUR CURRENT VERSION OF SODIUM**")
+    .setDescription("You probably have the [Continuity](https://modrinth.com/mod/continuity) mod, Continuity has a conditional dependency.\nIf [Sodium](https://modrinth.com/mod/sodium) is present [Indium](https://modrinth.com/mod/indium) will have to be installed so that Continuity can be happy\n*Find the Indium for your game version and install it along with Continuity and the crash shouldn't happen no longer.\n__Feel free to let any of the support staff know if you have issues__\n\n**DOWNLOAD AN [OLDER VERSION OF INDIUM](https://www.curseforge.com/minecraft/mc-mods/indium/download/4291875)**\n**THE NEWER VERSION CRASHES WITH OUR CURRENT VERSION OF SODIUM**")
     .setColor("Red")
     .setFooter({ text: 'Written by !DED, Updated by Pixel', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
   
@@ -145,7 +145,7 @@ const embeds = {
   
     gamma:  new EmbedBuilder()
     .setTitle("**Gamma issues**")
-    .setDescription("**Why is my Gamma/Saturation off?**\n\nQuest currently has Gamma/Saturation issues (We don't know the reason why)\nYou can try using a mod called [Gamma Utils](https://www.curseforge.com/minecraft/mc-mods/gamma-utils) to try and help, though it only helps slightly and only lowers the brightness")
+    .setDescription("**Why is my Gamma/Saturation off?**\n\nQuest has Gamma/Saturation issues in QuestCraft versions 3.1.2 and below\nYou can try using a mod called [Gamma Utils](https://www.curseforge.com/minecraft/mc-mods/gamma-utils) to try and help, though it only helps slightly and only lowers the brightness")
     .setColor("Yellow")
     .setFooter({ text: 'Written by Pixel', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100075208498487356/Crowpixel.webp'}),
   
@@ -163,7 +163,7 @@ const embeds = {
   
     license:  new EmbedBuilder()
     .setTitle("**📜 License Info**")
-    .setDescription("My License is [Creative-Commons-Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/), please check [my License](https://github.com/Cartrigger/QCXRSoonBot/blob/functionalityhandlercommandupdate/LICENSE.md) to see more info.")
+    .setDescription("My License is [Creative-Commons-Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/), please check [my License]https://github.com/Cartrigger/QCXRSoonBot/blob/main/LICENSE.md) to see more info.")
     .setColor("White")
     .setFooter({ text: 'Written by Cart', iconURL: 'https://images-ext-1.discordapp.net/external/aTyGSUOhnDS_8fX4GGP9UfztBpotA7axEqb0ujMNz0U/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?width=310&height=310'}),
   
@@ -187,19 +187,19 @@ const embeds = {
   
     renderer_gl4es: new EmbedBuilder()
     .setTitle("**QuestCraft GL4ES Renderer**")
-    .setDescription("All QuestCraft versions can utilize the **GL4ES renderer**, it has moderate speed with moderate mod compatibility.\n- Complex mods like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) may not work, test at your own risk.\n\nPlease note moving forwards, on QuestCraft versions 4.0 and above, GL4ES will no longer be toggled by default and will be removed in later versions. ")
+    .setDescription("QuestCraft versions 3.1.2 and below utilize the **GL4ES renderer**, it has moderate speed with moderate mod compatibility.\n- Complex mods like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) will not work.\n\nPlease note moving forwards, on QuestCraft versions 4.0 and above, GL4ES will be replaced with Zink.")
     .setColor("Orange")
     .setFooter({ text: 'Written by my Developers and my Contributors', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1098737664754192545/IMG_8202.png?width=633&height=633'}),
   
     renderer_vulkan: new EmbedBuilder()
     .setTitle("**QuestCraft Vulkan Renderer**")
-    .setDescription("QuestCraft versions 4.0 and above will support  the **Vulkan Renderer**.\nThe Vulkan renderer uses Vulkan (hence the name) to optimise the game rendering and significantly increase framerate, at the cost of mod compatibility.\n\nThis means that more complex mods, like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) will not work, and instead will crash.")
+    .setDescription("QuestCraft versions 4.0 and above will- in a future addition- support  the **Vulkan Renderer**.\nThe Vulkan renderer uses Vulkan (hence the name) to optimise the game rendering and significantly increase framerate, at the cost of mod compatibility.\n\nThis means that more complex mods, like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) will not work, and instead will crash.")
     .setColor("Orange")
     .setFooter({ text: 'Written by JaffaJace and my Contributors', iconURL: 'https://images-ext-1.discordapp.net/external/CNDjGEZxdZHTQQnmL43jjbUyilF1FNrpbwl4dzh1xhY/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/654048865137459261/ec3ef49d087775eb2c26b10a4dc7c456.png?width=539&height=539'}),
   
     renderer_zink: new EmbedBuilder()
     .setTitle("**QuestCraft Zink Renderer**")
-    .setDescription("QuestCraft versions 4.0 and above will support both the **Zink Renderer**.\nThe Zink renderer is a custom renderer implemented by the QC team to optimise the rendering of QuestCraft, but also improve mod compatibility, at the cost of less performance.\n\nThis means that more complex mods, like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) will work in QC!")
+    .setDescription("QuestCraft versions 4.0 and above will utilize the **Zink Renderer**.\nThe Zink renderer is a custom renderer implemented by the QuestCraft team to optimise the rendering of QuestCraft, but also improve mod compatibility, at the cost of less performance.\n\nThis means that more complex mods, like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) will work in QC!")
     .setColor("Orange")
     .setFooter({ text: 'Written by JaffaJace and my Contributors', iconURL: 'https://images-ext-1.discordapp.net/external/CNDjGEZxdZHTQQnmL43jjbUyilF1FNrpbwl4dzh1xhY/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/654048865137459261/ec3ef49d087775eb2c26b10a4dc7c456.png?width=539&height=539'}),
   
@@ -224,7 +224,7 @@ const embeds = {
     essentials_questcraft: new EmbedBuilder()
     .setTitle("**Essentials Mod on QuestCraft**")
     .setDescription("The mod does technically function **but does not work properly**\nIt is best to avoid the mod due to the UI issues that are on QuestCraft, and when it's fixed it will most likely not have fully functional networking\n\nWe suggest either creating your own server or using XRCraft for most networking in VR, <#966126967701262386> or run ``/servers`` for info to create your own server")    .setColor("Green")
-    .setFooter({ text: 'Written by Reality', iconURL: 'https://cdn.discordapp.com/avatars/251735485884530689/50020f1de3cf0117abb1510d167f9413.png?size=4096'}),
+    .setFooter({ text: 'Written by Reality', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1101871444008374444/df17a2dbbe4fcd2de4f3bfb9f580b943.png?width=324&height=324'}),
   
     error_channels: new EmbedBuilder()
     .setTitle('Error!')
@@ -267,31 +267,13 @@ const embeds = {
     devs_only: new EmbedBuilder()
     .setDescription("Only developers of <@997670790604542012> can use this.")
     .setColor("ED4245"),
-    selfhostserver: new EmbedBuilder() //If you want to make more complex embeds like this I recommend https://embed.dan.onl/ a-m-a-z-i-n-g
-    .setTitle("Self-hosted server tutorial")
-    .setDescription("Here is a full tutorial on how to set-up a full server that supports Vivecraft (QuestCraft's base mod)")
-    .addFields(
-      {
-        name: "Step 1 - Downloading your server:",
-        value: "In this tutorial, we will use [FabricMC](https://fabricmc.net/) because that is what QuestCraft uses, it is fast and reliable.\n\nDownload the Fabric installer then move it into a new folder, run the installer and click server and select your version."
-      },
-      {
-        name: "Step 2 - Finding the right files:",
-        value: "You can download the mod on [Modrinth](https://modrinth.com/mod/vivecraft)\n\nNow supporting older and newer versions is simple, you just need the following:\n- [ViaFabric](https://modrinth.com/mod/viafabric) (Required for ViaBackwards to function)\n- [ViaBackwards (Fabric version)](https://beta.curseforge.com/minecraft/mc-mods/viabackwards) (!!!WARNING: CurseForge link!!!)\n\nAll these mods now go in the `mods` folder in your server.\nAfter starting your server you should be able to join on your headset and other devices.",
-      },
-      {
-        name: "Step 3 - Joining your server (Locally):",
-        value: "**Find your local IP of your server:**\n[Windows](https://support.microsoft.com/en-us/windows/find-your-ip-address-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9)\n[Linux](https://stackoverflow.com/questions/13322485/how-to-get-the-primary-ip-address-of-the-local-machine-on-linux-and-os-x)\n[MacOS](https://apple.stackexchange.com/questions/20547/how-do-i-find-my-ip-address-from-the-command-line)\n\n**Find your port:**\nFind your `server.properties` and search for \"server-port=\"\nThe numbers after that is the port\n\n**Joining:**\n- Click add server\n- In the server address type in your local IP followed by a colon the your port (`ip:port`)\n- Hit join!",
-      },
-      {
-        name: "Step 3 - Joining your server (Globally):",
-        value: "**Find your port:**\nFind your `server.properties` and search for \"server-port=\"\nThe numbers after that is the port\n\n**Forward your port:**\n[Guide](https://portforward.com/)\n\n**Getting your public IP:**\n[Google](https://lmgtfy.app/?q=What+is+my+ip)\n\n**Joining:**\n- Click add server\n- In the server address type in your public IP followed by a colon the your port (`ip:port`)\n- Hit join!",
-      },
-    )
-    .setColor("#00b0f4")
+    v53: new EmbedBuilder()
+    .setTitle("Quest firmware v53 issues")
+    .setDescription("The Quest firmware v53 has caused QuestCraft to have many issues\n\nMeta did it again...\n\nYou may experience bad lag spikes\nWe do not have this under our control please be patient")
+    .setColor("Red")
     .setFooter({
-      text: "Created by DevLime",
-      iconURL: "https://cdn.discordapp.com/avatars/779054724543414324/e7ea58b047a539b15a388e8d32f8e2ca.png?size=4096",
+      text: "Written By DevLime",
+      iconURL: "https://cdn.discordapp.com/avatars/779054724543414324/e7ea58b047a539b15a388e8d32f8e2ca?size=1024",
     })
 };
 
