@@ -11,7 +11,7 @@ module.exports = {
                 .setRequired(true)
                 .addChoices(
                     { name: 'XRCraft', value: 'play.xrcraft.net'},
-                    { name: 'XRCRaft Modded', value: 'modded.xrcraftmc.com'},
+                    { name: 'XRCraft Modded', value: 'modded.xrcraftmc.com'},
                 )),
     async execute(interaction) {
         try{

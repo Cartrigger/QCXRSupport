@@ -25,9 +25,9 @@ module.exports = {
 			.setDescription('The game options')
 			.setRequired(true)
 			.addChoices(
-				{ name: 'hangman', value: 'hangman' },
-                { name: 'snake', value: 'snake' },
-                { name: 'connect 4', value: 'connect_4' },
+				{ name: 'Hangman', value: 'hangman' },
+                { name: 'Snake', value: 'snake' },
+                { name: 'Connect 4', value: 'connect_4' },
                 { name: 'TicTacToe', value: 'tictactoe' },
                 { name: 'Match Pairs', value: 'match_pairs' }
             ))
