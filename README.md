@@ -44,3 +44,5 @@ Thank you to all these amazing contributors for helping with the bot!
 ## 🔄 Updates!
 🆕 ``/logs`` command!
  ####  [[Future Plans]](https://github.com/Cartrigger/QCXRSoonBot/issues/25)
+
+# QCXR bot is in and used in the QuestCraft Server and is not always up to date to this github repo, it may be an older commit.
