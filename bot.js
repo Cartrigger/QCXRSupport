@@ -150,25 +150,25 @@ for (const module of autocompleteInteractions) {
 /**********************************************************************/
 // Registration of Context-Menu Interactions
 
-// /**
-//  * @type {String[]}
-//  * @description All Context Menu commands.
-//  */
+/**
+ * @type {String[]}
+ * @description All Context Menu commands.
+ */
 
-// const contextMenus = fs.readdirSync("./interactions/context-menus");
+const contextMenus = fs.readdirSync("./interactions/context-menus");
 
-// // Loop through all files and store context-menus in contextMenus collection.   <--- Comment out to use context menus (remove all // at the start of lines)
+// Loop through all files and store context-menus in contextMenus collection.
 
-// for (const folder of contextMenus) {
-// 	const files = fs
-// 		.readdirSync(`./interactions/context-menus/${folder}`)
-// 		.filter((file) => file.endsWith(".js"));
-// 	for (const file of files) {
-// 		const menu = require(`./interactions/context-menus/${folder}/${file}`);
-// 		const keyName = `${folder.toUpperCase()} ${menu.data.name}`;
-// 		client.contextCommands.set(keyName, menu);
-// 	}
-// }
+for (const folder of contextMenus) {
+	const files = fs
+		.readdirSync(`./interactions/context-menus/${folder}`)
+		.filter((file) => file.endsWith(".js"));
+	for (const file of files) {
+		const menu = require(`./interactions/context-menus/${folder}/${file}`);
+		const keyName = `${folder.toUpperCase()} ${menu.data.name}`;
+		client.contextCommands.set(keyName, menu);
+	}
+}
 
 /**********************************************************************/
 // Registration of Button-Command Interactions.
