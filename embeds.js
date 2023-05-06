@@ -69,7 +69,7 @@ const embeds = {
   
     support_channels: new EmbedBuilder()
     .setTitle("**Sorry but <:notsupportchannel:993043214472859778>**")
-    .setDescription("Support is handled in <#945502948111290498> or <#946021441298649158> and you can see the FAQ in <#821469293156892724>.\nOn top of this, you can see common issues in <#1065000467010179092>\n\nFor more guided support, you can make a ticket in <#946184706486054984>, and a support member will be with you shortly.")
+    .setDescription("Support is handled in <#945502948111290498> or <#946021441298649158> and you can see the FAQ in <#821469293156892724>.\nOn top of this, you can see common issues in <#1101947003111489586>\n\nFor more guided support, you can make a ticket in <#946184706486054984>, and a support member will be with you shortly.")
     .setColor("Green"),
   
     versions: new EmbedBuilder()
@@ -92,7 +92,7 @@ const embeds = {
   
     fixed: new EmbedBuilder()
     .setTitle("**Was QuestCraft fixed...?**")
-    .setDescription("Yes!!! 3.0 Was released on <t:1671995040:D>! 4.0 was released on (insert time here)")
+    .setDescription("Yes!!! 3.0 Was released on the <t:1671995040:D>! 4.0 was released on the <t:1682796715:D>")
     .setColor("Green"),
   
     github_qc: new EmbedBuilder()
@@ -266,7 +266,15 @@ const embeds = {
     
     devs_only: new EmbedBuilder()
     .setDescription("Only developers of <@997670790604542012> can use this.")
-    .setColor("ED4245")
+    .setColor("ED4245"),
+    v53: new EmbedBuilder()
+    .setTitle("Quest firmware v53 issues")
+    .setDescription("The Quest firmware v53 has caused QuestCraft to have many issues\n\nMeta did it again...\n\nYou may experience bad lag spikes\nWe do not have this under our control please be patient")
+    .setColor("Red")
+    .setFooter({
+      text: "Written By DevLime",
+      iconURL: "https://cdn.discordapp.com/avatars/779054724543414324/e7ea58b047a539b15a388e8d32f8e2ca?size=1024",
+    })
 };
 
 module.exports = embeds;

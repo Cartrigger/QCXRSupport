@@ -38,9 +38,11 @@ Thank you to all these amazing contributors for helping with the bot!
 </a>
 
 
-## 📝 [License](https://github.com/Cartrigger/QCXRSoonBot/blob/main/LICENSE.md)
-  QCXR Bot © 2022 by [Carson G](https://github.com/Cartrigger) and [TechyGiraffe999](https://github.com/TecEash1) is licensed under [Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/) (CREATIVE COMMONS)
+## 📝 [License](LICENSE)
+  QCXR Bot © 2023 by [Carson G](https://github.com/Cartrigger) is licensed under [GPLv3](LICENSE) (GNU Public License v3)
 
 ## 🔄 Updates!
 🆕 ``/logs`` command!
  ####  [[Future Plans]](https://github.com/Cartrigger/QCXRSoonBot/issues/25)
+
+#### QCXR bot is in and used in the QuestCraft Server and is not always up to date to this github repo, it may be an older commit.
