@@ -88,7 +88,7 @@ module.exports = {
     }
     if (file) {
         embed.addFields(
-            { name: "Log File:", value: `[${file.name}](${file.url})`},
+            { name: "Log File:", value: `[${file.name}](${file.url}) | [Link](https://mclo.gs/${analysis["data"]["id"]})`},
         );
     }
     
