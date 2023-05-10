@@ -8,7 +8,7 @@ const translate = require("@iamtraction/google-translate");
 
 module.exports = {
     data: {
-        name: "translate",
+        name: "Translate",
         type: 3, // 3 is for message context menus
     },
 
