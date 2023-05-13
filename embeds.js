@@ -181,7 +181,7 @@ const embeds = {
   
     immersive_mc_embed: new EmbedBuilder()
     .setTitle("**Game crashes with ImmersiveMC**")
-    .setDescription("Please select your Minecraft Version below to get the [ImmersiveMC](https://www.curseforge.com/minecraft/mc-mods/immersivemc) info. \n*- Alternatively if your on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
+    .setDescription("Please select your Minecraft Version below to get the [ImmersiveMC](https://www.curseforge.com/minecraft/mc-mods/immersivemc) info. \n*- Alternatively if you're on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
     .setColor("Blurple")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
   
