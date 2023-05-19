@@ -14,7 +14,7 @@
 	"keywords": [
 		"discord-js"
 	],
-	"license": "Creative Commons",
+	"license": "GPL-3.0 license",
 	"bugs": {
 		"url": "https://github.com/Cartrigger/QCXRSupport/issues/new?assignees=&labels=bug&template=bugs.yml&title=%5BBUG%5D+%3Ctitle%3E"
 	},
