@@ -1,5 +1,5 @@
 {
-	"name": "discord-questcraftsoonbot",
+	"name": "discord-qcxrsupport",
 	"version": "2.0.0",
 	"description": "",
 	"types": "./typings.d.ts",
@@ -16,9 +16,9 @@
 	],
 	"license": "Creative Commons",
 	"bugs": {
-		"url": "https://github.com/Cartrigger/QCXRSoonBot/issues/new?assignees=&labels=bug&template=bugs.yml&title=%5BBUG%5D+%3Ctitle%3E"
+		"url": "https://github.com/Cartrigger/QCXRSupport/issues/new?assignees=&labels=bug&template=bugs.yml&title=%5BBUG%5D+%3Ctitle%3E"
 	},
-	"homepage": "https://github.com/Cartrigger/QCXRSoonBot/blob/main/README.md",
+	"homepage": "https://github.com/Cartrigger/QCXRSupport/blob/main/README.md",
 	"dependencies": {
 		"@discordjs/rest": "^1.0.0",
 		"@iamtraction/google-translate": "^2.0.1",
