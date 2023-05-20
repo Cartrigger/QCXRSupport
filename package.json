@@ -1,6 +1,6 @@
 {
 	"name": "discord-qcxrsupport",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"description": "",
 	"types": "./typings.d.ts",
 	"main": "bot.js",
@@ -9,12 +9,12 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Cartrigger/QCXRSoonBot.git"
+		"url": "git+https://github.com/Cartrigger/QCXRSupport.git"
 	},
 	"keywords": [
 		"discord-js"
 	],
-	"license": "GPL-3.0 license",
+	"license": "GPL-3.0-with-Commons-Clause",
 	"bugs": {
 		"url": "https://github.com/Cartrigger/QCXRSupport/issues/new?assignees=&labels=bug&template=bugs.yml&title=%5BBUG%5D+%3Ctitle%3E"
 	},
