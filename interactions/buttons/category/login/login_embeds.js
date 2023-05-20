@@ -3,7 +3,7 @@ const { EmbedBuilder, Embed } = require('discord.js');
 const login_embeds = {
   login: new EmbedBuilder()
     .setTitle("You have selected a [LOGIN] issue")
-    .setDescription("Please respond with the correct buttons, if you want to make a new instance of the questions please run ``/login``")
+    .setDescription("Please respond with the correct buttons, if you mess anything up you can make a new instance of the questions please run ``/login``")
     .setColor("Aqua")
     .setFooter({ text: 'Developed by TechyGiraffe999 [BETA]', iconURL: 'https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303'}),
 
@@ -26,7 +26,7 @@ const login_embeds = {
     .setFooter({ text: 'Written by TechyGiraffe999 - Fix found by !DED [BETA]'}),
   account_status_no: new EmbedBuilder()
     .setTitle("Please follow the steps below")
-    .setDescription("first you must have a overage account to start a Microsoft family.\n1. log into this [link](https://account.microsoft.com/family/home?refd=login.live.com) with the overage account\n2. add your main account as a member.\n3. accept invite you received in your main account's email.\n\n**Things to note:** \nthe overage account doesn't have to own java but can.\nthe main account has to be added to the family as a member instead of as an organizer.\nthe main account has to be added to the overage accounts family, not the other way around.\nyou cannot invite yourself as a member to a Microsoft family.\n\nOnce you have followed those steps try and login to QuestCraft again\n\nIf your issue still persists please click the button below")
+    .setDescription("First you must have a overage account to start a Microsoft family.\n1. Log into this [link](https://account.microsoft.com/family/home?refd=login.live.com) with the overage account\n2. Add your main account as a member.\n3. Accept invite you received in your main account's email.\n\n**Things to note:** \n- The overage account doesn't have to own java but can.\n- The main account has to be added to the family as a member instead of as an organizer.\n- The main account has to be added to the overage accounts family, not the other way around.\n- You cannot invite yourself as a member to a Microsoft family.\n\nOnce you have followed those steps try and login to QuestCraft again\n\nIf your issue still persists please click the button below")
     .setColor("Green")
     .setFooter({ text: 'Written by !DED [BETA]', iconURL: 'https://cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?size=4096'}),
   
