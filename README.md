@@ -1,5 +1,5 @@
 <p>
-  <img align="right" width="300" alt="image" src="https://github.com/Cartrigger/QCXRSupport/assets/92249532/a5aa6dbb-d790-4ee6-92c7-f6fdb478b9bf">
+  <img align="right" width="310" alt="image" src="https://github.com/Cartrigger/QCXRSupport/assets/92249532/55dc86a0-b65c-4128-ba1d-b18a5b2df563">
 </p>
 
 
