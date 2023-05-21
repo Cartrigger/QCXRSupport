@@ -6,7 +6,7 @@
 
 ## 🤔 What is this bot?
 
-The QCXRSoonBot (CraftyVR) is a bot made for the [QuestCraft](https://questcraft.org) [discord server](https://discord.gg/questcraft)
+QCXRSupport (CraftyVR) is a bot made for the [QuestCraft](https://questcraft.org) [discord server](https://discord.gg/questcraft)
 
 The bot's main focus is around helping people as well as improving the overall experience on the server
 
