@@ -1,10 +1,12 @@
+<p>
+  <img align="right" width="300" alt="image" src="https://github.com/Cartrigger/QCXRSupport/assets/92249532/a5aa6dbb-d790-4ee6-92c7-f6fdb478b9bf">
 </p>
-<img align="right" width="223" alt="image" src="https://user-images.githubusercontent.com/92249532/227790891-8ec082dd-b64f-484c-914a-8d02559c9c16.png">
-</p>
+
+
 
 ## 🤔 What is this bot?
 
-The QCXRSoonBot (CraftyXR) is a bot made for the [QuestCraft](https://questcraft.org) [discord server](https://discord.gg/questcraft)
+The QCXRSoonBot (CraftyVR) is a bot made for the [QuestCraft](https://questcraft.org) [discord server](https://discord.gg/questcraft)
 
 The bot's main focus is around helping people as well as improving the overall experience on the server
 
