@@ -13,7 +13,6 @@ module.exports = {
 			.setDescription('The FAQ presets')
 			.setRequired(false)
 			.addChoices(
-                { name: 'Play crashes the game', value: 'play_crash' },
 				{ name: 'Cant see anything in world', value: 'world' },
 				{ name: 'Rebinding', value: 'rebinding' },
                 { name: 'Immersive controls', value: 'immersive_controls' },
@@ -25,10 +24,6 @@ module.exports = {
 			)),
 			async execute(interaction) {
 				const categorys = interaction.options.getString('presets');
-                if (categorys === 'play_crash') {
-                    await interaction.reply({embeds: [embeds.play_crash]});
-                    return;
-                }
 				if (categorys === 'world') {
                     await interaction.reply({embeds: [embeds.faq_world]});
                     return;

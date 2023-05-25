@@ -106,12 +106,6 @@ const embeds = {
     .setColor("Red")
     .setFooter({ text: 'Written by !DED, Updated by Pixel', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
   
-    play_crash:  new EmbedBuilder()
-    .setTitle("**When I press play it crashes**")
-    .setDescription("you may have skipped over the instances installation.\n\nReinstall and wait 2-20 minutes after pressing Microsoft login.\n\n• Average completion time is 2-20 minutes but it depends on your internet speed.\n• it will tell you when its done. \n• The file size is around 700 megabytes\n\n**Doing any one of these things will stop the download:**\n\n• taking off the headset\n• letting the headset go idle\n• exiting your guardian\n• clicking any buttons in the app\n• going into passthrough\n• messing with wifi settings\n• quitting the app")
-    .setColor("Red")
-    .setFooter({ text: 'Written by !DED - revised with Pixel', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
-  
     faq_world:  new EmbedBuilder()
     .setTitle("**When I load into a world it doesn't show anything:**")
     .setDescription("Switch the graphics quality to fast.\n\n If this doesn't work try restarting your headset\nIf it still persists contact support")
