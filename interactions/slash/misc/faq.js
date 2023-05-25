@@ -20,7 +20,6 @@ module.exports = {
                 { name: 'Voice chat', value: 'voice_chat' },
                 { name: 'Microsoft login does nothing', value: 'microsoft_login' },
                 { name: 'Falling blocks crash the game', value: 'falling_blocks' },
-		{ name: 'Gamma', value: 'gamma' },
                 { name: 'Essentials on QuestCraft', value: 'essentials_questcraft' },
 
 			)),
@@ -28,10 +27,6 @@ module.exports = {
 				const categorys = interaction.options.getString('presets');
                 if (categorys === 'play_crash') {
                     await interaction.reply({embeds: [embeds.play_crash]});
-                    return;
-                }
-		if (categorys === 'gamma') {
-                    await interaction.reply({embeds: [embeds.gamma]});
                     return;
                 }
 				if (categorys === 'world') {
