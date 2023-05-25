@@ -1,10 +1,12 @@
+<p>
+  <img align="right" width="310" alt="image" src="https://github.com/Cartrigger/QCXRSupport/assets/92249532/55dc86a0-b65c-4128-ba1d-b18a5b2df563">
 </p>
-<img align="right" width="223" alt="image" src="https://user-images.githubusercontent.com/92249532/227790891-8ec082dd-b64f-484c-914a-8d02559c9c16.png">
-</p>
+
+
 
 ## 🤔 What is this bot?
 
-The QCXRSoonBot (CraftyXR) is a bot made for the [QuestCraft](https://questcraft.org) [discord server](https://discord.gg/questcraft)
+QCXRSupport (CraftyVR) is a bot made for the [QuestCraft](https://questcraft.org) [discord server](https://discord.gg/questcraft)
 
 The bot's main focus is around helping people as well as improving the overall experience on the server
 
@@ -39,7 +41,7 @@ Thank you to all these amazing contributors for helping with the bot!
 
 
 ## 📝 [License](LICENSE)
-  QCXR Bot © 2023 by [Carson G](https://github.com/Cartrigger) is licensed under [GPLv3](LICENSE) (GNU Public License v3)
+  QCXR Bot © 2023 by [Carson G](https://github.com/Cartrigger) is licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) (GNU General Public License v3.0) with [Commons Clause](https://commonsclause.com)
 
 ## 🔄 Updates!
 🆕 ``/logs`` command!

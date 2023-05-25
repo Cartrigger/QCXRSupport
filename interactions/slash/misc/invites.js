@@ -15,7 +15,7 @@ module.exports = {
 			.addChoices(
 				{ name: 'QuestCraft Discord', value: 'questcraft' },
                 { name: 'Vivecraft Discord', value: 'vivecraft' },
-                { name: 'Vivecraft mixin Discord', value: 'vivecraft_mixin' },
+                { name: 'Vivecraft Mixin Discord', value: 'vivecraft_mixin' },
                 { name: 'PojavLauncher Discord', value: 'pojav_launcher' },
                 { name: 'Digital Genesis Discord', value: 'digital_genesis' },
 

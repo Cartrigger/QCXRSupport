@@ -63,7 +63,7 @@ module.exports = {
         }catch(err){
             try{
                 interaction.reply({embeds: [error], ephemeral: true})
-            }catch(error){
+            }catch(err){
                 interaction.editreply({embeds: [error], ephemeral: true})
             }
         }

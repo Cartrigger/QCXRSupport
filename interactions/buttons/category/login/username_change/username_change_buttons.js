@@ -5,7 +5,7 @@ const buttons_username_change = {
     .addComponents(
         new ButtonBuilder()
             .setCustomId('username_change')
-            .setLabel("next")
+            .setLabel("Next")
             .setEmoji("➡️")
             .setStyle(ButtonStyle.Primary),
     )
