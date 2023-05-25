@@ -16,7 +16,6 @@ module.exports = {
                 { name: 'Play crashes the game', value: 'play_crash' },
 				{ name: 'Cant see anything in world', value: 'world' },
 				{ name: 'Rebinding', value: 'rebinding' },
-                { name: 'Died in lava', value: 'lava' },
                 { name: 'Immersive controls', value: 'immersive_controls' },
                 { name: 'Voice chat', value: 'voice_chat' },
                 { name: 'Microsoft login does nothing', value: 'microsoft_login' },
@@ -42,10 +41,6 @@ module.exports = {
                 if (categorys === 'rebinding') {
                   await interaction.reply({embeds: [embeds.rebinding]});
                   return;
-                }
-                if (categorys === 'lava') {
-                    await interaction.reply({embeds: [embeds.lava]});
-                    return;
                 }
                 if (categorys === 'immersive_controls') {
                     await interaction.reply({embeds: [embeds.immersive_controls]});

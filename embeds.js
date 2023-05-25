@@ -125,12 +125,6 @@ const embeds = {
     .setColor("Red")
     .setFooter({ text: 'Written by !DED', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
   
-    lava:  new EmbedBuilder()
-    .setTitle("**After dying in lava I can't respawn:**")
-    .setDescription("- This is a bug. The only way to respawn is to log into the server on a computer, respawn, and then log back in on your Quest\n\n- Alternatively you could make sure that the gamerule `/gamerule doImmediateRespawn` is enabled (set to true), this will not give you the option to respawn and you will auto respawn immediately\nI have tested the command to see if enabling it while you are dead fixes the issue, it doesn't\n\n- Another option is to delete your player data file, however **deleting this will delete everything about your player, including ender chests, bed spawn and your location,** this file is located in ``world/playerdata/‘youruuid’`` to find your UUID just join the server and it will be displayed in the console/your Minecraft log file. Alternatively you can find it by searching for your username on [NameMC](https://namemc.com/)\n\n- Or if you really know what you're doing you could edit your player.dat file manually")
-    .setColor("Red")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
-  
     immersive_controls:  new EmbedBuilder()
     .setTitle("**How do I turn immersive controls on?**")
     .setDescription("> Immersive controls are on by default\n\n• Swing at stuff to break or hit. Punching might not work as good\n\n• Drinking and eating works by putting food up to your mouth\n\n• You use bows by putting the arrow in the bow and pulling back while holding right trigger\n*Be sure to disable Raw Item Positions or else the bow will not work*")
