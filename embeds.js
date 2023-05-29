@@ -175,7 +175,7 @@ const embeds = {
   
     renderer_vulkan: new EmbedBuilder()
     .setTitle("**QuestCraft Vulkan Renderer**")
-    .setDescription("QuestCraft versions 4.1 and above will- in a future addition- support  the **Vulkan Renderer**.\nThe Vulkan renderer uses Vulkan (hence the name) to optimise the game rendering and significantly increase framerate, at the cost of mod compatibility.\n\nThis means that more complex mods, like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) will not work, and instead will crash.")
+    .setDescription("QuestCraft versions 4.1 and above will- in a future addition- support  the **Vulkan Renderer**.\nThe Vulkan renderer uses Vulkan (hence the name) to optimise the game rendering and significantly increase framerate, at the cost of mod compatibility, it will be toggleable.\n\nThis means that more complex mods, like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) will not work, and instead will crash.")
     .setColor("Orange")
     .setFooter({ text: 'Written by JaffaJace and my Contributors', iconURL: 'https://images-ext-1.discordapp.net/external/CNDjGEZxdZHTQQnmL43jjbUyilF1FNrpbwl4dzh1xhY/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/654048865137459261/ec3ef49d087775eb2c26b10a4dc7c456.png?width=539&height=539'}),
   

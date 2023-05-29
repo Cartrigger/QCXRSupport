@@ -14,6 +14,7 @@ module.exports = {
 			.setRequired(true)
 			.addChoices(
 				{ name: 'QuestCraft Discord', value: 'questcraft' },
+                { name: 'Ross Light', value: 'ross_light' },
                 { name: 'Vivecraft Discord', value: 'vivecraft' },
                 { name: 'Vivecraft Mixin Discord', value: 'vivecraft_mixin' },
                 { name: 'PojavLauncher Discord', value: 'pojav_launcher' },
@@ -24,6 +25,10 @@ module.exports = {
 				const categorys = interaction.options.getString('invites');
 				if (categorys === 'questcraft') {
                     await interaction.reply("https://discord.gg/questcraft");
+                    return;
+                }
+                if (categorys === 'ross_light') {
+                    await interaction.reply("https://discord.gg/JK8hye7T2n");
                     return;
                 }
                 if (categorys === 'vivecraft') {
