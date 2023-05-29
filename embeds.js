@@ -15,7 +15,7 @@ const embeds = {
   
     developers: new EmbedBuilder()
     .setTitle("**🛠️ My Developers!**")
-    .setDescription("The current developers of CraftyXR are <@317814254336081930>, <@719815864135712799> and <@796512162855125022>! \nYou can checkout the full code of <@997670790604542012> at the [GitHub repo](https://github.com/Cartrigger/QCXRSoonBot)")
+    .setDescription("The current developers of <@997670790604542012> are <@317814254336081930>, <@719815864135712799> and <@796512162855125022>! \nYou can checkout the full code of <@997670790604542012> at the [GitHub repo](https://github.com/Cartrigger/QCXRSupport)")
     .setColor("Green"),
   
     installation: new EmbedBuilder()
