@@ -90,7 +90,7 @@ module.exports = {
 
             }
             if (categorys === 'ask') {
-                if (OPENAI_API_KEY && OPENAI_API_KEY >= 4) {
+                if (!OPENAI_API_KEY || OPENAI_API_KEY < 4) {
                     interaction.reply({embeds: [api_invalid]})
                     return;
                 
