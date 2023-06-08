@@ -34,10 +34,8 @@ To test the bot out join the [QuestCraft discord server](https://discord.gg/ques
  - This bot utilizes a modified version of the [discord bot template](https://github.com/NamVr/DiscordBot-Template) made by [Naman Vrati](https://github.com/NamVr)! [\[Apache License 2.0\]](https://github.com/NamVr/DiscordBot-Template/blob/master/LICENSE)
 
 ### 🧩 Contributors
-Thank you to all these amazing contributors for helping with the bot!
-<a href="https://github.com/Cartrigger/QCXRSoonBot/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Cartrigger/QCXRSoonBot" />
-</a>
+Thank you to all these amazing contributors for helping with the bot!    
+![techy](https://github.com/swaggio7/QCXRSupport/blob/main/README/techy.png?raw=true) ![cart](https://github.com/swaggio7/QCXRSupport/blob/main/README/cart.png?raw=true) ![jaffa](https://github.com/swaggio7/QCXRSupport/blob/main/README/jaffa.png) ![crow](https://github.com/swaggio7/QCXRSupport/blob/main/README/crow.png?raw=true) ![judge](https://github.com/swaggio7/QCXRSupport/blob/main/README/judge.png?raw=true) ![divea](https://github.com/swaggio7/QCXRSupport/blob/main/README/divea.png?raw=true) 
 
 
 ## 📝 [License](LICENSE)
