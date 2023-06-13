@@ -9,7 +9,7 @@ const embeds = require('../../../../embeds.js');
 
 
 const success = new EmbedBuilder()
-    .setDescription("✅ User was send a DM and their feedback was stored ")
+    .setDescription("✅ User was send a DM and their submission was stored ")
     .setColor("Green")
 
 const error = new EmbedBuilder()
@@ -38,7 +38,7 @@ module.exports = {
 
                 
             const embed = new EmbedBuilder()
-                .setTitle("Feedback Reviewed")
+                .setTitle("Training Submission Reviewed")
                 .setDescription(`We have reviewed your training submission regarding \`\`${prompt}\`\` and it is not applicable for <@997670790604542012>`)
                 .setColor("Red")
 
