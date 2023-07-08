@@ -2,7 +2,11 @@
   <img align="right" width="310" alt="image" src="https://github.com/Cartrigger/QCXRSupport/assets/92249532/55dc86a0-b65c-4128-ba1d-b18a5b2df563">
 </p>
 
+## Please read before looking at the description.
+This bot is not being actively developed, though is still accepting PR's
+The main repo that gets uploaded to the bot is [QCXRSB](https://github.com/QuestCraftPlusPlus/QCXRSupportBot)
 
+---
 
 ## 🤔 What is this bot?
 
