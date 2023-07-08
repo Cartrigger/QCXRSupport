@@ -3,8 +3,8 @@
 </p>
 
 ## Please read before looking at the description.
-This bot is not being actively developed, though is still accepting PR's
-The main repo that gets uploaded to the bot is [QCXRSB](https://github.com/QuestCraftPlusPlus/QCXRSupportBot)
+This bot is not being actively developed, though is still accepting Pull Requests.
+<br>The main repo that gets uploaded to the bot is [QCXRSB](https://github.com/QuestCraftPlusPlus/QCXRSupportBot)
 
 ---
 
