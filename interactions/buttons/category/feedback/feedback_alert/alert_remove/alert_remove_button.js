@@ -1,4 +1,9 @@
 /**
+ * @file Alert Remove Button.
+ * @author TechyGiraffe999
+ */
+
+/**
  * @type {import('../../../typings').ButtonInteractionCommand}
  */
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events, EmbedBuilder, Embed } = require('discord.js');

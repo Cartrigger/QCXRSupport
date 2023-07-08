@@ -1,3 +1,8 @@
+/**
+ * @file Logs Slash Command.
+ * @author TechyGiraffe999
+ */
+
 const axios = require('axios');
 const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
 

@@ -1,3 +1,8 @@
+/**
+ * @file Developers Slash Command.
+ * @author TechyGiraffe999
+ */
+
 // Deconstructed the constants we need in this file.
 
 const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");

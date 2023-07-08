@@ -1,3 +1,7 @@
+/**
+ * @file Others Button.
+ * @author TechyGiraffe999
+ */
 
 /**
  * @type {import('../../../typings').ButtonInteractionCommand}

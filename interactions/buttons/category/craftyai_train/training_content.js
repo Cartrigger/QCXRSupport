@@ -1,3 +1,7 @@
+/**
+ * @file Training Content Button. 
+ * @author TechyGiraffe999
+ */
 
 /**
  * @type {import('../../../typings').ButtonInteractionCommand}

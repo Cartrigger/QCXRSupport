@@ -1,3 +1,7 @@
+/**
+ * @file Account Status Yes Button.
+ * @author TechyGiraffe999
+ */
 
 /**
  * @type {import('../../../typings').ButtonInteractionCommand}

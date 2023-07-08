@@ -1,4 +1,9 @@
 /**
+ * @file Translate Context Menu. 
+ * @author TechyGiraffe999
+ */
+
+/**
  * @type {import('../../../typings').ContextInteractionCommand}
  */
 

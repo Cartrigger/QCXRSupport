@@ -1,3 +1,7 @@
+/**
+ * @file Bedrock Geyser Button.
+ * @author TechyGiraffe999
+ */
 
 /**
  * @type {import('../../../../typings').ButtonInteractionCommand}

@@ -1,3 +1,9 @@
+/**
+ * @file Support Channels Trigger.
+ * @author TechyGiraffe999
+ */
+
+
 // For now, the only available property is name array. Not making the name array will result in an error.
 const embeds = require('../../embeds.js');
 

@@ -1,8 +1,9 @@
 /**
  * @file Slash Command Interaction Handler
  * @author Naman Vrati
+ * @contributor TechyGiraffe999
  * @since 3.0.0
- * @version 3.3.0
+ * @version 3.4.0
  */
 
 const { Collection, EmbedBuilder } = require("discord.js"),

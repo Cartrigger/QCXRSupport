@@ -1,3 +1,8 @@
+/**
+ * @file Whitelist Command.
+ * @author TechyGiraffe999
+ */
+
 const fs = require("fs");
 const path = require("path");
 
