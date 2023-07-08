@@ -1,3 +1,7 @@
+/**
+ * @file Feedback No Button. 
+ * @author TechyGiraffe999
+ */
 
 /**
  * @type {import('../../../typings').ButtonInteractionCommand}

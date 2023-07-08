@@ -1,3 +1,8 @@
+/**
+ * @file CraftyAI Slash Command.
+ * @author TechyGiraffe999
+ */
+
 // Deconstructed the constants we need in this file.
 const { owner, OPENAI_API_KEY } = require("../../../config.json")
 const {Configuration, OpenAIApi} = require('openai')

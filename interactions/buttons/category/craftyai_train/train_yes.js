@@ -1,4 +1,9 @@
 /**
+ * @file Train Yes Button. 
+ * @author TechyGiraffe999
+ */
+
+/**
  * @type {import('../../../typings').ButtonInteractionCommand}
  */
 const fs = require('fs');

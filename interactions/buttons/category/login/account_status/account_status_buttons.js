@@ -1,3 +1,8 @@
+/**
+ * @file Account Status Buttons.
+ * @author TechyGiraffe999
+ */
+
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events,EmbedBuilder, Embed } = require('discord.js');
 
 const buttons_account_status = {

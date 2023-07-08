@@ -1,3 +1,7 @@
+/**
+ * @file Ping Slash Command.
+ * @author TechyGiraffe999
+ */
 
 const { EmbedBuilder, SlashCommandBuilder, Embed } = require("discord.js");
 

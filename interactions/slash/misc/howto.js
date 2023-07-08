@@ -1,3 +1,8 @@
+/**
+ * @file Howto Slash Command.
+ * @author TechyGiraffe999 & Crowpixel
+ */
+
 const { SlashCommandBuilder } = require('discord.js');
 /**
  * @type {import('../../../typings').SlashInteractionCommand}

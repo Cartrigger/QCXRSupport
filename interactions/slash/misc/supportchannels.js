@@ -1,3 +1,8 @@
+/**
+ * @file Support Channels Slash Command.
+ * @author TechyGiraffe999
+ */
+
 const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
 const embeds = require('../../../embeds.js');
 

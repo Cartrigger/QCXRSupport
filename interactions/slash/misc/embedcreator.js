@@ -1,3 +1,8 @@
+/**
+ * @file EmbedCreator Slash Command.
+ * @author TechyGiraffe999
+ */
+
 const { EmbedBuilder, SlashCommandBuilder,PermissionsBitField } = require("discord.js");
 
 /**

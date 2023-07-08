@@ -1,3 +1,8 @@
+/**
+ * @file Support Channels Command.
+ * @author TechyGiraffe999
+ */
+
 const embeds = require('../../embeds.js');
 
 

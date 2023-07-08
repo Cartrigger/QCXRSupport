@@ -1,3 +1,8 @@
+/**
+ * @file Games Slash Command.
+ * @author TechyGiraffe999
+ */
+
 const { SlashCommandBuilder, EmbedBuilder, Embed } = require('discord.js');
 const { Hangman, Snake, Connect4,TicTacToe, MatchPairs  } = require('discord-gamecord');
 

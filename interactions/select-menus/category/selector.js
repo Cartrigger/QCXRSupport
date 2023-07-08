@@ -1,3 +1,7 @@
+/**
+ * @file Selector Select Menu
+ * @author TechyGiraffe999
+ */
 
 const { EmbedBuilder } = require("discord.js");
 
