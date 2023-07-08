@@ -1,3 +1,8 @@
+/**
+ * @file Feedback Slash Command.
+ * @author TechyGiraffe999
+ */
+
 // Deconstructed the constants we need in this file.
 
 const { SlashCommandBuilder, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder, EmbedBuilder} = require("discord.js");

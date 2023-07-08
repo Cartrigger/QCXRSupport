@@ -1,3 +1,7 @@
+/**
+ * @file ImmersiveMC 1.18.2 Button.
+ * @author TechyGiraffe999
+ */
 
 /**
  * @type {import('../../../../typings').ButtonInteractionCommand}

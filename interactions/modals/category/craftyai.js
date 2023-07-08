@@ -1,4 +1,9 @@
 /**
+ * @file CraftyAI Modal. 
+ * @author TechyGiraffe999
+ */
+
+/**
  * @type {import('../../../typings').ModalInteractionCommand}
  */
 const {Configuration, OpenAIApi} = require('openai')

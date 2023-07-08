@@ -1,3 +1,8 @@
+/**
+ * @file Channel Create Event.
+ * @author TechyGiraffe999
+ */
+
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events,EmbedBuilder, Embed } = require('discord.js');
 
 const login_embeds = require('../interactions/buttons/category/login/login_embeds');

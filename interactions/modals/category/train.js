@@ -1,4 +1,9 @@
 /**
+ * @file Train Modal.
+ * @author TechyGiraffe999
+ */
+
+/**
  * @type {import('../../../typings').ModalInteractionCommand}
  */
 const embeds = require('../../../embeds.js');

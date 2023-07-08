@@ -1,4 +1,9 @@
 /**
+ * @file Feedback Modal.
+ * @author TechyGiraffe999
+ */
+
+/**
  * @type {import('../../../typings').ModalInteractionCommand}
  */
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events,EmbedBuilder, Embed } = require('discord.js');
