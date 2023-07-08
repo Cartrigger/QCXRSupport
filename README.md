@@ -38,11 +38,8 @@ To test the bot out join the [QuestCraft discord server](https://discord.gg/ques
  - This bot utilizes a modified version of the [discord bot template](https://github.com/NamVr/DiscordBot-Template) made by [Naman Vrati](https://github.com/NamVr)! [\[Apache License 2.0\]](https://github.com/NamVr/DiscordBot-Template/blob/master/LICENSE)
 
 ### 🧩 Contributors
-Thank you to all these amazing contributors for helping with the bot!
-<a href="https://github.com/Cartrigger/QCXRSoonBot/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Cartrigger/QCXRSoonBot" />
-</a>
-
+Thank you to all these amazing contributors for helping with the bot!    
+![techy](https://github.com/swaggio7/QCXRSupport/blob/main/README/techy.png?raw=true) ![cart](https://github.com/swaggio7/QCXRSupport/blob/main/README/cart.png?raw=true) ![jaffa-crow](https://github.com/swaggio7/QCXRSupport/blob/main/README/jaffa-crow.png?raw=true) ![judge](https://github.com/swaggio7/QCXRSupport/blob/main/README/judge.png?raw=true) ![divea](https://github.com/swaggio7/QCXRSupport/blob/main/README/divea.png?raw=true) ![cad](https://github.com/swaggio7/QCXRSupport/blob/main/README/cad.png?raw=true) ![flamgop](https://github.com/swaggio7/QCXRSupport/blob/main/README/flamgop.png?raw=true) ![ded](https://github.com/swaggio7/QCXRSupport/blob/main/README/ded.png?raw=true) ![swag the great](https://github.com/swaggio7/QCXRSupport/blob/main/README/swag.png?raw=true)
 
 ## 📝 [License](LICENSE)
   QCXR Bot © 2023 by [Carson G](https://github.com/Cartrigger) is licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) (GNU General Public License v3.0) with [Commons Clause](https://commonsclause.com)
