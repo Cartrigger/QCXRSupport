@@ -1,6 +1,6 @@
 /**
  * @file Selector Select Menu
- * @author TechyGiraffe999
+ * @author Cartrigger
  */
 
 const { EmbedBuilder } = require("discord.js");
