@@ -8,7 +8,7 @@ You are looking at the uploaded bot page, it is mostly a mirror of [CARTQCXRSB](
 ---
 
 ## Please read before looking at the description.
-This bot is not being actively developed, though is still accepting Pull Requests.
+This bot is not being actively developed by any main contributors, which means bugs will not be squashed, beware of bugs, though is still accepting Pull Requests.
 <br>The main repo that gets uploaded to the bot is [QCXRSB](https://github.com/QuestCraftPlusPlus/QCXRSupportBot)
 
 ---
