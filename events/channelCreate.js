@@ -9,7 +9,7 @@ const login_embeds = require('../interactions/buttons/category/login/login_embed
 const buttons = require('../interactions/buttons/category/login/own/own_buttons');
 
 module.exports = {
-    name: 'channelCreate',
+    name: Events.ChannelCreate,
     async execute(channel) {
         try{
         channel_temp = channel.parent

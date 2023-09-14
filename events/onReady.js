@@ -10,7 +10,7 @@ const { Client, Collection, GatewayIntentBits, Routes, Events, EmbedBuilder, Act
 
 
 module.exports = {
-	name: "ready",
+	name: Events.ClientReady,
 	once: true,
 
 	/**
