@@ -6,6 +6,8 @@
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events,EmbedBuilder, Embed } = require('discord.js');
 
 const buttons = {
+    
+    // ImmersiveMC Buttons Outdated - Select Menu now used    
     immersive_mc: new ActionRowBuilder()
     .addComponents(
         new ButtonBuilder()
@@ -15,9 +17,18 @@ const buttons = {
         new ButtonBuilder()
             .setCustomId('immersivemc_1_19_3')
             .setLabel('1.19.3')
-            .setStyle(ButtonStyle.Danger),
+            .setStyle(ButtonStyle.Secondary),
+        new ButtonBuilder()
+            .setCustomId('immersivemc_1_19_4')
+            .setLabel('1.19.4')
+            .setStyle(ButtonStyle.Primary),
+        new ButtonBuilder()
+            .setCustomId('immersivemc_1_20_1')
+            .setLabel('1.20.1')
+            .setStyle(ButtonStyle.Danger),           
     ),
-    
+
+
     servers: new ActionRowBuilder()
     .addComponents(
         new ButtonBuilder()
