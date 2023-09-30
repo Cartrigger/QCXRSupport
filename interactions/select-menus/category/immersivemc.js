@@ -26,8 +26,8 @@ module.exports = {
 				await interaction.reply({ embeds: [embeds.immersivemc_1_18_2], ephemeral: true });
 				break;
 			case "1.19.2":
-					await interaction.reply({ embeds: [soon], ephemeral: true });
-					break;	
+				await interaction.reply({ embeds: [soon], ephemeral: true });
+				break;	
 			case "1.19.3":
 				await interaction.reply({ embeds: [embeds.immersivemc_1_19_3], ephemeral: true });
 				break;
