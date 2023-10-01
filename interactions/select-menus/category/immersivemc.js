@@ -1,5 +1,5 @@
 /**
- * @file Selector Select Menu
+ * @file ImmersiveMC Select Menu
  * @author TechyGiraffe999
  */
 
