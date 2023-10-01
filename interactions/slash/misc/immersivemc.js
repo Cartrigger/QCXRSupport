@@ -27,12 +27,6 @@ module.exports = {
             )),
             async execute(interaction) {
                 const categorys = interaction.options.getString('version');
-
-                const soon = new EmbedBuilder()
-                .setTitle("Soon!")
-                .setDescription("Versions of ImmersiveMC for this version of MC will be put here soon!")
-                .setColor("Orange")
-
                 const row = new ActionRowBuilder()
                     .addComponents(
                     new StringSelectMenuBuilder()
@@ -66,16 +60,16 @@ module.exports = {
                         await interaction.reply({embeds: [embeds.immersivemc_1_18_2]});
                         break;
                     case "1.19.2":
-                        await interaction.reply({embeds: [soon], ephemeral: true});
+                        await interaction.reply({embeds: [embeds.immersivemc_1_19_2]});
                         break;
                     case "1.19.3":
                         await interaction.reply({embeds: [embeds.immersivemc_1_19_3]});
                         break;
                     case "1.19.4":
-                            await interaction.reply({embeds: [soon], ephemeral: true});
+                            await interaction.reply({embeds: [embeds.immersivemc_1_19_4]});
                             break;
                     case "1.20.1":
-                            await interaction.reply({embeds: [soon], ephemeral: true});
+                            await interaction.reply({embeds: [embeds.immersivemc_1_20_1]});
                             break;
                     default:
                         await interaction.reply({ embeds: [embeds.immersive_mc_embed], components: [row]});
