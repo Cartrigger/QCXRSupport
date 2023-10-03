@@ -28,14 +28,6 @@ const buttons = {
             .setStyle(ButtonStyle.Danger),           
     ),
 
-    login_restart: new ActionRowBuilder()
-    .addComponents(
-        new ButtonBuilder()
-            .setCustomId('login_restart')
-            .setLabel('🔁 Restart')
-            .setStyle(ButtonStyle.Success),
-    ),
-
     servers: new ActionRowBuilder()
     .addComponents(
         new ButtonBuilder()
