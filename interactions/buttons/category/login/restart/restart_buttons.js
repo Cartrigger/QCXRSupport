@@ -1,5 +1,5 @@
 /**
- * @file Others Buttons.
+ * @file Restart Buttons.
  * @author TechyGiraffe999
  */
 
