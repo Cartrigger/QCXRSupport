@@ -59,7 +59,7 @@ module.exports = {
       
         if (file) {
             no_errors.addFields(
-                { name: "Log File:", value: `[${file.name}](${file.url})`},
+                { name: "Log File:", value: `[${file.name}](${file.url}) | [Link](https://mclo.gs/${analysis["data"]["id"]})`},
             );
         }
       
