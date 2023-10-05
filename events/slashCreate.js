@@ -6,11 +6,11 @@
  * @version 3.4.0
  */
 
-const { Collection, EmbedBuilder } = require("discord.js"),
+const { Collection, EmbedBuilder, Events } = require("discord.js"),
 { owner } = require('../config.json');
 
 module.exports = {
-	name: "interactionCreate",
+	name: Events.InteractionCreate,
 
 	/**
 	 * @description Executes when an interaction is created and handle it.

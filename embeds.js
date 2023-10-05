@@ -52,7 +52,7 @@ const embeds = {
   
     reinstall: new EmbedBuilder()
     .setTitle("**QuestCraft Reinstall Instructions**")
-    .setDescription("1. Uninstall QuestCraft (3 dots in unknown sources, or uninstall from SideQuest, run `/adb` for info on how to do that)\n2. Restart Headset\n3. Install QuestCraft from [GitHub](https://github.com/QuestCraftPlusPlus/QuestCraft/releases/latest) / [SideQuest](https://sidequestvr.com/app/7150/questcraft)\n4. Open QuestCraft, if you have any issues with this procedure, please uninstall using ``/adb``")
+    .setDescription("1. Uninstall QuestCraft (3 dots in unknown sources, or uninstall from SideQuest, click the button for info on how to do that)\n2. Restart Headset\n3. Install QuestCraft from [GitHub](https://github.com/QuestCraftPlusPlus/QuestCraft/releases/latest) / [SideQuest](https://sidequestvr.com/app/7150/questcraft)\n4. Open QuestCraft, if you have any issues with this procedure, please uninstall using the info on the button below.")
     .setColor("Green"),
   
     support_menu:  new EmbedBuilder()
@@ -63,7 +63,7 @@ const embeds = {
   
     releases: new EmbedBuilder()
     .setTitle("**Release Info**")
-    .setDescription("Questcraft is distributed on **[Github](https://github.com/QuestCraftPlusPlus/QuestCraft/releases)** and **[Sidequest](https://sidequestvr.com/app/7150/questcraft)**\n||(Do ``/installation`` for info on how to install Questcraft)||")
+    .setDescription("Questcraft is distributed on **[Github](https://github.com/QuestCraftPlusPlus/QuestCraft/releases)** and **[Sidequest](https://sidequestvr.com/app/7150/questcraft)**\n||(Click the button below for info on how to install Questcraft)||")
     .setColor("Green")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
   
@@ -74,7 +74,7 @@ const embeds = {
   
     versions: new EmbedBuilder()
     .setTitle("**Version Info**")
-    .setDescription("Questcraft currently supports Minecraft versions:\n> 1.18.2 | 1.19.2 | 1.19.3 | 1.19.4\n\nYou are unable to use any versions below 1.18.2\nTo change versions, Click on the version number in the bottom left of the play screen (As shown in the image below)")
+    .setDescription("Questcraft currently supports Minecraft versions:\n> 1.18.2 | 1.19.2 | 1.19.3 | 1.19.4 | 1.20.1 \n\nYou are unable to use any versions below 1.18.2\nTo change versions, Click on the version number in the bottom left of the play screen (As shown in the image below)")
     .setColor("Green")
     .setImage("https://media.discordapp.net/attachments/1057074981135196230/1086666081244024925/version_switch.png?width=868&height=656")
     .setFooter({ text: 'Written by Pixel', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100075208498487356/Crowpixel.webp'}),
@@ -115,7 +115,7 @@ const embeds = {
   
     rebinding:  new EmbedBuilder()
     .setTitle("**I can't rebind keys:**")
-    .setDescription("Rebinding is not officially supported (and most likely never will be). There is a mod called [QuestBind](https://modrinth.com/mod/questbind)(Credit to <@815788241168367656> for creating the mod!) that allows you to rebind keys, but it is a bit lengthy to set up. A UI element is being developed to make it more convenient, so stay tuned!.")
+    .setDescription("Rebinding is not officially supported (and most likely never will be). There is a mod called [QuestBind](https://modrinth.com/mod/questbind) (Credit to <@815788241168367656> for creating the mod!) that allows you to rebind keys. A simple to setup UI element is now included in the mod!")
     .setColor("Red")
     .setFooter({ text: 'Written by !DED', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
   
@@ -148,22 +148,40 @@ const embeds = {
     .setDescription("My License is GNU General Public License v3.0 with Commons Clause, please check [my License](https://github.com/Cartrigger/QCXRSupport/blob/main/LICENSE) to see more info.")
     .setColor("White")
     .setFooter({ text: 'Written by Cart', iconURL: 'https://images-ext-1.discordapp.net/external/aTyGSUOhnDS_8fX4GGP9UfztBpotA7axEqb0ujMNz0U/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?width=310&height=310'}),
-  
-    immersivemc_1_19_3:  new EmbedBuilder()
-    .setTitle("**Installing ImmersiveMC on 1.19.3**")
-    .setDescription("If you are having issues when running [**ImmersiveMC**](https://www.curseforge.com/minecraft/mc-mods/immersivemc) on **1.19.3** please uninstall the mod along with any related files you installed with it and then reinstall it with the all the files listed below:\n\n**- [Architectury API](https://www.curseforge.com/minecraft/mc-mods/architectury-api/download/4384408)**\n**- [Forge Config API port](https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port-fabric/download/4238520)**\n**- [MC VR API](https://www.curseforge.com/minecraft/mc-mods/mc-vr-api/download/4403503)** \n**- [ImmersiveMc](https://www.curseforge.com/minecraft/mc-mods/immersivemc/download/4430202)**\n\nWith all of these your game should work with **ImmersiveMC** on **1.19.3**\n\n*- Alternatively if your on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
-    .setColor("Blurple")
-    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
-  
+    
     immersivemc_1_18_2:  new EmbedBuilder()
     .setTitle("**Installing ImmersiveMC on 1.18.2**")
-    .setDescription("If you are having issues when running [**ImmersiveMC**](https://www.curseforge.com/minecraft/mc-mods/immersivemc) on **1.18.2** please uninstall the mod along with any related files you installed with it and then reinstall it with the all the files listed below:\n\n**- [Architectury API](https://www.curseforge.com/minecraft/mc-mods/architectury-api/download/4384408)**\n**- [Forge Config API port](https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port-fabric/download/3943250)**\n**- [MC VR API](https://www.curseforge.com/minecraft/mc-mods/mc-vr-api/download/4403501)** \n**- [ImmersiveMc](https://www.curseforge.com/minecraft/mc-mods/immersivemc/download/4426537)**\n\nWith all of these your game should work with **ImmersiveMC** on **1.18.2**\n\n*- Alternatively if your on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
+    .setDescription("If you are having issues when running [**ImmersiveMC**](https://modrinth.com/mod/immersivemc) on **1.18.2** please uninstall the mod along with any related files you installed with it and then reinstall it with the all the files listed below:\n\n**- [Architectury API](https://www.curseforge.com/minecraft/mc-mods/architectury-api/download/4384408)**\n**- [Forge Config API port](https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port-fabric/download/3943250)**\n**- [MC VR API](https://www.curseforge.com/minecraft/mc-mods/mc-vr-api/download/4403501)** \n**- [ImmersiveMc](https://www.curseforge.com/minecraft/mc-mods/immersivemc/download/4426537)**\n\nWith all of these your game should work with **ImmersiveMC** on **1.18.2**\n\n*- Alternatively if your on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
     .setColor("Blurple")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
-  
+    
+    immersivemc_1_19_2:  new EmbedBuilder()
+    .setTitle("**Installing ImmersiveMC on 1.19.2**")
+    .setDescription("If you are having issues when running [**ImmersiveMC**](https://modrinth.com/mod/immersivemc) on **1.19.2** please uninstall the mod along with any related files you installed with it and then reinstall it with the all the files listed below:\n\n**- [Architectury API](https://cdn.modrinth.com/data/lhGA9TYQ/versions/HoIJp48v/architectury-6.5.85-fabric.jar)**\n**- [Forge Config API port](https://cdn.modrinth.com/data/ohNO6lps/versions/3VCgXZ79/ForgeConfigAPIPort-v4.2.11-1.19.2-Fabric.jar)**\n**- [MC VR API](https://cdn.modrinth.com/data/B3INNxum/versions/RX8bVxEn/vrapi-3.0.6-1.19.2-fabric.jar)** \n**- [ImmersiveMc](https://cdn.modrinth.com/data/XJ9is6vj/versions/q1Zgpjlm/immersivemc-1.4.0-beta1.1-1.19.2-fabric.jar)**\n\nWith all of these your game should work with **ImmersiveMC** on **1.19.2**\n\n*- Alternatively if your on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
+    .setColor("Blurple")
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
+
+    immersivemc_1_19_3:  new EmbedBuilder()
+    .setTitle("**Installing ImmersiveMC on 1.19.3**")
+    .setDescription("If you are having issues when running [**ImmersiveMC**](https://modrinth.com/mod/immersivemc) on **1.19.3** please uninstall the mod along with any related files you installed with it and then reinstall it with the all the files listed below:\n\n**- [Architectury API](https://www.curseforge.com/minecraft/mc-mods/architectury-api/download/4384408)**\n**- [Forge Config API port](https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port-fabric/download/4238520)**\n**- [MC VR API](https://www.curseforge.com/minecraft/mc-mods/mc-vr-api/download/4403503)** \n**- [ImmersiveMc](https://www.curseforge.com/minecraft/mc-mods/immersivemc/download/4430202)**\n\nWith all of these your game should work with **ImmersiveMC** on **1.19.3**\n\n*- Alternatively if your on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
+    .setColor("Blurple")
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
+    
+    immersivemc_1_19_4:  new EmbedBuilder()
+    .setTitle("**Installing ImmersiveMC on 1.19.4**")
+    .setDescription("If you are having issues when running [**ImmersiveMC**](https://modrinth.com/mod/immersivemc) on **1.19.4** please uninstall the mod along with any related files you installed with it and then reinstall it with the all the files listed below:\n\n**- [Architectury API](https://cdn.modrinth.com/data/lhGA9TYQ/versions/6bcAfgt2/architectury-8.2.89-fabric.jar)**\n**- [Forge Config API port](https://cdn.modrinth.com/data/ohNO6lps/versions/2TybfFU8/ForgeConfigAPIPort-v6.0.2-1.19.4-Fabric.jar)**\n**- [MC VR API](https://cdn.modrinth.com/data/B3INNxum/versions/NPESFprJ/vrapi-3.0.6-1.19.4-fabric.jar)** \n**- [ImmersiveMc](https://cdn.modrinth.com/data/XJ9is6vj/versions/JjCLHUjo/immersivemc-1.4.0-beta1.1-1.19.4-fabric.jar)**\n\nWith all of these your game should work with **ImmersiveMC** on **1.19.4**\n\n*- Alternatively if your on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
+    .setColor("Blurple")
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
+    
+    immersivemc_1_20_1:  new EmbedBuilder()
+    .setTitle("**Installing ImmersiveMC on 1.20.1**")
+    .setDescription("If you are having issues when running [**ImmersiveMC**](https://modrinth.com/mod/immersivemc) on **1.20.1** please uninstall the mod along with any related files you installed with it and then reinstall it with the all the files listed below:\n\n**- [Architectury API](https://cdn.modrinth.com/data/lhGA9TYQ/versions/Sbew3kXe/architectury-9.1.12-fabric.jar)**\n**- [Forge Config API port](https://cdn.modrinth.com/data/ohNO6lps/versions/CtENDTlF/ForgeConfigAPIPort-v8.0.0-1.20.1-Fabric.jar)**\n**- [MC VR API](https://cdn.modrinth.com/data/B3INNxum/versions/wLxZYTdg/vrapi-3.0.6-1.20.1-fabric.jar)** \n**- [ImmersiveMc](https://cdn.modrinth.com/data/XJ9is6vj/versions/sLGj7pCf/immersivemc-1.4.0-beta1.1-1.20.1-fabric.jar)**\n\nWith all of these your game should work with **ImmersiveMC** on **1.20.1**\n\n*- Alternatively if your on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
+    .setColor("Blurple")
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
+    
     immersive_mc_embed: new EmbedBuilder()
     .setTitle("**Game crashes with ImmersiveMC**")
-    .setDescription("Please select your Minecraft Version below to get the [ImmersiveMC](https://www.curseforge.com/minecraft/mc-mods/immersivemc) info. \n*- Alternatively if you're on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
+    .setDescription("Please select your Minecraft Version below to get the [ImmersiveMC](https://modrinth.com/mod/immersivemc) info. \n*- Alternatively if you're on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
     .setColor("Blurple")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
   
@@ -205,7 +223,8 @@ const embeds = {
   
     essentials_questcraft: new EmbedBuilder()
     .setTitle("**Essentials Mod on QuestCraft**")
-    .setDescription("The mod does technically function **but does not work properly**\nIt is best to avoid the mod due to the UI issues that are on QuestCraft, and when it's fixed it will most likely not have fully functional networking\n\nWe suggest creating your own server for most networking in VR, <#966126967701262386> or run ``/servers`` for info to create your own server")    .setColor("Green")
+    .setDescription("The mod does technically function **but does not work properly**\nIt is best to avoid the mod due to the UI issues that are on QuestCraft, and when it's fixed it will most likely not have fully functional networking\n\nWe suggest creating your own server for most networking in VR, you can run ``/servers`` for info to create your own server")    
+    .setColor("Green")
     .setFooter({ text: 'Written by Reality', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1101871444008374444/df17a2dbbe4fcd2de4f3bfb9f580b943.png?width=324&height=324'}),
   
     error_channels: new EmbedBuilder()
@@ -219,14 +238,27 @@ const embeds = {
     .setImage("https://cdn.discordapp.com/attachments/1078126187064332359/1096999716509712435/SideQuest.gif")
     .setColor("DarkOrange")
     .setFooter({ text: 'Written by !DED', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
-  
+
+    embed_logs: new EmbedBuilder()
+    .setTitle("**Log Guides**")
+    .setDescription("Please select your device below to get the log guides.")
+    .setColor("Green")
+    .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1059913125308145716/1157685309602013304/TechyGiraffe_v.2.0_test_3.png?ex=652aa576&is=65183076&hm=9533b00a2f57636ddb1b7a423ecf97bac64c866b9ce27581ce16283886a204c8&=&width=576&height=576'}),
+    
     quest_logs: new EmbedBuilder()
     .setTitle("**Getting logs on Quest Guide**")
     .setDescription("**Sending logs from Quest:**\n\n1) Find the log located in `android/data/com.qcxr.qcxr/files/latestlog.txt`.\n2) Copy and Paste the log in `downloads`.\n3) Open Discord on the Meta Browser and click the + next to the chat box.\n4) Click `Upload a file` and in the top right, change the filter `Media` to `All`.\n5) Locate `latestlog.txt` and send it.")
     .setImage("https://cdn.discordapp.com/attachments/1078126187064332359/1097009784944873533/ezgif.com-video-to-gif.gif")
     .setColor("DarkOrange")
     .setFooter({ text: 'Written by Pixel', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100075208498487356/Crowpixel.webp'}),
-  
+
+    pc_logs: new EmbedBuilder()
+    .setTitle("**Pc Logs Guide**")
+    .setDescription("**Sending a QuestCraft Log on PC:**\n\n1) Connect your headset to your pc via a cable that supports data transfer.\n2) Go into your headset and accept the file access prompt.\n3) Look onto your pc and find the new device that was recognized in windows explorer.\n4) On the device go to android/data/com.qcxr.qcxr/files/latestlog.txt.\n5) Once you found this file, drag it into a different folder on your pc, then drag it into discord.\n\n**Note: if there was no file access prompt, you may have file access prompts disabled in headset developer settings. If that doesn't work, try using a different cable.**")
+    .setColor("Green")
+    .setImage("https://media.discordapp.net/attachments/1057074981135196230/1099818983911346277/stinkers.gif?width=900&height=507")
+    .setFooter({ text: 'Written by !DED', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
+
     sideload_bugjaeger: new EmbedBuilder()
     .setTitle("**Sideloading using Bugjaeger Guide**")
     .setDescription("**How to Sideload APKs using Bugjaeger:**\n\n1) Connect your headset to your phone using a USB-C wire.\n2) Allow Bugjaeger to Access Quest 2.\n3) Allow USB debugging within the Quest headset\n4) Click on the the 3rd tab which looks like a box with an arrow pointing downwards.\n5) At the very top right of the screen click the `+` icon which will open the `Install new APK` menu.\n6) Allow Bugjaeger to access phone files.\n7) Locate the APK and select it.\n\nBugjaeger will install the APK, it will tell you when its done by closing its prompt and showing `Package Installed` at the bottom of the screen.")
@@ -238,13 +270,6 @@ const embeds = {
     .setDescription("**How to backup worlds**\n\n1) Navigate to `android/data/com.qcxr.qcxr/files/.minecraft`\n2) Locate the `Saves` folder\n3) Copy the folder \n4) Paste it into your `Downloads` folder if on Quest (If on pc just download it from sidequest)\n5) Reinstall Questcraft to update or to fix an issue\n6) Paste the folder back into `android/data/com.qcxr.qcxr/files/.minecraft`.")
     .setColor("Green")
     .setFooter({ text: 'Written by Pixel', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100075208498487356/Crowpixel.webp'}),
-  
-    pc_logs: new EmbedBuilder()
-    .setTitle("**Pc Logs Guide**")
-    .setDescription("**Sending a QuestCraft Log on PC:**\n\n1) Connect your headset to your pc via a cable that supports data transfer.\n2) Go into your headset and accept the file access prompt.\n3) Look onto your pc and find the new device that was recognized in windows explorer.\n4) On the device go to android/data/com.qcxr.qcxr/files/latestlog.txt.\n5) Once you found this file, drag it into a different folder on your pc, then drag it into discord.\n\n**Note: if there was no file access prompt, you may have file access prompts disabled in headset developer settings. If that doesn't work, try using a different cable.**")
-    .setColor("Green")
-    .setImage("https://media.discordapp.net/attachments/1057074981135196230/1099818983911346277/stinkers.gif?width=900&height=507")
-    .setFooter({ text: 'Written by !DED', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
     
     devs_only: new EmbedBuilder()
     .setDescription("Only developers of <@997670790604542012> can use this.")
