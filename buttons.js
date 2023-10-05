@@ -28,6 +28,38 @@ const buttons = {
             .setStyle(ButtonStyle.Danger),           
     ),
 
+    logs: new ActionRowBuilder()
+    .addComponents(
+        new ButtonBuilder()
+            .setCustomId('logs_pc')
+            .setLabel('PC')
+            .setEmoji("🖥️")
+            .setStyle(ButtonStyle.Success),
+        new ButtonBuilder()
+            .setCustomId('logs_quest')
+            .setLabel('Quest')
+            .setEmoji("🥽")
+            .setStyle(ButtonStyle.Danger),       
+    ),
+
+    adb: new ActionRowBuilder()
+    .addComponents(
+        new ButtonBuilder()
+            .setCustomId('adb')
+            .setLabel('ADB Uninstall')
+            .setEmoji("💾")
+            .setStyle(ButtonStyle.Success),   
+    ),
+
+    installation: new ActionRowBuilder()
+    .addComponents(
+        new ButtonBuilder()
+            .setCustomId('installation')
+            .setLabel('Installation')
+            .setEmoji("⚙️")
+            .setStyle(ButtonStyle.Success),   
+    ),
+
     servers: new ActionRowBuilder()
     .addComponents(
         new ButtonBuilder()
