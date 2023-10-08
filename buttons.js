@@ -28,6 +28,20 @@ const buttons = {
             .setStyle(ButtonStyle.Danger),           
     ),
 
+    mods: new ActionRowBuilder()
+    .addComponents(
+        new ButtonBuilder()
+            .setCustomId('mods_manual')
+            .setLabel('Manual')
+            .setEmoji("🛠️")
+            .setStyle(ButtonStyle.Success),
+        new ButtonBuilder()
+            .setCustomId('mods_modmanager')
+            .setLabel('Mod Manager')
+            .setEmoji("🧰")
+            .setStyle(ButtonStyle.Danger),         
+    ),
+
     logs: new ActionRowBuilder()
     .addComponents(
         new ButtonBuilder()
