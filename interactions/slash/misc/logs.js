@@ -3,7 +3,7 @@
  * @author TechyGiraffe999
  */
 
-const { SlashCommandBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 /**
  * @type {import('../../../typings').SlashInteractionCommand}
  */
@@ -26,10 +26,10 @@ module.exports = {
                 const categorys = interaction.options.getString('device');
                 switch (categorys) {
                     case "pc":
-                        await interaction.reply({embeds: [embeds.logs_pc]});
+                        await interaction.reply({embeds: [embeds.pc_logs]});
                         break;
                     case "quest":
-                        await interaction.reply({embeds: [embeds.logs_quest]});
+                        await interaction.reply({embeds: [embeds.quest_logs]});
                         break;
                     default:
                         await interaction.reply({ embeds: [embeds.embed_logs], components: [buttons.logs]});
