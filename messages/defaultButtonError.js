@@ -4,7 +4,7 @@
  * @contributor TechyGiraffe999
  * @since 3.0.0
  */
-game_ids = ["connect4_1","connect4_2","connect4_3","connect4_4","connect4_5","connect4_6","connect4_7","TicTacToe_","approve_accept","approve_reject","hangman_","hangman_stop","hangman_Y","hangman_Z","snake_up","snake_down","snake_left","snake_right","snake_stop","matchpairs_"]
+game_ids = ["connect4_1","connect4_2","connect4_3","connect4_4","connect4_5","connect4_6","connect4_7","TicTacToe_","approve_accept","approve_reject","hangman_","hangman_stop","hangman_Y","hangman_Z","snake_up","snake_down","snake_left","snake_right","snake_stop","matchpairs_","housefinder_"]
 
 module.exports = {
 	/**
