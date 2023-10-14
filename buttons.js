@@ -90,6 +90,6 @@ const buttons = {
             .setLabel('Recommended Servers')
             .setEmoji("✨")
             .setStyle(ButtonStyle.Link),
-    )
+    ),
 };
 module.exports = buttons;
