@@ -3,7 +3,8 @@
 </p>
 
 ## Please read before looking at the description.
-This bot is not being actively developed by any main contributors, which means bugs will not be squashed, beware of bugs, though is still accepting Pull Requests.
+This bot is not being actively developed by any main contributors, though we are still accepting Pull Requests. 
+<br>Mostly all bugs have been squashed, but be ready for any.
 <br>The main repo that gets uploaded to the bot is [QCXRSB](https://github.com/QuestCraftPlusPlus/QCXRSupportBot)
 
 ---
