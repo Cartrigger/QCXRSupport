@@ -11,7 +11,7 @@ const embeds = require('../../embeds.js');
  * @type {import('../../typings.js').TriggerCommand}
  */
 module.exports = {
-	name: ["<:notsupportchannel:993043214472859778>", "<#945502948111290498>","<#946021441298649158>"], //Put the trigger words in the array to use it
+	name: ["<:notsupportchannel:993043214472859778>"], //Put the trigger words in the array to use it
 
 	execute(message, args) {
 		// Put all your trigger code over here. This code will be executed when any of the element in the "name" array is found in the message content.
