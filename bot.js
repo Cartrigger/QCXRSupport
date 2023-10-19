@@ -9,6 +9,9 @@
 // Declare constants which will be used throughout the bot.
 const { DisTube } = require('distube')
 const { SpotifyPlugin } = require('@distube/spotify')
+const { DeezerPlugin } = require("@distube/deezer");
+const { SoundCloudPlugin } = require("@distube/soundcloud");
+const { YtDlpPlugin } = require("@distube/yt-dlp");
 
 const fs = require("fs");
 const {
@@ -314,12 +317,19 @@ for (const folder of triggerFolders) {
 
 const musicCommandHandler = require('./music_index');
 
+const plugins = [
+	new SpotifyPlugin(),
+	new DeezerPlugin(),
+	new SoundCloudPlugin(),
+	new YtDlpPlugin()
+  ];
+
 // Music Command
 client.distube = new DisTube(client, {
     emitNewSongOnly: true,
     leaveOnFinish: true, 
     emitAddListWhenCreatingQueue: false, 
-    plugins: [new SpotifyPlugin()]
+    plugins: plugins
 });
 
 // Music Command Handler
