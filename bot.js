@@ -7,6 +7,8 @@
  */
 
 // Declare constants which will be used throughout the bot.
+const { DisTube } = require('distube')
+const { SpotifyPlugin } = require('@distube/spotify')
 
 const fs = require("fs");
 const {
@@ -16,7 +18,7 @@ const {
 	Partials,
 	ActivityType,
 	REST,
-	Routes
+	Routes 
 } = require("discord.js");
 const { token, client_id, test_guild_id } = require("./config.json");
 
@@ -33,7 +35,8 @@ const client = new Client({
 		GatewayIntentBits.GuildMessages,
 		GatewayIntentBits.MessageContent,
 		GatewayIntentBits.DirectMessages,
-	],
+		GatewayIntentBits.GuildVoiceStates
+		],
 	partials: [Partials.Channel],
 });
 
@@ -307,9 +310,25 @@ for (const folder of triggerFolders) {
 	}
 }
 
+// Music Commands
+
+const musicCommandHandler = require('./music_index');
+
+// Music Command
+client.distube = new DisTube(client, {
+    emitNewSongOnly: true,
+    leaveOnFinish: true, 
+    emitAddListWhenCreatingQueue: false, 
+    plugins: [new SpotifyPlugin()]
+});
+
+// Music Command Handler
+musicCommandHandler(client);
+
 // Login into your client application with bot's token.
 
 client.login(token);
+
 
 
 /**********************************************************************/
