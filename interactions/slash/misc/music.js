@@ -151,7 +151,6 @@ module.exports = {
                                 return interaction.reply({ embeds: [embed], ephemeral: true});
                             }
                         case "queue":
-                            await queue.pause(voiceChannel);
                             embed.setColor("Green").setDescription(`${queue.songs.map(
                                 (song, id) => `\n**${id + 1}.** ${song.name} -\` ${song.formattedDuration} \``
                             )}`);
