@@ -57,7 +57,7 @@ const embeds = {
   
     reinstall: new EmbedBuilder()
     .setTitle("**QuestCraft Reinstall Instructions**")
-    .setDescription("1. Uninstall QuestCraft (3 dots in unknown sources, or uninstall from SideQuest, click the button for info on how to do that)\n2. Restart Headset\n3. Install QuestCraft from [GitHub](https://github.com/QuestCraftPlusPlus/QuestCraft/releases/latest) / [SideQuest](https://sidequestvr.com/app/7150/questcraft)\n4. Open QuestCraft, if you have any issues with this procedure, please uninstall using the info on the button below.")
+    .setDescription("1. Uninstall QuestCraft (3 dots in unknown sources, or uninstall from SideQuest, click the ``💾 ADB Uninstall`` button for info on how to do that)\n2. Restart Headset\n3. Install QuestCraft from [GitHub](https://github.com/QuestCraftPlusPlus/QuestCraft/releases/latest) / [SideQuest](https://sidequestvr.com/app/7150/questcraft)\n4. Open QuestCraft, if you have any issues with this procedure, please uninstall using the info on the button below.")
     .setColor("Green"),
   
     support_menu:  new EmbedBuilder()

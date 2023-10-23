@@ -57,8 +57,11 @@ module.exports = {
                     case "essentials_questcraft":
                             await interaction.reply({embeds: [embeds.essentials_questcraft]});
                             break;
+                    case "installation":
+                            await interaction.reply({embeds: [embeds.installation]});
+                            break;
                     case "reinstall":
-                            await interaction.reply({embeds: [embeds.reinstall], components:[buttons.adb]});
+                            await interaction.reply({embeds: [embeds.reinstall], components:[buttons.adb_installation]});
                             break;
                     case "releases":
                             await interaction.reply({embeds: [embeds.releases], components:[buttons.installation]});
