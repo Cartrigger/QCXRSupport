@@ -125,7 +125,7 @@ function restartBot() {
 
 // Function to refresh the console.
 function refreshConsole() {
-  consoleBox.setContent('{underline}Discord Bot{/underline}');
+  consoleBox.setContent('{underline}CraftyVR Console{/underline}');
   writeToConsole('Console refreshed.');
   screen.render();
 }
