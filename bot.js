@@ -315,7 +315,7 @@ for (const folder of triggerFolders) {
 
 // Music Commands
 
-const musicCommandHandler = require('./music_index');
+const musicCommandHandler = require('./music_index.js');
 
 const plugins = [
 	new SpotifyPlugin(),

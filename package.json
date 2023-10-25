@@ -1,6 +1,6 @@
 {
 	"name": "discord-qcxrsupport",
-	"version": "5.1",
+	"version": "5.2",
 	"description": "",
 	"types": "./typings.d.ts",
 	"main": "bot.js",
@@ -39,6 +39,7 @@
 		"figlet": "^1.7.0",
 		"libsodium-wrappers": "^0.7.13",
 		"moment": "^2.29.4",
+		"musicard": "^1.5.2",
 		"openai": "^3.2.1",
 		"os": "^0.1.2",
 		"path": "^0.12.7",

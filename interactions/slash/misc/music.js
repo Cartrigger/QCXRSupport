@@ -152,7 +152,7 @@ module.exports = {
                             }
                         case "queue":
                             embed.setColor("Green").setDescription(`${queue.songs.map(
-                                (song, id) => `\n**${id + 1}.** ${song.name} -\` ${song.formattedDuration} \``
+                                (song, id) => `\n**${id + 1}.** ${song.name} -\` ${song.formattedDuration}\` | ${song.user} `
                             )}`);
                             return interaction.reply({ embeds: [embed], ephemeral: true});
                             
