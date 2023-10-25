@@ -29,9 +29,7 @@ To test the bot out join the [QuestCraft discord server](https://discord.gg/ques
 
 2. Rename the file to ``config.json``
 
-3. run ``npm i``
-
-4. run ``node bot.js`` or ``npm start``
+3. Run ``startbot.bat`` *(Windows)* or ``startbot.sh`` *(MacOS, Windows, Linux etc.)*
 
 - All PR's are welcome for improvements.
 

@@ -77,7 +77,7 @@ module.exports = {
                   }
               }
               if (guildId !== allowedServerId) {
-                  if (!member.permissions.has([PermissionsBitField.Administrator])) {
+                  if (!member.permissions.has([PermissionsBitField.Flags.Administrator])) {
                       return await interaction.reply({ embeds: [qc_only], ephemeral: true });
                   }
               }

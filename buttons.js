@@ -74,6 +74,20 @@ const buttons = {
             .setStyle(ButtonStyle.Success),   
     ),
 
+    adb_installation: new ActionRowBuilder()
+    .addComponents(
+        new ButtonBuilder()
+            .setCustomId('adb')
+            .setLabel('ADB Uninstall')
+            .setEmoji("💾")
+            .setStyle(ButtonStyle.Success),   
+        new ButtonBuilder()
+            .setCustomId('installation')
+            .setLabel('Installation')
+            .setEmoji("⚙️")
+            .setStyle(ButtonStyle.Danger),   
+    ),
+
     servers: new ActionRowBuilder()
     .addComponents(
         new ButtonBuilder()
