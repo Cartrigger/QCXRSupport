@@ -230,7 +230,7 @@ const embeds = {
       .setTitle("Known Compatible Servers")
       .setDescription("### Rosslight Network\n`mc.rosslight.network`\nRun by Rosslight and some of XRCraft's former team\n\n### Bones Network\n`play.bones.network`\nRun by !DED#0026 and bonesmgee\n\n### TSC\n`smp.playtsc.com`\nRun By ungerground2\n\n### Scrabble SMP\n`16.ip.gl.ply.gg:44321`\nRun by monopolystinks")
       .setColor("DarkBlue")
-      .setFooter({ text: 'Written by Cartri, contributed to by ungerground2', iconURL: 'https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=1024&width=0&height=256'}),
+      .setFooter({ text: 'Written by Cart, contributed to by ungerground2', iconURL: 'https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=1024&width=0&height=256'}),
 
     essentials_questcraft: new EmbedBuilder()
     .setTitle("**Essentials Mod on QuestCraft**")
@@ -274,7 +274,7 @@ const embeds = {
     .setTitle("**Sideloading using Bugjaeger Guide**")
     .setDescription("**How to Sideload APKs using Bugjaeger:**\n\n1) Connect your headset to your phone using a USB-C wire.\n2) Allow Bugjaeger to Access Quest 2.\n3) Allow USB debugging within the Quest headset\n4) Click on the the 3rd tab which looks like a box with an arrow pointing downwards.\n5) At the very top right of the screen click the `+` icon which will open the `Install new APK` menu.\n6) Allow Bugjaeger to access phone files.\n7) Locate the APK and select it.\n\nBugjaeger will install the APK, it will tell you when its done by closing its prompt and showing `Package Installed` at the bottom of the screen.")
     .setColor("DarkOrange")
-    .setFooter({ text: 'Written by !DED - **ʷᵃʳⁿᶦⁿᵍ ᵗʰᶦˢ ˢʰᵒᵘˡᵈ ᵇᵉ ᵗʳᶦᵉᵈ ᵃˢ ᵃ ˡᵃˢᵗ ʳᵉˢᵒʳᵗ ᵃˢ ᶦᵗ ʰᵃˢ ᵃ ᵖᵒˢˢᶦᵇᶦˡᶦᵗʸ ᵒᶠ ⁿᵒᵗ ʷᵒʳᵏᶦⁿᵍ**', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
+    .setFooter({ text: 'Written by !DED', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
   
     backup_saves: new EmbedBuilder()
     .setTitle("**Backing Up Worlds Guide**")
@@ -289,10 +289,7 @@ const embeds = {
     .setTitle("Quest firmware v53 issues")
     .setDescription("The Quest firmware v53 has caused QuestCraft to have many issues\n\nMeta did it again...\n\nYou may experience bad lag spikes\nWe do not have this under our control please be patient")
     .setColor("Red")
-    .setFooter({
-      text: "Written By DevLime",
-      iconURL: "https://cdn.discordapp.com/avatars/779054724543414324/e7ea58b047a539b15a388e8d32f8e2ca?size=1024",
-    })
+    .setFooter({ text: "Written By DevLime", iconURL: "https://cdn.discordapp.com/avatars/779054724543414324/e7ea58b047a539b15a388e8d32f8e2ca?size=1024"})
 };
 
 module.exports = embeds;
