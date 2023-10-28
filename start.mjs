@@ -168,7 +168,7 @@ function updateStats() {
     `${chalk.red('Total Memory:')} ${chalk.white(totalMemory)}\n` +
     `${chalk.red('Bot Uptime:')} ${chalk.white(botUptime)}\n` +
     `${chalk.red('Bot Memory Usage:')} ${chalk.white(botMemoryUsage)}\n` +
-    `${chalk.red('CPU Cores:')} ${chalk.white(cpuCores)}\n` +
+    `${chalk.red('CPU Threads:')} ${chalk.white(cpuCores)}\n` +
     `${chalk.red('OS Info:')} ${chalk.white(osInfo)}\n\n` +
     `${chalk.red('Commands:')}\n` +
 
