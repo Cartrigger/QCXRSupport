@@ -29,7 +29,7 @@ To test the bot out join the [QuestCraft discord server](https://discord.gg/ques
 
 2. Rename the file to ``config.json``
 
-3. Run ``startbot.bat`` *(Windows)* or ``startbot.sh`` *(MacOS, Windows, Linux etc.)*
+3. Run ``startbot.bat`` *(Windows)* or ``startbot.sh`` *(MacOS and Linux or similar.)*
 
 - All PR's are welcome for improvements.
 
