@@ -1,5 +1,5 @@
 # 🔒 Security Policy
-This file contains relavent info about this Github Repo's Secuirty Guidlines 
+This file contains relavent info about this Github Repo's Security Guidlines 
 
 ### 🛡️Supported Versions
 

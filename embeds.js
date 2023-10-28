@@ -97,7 +97,7 @@ const embeds = {
   
     fixed: new EmbedBuilder()
     .setTitle("**Was QuestCraft fixed...?**")
-    .setDescription("Yes!!! 3.0 Was released on the <t:1671995040:D>! 4.0 was released on the <t:1682796715:D>")
+    .setDescription("Yes! 3.0 Was released on the <t:1671995040:D>! 4.0 was released on the <t:1682796715:D>\n It's not if you are using a Quest 3")
     .setColor("Green"),
   
     github_qc: new EmbedBuilder()
@@ -222,10 +222,16 @@ const embeds = {
   
     servers: new EmbedBuilder()
     .setTitle("**Server Guide**")
-    .setDescription("You can host one on your computer or on [Oracle](https://blogs.oracle.com/developers/post/how-to-set-up-and-run-a-really-powerful-free-minecraft-server-in-the-cloud), which is a bit complex, or you can make a free one on [Aternos](https://aternos.org/) or [Minehut](https://minehut.com/), I would recommend making it on Fabric or Paper and installing the Vivecraft plugin/mod so you can see things like your friends movements who are also in vr\n\n```Aternos: \n\n- Create an account if you haven’t already and select ‘Create server’\n\n- Install Paper 1.19.2/1.18.2 or Fabric 1.19.3/1.18.2 using the 'Software' tab on the left and install the version you are going to be playing questcraft on\n\n- Click on the mods/plugins section on the left\n\n- Search and install Vivecraft/Vivecraft spigot extensions, (if you are installing Vivecraft spigot extensions you will need to also install ViaVersion)\n\n- Join your server using the ip\n\n- With the 'Access' tab on the left you can also give your friends permission to start the server if they have an Aternos account ```\n\n```If you have any issues joining your server try joining with 'your server ip':'port' \n- the port can be found under the connect section when your server is online \n- if that doesn't work, try join using the 'Dyn IP'/Direct IP (Direct IP is not available on Aternos) \n- The dyn ip also helps connect if you have issues with other server hosting platforms - which can be found under 'Connect' as well on the main server page when the servers online, unfortunately the Dyn IP will change every time you start the server```\n\n[**Tutorial by Aternos**](https://youtu.be/LOFbK1eXzqo) \n- This tutorial is basic, it does not guide you to install all of the QuestCraft features")
+    .setDescription("You can host one on your computer or on [Oracle](https://blogs.oracle.com/developers/post/how-to-set-up-and-run-a-really-powerful-free-minecraft-server-in-the-cloud), which is a bit complex, or you can make a free one on [Aternos](https://aternos.org/) or [Minehut](https://minehut.com/), I would recommend making it on Fabric or Paper and installing the Vivecraft plugin/mod so you can see things like your friends movements who are also in vr\n\n```Aternos: \n\n- Create an account if you haven’t already and select ‘Create server’\n\n- Install Paper 1.19.2 or 1.20.1 to 1.18.2 using the 'Software' tab on the left and install the version you are going to be playing QuestCraft on\n\n- Click on the mods/plugins section on the left\n\n- Search and install Vivecraft/Vivecraft Spigot Extensions or Mod, (if you are installing Vivecraft Spigot Extensions you will need to also install ViaVersion)\n\n- Join your server using the IP\n\n- With the 'Access' tab on the left you can also give your friends permission to start the server if they have an Aternos account ```\n\n```If you have any issues joining your server try joining with 'your server ip':'port' \n- the port can be found under the connect section when your server is online \n- if that doesn't work, try join using the 'Dyn IP'/Direct IP (Direct IP is not available on Aternos) \n- The dyn ip also helps connect if you have issues with other server hosting platforms - which can be found under 'Connect' as well on the main server page when the servers online, unfortunately the Dyn IP will change every time you start the server```\n\n[**Tutorial by Aternos**](https://youtu.be/LOFbK1eXzqo) \n- This tutorial is basic, it does not guide you to install all of the QuestCraft features")
     .setColor("DarkOrange")
     .setFooter({ text: 'Written by TechyGiraffe999', iconURL: 'https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405'}),
-  
+
+    knowncompat: new EmbedBuilder()
+      .setTitle("Known Compatible Servers")
+      .setDescription("### Rosslight Network\n`mc.rosslight.network`\nRun by Rosslight and some of XRCraft's former team\n\n### Bones Network\n`play.bones.network`\nRun by !DED#0026 and bonesmgee\n\n### TSC\n`smp.playtsc.com`\nRun By ungerground2\n\n### Scrabble SMP\n`16.ip.gl.ply.gg:44321`\nRun by monopolystinks")
+      .setColor("DarkBlue")
+      .setFooter({ text: 'Written by Cart, contributed to by ungerground2', iconURL: 'https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=1024&width=0&height=256'}),
+
     essentials_questcraft: new EmbedBuilder()
     .setTitle("**Essentials Mod on QuestCraft**")
     .setDescription("The mod does technically function **but does not work properly**\nIt is best to avoid the mod due to the UI issues that are on QuestCraft, and when it's fixed it will most likely not have fully functional networking\n\nWe suggest creating your own server for most networking in VR, you can run ``/servers`` for info to create your own server")    
@@ -268,7 +274,7 @@ const embeds = {
     .setTitle("**Sideloading using Bugjaeger Guide**")
     .setDescription("**How to Sideload APKs using Bugjaeger:**\n\n1) Connect your headset to your phone using a USB-C wire.\n2) Allow Bugjaeger to Access Quest 2.\n3) Allow USB debugging within the Quest headset\n4) Click on the the 3rd tab which looks like a box with an arrow pointing downwards.\n5) At the very top right of the screen click the `+` icon which will open the `Install new APK` menu.\n6) Allow Bugjaeger to access phone files.\n7) Locate the APK and select it.\n\nBugjaeger will install the APK, it will tell you when its done by closing its prompt and showing `Package Installed` at the bottom of the screen.")
     .setColor("DarkOrange")
-    .setFooter({ text: 'Written by !DED - **ʷᵃʳⁿᶦⁿᵍ ᵗʰᶦˢ ˢʰᵒᵘˡᵈ ᵇᵉ ᵗʳᶦᵉᵈ ᵃˢ ᵃ ˡᵃˢᵗ ʳᵉˢᵒʳᵗ ᵃˢ ᶦᵗ ʰᵃˢ ᵃ ᵖᵒˢˢᶦᵇᶦˡᶦᵗʸ ᵒᶠ ⁿᵒᵗ ʷᵒʳᵏᶦⁿᵍ**', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
+    .setFooter({ text: 'Written by !DED', iconURL: 'https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318'}),
   
     backup_saves: new EmbedBuilder()
     .setTitle("**Backing Up Worlds Guide**")
@@ -283,10 +289,7 @@ const embeds = {
     .setTitle("Quest firmware v53 issues")
     .setDescription("The Quest firmware v53 has caused QuestCraft to have many issues\n\nMeta did it again...\n\nYou may experience bad lag spikes\nWe do not have this under our control please be patient")
     .setColor("Red")
-    .setFooter({
-      text: "Written By DevLime",
-      iconURL: "https://cdn.discordapp.com/avatars/779054724543414324/e7ea58b047a539b15a388e8d32f8e2ca?size=1024",
-    })
+    .setFooter({ text: "Written By DevLime", iconURL: "https://cdn.discordapp.com/avatars/779054724543414324/e7ea58b047a539b15a388e8d32f8e2ca?size=1024"})
 };
 
 module.exports = embeds;
