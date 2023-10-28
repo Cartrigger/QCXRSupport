@@ -1,7 +1,9 @@
 <p>
   <img align="right" width="310" alt="image" src="https://github.com/Cartrigger/QCXRSupport/assets/92249532/55dc86a0-b65c-4128-ba1d-b18a5b2df563">
 </p>
-
+---
+## This is the place where the bot gets uploaded to
+This is a clone of the PR [git](https://github.com/Cartrigger/QCXRSupport).
 ---
 
 ## Please read before looking at the description.
