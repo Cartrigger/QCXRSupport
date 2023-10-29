@@ -12,7 +12,7 @@ const roles_only = new EmbedBuilder()
  
 const qc_only = new EmbedBuilder()
   .setTitle('Error!')
-  .setDescription('Only admins of the server can use this command outside the [QuestCraft discord server.](https://discord.gg/questcraft)')
+  .setDescription('Only admins of the server can use this command outside the [QuestCraft Discord Server.](https://discord.gg/questcraft)')
   .setColor('Red')  
 
 module.exports = {
