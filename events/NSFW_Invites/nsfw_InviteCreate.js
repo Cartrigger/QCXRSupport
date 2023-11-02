@@ -23,7 +23,7 @@ module.exports = {
 
 	async execute(message) {
 		// Declares const to be used.
-        const NSFWwords = ["nsfw","18+","🔞","nude","addict","egirl","sex","tik","tok","tiktok","onlyfans","porn","lust","bdsm"]
+        const NSFWwords = ["nsfw","18+","🔞","nude","addict","egirl","sex","tik","tok","tiktok","onlyfans","porn","lust","bdsm","hentai"]
 		const { client, guild, channel, content, author } = message;
         
         const no_perms = new EmbedBuilder()
