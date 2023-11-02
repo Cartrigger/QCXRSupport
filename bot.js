@@ -80,7 +80,7 @@ for (const file of eventFiles) {
   async (...args) => await event.execute(...args, client));
 	}
 	client.events.set(event.name, event);
-  }
+}
 /**********************************************************************/
 // Define Collection of Commands, Slash Commands and cooldowns
 

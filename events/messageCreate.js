@@ -9,6 +9,7 @@
 
 const { Collection, ChannelType, Events } = require("discord.js");
 const { prefix, owner } = require("../config.json");
+const fetch = require("node-fetch");
 
 // Prefix regex, we will use to match in mention prefix.
 
@@ -27,7 +28,7 @@ module.exports = {
 
 	async execute(message) {
 		// Declares const to be used.
-
+		
 		const { client, guild, channel, content, author } = message;
 
 		// Checks if the bot is mentioned in the message all alone and triggers onMention trigger.

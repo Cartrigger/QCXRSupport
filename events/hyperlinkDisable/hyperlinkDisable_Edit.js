@@ -36,23 +36,22 @@ module.exports = {
                 const regex = /\[[^\]]*\]\(https:\/\/[^\)]*\)|\[[^\]]*\]\([^)]*\)/;
                 if (newMessage.content.match(regex)) {
                     if (newMessage.content.match(/\[[^\]]*\]\(https:\/\/[^\)]*\)/)) {
-                        newMessage.author.send({
+                        try{
+                            await newMessage.author.send({
                             embeds: [no_links],
-                        });
-                        newMessage.delete();
+                            });
+                            newMessage.delete();
+                        }   catch(err){
+                            await newMessage.reply({
+                                embeds: [no_links],
+                            });
+                            newMessage.delete();
+                        }
                 }
             }
         }
         }
 		} catch (error) {
-            if (!owner.includes(newMessage.author.id)) {
-                if (newMessage.member.roles.cache.size <= 1) {
-                    newMessage.reply({
-                        embeds: [no_links],
-                    });
-                    newMessage.delete();
-                }
             }
-		}
 	},
 };
