@@ -32,7 +32,7 @@ module.exports = {
 
         const crafty_NSFW = new EmbedBuilder()
         .setTitle("AutoMod: NSFW Server Invite Detected ")
-        .setDescription(`The message sent by ${message.author} was deleted because it contained a NSFW server invite.\n\n**UserID:**\n(ID: ${message.author.id})\n\n\n**Message Content:**\n||${message.content}||`)
+        .setDescription(`The message sent by ${message.author} was deleted because it contained a NSFW server invite.\n\n**UserID:**\n\`\`${message.author.id}\`\`\n\n\n**Message Content:**\n||${message.content}||`)
         .setColor("Red")
 
         const no_NSFW = new EmbedBuilder()
