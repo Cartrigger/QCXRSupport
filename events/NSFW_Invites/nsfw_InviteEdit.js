@@ -23,9 +23,8 @@ module.exports = {
 
 	async execute(oldMessage, newMessage) {
 		// Declares const to be used.
-        const NSFWwords = ["nsfw","18+","🔞","nude","addict","egirl","sex"]
-        
-
+        const NSFWwords = ["nsfw","18+","🔞","nude","addict","egirl","sex","tik","tok","tiktok","onlyfans"]
+    
         const no_perms = new EmbedBuilder()
         .setDescription(`⚠️ I lack the required permissions to delete this invite.`)
         .setColor("Red")
@@ -34,10 +33,6 @@ module.exports = {
         const crafty_NSFW = new EmbedBuilder()
         .setTitle("AutoMod: NSFW Server Invite Detected ")
         .setDescription(`The message edited by ${newMessage.author} was deleted because it contained a NSFW server invite.\n\n**UserID:**\n\`\`${newMessage.author.id}\`\`\n\n\n**Message Content:**\n||${newMessage.content}||`)
-        .setColor("Red")
-
-        const no_NSFW = new EmbedBuilder()
-        .setDescription(`🚫 NSFW server invites are not allowed in \`\`${newMessage.guild?.name ?? "DM"}\`\``)
         .setColor("Red")
 
 		try {
@@ -49,12 +44,9 @@ module.exports = {
                     
                     if (NSFWwords.some(word => inviteCode.includes(word))) {
                         try{
-                            await newMessage.author.send({ embeds: [no_NSFW] });
-                        }   catch(err){
-                            await newMessage.reply({ embeds: [no_NSFW] });
-                        }
-                        try{
-                            await newMessage.delete();
+                            await newMessage.channel.send({ content: `🚫 Scam sent by ${newMessage.author} deleted, [more info](<https://youtu.be/Kah-Dot1734>.)`}).then(msg => {
+                                setTimeout(() => msg.delete(), 5000)})
+                                ;(await newMessage).delete();
                         } catch(err){ 
                             await newMessage.reply({content:"<@&820768461697318982> NSFW Invite Detected", embeds: [no_perms] });
                         }
@@ -72,12 +64,9 @@ module.exports = {
             
                             if (NSFWwords.some(word => guildName.includes(word))) {
                                 try{
-                                    await newMessage.author.send({ embeds: [no_NSFW] });
-                                }   catch(err){
-                                    await newMessage.reply({ embeds: [no_NSFW] });
-                                }
-                                try{
-                                    await newMessage.delete();
+                                    await newMessage.channel.send({ content: `🚫 Scam sent by ${newMessage.author} deleted, [more info](<https://youtu.be/Kah-Dot1734>.)`}).then(msg => {
+                                        setTimeout(() => msg.delete(), 5000)})
+                                        ;(await newMessage).delete();
                                 } catch(err){ 
                                     await newMessage.reply({content:"<@&820768461697318982> NSFW Invite Detected", embeds: [no_perms] });
                                 }

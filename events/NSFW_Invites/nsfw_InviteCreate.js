@@ -23,7 +23,7 @@ module.exports = {
 
 	async execute(message) {
 		// Declares const to be used.
-        const NSFWwords = ["nsfw","18+","🔞","nude","addict","egirl","sex"]
+        const NSFWwords = ["nsfw","18+","🔞","nude","addict","egirl","sex","tik","tok","tiktok","onlyfans"]
 		const { client, guild, channel, content, author } = message;
         
         const no_perms = new EmbedBuilder()
@@ -35,10 +35,6 @@ module.exports = {
         .setDescription(`The message sent by ${message.author} was deleted because it contained a NSFW server invite.\n\n**UserID:**\n\`\`${message.author.id}\`\`\n\n\n**Message Content:**\n||${message.content}||`)
         .setColor("Red")
 
-        const no_NSFW = new EmbedBuilder()
-        .setDescription(`🚫 NSFW server invites are not allowed in \`\`${message.guild?.name ?? "DM"}\`\``)
-        .setColor("Red")
-
 		try {
             if (!owner.includes(message.author.id)) {
                 if (message.content.includes("discord.gg/") || message.content.includes("discord.com/invite/")) {
@@ -48,12 +44,9 @@ module.exports = {
                     
                     if (NSFWwords.some(word => inviteCode.includes(word))) {
                         try{
-                            await message.author.send({ embeds: [no_NSFW] });
-                        }   catch(err){
-                            await message.reply({ embeds: [no_NSFW] });
-                        }
-                        try{
-                            await message.delete();
+                            await message.channel.send({ content: `🚫 Scam sent by ${message.author} deleted, [more info](<https://youtu.be/Kah-Dot1734>.)`}).then(msg => {
+                                setTimeout(() => msg.delete(), 5000)})
+                                ;(await message).delete();
                         } catch(err){ 
                             await message.reply({content:"<@&820768461697318982> NSFW Invite Detected", embeds: [no_perms] });
                         }
@@ -71,12 +64,9 @@ module.exports = {
             
                             if (NSFWwords.some(word => guildName.includes(word))) {
                                 try{
-                                    await message.author.send({ embeds: [no_NSFW] });
-                                }   catch(err){
-                                    await message.reply({ embeds: [no_NSFW] });
-                                }
-                                try{
-                                    await message.delete();
+                                    await message.channel.send({ content: `🚫 Scam sent by ${message.author} deleted, [more info](<https://youtu.be/Kah-Dot1734>.)`}).then(msg => {
+                                        setTimeout(() => msg.delete(), 5000)})
+                                        ;(await message).delete();
                                 } catch(err){ 
                                     await message.reply({content:"<@&820768461697318982> NSFW Invite Detected", embeds: [no_perms] });
                                 }
