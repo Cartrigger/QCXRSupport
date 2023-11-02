@@ -44,7 +44,7 @@ module.exports = {
                     
                     if (NSFWwords.some(word => inviteCode.includes(word))) {
                         try{
-                            await newMessage.channel.send({ content: `🚫 Scam sent by ${newMessage.author} deleted, [more info](<https://youtu.be/Kah-Dot1734>.)`}).then(msg => {
+                            await newMessage.channel.send({ content: `🚫 Potential scam sent by ${newMessage.author} deleted, [more info](<https://youtu.be/Kah-Dot1734>.)`}).then(msg => {
                                 setTimeout(() => msg.delete(), 5000)})
                                 ;(await newMessage).delete();
                         } catch(err){ 
@@ -64,7 +64,7 @@ module.exports = {
             
                             if (NSFWwords.some(word => guildName.includes(word))) {
                                 try{
-                                    await newMessage.channel.send({ content: `🚫 Scam sent by ${newMessage.author} deleted, [more info](<https://youtu.be/Kah-Dot1734>.)`}).then(msg => {
+                                    await newMessage.channel.send({ content: `🚫 Potential scam sent by ${newMessage.author} deleted, [more info](<https://youtu.be/Kah-Dot1734>.)`}).then(msg => {
                                         setTimeout(() => msg.delete(), 5000)})
                                         ;(await newMessage).delete();
                                 } catch(err){ 
