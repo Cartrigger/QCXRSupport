@@ -53,6 +53,7 @@ module.exports = {
                         const guild = message.client.guilds.cache.get(serverId);
                         const channel = guild.channels.cache.get(channelId);
                         channel.send({ embeds: [crafty_NSFW]});
+                        return;
                     }
             
                     try {
@@ -73,6 +74,7 @@ module.exports = {
                                 const guild = message.client.guilds.cache.get(serverId);
                                 const channel = guild.channels.cache.get(channelId);
                                 channel.send({ embeds: [crafty_NSFW]});
+                                return;
                             }
                         }
                     } catch (error) {
