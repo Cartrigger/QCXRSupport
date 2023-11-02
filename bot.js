@@ -49,22 +49,38 @@ const client = new Client({
 /**
  * @description All event files of the event handler.
  * @type {String[]}
- * @author // TechyGiraffe999
+ * @author TechyGiraffe999
  */
 client.events = new Collection();
 
-const eventFiles = fs.readdirSync("./events").filter((file) => file.endsWith(".js"));
+function readDirectoryRecursively(directory) {
+	const files = [];
+	const subdirectories = fs.readdirSync(directory).filter((file) => fs.statSync(`${directory}/${file}`).isDirectory());
+  
+	for (const file of fs.readdirSync(directory)) {
+	  const filePath = `${directory}/${file}`;
+	  if (fs.statSync(filePath).isFile() && filePath.endsWith(".js")) {
+		files.push(filePath);
+	  } else if (fs.statSync(filePath).isDirectory()) {
+		files.push(...readDirectoryRecursively(filePath));
+	  }
+	}
+  
+	return files;
+  }
+const eventFiles = readDirectoryRecursively("./events");
 
 for (const file of eventFiles) {
-	const event = require(`./events/${file}`);
+	const event = require(file);
 	if (event.once) {
-		client.once(event.name, (...args) => event.execute(...args, client));
+	  client.once(event.name, (...args) => event.execute(...args, client));
 	} else {
-		client.on(event.name, async (...args) => await event.execute(...args, client));
+	  client.on(event.name,
+   
+  async (...args) => await event.execute(...args, client));
 	}
 	client.events.set(event.name, event);
 }
-
 /**********************************************************************/
 // Define Collection of Commands, Slash Commands and cooldowns
 
