@@ -23,7 +23,7 @@ module.exports = {
 
 	async execute(oldMessage, newMessage) {
 		// Declares const to be used.
-        const NSFWwords = ["nsfw","18+","🔞","nude","addict","egirl","sex","tik","tok","tiktok","onlyfans","porn","lust","bdsm","hentai"]
+        const NSFWwords = ["nsfw","18+","+18","🔞","nude","addict","egirl","sex","tik","tok","tiktok","onlyfans","porn","lust","bdsm","hentai"]
     
         const no_perms = new EmbedBuilder()
         .setDescription(`⚠️ I lack the required permissions to delete this invite.`)
