@@ -12,7 +12,7 @@ const { prefix } = require("./../../config.json");
 const { EmbedBuilder, ChannelType } = require("discord.js");
 
 /**
- * @type {import('../../typings').LegacyCommand}
+ * @type {import("../../typings").LegacyCommand}
  */
 module.exports = {
 	name: "help",
@@ -42,18 +42,18 @@ module.exports = {
 				.addFields([
 					{
 						name: "Usage",
-						value: `\nYou can send \`${prefix}help [command name]\` to get info on a specific command!`,
-					},
+						value: `\nYou can send \`${prefix}help [command name]\` to get info on a specific command!`
+					}
 				]);
 
 			// Attempts to reply and send embed
 
 			return message.reply({
-				embeds: [helpEmbed],
+				embeds: [helpEmbed]
 			}).catch((error) => {
 				console.error(`Could not send help reply to ${message.author.tag}.\n`, error);
 				message.reply({
-					content: "There was an error executing the command, please contact <@719815864135712799> or <@317814254336081930>!",
+					content: "There was an error executing the command, please contact <@719815864135712799> or <@317814254336081930>!"
 				});
 			});
 		}
@@ -94,26 +94,26 @@ module.exports = {
 				{
 					name: "Aliases",
 					value: `\`${command.aliases.join(", ")}\``,
-					inline: true,
+					inline: true
 				},
 				{
 					name: "Cooldown",
 					value: `${command.cooldown || 3} second(s)`,
-					inline: true,
-				},
+					inline: true
+				}
 			]);
 		if (command.usage)
 			commandEmbed.addFields([
 				{
 					name: "Usage",
 					value: `\`${prefix}${command.name} ${command.usage}\``,
-					inline: true,
-				},
+					inline: true
+				}
 			]);
 
 		// Finally send the embed.
 
 		message.channel.send({ embeds: [commandEmbed] });
 // Test message.reply when possible
-		},
+	}
 };

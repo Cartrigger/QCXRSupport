@@ -4,16 +4,16 @@
  */
 
 /**
- * @type {import('../../../../typings').ButtonInteractionCommand}
+ * @type {import("../../../../typings").ButtonInteractionCommand}
  */
 
-const embeds = require('../../../../embeds.js');
+const embeds = require("../../../../embeds.js");
 
 module.exports = {
 	id: "installation",
 
 	async execute(interaction) {
-		await interaction.reply({embeds: [embeds.installation], ephemeral: true});
+		await interaction.reply({ embeds: [embeds.installation], ephemeral: true });
 		return;
-	},
+	}
 };

@@ -8,17 +8,17 @@
 const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
 
 /**
- * @type {import('../../../typings').SlashInteractionCommand}
+ * @type {import("../../../typings").SlashInteractionCommand}
  */
-const embeds = require('../../../embeds.js');
+const embeds = require("../../../embeds.js");
 
 module.exports = {
-    data: new SlashCommandBuilder()
-        .setName('nopiracy')
-        .setDescription('Tells you information about piracy.'),
-    async execute(interaction,client ) {
-        await interaction.reply({
-            embeds: [embeds.nopiracy]
-        });
-    },
+	data: new SlashCommandBuilder()
+		.setName("nopiracy")
+		.setDescription("Tells you information about piracy."),
+	async execute(interaction, client) {
+		await interaction.reply({
+			embeds: [embeds.nopiracy]
+		});
+	}
 };

@@ -12,7 +12,7 @@ module.exports = {
 	/**
 	 * @description Executes when a message is created and handle it.
 	 * @author Naman Vrati
-	 * @param {import('discord.js').Message & { client: import('../typings').Client }} message The message which was created.
+	 * @param {import("discord.js").Message & { client: import("../typings").Client }} message The message which was created.
 	 */
 
 	async execute(message) {
@@ -52,7 +52,7 @@ module.exports = {
 						console.error(error);
 
 						message.reply({
-							content: "there was an error trying to execute that trigger! If the issue persists please contact <@317814254336081930> or <@719815864135712799>",
+							content: "there was an error trying to execute that trigger! If the issue persists please contact <@317814254336081930> or <@719815864135712799>"
 						});
 					}
 
@@ -63,5 +63,5 @@ module.exports = {
 				}
 			});
 		});
-	},
+	}
 };

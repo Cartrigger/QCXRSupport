@@ -8,17 +8,17 @@
 const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
 
 /**
- * @type {import('../../../typings').SlashInteractionCommand}
+ * @type {import("../../../typings").SlashInteractionCommand}
  */
-const embeds = require('../../../embeds.js');
+const embeds = require("../../../embeds.js");
 
 module.exports = {
-    data: new SlashCommandBuilder()
-        .setName('versions')
-        .setDescription('Displays minecraft version info for QuestCraft'),
-    async execute(interaction,client ) {
-        await interaction.reply({
-            embeds: [embeds.versions]
-        });
-    },
+	data: new SlashCommandBuilder()
+		.setName("versions")
+		.setDescription("Displays minecraft version info for QuestCraft"),
+	async execute(interaction, client) {
+		await interaction.reply({
+			embeds: [embeds.versions]
+		});
+	}
 };

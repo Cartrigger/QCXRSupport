@@ -6,10 +6,10 @@
 const { EmbedBuilder } = require("discord.js");
 
 /**
- * @type {import('../../../typings').SelectInteractionCommand}
+ * @type {import("../../../typings").SelectInteractionCommand}
  */
 
-const embeds = require('../../../embeds.js');
+const embeds = require("../../../embeds.js");
 
 module.exports = {
 	id: "select",
@@ -73,6 +73,6 @@ module.exports = {
 		}
 
 		return;
-	},
+	}
 };
 

@@ -10,7 +10,7 @@
 const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
 
 /**
- * @type {import('../../../typings').SlashInteractionCommand}
+ * @type {import("../../../typings").SlashInteractionCommand}
  */
 module.exports = {
 	// The data needed to register slash commands to Discord.
@@ -65,17 +65,17 @@ module.exports = {
 				.setTitle("List of all my slash commands")
 				.setDescription(
 					"`" +
-						interaction.client.slashCommands
-							.map((command) => command.data.name)
-							.join("`, `") +
-						"`"
+					interaction.client.slashCommands
+						.map((command) => command.data.name)
+						.join("`, `") +
+					"`"
 				);
 		}
 
 		// Replies to the interaction!
 
 		await interaction.reply({
-			embeds: [helpEmbed],
+			embeds: [helpEmbed]
 		});
-	},
+	}
 };

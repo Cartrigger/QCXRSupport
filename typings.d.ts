@@ -185,6 +185,7 @@ export interface TriggerCommand {
 	 * The names / aliases of the trigger command.
 	 */
 	name: string[];
+
 	/**
 	 * The command executor when it is called by the template handler.
 	 * @param message The message that triggered this command.

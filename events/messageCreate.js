@@ -23,12 +23,12 @@ module.exports = {
 	/**
 	 * @description Executes when a message is created and handle it.
 	 * @author Naman Vrati
-	 * @param {import('discord.js').Message & { client: import('../typings').Client }} message The message which was created.
+	 * @param {import("discord.js").Message & { client: import("../typings").Client }} message The message which was created.
 	 */
 
 	async execute(message) {
 		// Declares const to be used.
-		
+
 		const { client, guild, channel, content, author } = message;
 
 		// Checks if the bot is mentioned in the message all alone and triggers onMention trigger.
@@ -106,7 +106,7 @@ module.exports = {
 
 		if (command.guildOnly && message.channel.type === ChannelType.DM) {
 			return message.reply({
-				content: "I can't execute that command inside DMs!",
+				content: "I can't execute that command inside DMs!"
 			});
 		}
 
@@ -152,7 +152,7 @@ module.exports = {
 				return message.reply({
 					content: `please wait ${timeLeft.toFixed(
 						1
-					)} more second(s) before reusing the \`${command.name}\` command.`,
+					)} more second(s) before reusing the \`${command.name}\` command.`
 				});
 			}
 		}
@@ -168,8 +168,8 @@ module.exports = {
 		} catch (error) {
 			console.error(error);
 			message.reply({
-				content: "There was an error trying to execute that command!",
+				content: "There was an error trying to execute that command!"
 			});
 		}
-	},
+	}
 };

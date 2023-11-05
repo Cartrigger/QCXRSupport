@@ -6,10 +6,10 @@
 const { EmbedBuilder, Embed } = require("discord.js");
 
 /**
- * @type {import('../../../typings').SelectInteractionCommand}
+ * @type {import("../../../typings").SelectInteractionCommand}
  */
 
-const embeds = require('../../../embeds.js');
+const embeds = require("../../../embeds.js");
 
 module.exports = {
 	id: "immersivemc_select",
@@ -21,7 +21,7 @@ module.exports = {
 				break;
 			case "1.19.2":
 				await interaction.reply({ embeds: [embeds.immersivemc_1_19_2], ephemeral: true });
-				break;	
+				break;
 			case "1.19.3":
 				await interaction.reply({ embeds: [embeds.immersivemc_1_19_3], ephemeral: true });
 				break;
@@ -32,11 +32,11 @@ module.exports = {
 				await interaction.reply({ embeds: [embeds.immersivemc_1_20_1], ephemeral: true });
 				break;
 			default:
-				await interaction.reply({ embeds: [embeds.immersive_mc_embed]});
+				await interaction.reply({ embeds: [embeds.immersive_mc_embed] });
 				break;
 		}
 
 		return;
-	},
+	}
 };
 

@@ -13,7 +13,7 @@ module.exports = {
 	/**
 	 * @description Executes when an interaction is created and handle it.
 	 * @author Naman Vrati
-	 * @param {import('discord.js').ButtonInteraction & { client: import('../typings').Client }} interaction The interaction which was created
+	 * @param {import("discord.js").ButtonInteraction & { client: import("../typings").Client }} interaction The interaction which was created
 	 */
 
 	async execute(interaction) {
@@ -21,7 +21,7 @@ module.exports = {
 		const { client } = interaction;
 
 		// Checks if the interaction is a button interaction (to prevent weird bugs)
-		
+
 		if (!interaction.isButton()) return;
 
 		const command = client.buttonCommands.get(interaction.customId);
@@ -40,9 +40,9 @@ module.exports = {
 		} catch (err) {
 			await interaction.reply({
 				content: "There was an issue while executing that button! If the issue persists please contact <@317814254336081930> or <@719815864135712799>",
-				ephemeral: true,
+				ephemeral: true
 			});
 			return;
 		}
-	},
+	}
 };

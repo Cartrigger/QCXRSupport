@@ -6,7 +6,7 @@
  */
 
 /**
- * @type {import('../../typings').LegacyCommand}
+ * @type {import("../../typings").LegacyCommand}
  */
 module.exports = {
 	name: "ping",
@@ -14,5 +14,5 @@ module.exports = {
 
 	execute(message, args) {
 		message.channel.send({ content: "Pong." });
-	},
+	}
 };

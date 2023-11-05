@@ -4,7 +4,7 @@
  * @since 3.0.0
  * @version 3.3.2
  */
-const { Events } = require('discord.js');
+const { Events } = require("discord.js");
 
 module.exports = {
 	name: Events.InteractionCreate,
@@ -12,7 +12,7 @@ module.exports = {
 	/**
 	 * @description Executes when an interaction is created and handle it.
 	 * @author Naman Vrati
-	 * @param {import('discord.js').ContextMenuCommandInteraction & { client: import('../typings').Client }} interaction The interaction which was created
+	 * @param {import("discord.js").ContextMenuCommandInteraction & { client: import("../typings").Client }} interaction The interaction which was created
 	 */
 
 	execute: async (interaction) => {
@@ -40,7 +40,7 @@ module.exports = {
 				console.error(err);
 				await interaction.reply({
 					content: "There was an issue while executing that context command! If the issue persists please contact <@317814254336081930> or <@719815864135712799>",
-					ephemeral: true,
+					ephemeral: true
 				});
 			}
 		}
@@ -58,17 +58,17 @@ module.exports = {
 				console.error(err);
 				await interaction.reply({
 					content: "There was an issue while executing that context command! If the issue persists please contact <@317814254336081930> or <@719815864135712799>",
-					ephemeral: true,
+					ephemeral: true
 				});
 			}
 		}
 
-		// Practically not possible, but we are still caching the bug.
+			// Practically not possible, but we are still caching the bug.
 		// Possible Fix is a restart!
 		else {
 			return console.log(
 				"Something weird happening in context menu. Received a context menu of unknown type. If the issue persists please contact <@317814254336081930> or <@719815864135712799>"
 			);
 		}
-	},
+	}
 };

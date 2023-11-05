@@ -8,17 +8,17 @@
 const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
 
 /**
- * @type {import('../../../typings').SlashInteractionCommand}
+ * @type {import("../../../typings").SlashInteractionCommand}
  */
-const embeds = require('../../../embeds.js');
+const embeds = require("../../../embeds.js");
 
 module.exports = {
-    data: new SlashCommandBuilder()
-        .setName('performance')
-        .setDescription('Gives some info on how to improve QuestCraft performance'),
-    async execute(interaction,client ) {
-        await interaction.reply({
-            embeds: [embeds.performance]
-        });
-    },
+	data: new SlashCommandBuilder()
+		.setName("performance")
+		.setDescription("Gives some info on how to improve QuestCraft performance"),
+	async execute(interaction, client) {
+		await interaction.reply({
+			embeds: [embeds.performance]
+		});
+	}
 };
