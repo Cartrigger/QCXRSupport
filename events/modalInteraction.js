@@ -13,7 +13,7 @@ module.exports = {
 	/**
 	 * @description Executes when an interaction is created and handle it.
 	 * @author Naman Vrati
-	 * @param {import('discord.js').Interaction & { client: import('../typings').Client }} interaction The interaction which was created
+	 * @param {import("discord.js").Interaction & { client: import("../typings").Client }} interaction The interaction which was created
 	 */
 
 	async execute(interaction) {
@@ -41,8 +41,8 @@ module.exports = {
 			console.error(err);
 			await interaction.reply({
 				content: "There was an issue while understanding this modal! If the issue persists please contact <@317814254336081930> or <@719815864135712799>",
-				ephemeral: true,
+				ephemeral: true
 			});
 		}
-	},
+	}
 };

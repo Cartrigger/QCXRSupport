@@ -4,17 +4,17 @@
  */
 
 /**
- * @type {import('../../../../typings').ButtonInteractionCommand}
+ * @type {import("../../../../typings").ButtonInteractionCommand}
  */
 
-const embeds = require('../../../../embeds.js');
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const embeds = require("../../../../embeds.js");
+const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 
 module.exports = {
 	id: "logs_pc",
 
 	async execute(interaction) {
-		await interaction.reply({embeds: [embeds.pc_logs], ephemeral: true});
+		await interaction.reply({ embeds: [embeds.pc_logs], ephemeral: true });
 		return;
-	},
+	}
 };

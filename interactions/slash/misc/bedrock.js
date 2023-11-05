@@ -8,17 +8,17 @@
 const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
 
 /**
- * @type {import('../../../typings').SlashInteractionCommand}
+ * @type {import("../../../typings").SlashInteractionCommand}
  */
-const embeds = require('../../../embeds.js');
+const embeds = require("../../../embeds.js");
 
 module.exports = {
-    data: new SlashCommandBuilder()
-        .setName('bedrock')
-        .setDescription('Tells you why QC won\'t be developed for Bedrock Edition'),
-    async execute(interaction,client ) {
-        await interaction.reply({
-            embeds: [embeds.bedrock]
-        });
-    },
+	data: new SlashCommandBuilder()
+		.setName("bedrock")
+		.setDescription("Tells you why QC won't be developed for Bedrock Edition"),
+	async execute(interaction, client) {
+		await interaction.reply({
+			embeds: [embeds.bedrock]
+		});
+	}
 };

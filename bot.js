@@ -7,8 +7,8 @@
  */
 
 // Declare constants which will be used throughout the bot.
-const { DisTube } = require('distube')
-const { SpotifyPlugin } = require('@distube/spotify')
+const { DisTube } = require("distube");
+const { SpotifyPlugin } = require("@distube/spotify");
 const { DeezerPlugin } = require("@distube/deezer");
 const { SoundCloudPlugin } = require("@distube/soundcloud");
 const { YtDlpPlugin } = require("@distube/yt-dlp");
@@ -21,13 +21,13 @@ const {
 	Partials,
 	ActivityType,
 	REST,
-	Routes 
+	Routes
 } = require("discord.js");
 const { token, client_id, test_guild_id } = require("./config.json");
 
 /**
  * From v13, specifying the intents is compulsory.
- * @type {import('./typings').Client}
+ * @type {import("./typings").Client}
  * @description Main Application Client */
 
 // @ts-ignore
@@ -39,8 +39,8 @@ const client = new Client({
 		GatewayIntentBits.MessageContent,
 		GatewayIntentBits.DirectMessages,
 		GatewayIntentBits.GuildVoiceStates
-		],
-	partials: [Partials.Channel],
+	],
+	partials: [Partials.Channel]
 });
 
 /**********************************************************************/
@@ -56,28 +56,29 @@ client.events = new Collection();
 function readDirectoryRecursively(directory) {
 	const files = [];
 	const subdirectories = fs.readdirSync(directory).filter((file) => fs.statSync(`${directory}/${file}`).isDirectory());
-  
+
 	for (const file of fs.readdirSync(directory)) {
-	  const filePath = `${directory}/${file}`;
-	  if (fs.statSync(filePath).isFile() && filePath.endsWith(".js")) {
-		files.push(filePath);
-	  } else if (fs.statSync(filePath).isDirectory()) {
-		files.push(...readDirectoryRecursively(filePath));
-	  }
+		const filePath = `${directory}/${file}`;
+		if (fs.statSync(filePath).isFile() && filePath.endsWith(".js")) {
+			files.push(filePath);
+		} else if (fs.statSync(filePath).isDirectory()) {
+			files.push(...readDirectoryRecursively(filePath));
+		}
 	}
-  
+
 	return files;
-  }
+}
+
 const eventFiles = readDirectoryRecursively("./events");
 
 for (const file of eventFiles) {
 	const event = require(file);
 	if (event.once) {
-	  client.once(event.name, (...args) => event.execute(...args, client));
+		client.once(event.name, (...args) => event.execute(...args, client));
 	} else {
-	  client.on(event.name,
-   
-  async (...args) => await event.execute(...args, client));
+		client.on(event.name,
+
+			async (...args) => await event.execute(...args, client));
 	}
 	client.events.set(event.name, event);
 }
@@ -126,24 +127,24 @@ for (const folder of commandFolders) {
 const slashCommands = getSlashCommands("./interactions/slash");
 
 function getSlashCommands(path) {
-  let slashCommands = [];
+	let slashCommands = [];
 
-  const commandFiles = fs.readdirSync(path);
+	const commandFiles = fs.readdirSync(path);
 
-  for (const commandFile of commandFiles) {
-    const fullCommandPath = `${path}/${commandFile}`;
-    const commandStats = fs.statSync(fullCommandPath);
+	for (const commandFile of commandFiles) {
+		const fullCommandPath = `${path}/${commandFile}`;
+		const commandStats = fs.statSync(fullCommandPath);
 
-    if (commandStats.isDirectory()) {
-      slashCommands = slashCommands.concat(getSlashCommands(fullCommandPath));
-    } else if (commandFile.endsWith(".js")) {
-      const command = require(fullCommandPath);
-      client.slashCommands.set(command.data.name, command);
-      slashCommands.push(fullCommandPath);
-    }
-  }
+		if (commandStats.isDirectory()) {
+			slashCommands = slashCommands.concat(getSlashCommands(fullCommandPath));
+		} else if (commandFile.endsWith(".js")) {
+			const command = require(fullCommandPath);
+			client.slashCommands.set(command.data.name, command);
+			slashCommands.push(fullCommandPath);
+		}
+	}
 
-  return slashCommands;
+	return slashCommands;
 }
 
 
@@ -201,24 +202,24 @@ const buttonCommands = [];
 
 // Define a function that recursively loops through all files in a directory and its subdirectories.
 function walk(dir) {
-  const files = fs.readdirSync(dir);
-  for (const file of files) {
-    const path = `${dir}/${file}`;
-    if (fs.statSync(path).isDirectory()) {
-      walk(path);
-    } else if (file.endsWith('.js')) {
-      const command = require(path);
-      buttonCommands.push(command);
-    }
-  }
+	const files = fs.readdirSync(dir);
+	for (const file of files) {
+		const path = `${dir}/${file}`;
+		if (fs.statSync(path).isDirectory()) {
+			walk(path);
+		} else if (file.endsWith(".js")) {
+			const command = require(path);
+			buttonCommands.push(command);
+		}
+	}
 }
 
 // Start the recursive loop at the root of the button commands directory.
-walk('./interactions/buttons');
+walk("./interactions/buttons");
 
 // Register each button command with the client.
 for (const command of buttonCommands) {
-  client.buttonCommands.set(command.id, command);
+	client.buttonCommands.set(command.id, command);
 }
 
 /**********************************************************************/
@@ -273,7 +274,7 @@ const rest = new REST({ version: "9" }).setToken(token);
 
 const commandJsonData = [
 	...Array.from(client.slashCommands.values()).map((c) => c.data.toJSON()),
-	...Array.from(client.contextCommands.values()).map((c) => c.data),
+	...Array.from(client.contextCommands.values()).map((c) => c.data)
 ];
 
 (async () => {
@@ -331,21 +332,21 @@ for (const folder of triggerFolders) {
 
 // Music Commands
 
-const musicCommandHandler = require('./music_index.js');
+const musicCommandHandler = require("./music_index.js");
 
 const plugins = [
 	new SpotifyPlugin(),
 	new DeezerPlugin(),
 	new SoundCloudPlugin(),
 	new YtDlpPlugin()
-  ];
+];
 
 // Music Command
 client.distube = new DisTube(client, {
-    emitNewSongOnly: true,
-    leaveOnFinish: true, 
-    emitAddListWhenCreatingQueue: false, 
-    plugins: plugins
+	emitNewSongOnly: true,
+	leaveOnFinish: true,
+	emitAddListWhenCreatingQueue: false,
+	plugins: plugins
 });
 
 // Music Command Handler
@@ -356,13 +357,12 @@ musicCommandHandler(client);
 client.login(token);
 
 
-
 /**********************************************************************/
 // Anti Crash script
 
-process.on('unhandRejection', (reason, promise) => {
-    console.log(`🚫 Critical Error detected:\n\n`, reason, promise)
+process.on("unhandRejection", (reason, promise) => {
+	console.log(`🚫 Critical Error detected:\n\n`, reason, promise);
 });
-process.on('uncaughtException', (error, origin) => {
-    console.log(`🚫 Critical Error detected:\n\n`, error, origin)
+process.on("uncaughtException", (error, origin) => {
+	console.log(`🚫 Critical Error detected:\n\n`, error, origin);
 });

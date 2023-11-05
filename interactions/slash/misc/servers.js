@@ -8,18 +8,18 @@
 const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
 
 /**
- * @type {import('../../../typings').SlashInteractionCommand}
+ * @type {import("../../../typings").SlashInteractionCommand}
  */
-const embeds = require('../../../embeds.js');
-const buttons = require('../../../buttons.js');
+const embeds = require("../../../embeds.js");
+const buttons = require("../../../buttons.js");
 
 module.exports = {
-    data: new SlashCommandBuilder()
-        .setName('servers')
-        .setDescription('Displays a server guide'),
-    async execute(interaction,client ) {
-        await interaction.reply({
-            embeds: [embeds.servers], components: [buttons.servers]
-        });
-    },
+	data: new SlashCommandBuilder()
+		.setName("servers")
+		.setDescription("Displays a server guide"),
+	async execute(interaction, client) {
+		await interaction.reply({
+			embeds: [embeds.servers], components: [buttons.servers]
+		});
+	}
 };
