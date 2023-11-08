@@ -23,17 +23,19 @@ module.exports = {
 
 	async execute(oldMessage, newMessage) {
 		// Declares const to be used.
-		const NSFWwords = ["nsfw", "18+", "+18", "🔞", "nude", "addict", "egirl", "sex", "tik", "tok", "tiktok", "onlyfans", "porn", "lust", "bdsm", "hentai"];
+        const NSFWwords = ["nsfw","18+","+18","🔞","nude","addict","egirl","sex","tik","tok","tiktok","onlyfans","porn","lust","bdsm","hentai","🍑","🍆"]
+    
+        const no_perms = new EmbedBuilder()
+        .setDescription(`⚠️ I lack the required permissions to delete this invite.`)
+        .setColor("Red")
 
-		const no_perms = new EmbedBuilder()
-			.setDescription(`⚠️ I lack the required permissions to delete this invite.`)
-			.setColor("Red");
 
-
-		const crafty_NSFW = new EmbedBuilder()
-			.setTitle("AutoMod: NSFW Server Invite Detected ")
-			.setDescription(`The message edited by ${newMessage.author} was deleted because it contained a NSFW server invite.\n\n**UserID:**\n\`\`${newMessage.author.id}\`\`\n\n\n**Message Content:**\n||${newMessage.content}||`)
-			.setColor("Red");
+        const crafty_NSFW = new EmbedBuilder()
+        .setTitle("🤖 NSFW Server Invite Detected ")
+        .setDescription(`The message edited by ${newMessage.author} was deleted because it contained a NSFW server invite.\n\n**Message Content:**\n||${newMessage.content}||`)
+        .setTimestamp()
+        .setFooter({text: `User ID: ${newMessage.author.id}`})
+        .setColor("Red")
 
 		try {
 			if (!owner.includes(newMessage.author.id)) {
