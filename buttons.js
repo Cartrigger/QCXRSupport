@@ -3,7 +3,7 @@
  * @author TechyGiraffe999
  */
 
-const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events, EmbedBuilder, Embed } = require("discord.js");
+const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
 
 const buttons = {
 
@@ -14,10 +14,6 @@ const buttons = {
 				.setCustomId("immersivemc_1_18_2")
 				.setLabel("1.18.2")
 				.setStyle(ButtonStyle.Success),
-			new ButtonBuilder()
-				.setCustomId("immersivemc_1_19_3")
-				.setLabel("1.19.3")
-				.setStyle(ButtonStyle.Secondary),
 			new ButtonBuilder()
 				.setCustomId("immersivemc_1_19_4")
 				.setLabel("1.19.4")

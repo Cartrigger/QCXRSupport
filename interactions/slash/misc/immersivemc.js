@@ -4,18 +4,11 @@
  */
 
 const {
-	SlashCommandBuilder,
-	ActionRowBuilder,
-	Events,
-	StringSelectMenuBuilder,
-	EmbedBuilder,
-	Embed
-} = require("discord.js");
+	SlashCommandBuilder, ActionRowBuilder, StringSelectMenuBuilder } = require("discord.js");
 /**
  * @type {import("../../../typings").SlashInteractionCommand}
  */
 const embeds = require("../../../embeds.js");
-const buttons = require("../../../buttons.js");
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -28,7 +21,6 @@ module.exports = {
 				.addChoices(
 					{ name: "1.18.2", value: "1.18.2" },
 					{ name: "1.19.2", value: "1.19.2" },
-					{ name: "1.19.3", value: "1.19.3" },
 					{ name: "1.19.4", value: "1.19.4" },
 					{ name: "1.20.1", value: "1.20.1" }
 				)),
@@ -49,10 +41,6 @@ module.exports = {
 							value: "1.19.2"
 						},
 						{
-							label: "1.19.3",
-							value: "1.19.3"
-						},
-						{
 							label: "1.19.4",
 							value: "1.19.4"
 						},
@@ -68,9 +56,6 @@ module.exports = {
 				break;
 			case "1.19.2":
 				await interaction.reply({ embeds: [embeds.immersivemc_1_19_2] });
-				break;
-			case "1.19.3":
-				await interaction.reply({ embeds: [embeds.immersivemc_1_19_3] });
 				break;
 			case "1.19.4":
 				await interaction.reply({ embeds: [embeds.immersivemc_1_19_4] });
