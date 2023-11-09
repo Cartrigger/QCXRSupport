@@ -3,8 +3,6 @@
  * @author TechyGiraffe999
  */
 
-const { EmbedBuilder, Embed } = require("discord.js");
-
 /**
  * @type {import("../../../typings").SelectInteractionCommand}
  */
@@ -32,8 +30,6 @@ module.exports = {
 				await interaction.reply({ embeds: [embeds.immersive_mc_embed] });
 				break;
 		}
-
-		return;
 	}
 };
 

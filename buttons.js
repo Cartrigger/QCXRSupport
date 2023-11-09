@@ -3,7 +3,7 @@
  * @author TechyGiraffe999
  */
 
-const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events, EmbedBuilder, Embed } = require("discord.js");
+const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
 
 const buttons = {
 
