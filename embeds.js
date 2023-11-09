@@ -230,11 +230,11 @@ const embeds = {
 		}),
 
 	patreon: new EmbedBuilder()
-		.setTitle("Patreon")
-		.setDescription("Patreon Placeholder")
-		.setColor("Blurple")
+		.setTitle("<:Patreon:1172245220721709066> Patreon")
+		.setDescription("Support the developers and get patreon exlusive perks such as **early access QuestCraft builds** and **exlusive support** from the developers!")
+		.setColor("F96854")
 		.setFooter({
-			text: "Written by Cartri",
+			text: "Written by TechyGiraffe999",
 			iconURL: "https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405"
 		}),
 

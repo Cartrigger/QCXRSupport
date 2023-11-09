@@ -1,5 +1,5 @@
 /**
- * @file Adb Slash Command.
+ * @file Patreon Slash Command.
  * @author TechyGiraffe999
  */
 
@@ -7,7 +7,7 @@
 
 const { SlashCommandBuilder } = require("discord.js");
 const embeds = require("../../../embeds.js");
-
+const buttons = require("../../../buttons.js");
 
 /**
  * @type {import("../../../typings").SlashInteractionCommand}
@@ -18,7 +18,8 @@ module.exports = {
 		.setDescription("Tells you about the Patreon."),
 	async execute(interaction) {
 		await interaction.reply({
-			embeds: [embeds.patreon]
+			embeds: [embeds.patreon],
+			components: [buttons.patreon]
 		});
 	}
 };
