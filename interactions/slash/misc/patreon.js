@@ -1,5 +1,5 @@
 /**
- * @file Adb Slash Command.
+ * @file Patreon Slash Command.
  * @author TechyGiraffe999
  */
 
