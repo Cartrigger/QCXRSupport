@@ -28,8 +28,8 @@ in [#bot-commands](https://discord.com/channels/820767484042018829/9533836959082
 
 ## 💾 Install
 
-1. fill in the token and other values in ``config.json.example``
-
+1. fill in the token and other values in ``config.json.example``.
+   - Get your XProdiaKey [here](https://docs.prodia.com/reference/getting-started-guide)
 2. Rename the file to ``config.json``
 
 3. Run ``startbot.bat`` *(Windows)* or ``startbot.sh`` *(MacOS and Linux or similar.)*
