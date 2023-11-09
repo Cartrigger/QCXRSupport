@@ -5,7 +5,7 @@
 
 // Deconstructed the constants we need in this file.
 
-const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
+const { SlashCommandBuilder } = require("discord.js");
 const embeds = require("../../../embeds.js");
 
 
@@ -16,7 +16,7 @@ module.exports = {
 	data: new SlashCommandBuilder()
 		.setName("patreon")
 		.setDescription("Tells you about the Patreon."),
-	async execute(interaction, client) {
+	async execute(interaction) {
 		await interaction.reply({
 			embeds: [embeds.patreon]
 		});

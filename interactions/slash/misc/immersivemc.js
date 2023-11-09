@@ -4,18 +4,11 @@
  */
 
 const {
-	SlashCommandBuilder,
-	ActionRowBuilder,
-	Events,
-	StringSelectMenuBuilder,
-	EmbedBuilder,
-	Embed
-} = require("discord.js");
+	SlashCommandBuilder, ActionRowBuilder, StringSelectMenuBuilder } = require("discord.js");
 /**
  * @type {import("../../../typings").SlashInteractionCommand}
  */
 const embeds = require("../../../embeds.js");
-const buttons = require("../../../buttons.js");
 
 module.exports = {
 	data: new SlashCommandBuilder()
