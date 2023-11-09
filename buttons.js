@@ -15,10 +15,6 @@ const buttons = {
 				.setLabel("1.18.2")
 				.setStyle(ButtonStyle.Success),
 			new ButtonBuilder()
-				.setCustomId("immersivemc_1_19_3")
-				.setLabel("1.19.3")
-				.setStyle(ButtonStyle.Secondary),
-			new ButtonBuilder()
 				.setCustomId("immersivemc_1_19_4")
 				.setLabel("1.19.4")
 				.setStyle(ButtonStyle.Primary),
