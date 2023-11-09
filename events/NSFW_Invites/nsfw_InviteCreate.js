@@ -9,7 +9,7 @@ const { prefix, owner } = require("../../config.json");
 const fetch = require("node-fetch");
 
 const serverId = "820767484042018829";
-const channelId = "1057074981135196230";
+const channelId = "821078174992957480";
 
 
 module.exports = {
