@@ -1,5 +1,8 @@
 // Deconstructed the constants we need in this file.
-
+/**
+ * @file License Slash Command.
+ * @author Cartrigger
+ */
 const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
 
 /**
