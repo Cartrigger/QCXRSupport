@@ -101,7 +101,6 @@ const buttons = {
 				.setEmoji("✨")
 				.setStyle(ButtonStyle.Link)
 		),
-	
 	patreon: new ActionRowBuilder()
 			.addComponents(
 			new ButtonBuilder()
