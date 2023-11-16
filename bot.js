@@ -12,6 +12,7 @@ const { SpotifyPlugin } = require("@distube/spotify");
 const { DeezerPlugin } = require("@distube/deezer");
 const { SoundCloudPlugin } = require("@distube/soundcloud");
 const { YtDlpPlugin } = require("@distube/yt-dlp");
+const path = require('path');
 
 const fs = require("fs");
 const {
@@ -230,20 +231,21 @@ for (const command of buttonCommands) {
  * @description All modal commands.
  */
 
-const modalCommands = fs.readdirSync("./interactions/modals");
-
-// Loop through all files and store modal-commands in modalCommands collection.
-
-for (const module of modalCommands) {
-	const commandFiles = fs
-		.readdirSync(`./interactions/modals/${module}`)
-		.filter((file) => file.endsWith(".js"));
-
-	for (const commandFile of commandFiles) {
-		const command = require(`./interactions/modals/${module}/${commandFile}`);
-		client.modalCommands.set(command.id, command);
-	}
+function loadModalCommands(dir) {
+    const files = fs.readdirSync(dir);
+    for (const file of files) {
+        const fullPath = path.join(dir, file);
+        const stat = fs.lstatSync(fullPath);
+        if (stat.isDirectory()) {
+            loadModalCommands(fullPath);
+        } else if (file.endsWith('.js')) {
+            const command = require(path.resolve(__dirname, fullPath));
+            client.modalCommands.set(command.id, command);
+        }
+    }
 }
+
+loadModalCommands(path.resolve(__dirname, './interactions/modals'));
 
 /**********************************************************************/
 // Registration of select-menus Interactions
