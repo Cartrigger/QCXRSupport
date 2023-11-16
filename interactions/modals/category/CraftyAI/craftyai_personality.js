@@ -4,12 +4,12 @@
  */
 
 /**
- * @type {import("../../../typings").ModalInteractionCommand}
+ * @type {import("../../../../typings").ModalInteractionCommand}
  */
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } = require("discord.js");
 const fs = require('fs').promises;
 const path = require('path');
-const { test_guild_id } = require("../../../config.json");
+const { test_guild_id } = require("../../../../config.json");
 
 const serverId = test_guild_id;
 const channelId = "1115236755197661286";

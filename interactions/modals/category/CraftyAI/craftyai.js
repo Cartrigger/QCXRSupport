@@ -4,13 +4,13 @@
  */
 
 /**
- * @type {import("../../../typings").ModalInteractionCommand}
+ * @type {import("../../../../typings").ModalInteractionCommand}
  */
 const fs = require('fs').promises;
 const puppeteer = require('puppeteer');
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events, EmbedBuilder, Embed } = require("discord.js");
 const { Configuration, OpenAIApi } = require("openai");
-const { OPENAI_API_KEY } = require("../../../config.json"); 
+const { OPENAI_API_KEY } = require("../../../../config.json"); 
 
 const configuration = new Configuration({
     apiKey: OPENAI_API_KEY,
@@ -35,7 +35,7 @@ module.exports = {
 
         const loadingEmbed = new EmbedBuilder()
             .setTitle("**Loading your response . . .**")
-            .setDescription("*CraftyAI may make display innacurate/offensive info, QCXR is not responsible for any mistakes made by CraftyAI*s")
+            .setDescription("*CraftyAI may make display innacurate/offensive info, QCXR is not responsible for any mistakes made by CraftyAI*")
             .setFooter({text: "⏳ This may take a while", iconURL: interaction.user.displayAvatarURL()})
             .setTimestamp()
         const loadingMsg = await interaction.reply({ embeds: [loadingEmbed]
