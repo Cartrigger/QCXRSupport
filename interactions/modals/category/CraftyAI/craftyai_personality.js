@@ -48,7 +48,7 @@ module.exports = {
             .setColor("Red");
 
         const error = new EmbedBuilder()
-            .setDescription("There was an error while fetching the CraftyAI Log channel, please contact <@719815864135712799> or <@654048865137459261>")
+            .setDescription("⚠️ There was an error while fetching the CraftyAI Log channel, please contact <@719815864135712799>")
             .setColor("Red");
 
         const row = new ActionRowBuilder()
@@ -109,11 +109,11 @@ module.exports = {
                 }
         
                 await fs.writeFile(personalityFilePath, personalityPrompt);
-        
-                await i.update({ embeds: [success], components: [], files: []  });
-        
-                const guild = interaction.client.guilds.cache.get(serverId);
-                const channel = guild.channels.cache.get(channelId);
+                
+                try{ 
+                    const guild = interaction.client.guilds.cache.get(serverId);
+                    const channel = guild.channels.cache.get(channelId);
+
         
                 update = new EmbedBuilder()
                     .setDescription(`**Personality prompt updated by <@${interaction.user.id}>**`)
@@ -128,12 +128,17 @@ module.exports = {
                         { attachment: tempFilePath, name: 'old_personality.txt' }
                     ]
                 });
-        
+                await i.update({ embeds: [success], components: [], files: []  });
+                } catch (err) {
+                    await i.update({ embeds: [success,error], components: [], files: [] });
+                }
+
                 try {
                     await fs.unlink(tempFilePath);
                 } catch (err) {
                     console.error(err);
                 }
+
             } else {
                 await i.update({ embeds: [cancel], components: [], files: [] });
             }
