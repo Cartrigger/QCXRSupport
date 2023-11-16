@@ -130,6 +130,7 @@ module.exports = {
 
         lastResponse = lastResponse.replace(/^(CraftyAI:|\*\*CraftyAI:\*\*)/i, '');
         lastResponse = lastResponse.replace(/^\s*Hello[.,!?\s]/i, '');
+        lastResponse = lastResponse.charAt(0).toUpperCase() + lastResponse.slice(1);
         
         if (!(!OPENAI_API_KEY || OPENAI_API_KEY < 4)) {
             try{
