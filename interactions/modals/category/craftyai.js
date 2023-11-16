@@ -9,12 +9,20 @@
 const fs = require('fs').promises;
 const puppeteer = require('puppeteer');
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events, EmbedBuilder, Embed } = require("discord.js");
+const { Configuration, OpenAIApi } = require("openai");
+const { OPENAI_API_KEY } = require("../../../config.json"); 
+
+const configuration = new Configuration({
+    apiKey: OPENAI_API_KEY,
+});
+
+const openai = new OpenAIApi(configuration);
+
 
 module.exports = {
     id: "crafty_ai",
 
     async execute(interaction) {
-
         const personalityFilePath = __dirname + '/personality.txt';
         const personalityContent = await fs.readFile(personalityFilePath, 'utf-8');
         const personalityLines = personalityContent.split('\n');
@@ -94,8 +102,32 @@ module.exports = {
           });
 
         await browser.close();
-        lastResponse = lastResponse.replace(/^Hello[.,!?]/, '');
 
+        lastResponse = lastResponse.replace(/^(CraftyAI:|\*\*CraftyAI:\*\*)/i, '');
+        lastResponse = lastResponse.replace(/^\s*Hello[.,!?\s]/i, '');
+
+        if (!(!OPENAI_API_KEY || OPENAI_API_KEY < 4)) {
+            try{
+                const moderation = await openai.createModeration({
+                input: lastResponse
+                })
+
+                if (moderation.data.results[0].flagged == True) {
+                clearInterval(loadingInterval);
+                clearInterval(sendTypingInterval);
+                
+                violate = new EmbedBuilder()
+                    .setDescription("This result could not be generated as it contained Harmful Content")
+                    .setColour("Red")
+                await interaction.editReply({embeds: [violate]}) 
+                return;
+                }
+            } catch(err) {
+                // console.log(err)
+                }
+            }
+        
+        
         clearInterval(loadingInterval);
         clearInterval(sendTypingInterval);
 

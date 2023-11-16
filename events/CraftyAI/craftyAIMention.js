@@ -10,6 +10,15 @@ const { default: axios } = require("axios");
 const fs = require('fs').promises;
 const path = require('path');
 const puppeteer = require('puppeteer');
+const { Configuration, OpenAIApi } = require("openai");
+const { OPENAI_API_KEY } = require("../../config.json"); 
+
+const configuration = new Configuration({
+    apiKey: OPENAI_API_KEY,
+});
+
+const openai = new OpenAIApi(configuration);
+
 
 module.exports = {
     name: Events.MessageCreate,
@@ -105,6 +114,27 @@ module.exports = {
         lastResponse = lastResponse.replace(/^(CraftyAI:|\*\*CraftyAI:\*\*)/i, '');
         lastResponse = lastResponse.replace(/^\s*Hello[.,!?\s]/i, '');
 
+        if (!(!OPENAI_API_KEY || OPENAI_API_KEY < 4)) {
+            try{
+                const moderation = await openai.createModeration({
+                input: lastResponse
+                })
+
+                if (moderation.data.results[0].flagged == True) {
+                clearInterval(loadingInterval);
+                clearInterval(sendTypingInterval);
+                
+                violate = new EmbedBuilder()
+                    .setDescription("This result could not be generated as it contained Harmful Content")
+                    .setColour("Red")
+                await loadingMsg.edit({embeds: [violate]}) 
+                return;
+                }
+            } catch(err) {
+                // console.log(err)
+                }
+            }
+            
         clearInterval(loadingInterval);
         clearInterval(sendTypingInterval);
 
