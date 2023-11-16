@@ -231,11 +231,11 @@ const embeds = {
 
 	patreon: new EmbedBuilder()
 		.setTitle("<:Patreon:1172245220721709066> Patreon")
-		.setDescription("Support the developers and get patreon exlusive perks such as **early access QuestCraft builds** and **exlusive support** from the developers!")
+		.setDescription("You can support the Patreon [here](https://patreon.com/questcraftxr) to get special perks and early access builds of QuestCraft.")
 		.setColor("F96854")
 		.setFooter({
-			text: "Written by TechyGiraffe999",
-			iconURL: "https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405"
+			text: "Written by Cart",
+			iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=1024&width=0&height=256"
 		}),
 
 	immersivemc_1_19_4: new EmbedBuilder()
