@@ -34,7 +34,8 @@ module.exports = {
         }, 5000);
 
         const loadingEmbed = new EmbedBuilder()
-            .setDescription("**Loading your response . . .**")
+            .setTitle("**Loading your response . . .**")
+            .setDescription("*CraftyAI may make display innacurate/offensive info, QCXR is not responsible for any mistakes made by CraftyAI*s")
             .setFooter({text: "⏳ This may take a while", iconURL: interaction.user.displayAvatarURL()})
             .setTimestamp()
         const loadingMsg = await interaction.reply({ embeds: [loadingEmbed]
@@ -43,7 +44,7 @@ module.exports = {
         const loadingDots = [" .  ", " . . ", " . . ."];
         let i = 0;
         const loadingInterval = setInterval(() => {
-            loadingEmbed.setDescription(`**Loading your response ${loadingDots[i]}**`);
+            loadingEmbed.setTitle(`**Loading your response ${loadingDots[i]}**`);
             loadingMsg.edit({ embeds: [loadingEmbed] });
             i = (i + 1) % loadingDots.length;
         }, 500);
