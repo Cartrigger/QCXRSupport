@@ -1,6 +1,6 @@
 # 🔒 Security Policy
 
-This file contains relavent info about this Github Repo's Security Guidlines
+This file contains relavent info about this Github Repo's Security Guidelines
 
 ### 🛡️Supported Versions
 
@@ -10,7 +10,7 @@ and security updates
 ### 🚨 Reporting a Vulnerability
 
 If you find a vunerability on one of the branches please file an  *
-*[issue](https://github.com/Cartrigger/QCXRSoonBot/issues/new)** and we will try review it ASAP
+*[issue,](https://github.com/Cartrigger/QCXRSoonBot/issues/new)* then we will try review it ASAP.
 
 ### 📜 License
 
