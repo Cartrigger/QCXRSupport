@@ -29,7 +29,7 @@ buttons = new ActionRowBuilder()
 
 
 const error = new EmbedBuilder()
-	.setDescription("There was an error while fetching the Feedback channel, please contact <@719815864135712799> or <@654048865137459261>")
+	.setDescription("There was an error while fetching the Feedback channel, please contact <@719815864135712799>")
 	.setColor("Red");
 
 module.exports = {
