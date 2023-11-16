@@ -110,7 +110,7 @@ module.exports = {
         
                 await fs.writeFile(personalityFilePath, personalityPrompt);
         
-                await i.update({ embeds: [success], components: [] });
+                await i.update({ embeds: [success], components: [], files: []  });
         
                 const guild = interaction.client.guilds.cache.get(serverId);
                 const channel = guild.channels.cache.get(channelId);
@@ -135,7 +135,7 @@ module.exports = {
                     console.error(err);
                 }
             } else {
-                await i.update({ embeds: [cancel], components: [] });
+                await i.update({ embeds: [cancel], components: [], files: [] });
             }
         });
     }
