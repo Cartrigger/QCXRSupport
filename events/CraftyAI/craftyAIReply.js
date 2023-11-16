@@ -71,7 +71,7 @@ module.exports = {
         const page = await browser.newPage();
 
 
-        const personalityFilePath = path.join(__dirname, '../../interactions/modals/category/personality.txt');
+        const personalityFilePath = path.join(__dirname, '../../interactions/modals/category/CraftyAI/personality.txt');
         const personalityContent = await fs.readFile(personalityFilePath, 'utf-8');
         const personalityLines = personalityContent.split('\n');
 
