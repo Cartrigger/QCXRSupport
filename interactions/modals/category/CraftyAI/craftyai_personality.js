@@ -92,7 +92,7 @@ module.exports = {
         });
 
         const filter = i => i.customId === 'yes_craftyai_personality' || i.customId === 'no_craftyai_personality';
-        const collector = interaction.channel.createMessageComponentCollector({ filter, time: 15000 });
+        const collector = interaction.channel.createMessageComponentCollector({ filter, time: 60000 });
 
         collector.on('collect', async i => {
             if (i.customId === 'yes_craftyai_personality') {
