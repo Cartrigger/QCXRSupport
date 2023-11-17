@@ -77,16 +77,15 @@ module.exports = {
         const personalityTextBoxSelector = 'textarea[aria-label="chatbot-user-prompt"]';
         await page.goto('https://craftyai.zapier.app/craftyai');
         await page.waitForSelector(personalityTextBoxSelector);
-        for (let i = 0; i < personalityLines.length; i++) {
-            await page.keyboard.down('Shift');
-            await page.keyboard.up('Enter');
-            await page.type(personalityTextBoxSelector, personalityLines[i]);
-          }
-        await page.keyboard.up('Shift');
-        await page.keyboard.up('Enter');
-        await page.keyboard.press('Enter');
-        await page.waitForSelector('[data-testid="final-bot-response"] p'); 
-        await new Promise(r => setTimeout(r, 2000)); 
+        await page.evaluate((personalityLines) => {
+            const personalityTextArea = document.querySelector('textarea[aria-label="chatbot-user-prompt"]');
+            personalityTextArea.value = personalityLines.join('\n');
+            personalityTextArea.dispatchEvent(new Event('input', { bubbles: true }));
+            personalityTextArea.dispatchEvent(new Event('change', { bubbles: true }));
+            const event = new KeyboardEvent('keydown', { key: 'Enter', bubbles: true });
+            personalityTextArea.dispatchEvent(event);
+        }, personalityLines);
+        await page.waitForSelector('[data-testid="final-bot-response"] p');
 
         const userQuestionLines = userQuestion.split('\n');
         const userTextBoxSelector = 'textarea[aria-label="chatbot-user-prompt"]';
