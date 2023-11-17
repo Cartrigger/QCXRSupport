@@ -34,7 +34,7 @@ module.exports = {
 
         const loadingEmbed = new EmbedBuilder()
             .setTitle("**Loading your response . . .**")
-            .setDescription("*CraftyAI may make display innacurate/offensive info, QCXR is not responsible for any mistakes made by CraftyAI*")
+            .setDescription("*CraftyAI may display innacurate/offensive info, QCXR is not responsible for any mistakes made by CraftyAI*")
             .setFooter({text: "⏳ This may take a while", iconURL: interaction.user.displayAvatarURL()})
             .setTimestamp()
         const loadingMsg = await interaction.reply({ embeds: [loadingEmbed]

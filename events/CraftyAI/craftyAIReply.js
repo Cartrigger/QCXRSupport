@@ -53,7 +53,7 @@ module.exports = {
 
         const loadingEmbed = new EmbedBuilder()
             .setTitle("**⌛Loading your response**")
-            .setDescription("*CraftyAI may make display innacurate/offensive info, QCXR is not responsible for any mistakes made by CraftyAI*")
+            .setDescription("*CraftyAI may display innacurate/offensive info, QCXR is not responsible for any mistakes made by CraftyAI*")
             .setFooter({text: "This may take a while", iconURL: `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=256`})
             .setTimestamp()
         const loadingMsg = await message.reply({ embeds: [loadingEmbed] });
