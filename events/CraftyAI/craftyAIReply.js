@@ -10,14 +10,12 @@ const { default: axios } = require("axios");
 const fs = require('fs').promises;
 const path = require('path');
 const puppeteer = require('puppeteer');
-const { Configuration, OpenAIApi } = require("openai");
+const {OpenAI} = require('openai')
 const { OPENAI_API_KEY } = require("../../config.json"); 
 
-const configuration = new Configuration({
+const openai = new OpenAI({
     apiKey: OPENAI_API_KEY,
-});
-
-const openai = new OpenAIApi(configuration);
+  });
 
 
 module.exports = {
@@ -55,7 +53,7 @@ module.exports = {
 
         const loadingEmbed = new EmbedBuilder()
             .setTitle("**⌛Loading your response**")
-            .setDescription("*CraftyAI may make display innacurate/offensive info, QCXR is not responsible for any mistakes made by CraftyAI*")
+            .setDescription("*CraftyAI may display innacurate/offensive info, QCXR is not responsible for any mistakes made by CraftyAI*")
             .setFooter({text: "This may take a while", iconURL: `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=256`})
             .setTimestamp()
         const loadingMsg = await message.reply({ embeds: [loadingEmbed] });
@@ -79,16 +77,15 @@ module.exports = {
         const personalityTextBoxSelector = 'textarea[aria-label="chatbot-user-prompt"]';
         await page.goto('https://craftyai.zapier.app/craftyai');
         await page.waitForSelector(personalityTextBoxSelector);
-        for (let i = 0; i < personalityLines.length; i++) {
-            await page.keyboard.down('Shift');
-            await page.keyboard.up('Enter');
-            await page.type(personalityTextBoxSelector, personalityLines[i]);
-          }
-        await page.keyboard.up('Shift');
-        await page.keyboard.up('Enter');
-        await page.keyboard.press('Enter');
-        await page.waitForSelector('[data-testid="final-bot-response"] p'); 
-        await new Promise(r => setTimeout(r, 2000)); 
+        await page.evaluate((personalityLines) => {
+            const personalityTextArea = document.querySelector('textarea[aria-label="chatbot-user-prompt"]');
+            personalityTextArea.value = personalityLines.join('\n');
+            personalityTextArea.dispatchEvent(new Event('input', { bubbles: true }));
+            personalityTextArea.dispatchEvent(new Event('change', { bubbles: true }));
+            const event = new KeyboardEvent('keydown', { key: 'Enter', bubbles: true });
+            personalityTextArea.dispatchEvent(event);
+        }, personalityLines);
+        await page.waitForSelector('[data-testid="final-bot-response"] p');
 
         const userQuestionLines = userQuestion.split('\n');
         const userTextBoxSelector = 'textarea[aria-label="chatbot-user-prompt"]';
@@ -134,7 +131,7 @@ module.exports = {
         
         if (!(!OPENAI_API_KEY || OPENAI_API_KEY < 4)) {
             try{
-                const moderation = await openai.createModeration({
+                const moderation = await openai.moderations.create({
                 input: lastResponse
                 })
 
