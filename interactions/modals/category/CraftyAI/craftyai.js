@@ -9,14 +9,12 @@
 const fs = require('fs').promises;
 const puppeteer = require('puppeteer');
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events, EmbedBuilder, Embed } = require("discord.js");
-const { Configuration, OpenAIApi } = require("openai");
+const {OpenAI} = require('openai')
 const { OPENAI_API_KEY } = require("../../../../config.json"); 
 
-const configuration = new Configuration({
+const openai = new OpenAI({
     apiKey: OPENAI_API_KEY,
-});
-
-const openai = new OpenAIApi(configuration);
+  });
 
 
 module.exports = {
@@ -110,10 +108,9 @@ module.exports = {
         
         if (!(!OPENAI_API_KEY || OPENAI_API_KEY < 4)) {
             try{
-                const moderation = await openai.createModeration({
+                const moderation = await openai.moderations.create({
                 input: lastResponse
                 })
-
                 if (moderation.data.results[0].flagged == True) {
                 clearInterval(loadingInterval);
                 clearInterval(sendTypingInterval);
@@ -125,7 +122,6 @@ module.exports = {
                 return;
                 }
             } catch(err) {
-                // console.log(err)
                 }
             }
         

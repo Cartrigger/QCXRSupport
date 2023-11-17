@@ -10,14 +10,12 @@ const { default: axios } = require("axios");
 const fs = require('fs').promises;
 const path = require('path');
 const puppeteer = require('puppeteer');
-const { Configuration, OpenAIApi } = require("openai");
+const {OpenAI} = require('openai')
 const { OPENAI_API_KEY } = require("../../config.json"); 
 
-const configuration = new Configuration({
+const openai = new OpenAI({
     apiKey: OPENAI_API_KEY,
-});
-
-const openai = new OpenAIApi(configuration);
+  });
 
 
 module.exports = {
@@ -134,7 +132,7 @@ module.exports = {
         
         if (!(!OPENAI_API_KEY || OPENAI_API_KEY < 4)) {
             try{
-                const moderation = await openai.createModeration({
+                const moderation = await openai.moderations.create({
                 input: lastResponse
                 })
 
