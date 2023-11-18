@@ -86,7 +86,7 @@ module.exports = {
             const event = new KeyboardEvent('keydown', { key: 'Enter', bubbles: true });
             personalityTextArea.dispatchEvent(event);
         }, personalityLines);
-        await page.waitForSelector('[data-testid="final-bot-response"] p');
+        await page.waitForSelector('[data-testid="final-bot-response"]');
         
         const userTextBoxSelector = 'textarea[aria-label="chatbot-user-prompt"]';
         await page.waitForSelector(userTextBoxSelector);
