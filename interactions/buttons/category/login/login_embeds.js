@@ -58,7 +58,7 @@ const login_embeds = {
 
 	others: new EmbedBuilder()
 		.setTitle("If none of the things mentioned have worked")
-		.setDescription("If none of the things mentioned have worked you can try to Uninstall Questcraft with ADB commands, and then reinstall it. Then try launch QuestCraft again\n\nIf your issue still persists, please wait for a support staff member to review your issue and if you havn't already, please provide any additional information below or [create a ticket](https://discord.com/channels/820767484042018829/946184706486054984).")
+		.setDescription("If none of the things mentioned have worked you can try to Uninstall Questcraft with ADB commands, and then reinstall it. Then try launch QuestCraft again\n\nIf your issue still persists, please wait for a support staff member to review your issue and if you haven't already, please provide any additional information below or [create a ticket](https://discord.com/channels/820767484042018829/946184706486054984).")
 		.setColor("Green")
 		.setFooter({
 			text: "Written by TechyGiraffe999 [BETA]",

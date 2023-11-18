@@ -38,7 +38,7 @@ module.exports = {
 		const serverId = test_guild_id;
 		const channelId = "1093819562799149098";
 		const secondServerId = "820767484042018829"; // QuestCraft Server ID
-		const secondChannelId = "821078174992957480"; // QuestCraft Support Staff channel ID
+		const secondChannelId = "1057074981135196230"; // QuestCraft Support Staff channel ID
 
 		try {
 			const message = await interaction.message.fetch();

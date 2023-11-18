@@ -3,7 +3,7 @@ const { EmbedBuilder } = require("discord.js");
 const embeds = {
 	adb: new EmbedBuilder()
 		.setTitle("**Uninstalling using ADB commands**")
-		.setDescription("If you're having an issue with uninstalling and need to perform a force uninstallation, Please make sure you are using **[Sidequest Advanced](https://sidequestvr.com/setup-howto)** as basic SideQuest wont work. Run the command: ``adb uninstall com.qcxr.qcxr``, as shown in the image below.")
+		.setDescription("If you're having an issue with uninstalling and need to perform a force uninstallation, Please make sure you are using **[SideQuest Advanced](https://SideQuestvr.com/setup-howto)** as basic SideQuest wont work. Run the command: ``adb uninstall com.qcxr.qcxr``, as shown in the image below.")
 		.setImage("https://media.discordapp.net/attachments/1059913125308145716/1111366186274390226/ADB.png?width=643&height=670")
 		.setColor("Green")
 		.setFooter({
@@ -18,12 +18,12 @@ const embeds = {
 
 	developers: new EmbedBuilder()
 		.setTitle("**🛠️ My Developers!**")
-		.setDescription("The current developers of <@997670790604542012> are <@317814254336081930>, <@719815864135712799> and <@796512162855125022>! \nYou can checkout the full code of <@997670790604542012> at the [GitHub repo](https://github.com/Cartrigger/QCXRSupport)")
+		.setDescription("The current developers of <@997670790604542012> are <@719815864135712799> and <@317814254336081930>! \nYou can checkout the full code of <@997670790604542012> at the [**GitHub repo**](https://github.com/Cartrigger/QCXRSupport).")
 		.setColor("Green"),
 
 	installation: new EmbedBuilder()
 		.setTitle("**Installation Guide**")
-		.setDescription("1. Download sidequest at the link [here](https://sidequestvr.com/setup-howto) (Advanced one is reccomended)\n2. Go to the QuestCraft SideQuest page which is linked [here](https://sidequestvr.com/app/7150/questcraft)\n3. Plug your quest into your computer/phone and accept the prompt on your quest to allow your computer to view the files\n4. Go back to sidequest and select 'sideload' - in the top right of sidequest you should see a running task (That is QuestCraft) - wait until it has finished\n5. Unplug your quest and go to your app library\n6. Go to 'unknown sources' (It is in the top right dropdown on your app library)\n7. Open QuestCraft\n8. Make sure to keep your headset on while QuestCraft is guiding you through the install - if you do not it may become bugged \n9. If downloading instances is taking a long time and you dont want to keep your headset on you can cover the sensor - Just make sure your quest stays on\n10. Login and go to the Microsoft website it says and enter the code it gives you\n11. Select play and enjoy!\n- make sure to keep your headset on or the sensor covered fully throughout the install, if you do not your install may become bugged\n\nAlso make sure you don't do the following:\n- Don't exit your boundry\n- Don't click any buttons\n- Don't go into passthrough\n- Don't mess with wifi settings\n\n[**Video tutorial**](https://youtu.be/cVU4ZXDXvP4):\nCredit to <@136571842906292224>")
+		.setDescription("1. Download SideQuest at the link [here](https://SideQuestvr.com/setup-howto) (Advanced one is reccomended)\n2. Go to the QuestCraft SideQuest page which is linked [here](https://SideQuestvr.com/app/7150/questcraft)\n3. Plug your quest into your computer/phone and accept the prompt on your quest to allow your computer to view the files\n4. Go back to SideQuest and select 'sideload' - in the top right of SideQuest you should see a running task (That is QuestCraft) - wait until it has finished\n5. Unplug your quest and go to your app library\n6. Go to 'unknown sources' (It is in the top right dropdown on your app library)\n7. Open QuestCraft\n8. Make sure to keep your headset on while QuestCraft is guiding you through the install - if you do not it may become bugged \n9. If downloading instances is taking a long time and you dont want to keep your headset on you can cover the sensor - Just make sure your quest stays on\n10. Login and go to the Microsoft website it says and enter the code it gives you\n11. Select play and enjoy!\n- make sure to keep your headset on or the sensor covered fully throughout the install, if you do not your install may become bugged\n\nAlso make sure you don't do the following:\n- Don't exit your boundry\n- Don't click any buttons\n- Don't go into passthrough\n- Don't mess with wifi settings\n\n[**Video tutorial**](https://youtu.be/cVU4ZXDXvP4):\nCredit to <@136571842906292224>")
 		.setColor("Green")
 		.setFooter({
 			text: "Written by TechyGiraffe999",
@@ -78,7 +78,7 @@ const embeds = {
 
 	reinstall: new EmbedBuilder()
 		.setTitle("**QuestCraft Reinstall Instructions**")
-		.setDescription("1. Uninstall QuestCraft (3 dots in unknown sources, or uninstall from SideQuest, click the ``💾 ADB Uninstall`` button for info on how to do that)\n2. Restart Headset\n3. Install QuestCraft from [GitHub](https://github.com/QuestCraftPlusPlus/QuestCraft/releases/latest) / [SideQuest](https://sidequestvr.com/app/7150/questcraft)\n4. Open QuestCraft, if you have any issues with this procedure, please uninstall using the info on the button below.")
+		.setDescription("1. Uninstall QuestCraft (3 dots in unknown sources, or uninstall from SideQuest, click the ``💾 ADB Uninstall`` button for info on how to do that)\n2. Restart Headset\n3. Install QuestCraft from [GitHub](https://github.com/QuestCraftPlusPlus/QuestCraft/releases/latest) / [SideQuest](https://SideQuestvr.com/app/7150/questcraft)\n4. Open QuestCraft, if you have any issues with this procedure, please uninstall using the info on the button below.")
 		.setColor("Green"),
 
 	support_menu: new EmbedBuilder()
@@ -92,7 +92,7 @@ const embeds = {
 
 	releases: new EmbedBuilder()
 		.setTitle("**Release Info**")
-		.setDescription("Questcraft is distributed on **[Github](https://github.com/QuestCraftPlusPlus/QuestCraft/releases)** and **[Sidequest](https://sidequestvr.com/app/7150/questcraft)**\n||(Click the button below for info on how to install Questcraft)||")
+		.setDescription("Questcraft is distributed on **[Github](https://github.com/QuestCraftPlusPlus/QuestCraft/releases)** and **[SideQuest](https://SideQuestvr.com/app/7150/questcraft)**\n||(Click the button below for info on how to install Questcraft)||")
 		.setColor("Green")
 		.setFooter({
 			text: "Written by TechyGiraffe999",
@@ -130,7 +130,7 @@ const embeds = {
 
 	fixed: new EmbedBuilder()
 		.setTitle("**Was QuestCraft fixed...?**")
-		.setDescription("Yes! 3.0 Was released on the <t:1671995040:D>! 4.0 was released on the <t:1682796715:D>\n It's not if you are using a Quest 3")
+		.setDescription("Yes! on <t:1671995040:D>!\n It's not if you are using a Quest 3")
 		.setColor("Green"),
 
 	github_qc: new EmbedBuilder()
@@ -230,12 +230,12 @@ const embeds = {
 		}),
 
 	patreon: new EmbedBuilder()
-		.setTitle("Patreon")
-		.setDescription("Patreon Placeholder")
-		.setColor("Blurple")
+		.setTitle("<:Patreon:1172245220721709066> Patreon")
+		.setDescription("You can support the Patreon [here](https://patreon.com/questcraftxr) to get special perks and early access builds of QuestCraft.")
+		.setColor("F96854")
 		.setFooter({
-			text: "Written by Cartri",
-			iconURL: "https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405"
+			text: "Written by Cart",
+			iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=1024&width=0&height=256"
 		}),
 
 	immersivemc_1_19_4: new EmbedBuilder()
@@ -392,7 +392,7 @@ const embeds = {
 
 	backup_saves: new EmbedBuilder()
 		.setTitle("**Backing Up Worlds Guide**")
-		.setDescription("**How to backup worlds**\n\n1) Navigate to `android/data/com.qcxr.qcxr/files/.minecraft`\n2) Locate the `Saves` folder\n3) Copy the folder \n4) Paste it into your `Downloads` folder if on Quest (If on pc just download it from sidequest)\n5) Reinstall Questcraft to update or to fix an issue\n6) Paste the folder back into `android/data/com.qcxr.qcxr/files/.minecraft`.")
+		.setDescription("**How to backup worlds**\n\n1) Navigate to `android/data/com.qcxr.qcxr/files/.minecraft`\n2) Locate the `Saves` folder\n3) Copy the folder \n4) Paste it into your `Downloads` folder if on Quest (If on pc just download it from SideQuest)\n5) Reinstall Questcraft to update or to fix an issue\n6) Paste the folder back into `android/data/com.qcxr.qcxr/files/.minecraft`.")
 		.setColor("Green")
 		.setFooter({
 			text: "Written by Pixel",

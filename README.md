@@ -2,26 +2,24 @@
   <img align="right" width="310" alt="image" src="https://github.com/Cartrigger/QCXRSupport/assets/92249532/55dc86a0-b65c-4128-ba1d-b18a5b2df563">
 </p>
 
+
 ## This is the place where the bot gets uploaded to
 This is a clone of the PR [git](https://github.com/Cartrigger/QCXRSupport).
 
----
 
 ## Please read before looking at the description.
 
 This bot is not being actively developed by any main contributors, which means bugs will not be squashed, beware of
 bugs, though is still accepting Pull Requests.
 
----
-
 ## 🤔 What is this bot?
 
 QCXRSupport (CraftyVR) is a bot made for
-the [QuestCraft](https://questcraft.org) [discord server](https://discord.gg/questcraft)
+the [QuestCraft](https://questcraft.org) Discord.
 
 The bot's main focus is around helping people as well as improving the overall experience on the server
 
-To test the bot out join the [QuestCraft discord server](https://discord.gg/questcraft) and run a command
+To test the bot out join the [QuestCraft Discord Server](https://discord.gg/questcraft) and run a command
 in [#bot-commands](https://discord.com/channels/820767484042018829/953383695908216843)
 
 - You can also invite the bot to your server by clicking on its profile and selecting 'Add to server'
@@ -62,7 +60,7 @@ with [Commons Clause](https://commonsclause.com)
 
 ## 🔄 Updates!
 
-🆕 ``/logs`` command!
+🆕 ``/crafyai`` command!
 
 #### [[Future Plans]](https://github.com/Cartrigger/QCXRSoonBot/issues/25)
 

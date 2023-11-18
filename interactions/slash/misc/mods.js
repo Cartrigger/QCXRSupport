@@ -1,3 +1,8 @@
+/**
+ * @file Mods Slash Command.
+ * @author TechyGiraffe999
+ */
+
 const { SlashCommandBuilder } = require("discord.js");
 /**
  * @type {import("../../../typings").SlashInteractionCommand}

@@ -68,6 +68,9 @@ function startBot() {
 		return;
 	}
 
+	//impl later, for git pull inside of application
+	function gitpull() {
+	}
 	// Modify this line to start your bot with the correct command and arguments
 	bot = spawn("node", ["bot.js"], {
 		stdio: ["pipe", "pipe", "pipe", "pipe", "pipe", "pipe", process.stderr]

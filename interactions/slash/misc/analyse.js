@@ -39,7 +39,7 @@ module.exports = {
 			const loadingEmbed = new EmbedBuilder()
 				.setDescription("**Analyzing log data . . .**");
 			const loadingMsg = await interaction.reply({ embeds: [loadingEmbed] });
-			const loadingDots = [" .  ", " . . ", " . . ."];
+			const loadingDots = [""," .  ", " . . ", " . . ."];
 			let i = 0;
 			const loadingInterval = setInterval(() => {
 				loadingEmbed.setDescription(`**Analyzing log data${loadingDots[i]}**`);

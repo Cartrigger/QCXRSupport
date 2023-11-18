@@ -100,6 +100,15 @@ const buttons = {
 				.setLabel("Recommended Servers")
 				.setEmoji("✨")
 				.setStyle(ButtonStyle.Link)
-		)
+		),
+	
+	patreon: new ActionRowBuilder()
+			.addComponents(
+			new ButtonBuilder()
+				.setURL("https://www.patreon.com/QuestCraftXR")
+				.setLabel("Patreon")
+				.setEmoji("<:Patreon:1172245220721709066>")
+				.setStyle(ButtonStyle.Link)
+			),
 };
 module.exports = buttons;
