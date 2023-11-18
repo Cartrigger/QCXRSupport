@@ -40,7 +40,7 @@ module.exports = {
         const loadingMsg = await interaction.reply({ embeds: [loadingEmbed]
             //, ephemeral: true 
         });
-        const loadingDots = [" .  ", " . . ", " . . ."];
+        const loadingDots = [""," .  ", " . . ", " . . ."];
         let i = 0;
         const loadingInterval = setInterval(() => {
             loadingEmbed.setTitle(`**Loading your response ${loadingDots[i]}**`);
