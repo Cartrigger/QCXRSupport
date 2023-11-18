@@ -43,6 +43,7 @@ module.exports = {
             
         const threadMessagesStr = threadMessages.join('\n\n');
         const userQuestion = `This is a conversation a user had with you before, continue it, when responding do not say ‘Bot:’: ${threadMessagesStr}\n\nUser: ${message.content}`;
+        const userQuestionLines = userQuestion.split('\n');
 
         
         const sendTypingInterval = setInterval(() => {
@@ -86,20 +87,17 @@ module.exports = {
             personalityTextArea.dispatchEvent(event);
         }, personalityLines);
         await page.waitForSelector('[data-testid="final-bot-response"] p');
-        await new Promise(r => setTimeout(r, 2000)); 
-
-        const userQuestionLines = userQuestion.split('\n');
+        
         const userTextBoxSelector = 'textarea[aria-label="chatbot-user-prompt"]';
         await page.waitForSelector(userTextBoxSelector);
-        for (let i = 0; i < userQuestionLines.length; i++) {
-            await page.keyboard.down('Shift');
-            await page.keyboard.up('Enter');
-            await page.type(userTextBoxSelector, userQuestionLines[i]);
-        }
-        await page.keyboard.up('Shift');
-        await page.keyboard.up('Enter');
-        await page.keyboard.press('Enter');
-        // await new Promise(r => setTimeout(r, 20000)); 
+        const userInput = userQuestionLines.join('\n');
+        await page.$eval(userTextBoxSelector, (el, value) => {
+            el.value = value;
+        }, userInput);
+        await page.focus(userTextBoxSelector);
+        await page.keyboard.type(' ');
+        await page.keyboard.press('Enter'); 
+
         const initialResponseCount = await page.$$eval('[data-testid="final-bot-response"] p', elements => elements.length);
 
         // Wait for a new bot response
