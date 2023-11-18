@@ -86,6 +86,7 @@ module.exports = {
             personalityTextArea.dispatchEvent(event);
         }, personalityLines);
         await page.waitForSelector('[data-testid="final-bot-response"] p');
+        await new Promise(r => setTimeout(r, 2000)); 
 
         const userQuestionLines = userQuestion.split('\n');
         const userTextBoxSelector = 'textarea[aria-label="chatbot-user-prompt"]';
