@@ -75,12 +75,12 @@ module.exports = {
         await page.keyboard.press('Enter'); 
 
         // await new Promise(r => setTimeout(r, 20000)); 
-        const initialResponseCount = await page.$$eval('[data-testid="final-bot-response"] p', elements => elements.length);
+        const initialResponseCount = await page.$$eval('[data-testid="final-bot-response"]', elements => elements.length);
 
         // Wait for a new bot response
         await page.waitForFunction(
         ({ initialResponseCount }) => {
-            const responses = document.querySelectorAll('[data-testid="final-bot-response"] p');
+            const responses = document.querySelectorAll('[data-testid="final-bot-response"]');
             return responses.length > initialResponseCount;
         },
         { timeout: 50000 },
@@ -88,7 +88,7 @@ module.exports = {
         );  
 
         await page.waitForFunction(() => {
-            const responses = document.querySelectorAll('[data-testid="final-bot-response"] p');
+            const responses = document.querySelectorAll('[data-testid="final-bot-response"]');
             return responses.length > 1 && responses[responses.length - 1].textContent !== responses[responses.length - 2].textContent;
         }, { timeout: 50000 });
 
