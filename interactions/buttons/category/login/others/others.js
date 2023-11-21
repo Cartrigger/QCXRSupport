@@ -1,12 +1,3 @@
-/**
- * @file Others Button.
- * @author TechyGiraffe999
- */
-
-/**
- * @type {import("../../../typings").ButtonInteractionCommand}
- */
-
 const login_embeds = require("../login_embeds");
 const buttons = require("../restart/restart_buttons");
 const embeds = require("../../../../../embeds");

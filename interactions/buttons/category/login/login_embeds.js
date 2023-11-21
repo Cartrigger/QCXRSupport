@@ -1,8 +1,3 @@
-/**
- * @file Login Embeds.
- * @author TechyGiraffe999
- */
-
 const { EmbedBuilder, Embed } = require("discord.js");
 
 const login_embeds = {

@@ -1,14 +1,4 @@
-/**
- * @file Selector Select Menu
- * @author Cartrigger
- */
-
 const { EmbedBuilder } = require("discord.js");
-
-/**
- * @type {import("../../../typings").SelectInteractionCommand}
- */
-
 const embeds = require("../../../embeds.js");
 
 module.exports = {

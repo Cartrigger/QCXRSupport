@@ -1,12 +1,3 @@
-/**
- * @file Account Status No Button.
- * @author TechyGiraffe999
- */
-
-/**
- * @type {import("../../../typings").ButtonInteractionCommand}
- */
-
 const login_embeds = require("../login_embeds");
 const buttons = require("../username_change/username_change_buttons");
 

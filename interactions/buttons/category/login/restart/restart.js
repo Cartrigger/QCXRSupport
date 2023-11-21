@@ -1,11 +1,3 @@
-/**
- * @file Login Restart Button.
- * @author TechyGiraffe999
- */
-
-/**
- * @type {import("../../../typings").ButtonInteractionCommand}
- */
 const login_embeds = require("../login_embeds");
 const buttons = require("../own/own_buttons");
 module.exports = {

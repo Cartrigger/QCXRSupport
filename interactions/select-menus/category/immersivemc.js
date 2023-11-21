@@ -1,12 +1,3 @@
-/**
- * @file ImmersiveMC Select Menu
- * @author TechyGiraffe999
- */
-
-/**
- * @type {import("../../../typings").SelectInteractionCommand}
- */
-
 const embeds = require("../../../embeds.js");
 
 module.exports = {
