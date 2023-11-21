@@ -247,28 +247,6 @@ for (const folder of triggerFolders) {
 	}
 }
 
-// Music Commands
-
-const musicCommandHandler = require("./music_index.js");
-
-const plugins = [
-	new SpotifyPlugin(),
-	new DeezerPlugin(),
-	new SoundCloudPlugin(),
-	new YtDlpPlugin()
-];
-
-// Music Command
-client.distube = new DisTube(client, {
-	emitNewSongOnly: true,
-	leaveOnFinish: true,
-	emitAddListWhenCreatingQueue: false,
-	plugins: plugins
-});
-
-// Music Command Handler
-musicCommandHandler(client);
-
 // Login into your client application with bot's token.
 
 client.login(token);
