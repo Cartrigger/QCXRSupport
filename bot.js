@@ -7,7 +7,7 @@ const { YtDlpPlugin } = require("@distube/yt-dlp");
 const path = require('path');
 
 const fs = require("fs");
-const {Client, GatewayIntentBits, Partials, } = require("discord.js");
+const {Client, GatewayIntentBits, Partials, Collection, REST } = require("discord.js");
 const { token, client_id, test_guild_id } = require("./config.json");
 
 // @ts-ignore
