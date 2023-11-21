@@ -207,3 +207,7 @@ client.on(Events.InteractionCreate, async interaction => {
         await interaction.reply({ embeds: [embed_test], ephemeral: true})
     }
 })
+
+process.on("unhandRejection","uncaughtException", (reason, promise) => {
+	console.log(`🚫 Critical Error detected:\n\n`, reason, promise);
+});
