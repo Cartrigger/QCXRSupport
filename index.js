@@ -45,12 +45,6 @@ client.on("rateLimit", function (rateLimitData) {
         console.error(error);
     }
 })();
-/*rest.put(Routes.applicationGuildCommands(ClientID, GuildID), { body: commands })
-    .then(() => console.log('Successfully registered application commands locally with no errors! Your slash commands are working!'))
-    .catch(console.error);*/
-/*rest.put(Routes.applicationCommands(ClientID), { body: commands })
-    .then(() => console.log('Successfully registered application commands globally with no errors! Your slash commands are working!'))
-    .catch(console.error);*/
 
 client.on('interactionCreate', async interaction => {
     if (!interaction.isChatInputCommand()) return;
