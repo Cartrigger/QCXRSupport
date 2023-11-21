@@ -15,15 +15,7 @@ const { YtDlpPlugin } = require("@distube/yt-dlp");
 const path = require('path');
 
 const fs = require("fs");
-const {
-	Client,
-	Collection,
-	GatewayIntentBits,
-	Partials,
-	ActivityType,
-	REST,
-	Routes
-} = require("discord.js");
+const {Client, GatewayIntentBits, Partials, } = require("discord.js");
 const { token, client_id, test_guild_id } = require("./config.json");
 
 /**
@@ -146,30 +138,6 @@ function getSlashCommands(path) {
 	}
 
 	return slashCommands;
-}
-
-
-/**********************************************************************/
-// Registration of Autocomplete Interactions.
-
-/**
- * @type {String[]}
- * @description All autocomplete interactions.
- */
-
-const autocompleteInteractions = fs.readdirSync("./interactions/autocomplete");
-
-// Loop through all files and store autocomplete interactions in autocompleteInteractions collection.
-
-for (const module of autocompleteInteractions) {
-	const files = fs
-		.readdirSync(`./interactions/autocomplete/${module}`)
-		.filter((file) => file.endsWith(".js"));
-
-	for (const interactionFile of files) {
-		const interaction = require(`./interactions/autocomplete/${module}/${interactionFile}`);
-		client.autocompleteInteractions.set(interaction.name, interaction);
-	}
 }
 
 /**********************************************************************/
@@ -362,9 +330,6 @@ client.login(token);
 /**********************************************************************/
 // Anti Crash script
 
-process.on("unhandRejection", (reason, promise) => {
+process.on("unhandRejection","uncaughtException", (reason, promise) => {
 	console.log(`🚫 Critical Error detected:\n\n`, reason, promise);
-});
-process.on("uncaughtException", (error, origin) => {
-	console.log(`🚫 Critical Error detected:\n\n`, error, origin);
 });
