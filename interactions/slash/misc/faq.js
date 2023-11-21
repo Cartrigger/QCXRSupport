@@ -5,7 +5,7 @@
 
 const { SlashCommandBuilder } = require("discord.js");
 /**
- * @type {import("../../../typings").SlashInteractionCommand}
+ * @type {{mods_manual: EmbedBuilder, mods: EmbedBuilder, developers: EmbedBuilder, renderer_gl4es: EmbedBuilder, mods_manager: EmbedBuilder, github_bot: EmbedBuilder, simple_voice_chat: EmbedBuilder, devs_only: EmbedBuilder, microsoft_login: EmbedBuilder, v53: EmbedBuilder, faq: EmbedBuilder, immersive_mc_embed: EmbedBuilder, immersivemc_1_18_2: EmbedBuilder, adb: EmbedBuilder, support_menu: EmbedBuilder, bedrock_geyser: EmbedBuilder, github_qc: EmbedBuilder, renderer_vulkan: EmbedBuilder, knowncompat: EmbedBuilder, patreon: EmbedBuilder, rebinding: EmbedBuilder, license: EmbedBuilder, versions: EmbedBuilder, backup_saves: EmbedBuilder, falling_blocks_crash: EmbedBuilder, quest_logs: EmbedBuilder, fixed: EmbedBuilder, faq_world: EmbedBuilder, error_channels: EmbedBuilder, sideload_pc: EmbedBuilder, renderer_zink: EmbedBuilder, servers: EmbedBuilder, bedrock: EmbedBuilder, immersivemc_1_19_4: EmbedBuilder, sideload_bugjaeger: EmbedBuilder, installation: EmbedBuilder, support_channels: EmbedBuilder, immersivemc_1_19_2: EmbedBuilder, essentials_questcraft: EmbedBuilder, immersivemc_1_20_1: EmbedBuilder, embed_logs: EmbedBuilder, voice_chat: EmbedBuilder, immersive_controls: EmbedBuilder, pc_logs: EmbedBuilder, nopiracy: EmbedBuilder, releases: EmbedBuilder, performance: EmbedBuilder, yvr: EmbedBuilder, otherheadsets: EmbedBuilder, reinstall: EmbedBuilder}|{}}
  */
 const embeds = require("../../../embeds.js");
 const buttons = require("../../../buttons.js");
@@ -33,8 +33,8 @@ module.exports = {
 					{ name: "Back Up Worlds", value: "backupsaves" }
 				)),
 	async execute(interaction) {
-		const categorys = interaction.options.getString("presets");
-		switch (categorys) {
+		const categories = interaction.options.getString("presets");
+		switch (categories) {
 			case "world":
 				await interaction.reply({ embeds: [embeds.faq_world] });
 				break;
