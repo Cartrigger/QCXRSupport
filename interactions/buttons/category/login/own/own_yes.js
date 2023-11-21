@@ -1,12 +1,3 @@
-/**
- * @file Own Yes Button.
- * @author TechyGiraffe999
- */
-
-/**
- * @type {import("../../../typings").ButtonInteractionCommand}
- */
-
 const login_embeds = require("../login_embeds");
 const buttons = require("../account_status/account_status_buttons");
 

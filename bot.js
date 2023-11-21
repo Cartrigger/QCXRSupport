@@ -1,11 +1,3 @@
-/**
- * @file Main File of the bot, responsible for registering events, commands, interactions etc.
- * @author Naman Vrati
- * @contributor TechyGiraffe999
- * @since 1.0.0
- * @version 3.4.0
- */
-
 // Declare constants which will be used throughout the bot.
 const { DisTube } = require("distube");
 const { SpotifyPlugin } = require("@distube/spotify");
@@ -15,21 +7,8 @@ const { YtDlpPlugin } = require("@distube/yt-dlp");
 const path = require('path');
 
 const fs = require("fs");
-const {
-	Client,
-	Collection,
-	GatewayIntentBits,
-	Partials,
-	ActivityType,
-	REST,
-	Routes
-} = require("discord.js");
+const {Client, GatewayIntentBits, Partials, } = require("discord.js");
 const { token, client_id, test_guild_id } = require("./config.json");
-
-/**
- * From v13, specifying the intents is compulsory.
- * @type {import("./typings").Client}
- * @description Main Application Client */
 
 // @ts-ignore
 const client = new Client({
@@ -44,14 +23,8 @@ const client = new Client({
 	partials: [Partials.Channel]
 });
 
-/**********************************************************************/
 // Below we will be making an event handler!
 
-/**
- * @description All event files of the event handler.
- * @type {String[]}
- * @author TechyGiraffe999
- */
 client.events = new Collection();
 
 function readDirectoryRecursively(directory) {
@@ -99,11 +72,6 @@ client.triggers = new Collection();
 /**********************************************************************/
 // Registration of Message-Based Legacy Commands.
 
-/**
- * @type {String[]}
- * @description All command categories aka folders.
- */
-
 const commandFolders = fs.readdirSync("./commands");
 
 // Loop through all files and store commands in commands collection.
@@ -120,10 +88,6 @@ for (const folder of commandFolders) {
 
 /**********************************************************************/
 // Registration of Slash-Command Interactions.
-/**
- * @type {String[]}
- * @description All slash commands.
- */
 
 const slashCommands = getSlashCommands("./interactions/slash");
 
@@ -148,37 +112,7 @@ function getSlashCommands(path) {
 	return slashCommands;
 }
 
-
-/**********************************************************************/
-// Registration of Autocomplete Interactions.
-
-/**
- * @type {String[]}
- * @description All autocomplete interactions.
- */
-
-const autocompleteInteractions = fs.readdirSync("./interactions/autocomplete");
-
-// Loop through all files and store autocomplete interactions in autocompleteInteractions collection.
-
-for (const module of autocompleteInteractions) {
-	const files = fs
-		.readdirSync(`./interactions/autocomplete/${module}`)
-		.filter((file) => file.endsWith(".js"));
-
-	for (const interactionFile of files) {
-		const interaction = require(`./interactions/autocomplete/${module}/${interactionFile}`);
-		client.autocompleteInteractions.set(interaction.name, interaction);
-	}
-}
-
-/**********************************************************************/
 // Registration of Context-Menu Interactions
-
-/**
- * @type {String[]}
- * @description All Context Menu commands.
- */
 
 const contextMenus = fs.readdirSync("./interactions/context-menus");
 
@@ -223,13 +157,7 @@ for (const command of buttonCommands) {
 	client.buttonCommands.set(command.id, command);
 }
 
-/**********************************************************************/
 // Registration of Modal-Command Interactions.
-
-/**
- * @type {String[]}
- * @description All modal commands.
- */
 
 function loadModalCommands(dir) {
     const files = fs.readdirSync(dir);
@@ -247,13 +175,7 @@ function loadModalCommands(dir) {
 
 loadModalCommands(path.resolve(__dirname, './interactions/modals'));
 
-/**********************************************************************/
 // Registration of select-menus Interactions
-
-/**
- * @type {String[]}
- * @description All Select Menu commands.
- */
 
 const selectMenus = fs.readdirSync("./interactions/select-menus");
 
@@ -269,7 +191,6 @@ for (const module of selectMenus) {
 	}
 }
 
-/**********************************************************************/
 // Registration of Slash-Commands in Discord API
 
 const rest = new REST({ version: "9" }).setToken(token);
@@ -310,13 +231,7 @@ const commandJsonData = [
 	}
 })();
 
-/**********************************************************************/
 // Registration of Message Based Chat Triggers
-
-/**
- * @type {String[]}
- * @description All trigger categories aka folders.
- */
 
 const triggerFolders = fs.readdirSync("./triggers");
 
@@ -358,13 +273,8 @@ musicCommandHandler(client);
 
 client.login(token);
 
-
-/**********************************************************************/
 // Anti Crash script
 
-process.on("unhandRejection", (reason, promise) => {
+process.on("unhandRejection","uncaughtException", (reason, promise) => {
 	console.log(`🚫 Critical Error detected:\n\n`, reason, promise);
-});
-process.on("uncaughtException", (error, origin) => {
-	console.log(`🚫 Critical Error detected:\n\n`, error, origin);
 });

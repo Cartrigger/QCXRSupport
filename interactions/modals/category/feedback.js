@@ -1,11 +1,3 @@
-/**
- * @file Feedback Modal.
- * @author TechyGiraffe999
- */
-
-/**
- * @type {import("../../../typings").ModalInteractionCommand}
- */
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events, EmbedBuilder, Embed } = require("discord.js");
 const embeds = require("../../../embeds.js");
 const { test_guild_id } = require("../../../config.json");

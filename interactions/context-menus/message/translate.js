@@ -1,14 +1,4 @@
-/**
- * @file Translate Context Menu.
- * @author TechyGiraffe999
- */
-
-/**
- * @type {import("../../../typings").ContextInteractionCommand}
- */
-
 const { EmbedBuilder } = require("discord.js");
-
 const translate = require("@iamtraction/google-translate");
 
 module.exports = {

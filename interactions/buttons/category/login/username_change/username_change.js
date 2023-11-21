@@ -1,12 +1,3 @@
-/**
- * @file Username Change Button.
- * @author TechyGiraffe999
- */
-
-/**
- * @type {import("../../../typings").ButtonInteractionCommand}
- */
-
 const login_embeds = require("../login_embeds");
 const buttons = require("../others/others_buttons");
 

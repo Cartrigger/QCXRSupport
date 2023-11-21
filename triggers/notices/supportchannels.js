@@ -1,15 +1,6 @@
-/**
- * @file Support Channels Trigger.
- * @author TechyGiraffe999
- */
-
-
 // For now, the only available property is name array. Not making the name array will result in an error.
 const embeds = require("../../embeds.js");
 
-/**
- * @type {import("../../typings.js").TriggerCommand}
- */
 module.exports = {
 	name: ["<:notsupportchannel:993043214472859778>"], //Put the trigger words in the array to use it
 
