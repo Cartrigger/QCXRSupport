@@ -7,7 +7,7 @@ const { YtDlpPlugin } = require("@distube/yt-dlp");
 const path = require('path');
 
 const fs = require("fs");
-const {Client, GatewayIntentBits, Partials, } = require("discord.js");
+const {Client, GatewayIntentBits, Partials, Collection, REST, Routes } = require("discord.js");
 const { token, client_id, test_guild_id } = require("./config.json");
 
 // @ts-ignore
@@ -247,34 +247,15 @@ for (const folder of triggerFolders) {
 	}
 }
 
-// Music Commands
-
-const musicCommandHandler = require("./music_index.js");
-
-const plugins = [
-	new SpotifyPlugin(),
-	new DeezerPlugin(),
-	new SoundCloudPlugin(),
-	new YtDlpPlugin()
-];
-
-// Music Command
-client.distube = new DisTube(client, {
-	emitNewSongOnly: true,
-	leaveOnFinish: true,
-	emitAddListWhenCreatingQueue: false,
-	plugins: plugins
-});
-
-// Music Command Handler
-musicCommandHandler(client);
-
 // Login into your client application with bot's token.
 
 client.login(token);
 
 // Anti Crash script
 
-process.on("unhandRejection","uncaughtException", (reason, promise) => {
+process.on("unhandRejection", (reason, promise) => {
+	console.log(`🚫 Critical Error detected:\n\n`, reason, promise);
+});
+process.on("uncaughtException", (reason, promise) => {
 	console.log(`🚫 Critical Error detected:\n\n`, reason, promise);
 });
