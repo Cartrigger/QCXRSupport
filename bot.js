@@ -36,26 +36,55 @@ readDirectoryRecursively(__dirname + "/events").forEach(file => {
 const registerCommands = (collection, folderPath, setFunction) => {
 	fs.readdirSync(__dirname + folderPath).forEach(folder => {
 		const files = fs.readdirSync(path.join(__dirname + folderPath, folder)).filter(file => file.endsWith(".js"));
+		const folderCommands = [];
+
 		files.forEach(file => {
-			const command = require(path.join(__dirname + folderPath, folder, file));
-			collection.set(command.id || command.name, command);
+			try {
+				const filePath = path.join(__dirname + folderPath, folder, file);
+				const command = require(filePath);
+
+				console.log(`Loaded command from ${filePath}:`, command);
+
+				if (command) {
+					if (!command.data.name) {
+						console.warn(`Warning: Missing 'name' property in command from ${filePath}`);
+					} else if (client.slashCommands.has(command.data.name)) {
+						console.warn(`Warning: Duplicate slash command name '${command.data.name}' detected for ${filePath}`);
+					} else {
+						client.slashCommands.set(command.data.name, command);
+					}
+				} else {
+					console.warn(`Warning: No command exported from ${filePath}`);
+				}
+			} catch (error) {
+				console.error(`Error loading command from ${file}:`, error);
+			}
 		});
-	});
-};
+
+		collection.set(folder, folderCommands);
+		})
+}
 
 registerCommands(client.commands, "/commands", client.commands.set.bind(client.commands));
 registerCommands(client.slashCommands, "/interactions/slash", client.slashCommands.set.bind(client.slashCommands));
-registerCommands(client.contextCommands, "/interactions/context-menus", (key, command) => client.contextCommands.set(`${key.toUpperCase()} ${command.data.name}`, command));
-registerCommands(client.buttonCommands, "/interactions/buttons", client.buttonCommands.set.bind(client.buttonCommands));
+//registerCommands(client.contextCommands, "/interactions/context-menus", (key, command) => client.contextCommands.set(`${key.toUpperCase()} ${command.data.name}`, command));
+registerCommands(client.buttonCommands, "/interactions/buttons/category", client.buttonCommands.set.bind(client.buttonCommands));
 registerCommands(client.modalCommands, "/interactions/modals", client.modalCommands.set.bind(client.modalCommands));
 registerCommands(client.selectCommands, "/interactions/select-menus", client.selectCommands.set.bind(client.selectCommands));
 
 const rest = new REST({ version: "9" }).setToken(token);
-const commandJsonData = [...Array.from(client.slashCommands.values()).map((c) => c.data.toJSON()), ...Array.from(client.contextCommands.values()).map((c) => c.data)];
+const commandJsonData = [
+	...Array.from(client.slashCommands.values())
+		.map((c) => c.data?.toJSON())
+		.filter((data) => data !== undefined),
+	...Array.from(client.contextCommands.values())
+		.map((c) => c.data)
+		.filter((data) => data !== undefined),
+];
 try {
 	console.log("Started refreshing application (/) commands.");
-	rest.put(Routes.applicationCommands(client_id), { body: commandJsonData });
-	console.log("Successfully reloaded application (/) commands.");
+	rest.put(Routes.applicationCommands(client_id), { body: commandJsonData })
+		.then(console.log("Successfully reloaded application (/) commands."));
 } catch (error) {
 	console.error(error);
 }
