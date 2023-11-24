@@ -43,8 +43,6 @@ const registerCommands = (collection, folderPath, setFunction) => {
 				const filePath = path.join(__dirname + folderPath, folder, file);
 				const command = require(filePath);
 
-				console.log(`Loaded command from ${filePath}:`, command);
-
 				if (command) {
 					if (!command.data.name) {
 						console.warn(`Warning: Missing 'name' property in command from ${filePath}`);
@@ -58,6 +56,7 @@ const registerCommands = (collection, folderPath, setFunction) => {
 				}
 			} catch (error) {
 				console.error(`Error loading command from ${file}:`, error);
+				console.log('Path to file: ' + path.join(__dirname + folderPath, folder, file));
 			}
 		});
 
@@ -65,7 +64,6 @@ const registerCommands = (collection, folderPath, setFunction) => {
 		})
 }
 
-registerCommands(client.commands, "/commands", client.commands.set.bind(client.commands));
 registerCommands(client.slashCommands, "/interactions/slash", client.slashCommands.set.bind(client.slashCommands));
 //registerCommands(client.contextCommands, "/interactions/context-menus", (key, command) => client.contextCommands.set(`${key.toUpperCase()} ${command.data.name}`, command));
 registerCommands(client.buttonCommands, "/interactions/buttons/category", client.buttonCommands.set.bind(client.buttonCommands));
@@ -73,29 +71,18 @@ registerCommands(client.modalCommands, "/interactions/modals", client.modalComma
 registerCommands(client.selectCommands, "/interactions/select-menus", client.selectCommands.set.bind(client.selectCommands));
 
 const rest = new REST({ version: "9" }).setToken(token);
-const commandJsonData = [
-	...Array.from(client.slashCommands.values())
-		.map((c) => c.data?.toJSON())
-		.filter((data) => data !== undefined),
-	...Array.from(client.contextCommands.values())
-		.map((c) => c.data)
-		.filter((data) => data !== undefined),
-];
+const commandJsonData = [...Array.from(client.slashCommands.values()).map((c) => c.data?.toJSON()).filter((data) => data !== undefined), ...Array.from(client.contextCommands.values()).map((c) => c.data).filter((data) => data !== undefined),];
+
 try {
 	console.log("Started refreshing application (/) commands.");
 	rest.put(Routes.applicationCommands(client_id), { body: commandJsonData })
 		.then(console.log("Successfully reloaded application (/) commands."));
+
+	client.login(token);
+	registerCommands(client.triggers, "/triggers", client.triggers.set.bind(client.triggers));
 } catch (error) {
 	console.error(error);
 }
-
-try {
-	client.login(token);
-} catch (error) {
-	console.log(error);
-}
-
-registerCommands(client.triggers, "/triggers", client.triggers.set.bind(client.triggers));
 
 process.on("uncaughtException", (reason, promise) => {
 	console.log(`🚫 Critical Error detected:\n\n`, reason, promise);
