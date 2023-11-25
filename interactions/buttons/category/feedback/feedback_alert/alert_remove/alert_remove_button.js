@@ -1,19 +1,7 @@
-/**
- * @file Alert Remove Button.
- * @author TechyGiraffe999
- */
-
-/**
- * @type {import("../../../typings").ButtonInteractionCommand}
- */
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events, EmbedBuilder, Embed } = require("discord.js");
 const { test_guild_id, owner } = require("../../../../../../config.json");
-const embeds = require("../../../../../../embeds.js");
-
 const fs = require("fs");
 const path = require("path");
-const internal = require("stream");
-
 const success = new EmbedBuilder()
 	.setDescription("✅ User now has access to the ``/feedback`` command again")
 	.setColor("Green");
@@ -31,13 +19,16 @@ const access_back = new EmbedBuilder()
 	.setDescription("We have given you access to the ``/feedback`` command again, please remember to follow the QuestCraft rules and to not spam, or feedback on irrelevant things.")
 	.setColor("Green");
 
+const devs_only = new EmbedBuilder()
+	.setDescription("Only developers of <@997670790604542012> can use this.")
+	.setColor("ED4245");
 
 module.exports = {
 	id: "alert_remove",
 
 	async execute(interaction) {
 		if (!owner.includes(interaction.user.id)) {
-			return await interaction.reply({ embeds: [embeds.devs_only], ephemeral: true });
+			return await interaction.reply({ embeds: [devs_only], ephemeral: true });
 		}
 		const serverId = test_guild_id;
 		const channelId = "1093819562799149098";

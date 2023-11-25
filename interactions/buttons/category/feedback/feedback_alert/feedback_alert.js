@@ -1,15 +1,6 @@
-/**
- * @file Feedback Alert Button.
- * @author TechyGiraffe999
- */
-
-/**
- * @type {import("../../../typings").ButtonInteractionCommand}
- */
 const fs = require("fs");
 const { SlashCommandBuilder, ActionRowBuilder, EmbedBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
 const { test_guild_id, owner } = require("../../../../../config.json");
-const embeds = require("../../../../../embeds.js");
 
 feedback_alert = new ActionRowBuilder()
 	.addComponents(
@@ -20,7 +11,6 @@ feedback_alert = new ActionRowBuilder()
 			.setStyle(ButtonStyle.Primary)
 	);
 
-
 const success = new EmbedBuilder()
 	.setDescription("✅ Feedback was flagged as an alert and stored ")
 	.setColor("Green");
@@ -29,11 +19,15 @@ const error = new EmbedBuilder()
 	.setDescription("❌ Could not dm user, or could not send a message in one or more of the channels stored ")
 	.setColor("Red");
 
+const devs_only = new EmbedBuilder()
+	.setDescription("Only developers of <@997670790604542012> can use this.")
+	.setColor("ED4245");
+
 module.exports = {
 	id: "feedback_alert",
 	async execute(interaction) {
 		if (!owner.includes(interaction.user.id)) {
-			return await interaction.reply({ embeds: [embeds.devs_only], ephemeral: true });
+			return await interaction.reply({ embeds: [devs_only], ephemeral: true });
 		}
 		const serverId = test_guild_id;
 		const channelId = "1093819562799149098";

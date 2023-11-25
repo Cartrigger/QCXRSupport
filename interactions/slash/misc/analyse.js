@@ -1,8 +1,3 @@
-/**
- * @file Analyse Slash Command.
- * @author TechyGiraffe999
- */
-
 const axios = require("axios");
 const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
 
@@ -12,9 +7,6 @@ const error = new EmbedBuilder()
 	.setColor("Red");
 
 
-/**
- * @type {import("../../../typings").SlashInteractionCommand}
- */
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName("analyse")
@@ -67,7 +59,7 @@ module.exports = {
 				}
 
 				try {
-					interaction.editReply({ embeds: [no_errors] });
+					await interaction.editReply({ embeds: [no_errors] });
 				} catch (err) {
 					interaction.reply({ embeds: [no_errors] });
 				}

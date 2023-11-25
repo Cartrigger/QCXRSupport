@@ -1,15 +1,5 @@
-/**
- * @file Games Slash Command.
- * @author TechyGiraffe999
- */
-
-const { SlashCommandBuilder, EmbedBuilder, Embed } = require("discord.js");
+const { SlashCommandBuilder, EmbedBuilder} = require("discord.js");
 const { Hangman, Snake, Connect4, TicTacToe, MatchPairs } = require("discord-gamecord");
-
-/**
- * @type {import("../../../typings").SlashInteractionCommand}
- */
-const embeds = require("../../../embeds.js");
 
 const error_game = new EmbedBuilder()
 	.setTitle("Error!")
@@ -43,8 +33,8 @@ module.exports = {
 				.setRequired(false)),
 	async execute(interaction) {
 		try {
-			const categorys = interaction.options.getString("games");
-			if (categorys === "hangman") {
+			const categories = interaction.options.getString("games");
+			if (categories === "hangman") {
 				const Game = new Hangman({
 					message: interaction,
 					isSlashGame: true,
@@ -59,14 +49,14 @@ module.exports = {
 					playerOnlyMessage: "Only {player} can use these buttons."
 				});
 
-				Game.startGame();
+				await Game.startGame();
 				Game.on("gameOver", result => {
 					return;
 				});
 			}
 
 
-			if (categorys === "snake") {
+			if (categories === "snake") {
 				const Game = new Snake({
 					message: interaction,
 					isSlashGame: true,
@@ -90,14 +80,14 @@ module.exports = {
 					playerOnlyMessage: "Only {player} can use these buttons."
 				});
 
-				Game.startGame();
+				await Game.startGame();
 				Game.on("gameOver", result => {
 					return;
 				});
 			}
 
 
-			if (categorys === "connect_4") {
+			if (categories === "connect_4") {
 				try {
 					const opponent = interaction.options.getUser("opponent");
 					const Game = new Connect4({
@@ -124,7 +114,7 @@ module.exports = {
 						playerOnlyMessage: "Only {player} and {opponent} can use these buttons."
 					});
 
-					Game.startGame();
+					await Game.startGame();
 					Game.on("gameOver", result => {
 						return;
 					});
@@ -132,7 +122,7 @@ module.exports = {
 					interaction.reply({ embeds: [error_game], ephemeral: true });
 				}
 			}
-			if (categorys === "tictactoe") {
+			if (categories === "tictactoe") {
 				try {
 					const opponent = interaction.options.getUser("opponent");
 					const Game = new TicTacToe({
@@ -161,7 +151,7 @@ module.exports = {
 						playerOnlyMessage: "Only {player} and {opponent} can use these buttons."
 					});
 
-					Game.startGame();
+					await Game.startGame();
 					Game.on("gameOver", result => {
 						return;
 					});
@@ -169,7 +159,7 @@ module.exports = {
 					interaction.reply({ embeds: [error_game], ephemeral: true });
 				}
 			}
-			if (categorys === "match_pairs") {
+			if (categories === "match_pairs") {
 				const Game = new MatchPairs({
 					message: interaction,
 					isSlashGame: true,
@@ -185,7 +175,7 @@ module.exports = {
 					playerOnlyMessage: "Only {player} can use these buttons."
 				});
 
-				Game.startGame();
+				await Game.startGame();
 				Game.on("gameOver", result => {
 					return;
 				});
@@ -194,7 +184,7 @@ module.exports = {
 			try {
 				interaction.reply({ embeds: [error], ephemeral: true });
 			} catch (err) {
-				interaction.editReply({ embeds: [error], ephemeral: true });
+				await interaction.editReply({ embeds: [error], ephemeral: true });
 			}
 		}
 

@@ -4,7 +4,7 @@ const buttons = require("../others/others_buttons");
 module.exports = {
 	id: "username_change",
 
-	async execute(interaction, message) {
+	async execute(interaction) {
 		await interaction.update({ embeds: [login_embeds.username_change], components: [buttons.others] });
 		return;
 	}

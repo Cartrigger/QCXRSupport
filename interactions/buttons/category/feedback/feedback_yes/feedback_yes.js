@@ -1,16 +1,5 @@
-/**
- * @file Feedback Yes Button.
- * @author TechyGiraffe999
- */
-
-/**
- * @type {import("../../../typings").ButtonInteractionCommand}
- */
-
-
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events, EmbedBuilder, Embed } = require("discord.js");
 const { test_guild_id, owner } = require("../../../../../config.json");
-const embeds = require("../../../../../embeds.js");
 
 feedback_update = new ActionRowBuilder()
 	.addComponents(
@@ -21,7 +10,6 @@ feedback_update = new ActionRowBuilder()
 			.setStyle(ButtonStyle.Primary)
 	);
 
-
 const success = new EmbedBuilder()
 	.setDescription("✅ User was send a DM and their feedback was stored ")
 	.setColor("Green");
@@ -30,15 +18,18 @@ const error = new EmbedBuilder()
 	.setDescription("❌ Could not dm user ")
 	.setColor("Red");
 
+const devs_only = new EmbedBuilder()
+	.setDescription("Only developers of <@997670790604542012> can use this.")
+	.setColor("ED4245");
+
 const serverId = test_guild_id;
 const channelId = "1093819492473245777";
-
 
 module.exports = {
 	id: "feedback_yes",
 	async execute(interaction) {
 		if (!owner.includes(interaction.user.id)) {
-			return await interaction.reply({ embeds: [embeds.devs_only], ephemeral: true });
+			return await interaction.reply({ embeds: [devs_only], ephemeral: true });
 		}
 		try {
 			const message = await interaction.message.fetch();

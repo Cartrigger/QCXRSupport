@@ -1,10 +1,3 @@
-/**
- * @file Feedback Slash Command.
- * @author TechyGiraffe999
- */
-
-// Deconstructed the constants we need in this file.
-
 const {
 	SlashCommandBuilder,
 	ModalBuilder,
@@ -13,24 +6,18 @@ const {
 	ActionRowBuilder,
 	EmbedBuilder
 } = require("discord.js");
-const embeds = require("../../../embeds.js");
 const feedbackAlertUserIds = require("../../buttons/category/feedback/feedback_alert/feedback_alert_user_ids.js");
-const fs = require("fs");
-
 
 const no_access = new EmbedBuilder()
 	.setDescription("Your access to this command has been revoked")
 	.setColor("Red");
 
-/**
- * @type {import("../../../typings").SlashInteractionCommand}
- */
 module.exports = {
 	cooldown: 600,
 	data: new SlashCommandBuilder()
 		.setName("feedback")
 		.setDescription("submit feedback about me!"),
-	async execute(interaction, client) {
+	async execute(interaction) {
 		const userIDs = feedbackAlertUserIds.getUserIDs();
 		const userID = interaction.user.id;
 

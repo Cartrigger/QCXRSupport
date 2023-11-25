@@ -33,7 +33,7 @@ readDirectoryRecursively(__dirname + "/events").forEach(file => {
 	client.events.set(event.name, event);
 });
 
-const registerCommands = (collection, folderPath, setFunction) => {
+const registerCommands = (collection, folderPath) => {
 	fs.readdirSync(__dirname + folderPath).forEach(folder => {
 		const files = fs.readdirSync(path.join(__dirname + folderPath, folder)).filter(file => file.endsWith(".js"));
 		const folderCommands = [];
@@ -76,7 +76,7 @@ const commandJsonData = [...Array.from(client.slashCommands.values()).map((c) =>
 try {
 	console.log("Started refreshing application (/) commands.");
 	rest.put(Routes.applicationCommands(client_id), { body: commandJsonData })
-		.then(console.log("Successfully reloaded application (/) commands."));
+		.then(() => console.log("Successfully reloaded application (/) commands."));
 
 	client.login(token);
 	registerCommands(client.triggers, "/triggers", client.triggers.set.bind(client.triggers));
