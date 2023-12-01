@@ -44,9 +44,7 @@ const registerCommands = (collection, folderPath) => {
 				const command = require(filePath);
 
 				if (command) {
-					if (!command.data.name) {
-						console.warn(`Warning: Missing 'name' property in command from ${filePath}`);
-					} else if (client.slashCommands.has(command.data.name)) {
+					  if (client.slashCommands.has(command.data.name)) {
 						console.warn(`Warning: Duplicate slash command name '${command.data.name}' detected for ${filePath}`);
 					} else {
 						client.slashCommands.set(command.data.name, command);
@@ -65,13 +63,25 @@ const registerCommands = (collection, folderPath) => {
 }
 
 registerCommands(client.slashCommands, "/interactions/slash", client.slashCommands.set.bind(client.slashCommands));
-//registerCommands(client.contextCommands, "/interactions/context-menus", (key, command) => client.contextCommands.set(`${key.toUpperCase()} ${command.data.name}`, command));
+registerCommands(client.contextCommands, "/interactions/context-menus", (key, command) => client.contextCommands.set(`${key.toUpperCase()} ${command.data.name}`, command));
 registerCommands(client.buttonCommands, "/interactions/buttons/category", client.buttonCommands.set.bind(client.buttonCommands));
 registerCommands(client.modalCommands, "/interactions/modals", client.modalCommands.set.bind(client.modalCommands));
 registerCommands(client.selectCommands, "/interactions/select-menus", client.selectCommands.set.bind(client.selectCommands));
 
 const rest = new REST({ version: "9" }).setToken(token);
-const commandJsonData = [...Array.from(client.slashCommands.values()).map((c) => c.data?.toJSON()).filter((data) => data !== undefined), ...Array.from(client.contextCommands.values()).map((c) => c.data).filter((data) => data !== undefined),];
+const commandJsonData = [...Array.from(client.slashCommands.values()).map((c) => {
+	if (c.data && typeof c.data.toJSON === 'function') {
+		return c.data.toJSON();
+	} else {
+		return undefined;
+	}
+}), ...Array.from(client.contextCommands.values()).map((c) => {
+	if (typeof c.data === 'object') {
+		return c.data;
+	} else {
+		return undefined;
+	}
+}),];
 
 try {
 	console.log("Started refreshing application (/) commands.");
