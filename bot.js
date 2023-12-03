@@ -42,24 +42,13 @@ const registerCommands = (collection, folderPath) => {
 			try {
 				const filePath = path.join(__dirname + folderPath, folder, file);
 				const command = require(filePath);
-
-				if (command) {
-					  if (client.slashCommands.has(command.data.name)) {
-						console.warn(`Warning: Duplicate slash command name '${command.data.name}' detected for ${filePath}`);
-					} else {
-						client.slashCommands.set(command.data.name, command);
-					}
-				} else {
-					console.warn(`Warning: No command exported from ${filePath}`);
-				}
+				folderCommands.push(command);
 			} catch (error) {
-				console.error(`Error loading command from ${file}:`, error);
-				console.log('Path to file: ' + path.join(__dirname + folderPath, folder, file));
+				console.error(`Error loading command from file ${file}: ${error}`);
 			}
 		});
-
 		collection.set(folder, folderCommands);
-		})
+	});
 }
 
 registerCommands(client.slashCommands, "/interactions/slash", client.slashCommands.set.bind(client.slashCommands));
