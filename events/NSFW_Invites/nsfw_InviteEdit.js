@@ -1,7 +1,3 @@
-/**
- * @file NSFW Disabler Edit
- * @author TechyGiraffe999
- */
 // Declares constants (destructured) to be used in this file.
 
 const { Collection, ChannelType, Events, EmbedBuilder } = require("discord.js");
@@ -14,12 +10,6 @@ const channelId = "1057074981135196230";
 
 module.exports = {
 	name: Events.MessageUpdate,
-
-	/**
-	 * @description Executes when a message is created and handle it.
-	 * @author Naman Vrati
-	 * @param {import("discord.js").Message & { client: import("../../typings").Client }} message The message which was created.
-	 */
 
 	async execute(oldMessage, newMessage) {
 		// Declares const to be used.

@@ -1,22 +1,8 @@
-/**
- * @file Slash Command Interaction Handler
- * @author Naman Vrati
- * @contributor TechyGiraffe999
- * @since 3.0.0
- * @version 3.4.0
- */
-
 const { Collection, EmbedBuilder, Events } = require("discord.js"),
 	{ owner } = require("../config.json");
 
 module.exports = {
 	name: Events.InteractionCreate,
-
-	/**
-	 * @description Executes when an interaction is created and handle it.
-	 * @author Naman Vrati
-	 * @param {import("discord.js").CommandInteraction & { client: import("../typings").Client }} interaction The interaction which was created
-	 */
 
 	async execute(interaction) {
 		// Deconstructed client from interaction object.

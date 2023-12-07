@@ -1,10 +1,3 @@
-/**
- * @file Message Based Commands Handler
- * @author Naman Vrati
- * @since 1.0.0
- * @version 3.3.2
- */
-
 // Declares constants (destructured) to be used in this file.
 
 const { Collection, ChannelType, Events } = require("discord.js");
@@ -19,12 +12,6 @@ const escapeRegex = (string) => {
 
 module.exports = {
 	name: Events.MessageCreate,
-
-	/**
-	 * @description Executes when a message is created and handle it.
-	 * @author Naman Vrati
-	 * @param {import("discord.js").Message & { client: import("../typings").Client }} message The message which was created.
-	 */
 
 	async execute(message) {
 		// Declares const to be used.
