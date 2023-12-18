@@ -50,7 +50,7 @@ with [Commons Clause](https://commonsclause.com)
 
 ## 🔄 Updates!
 
-🆕 ``/crafyai`` command!
+🔄 Huge Declutter
 
 #### [[Future Plans]](https://github.com/Cartrigger/QCXRSoonBot/issues/25)
 

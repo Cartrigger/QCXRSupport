@@ -29,16 +29,8 @@ module.exports = {
 			return;
 		}
 
-		/**
-		 * @description Converts prefix to lowercase.
-		 * @type {String}
-		 */
-
 		const checkPrefix = prefix.toLowerCase();
 
-		/**
-		 * @description Regex expression for mention prefix
-		 */
 
 		const prefixRegex = new RegExp(
 			`^(<@!?${client.user.id}>|${escapeRegex(checkPrefix)})\\s*`
@@ -48,23 +40,9 @@ module.exports = {
 
 		if (!prefixRegex.test(content.toLowerCase())) return;
 
-		/**
-		 * @description Checks and returned matched prefix, either mention or prefix in config.
-		 */
-
 		const [matchedPrefix] = content.toLowerCase().match(prefixRegex);
 
-		/**
-		 * @type {String[]}
-		 * @description The Message Content of the received message seperated by spaces (' ') in an array, this excludes prefix and command/alias itself.
-		 */
-
 		const args = content.slice(matchedPrefix.length).trim().split(/ +/);
-
-		/**
-		 * @type {String}
-		 * @description Name of the command received from first argument of the args array.
-		 */
 
 		const commandName = args.shift().toLowerCase();
 
@@ -79,7 +57,7 @@ module.exports = {
 				(cmd) => cmd.aliases && cmd.aliases.includes(commandName)
 			);
 
-		// It it's not a command, return :)
+		// If it's not a command, return :)
 
 		if (!command) return;
 

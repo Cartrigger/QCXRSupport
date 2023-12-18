@@ -1,7 +1,9 @@
 {
 	"prefix": "!",
 	"token": "...",
-	"owner": ["719815864135712799","317814254336081930"],
+	"owner": ["...","..."],
 	"client_id": "...",
-	"test_guild_id": "1059913124645441616",
+	"test_guild_id": "...",
 }
+
+// Required fields is everything but test_guild_id

@@ -1,5 +1,3 @@
 # When contributing you must:
-### ALWAYS MAKE IT AS COMPACT AS POSSIBLE
-### NOT MAKE HUGE FILES
-### NEVER MAKE FUN OF STAFF
-### TALK AS THE BOT
+### NOT MAKE HUGE FILES (such as 1000 lines)
+### TALK AS THE BOT (such as in commands)
