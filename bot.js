@@ -83,6 +83,10 @@ try {
 	console.error(error);
 }
 
+
+process.on("unhandRejection", (reason, promise) => {
+	console.log(`🚫 Critical Error detected:\n\n`, reason, promise);
+});
 process.on("uncaughtException", (reason, promise) => {
 	console.log(`🚫 Critical Error detected:\n\n`, reason, promise);
 });

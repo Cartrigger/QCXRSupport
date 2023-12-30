@@ -1,5 +1,4 @@
 const { Events } = require("discord.js");
-const discord = require('discord.js');
 
 module.exports = {
 	name: Events.MessageCreate,
@@ -13,7 +12,6 @@ module.exports = {
 		if (message.author.bot) return;
 
 		// Checking ALL triggers using every function and breaking out if a trigger was found.
-
 
 		let triggered = false;
 
@@ -29,12 +27,12 @@ module.exports = {
 					try {
 						trigger.execute(message, args);
 					} catch (error) {
-						// If triggereds fail, reply back!
+						// If trigger fails, reply back!
 
 						console.error(error);
 
 						message.reply({
-							content: "there was an error trying to execute that trigger! If the issue persists please contact <@317814254336081930> or <@719815864135712799>"
+							content: "There was an error trying to execute that trigger! If the issue persists please contact <@317814254336081930> or <@719815864135712799>"
 						});
 					}
 
