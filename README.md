@@ -22,7 +22,7 @@ in [#bot-commands](https://discord.com/channels/820767484042018829/9533836959082
 
 2. Rename the file to ``config.json``
 
-3. Run ``startbot.bat`` *(Windows)* or ``startbot.sh`` *(MacOS and Linux or similar.)*
+3. Run ``node bot``
 
 - All PR's are welcome for improvements.
 
