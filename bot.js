@@ -1,9 +1,4 @@
 // Declare constants which will be used throughout the bot.
-const { DisTube } = require("distube");
-const { SpotifyPlugin } = require("@distube/spotify");
-const { DeezerPlugin } = require("@distube/deezer");
-const { SoundCloudPlugin } = require("@distube/soundcloud");
-const { YtDlpPlugin } = require("@distube/yt-dlp");
 const path = require('path');
 
 const fs = require("fs");
