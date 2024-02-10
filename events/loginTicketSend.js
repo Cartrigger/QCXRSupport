@@ -21,6 +21,8 @@ module.exports = {
 				const message = await channel.send({ embeds: [login_embeds.own], components: [buttons.own] });
 			}
 		} catch (err) {
+			console.error(err)
+			console.log("Login ticket error!");
 		}
 	}
 };

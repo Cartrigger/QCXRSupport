@@ -1,4 +1,4 @@
-const { Events } = require("discord.js");
+const Events = require("discord.js");
 
 module.exports = {
 	name: Events.MessageCreate,
@@ -18,19 +18,14 @@ module.exports = {
 		message.client.triggers.every((trigger) => {
 			if (triggered) return false;
 
-			trigger.name.every(async (name) => {
-				if (triggered) return false;
-
 				// If validated, it will try to execute the trigger.
 
 				if (message.content.includes(name)) {
 					try {
 						trigger.execute(message, args);
 					} catch (error) {
-						// If trigger fails, reply back!
-
 						console.error(error);
-
+						console.log("Trigger error!");
 						message.reply({
 							content: "There was an error trying to execute that trigger! If the issue persists please contact <@317814254336081930> or <@719815864135712799>"
 						});
@@ -41,7 +36,4 @@ module.exports = {
 					triggered = true;
 					return false;
 				}
-			});
-		});
-	}
-};
+			})}};

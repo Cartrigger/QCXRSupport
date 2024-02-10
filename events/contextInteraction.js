@@ -44,6 +44,7 @@ module.exports = {
 				return await command.execute(interaction);
 			} catch (err) {
 				console.error(err);
+				console.log("Context error!");
 				await interaction.reply({
 					content: "There was an issue while executing that context command! If the issue persists please contact <@317814254336081930> or <@719815864135712799>",
 					ephemeral: true

@@ -132,6 +132,7 @@ module.exports = {
 			command.execute(message, args);
 		} catch (error) {
 			console.error(error);
+			console.log("Message Creation error!");
 			message.reply({
 				content: "There was an error trying to execute that command!"
 			});
