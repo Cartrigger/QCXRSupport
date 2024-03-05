@@ -52,6 +52,4 @@ with [Commons Clause](https://commonsclause.com)
 
 🔄 Huge Declutter
 
-#### [[Future Plans]](https://github.com/Cartrigger/QCXRSoonBot/issues/25)
-
 #### QCXR bot is in and used in the QuestCraft Server and is not always up to date to this github repo, it may be an older commit.
