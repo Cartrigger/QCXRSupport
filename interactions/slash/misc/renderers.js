@@ -10,7 +10,6 @@ module.exports = {
 				.setRequired(true)
 				.addChoices(
 					{ name: "GL4ES", value: "gl4es" },
-					{ name: "Vulkan", value: "vulkan" },
 					{ name: "Zink", value: "zink" }
 				)),
 	async execute(interaction) {
