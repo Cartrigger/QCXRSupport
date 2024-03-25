@@ -18,7 +18,7 @@ in [#bot-commands](https://discord.com/channels/820767484042018829/9533836959082
 
 ## 💾 Install
 
-1. fill in the token and other values in ``config.json.example``
+1. Fill in the token and other values in ``config.json.example``
 
 2. Rename the file to ``config.json``
 
@@ -51,7 +51,5 @@ with [Commons Clause](https://commonsclause.com)
 ## 🔄 Updates!
 
 🔄 Huge Declutter
-
-#### [[Future Plans]](https://github.com/Cartrigger/QCXRSoonBot/issues/25)
 
 #### QCXR bot is in and used in the QuestCraft Server and is not always up to date to this github repo, it may be an older commit.
