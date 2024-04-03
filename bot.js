@@ -33,59 +33,102 @@ readDirectoryRecursively(__dirname + "/events").forEach(file => {
 	client.events.set(event.name, event);
 });
 
-const registerCommands = (collection, folderPath) => {
-	fs.readdirSync(__dirname + folderPath).forEach(folder => {
-		const files = fs.readdirSync(path.join(__dirname + folderPath, folder)).filter(file => file.endsWith(".js"));
-		const folderCommands = [];
-
-		files.forEach(file => {
-			try {
-				const filePath = path.join(__dirname + folderPath, folder, file);
-				const command = require(filePath);
-				folderCommands.push(command);
-			} catch (error) {
-				console.error(`Error loading command from file ${file}: ${error}`);
-			}
-		});
-		collection.set(folder, folderCommands);
-	});
+const contextMenus = fs.readdirSync("./interactions/context-menus");
+for (const folder of contextMenus) {
+	const files = fs
+		.readdirSync(`./interactions/context-menus/${folder}`)
+		.filter((file) => file.endsWith(".js"));
+	for (const file of files) {
+		const menu = require(`./interactions/context-menus/${folder}/${file}`);
+		const keyName = `${folder.toUpperCase()} ${menu.data.name}`;
+		client.contextCommands.set(keyName, menu);
+	}
+}
+const buttonCommands = [];
+function walk(dir) {
+	const files = fs.readdirSync(dir);
+	for (const file of files) {
+		const path = `${dir}/${file}`;
+		if (fs.statSync(path).isDirectory()) {
+			walk(path);
+		} else if (file.endsWith(".js")) {
+			const command = require(path);
+			buttonCommands.push(command);
+		}
+	}
+}
+walk("./interactions/buttons");
+for (const command of buttonCommands) {
+	client.buttonCommands.set(command.id, command);
+}
+function loadModalCommands(dir) {
+	const files = fs.readdirSync(dir);
+	for (const file of files) {
+		const fullPath = path.join(dir, file);
+		const stat = fs.lstatSync(fullPath);
+		if (stat.isDirectory()) {
+			loadModalCommands(fullPath);
+		} else if (file.endsWith('.js')) {
+			const command = require(path.resolve(__dirname, fullPath));
+			client.modalCommands.set(command.id, command);
+		}
+	}
 }
 
-registerCommands(client.slashCommands, "/interactions/slash", client.slashCommands.set.bind(client.slashCommands)); //This one causes invalid form body
-registerCommands(client.contextCommands, "/interactions/context-menus", (key, command) => client.contextCommands.set(`${key.toUpperCase()} ${command.data.name}`, command)); //This one causes invalid form body too
+loadModalCommands(path.resolve(__dirname, './interactions/modals'));
 
-//For some reason, the above two functions cause invalid form body even though there is no data???
+const selectMenus = fs.readdirSync("./interactions/select-menus");
 
-registerCommands(client.buttonCommands, "/interactions/buttons/category", client.buttonCommands.set.bind(client.buttonCommands));
-registerCommands(client.modalCommands, "/interactions/modals", client.modalCommands.set.bind(client.modalCommands));
-registerCommands(client.selectCommands, "/interactions/select-menus", client.selectCommands.set.bind(client.selectCommands));
+for (const module of selectMenus) {
+	const commandFiles = fs
+		.readdirSync(`./interactions/select-menus/${module}`)
+		.filter((file) => file.endsWith(".js"));
+	for (const commandFile of commandFiles) {
+		const command = require(`./interactions/select-menus/${module}/${commandFile}`);
+		client.selectCommands.set(command.id, command);
+	}
+}
 
 const rest = new REST({ version: "9" }).setToken(token);
-const commandJsonData = [...Array.from(client.slashCommands.values()).map((c) => {
-	if (c.data && typeof c.data.toJSON === 'function') {
-		return c.data.toJSON();
-	} else {
-		return undefined;
+const commandJsonData = [
+	...Array.from(client.slashCommands.values()).map((c) => c.data.toJSON()),
+	...Array.from(client.contextCommands.values()).map((c) => c.data)
+];
+
+(async () => {
+	try {
+		console.log("Started refreshing application (/) commands.");
+
+		await rest.put(
+			Routes.applicationCommands(client_id),
+			{ body: commandJsonData }
+		);
+
+		console.log("Successfully reloaded application (/) commands.");
+	} catch (error) {
+		console.error(error);
 	}
-}), ...Array.from(client.contextCommands.values()).map((c) => {
-	if (typeof c.data === 'object') {
-		return c.data;
-	} else {
-		return undefined;
-	}
-}),];
+})();
 
 try {
 	console.log("Started refreshing application (/) commands.");
 	rest.put(Routes.applicationCommands(client_id), { body: commandJsonData })
 		.then(() => console.log("Successfully reloaded application (/) commands."));
 
-	client.login(token);
-	registerCommands(client.triggers, "/triggers", client.triggers.set.bind(client.triggers));
+	const triggerFolders = fs.readdirSync("./triggers");
+	for (const folder of triggerFolders) {
+		const triggerFiles = fs
+			.readdirSync(`./triggers/${folder}`)
+			.filter((file) => file.endsWith(".js"));
+		for (const file of triggerFiles) {
+			const trigger = require(`./triggers/${folder}/${file}`);
+			client.triggers.set(trigger.name, trigger);
+		}
+	}
 } catch (error) {
 	console.error(error);
 }
-
+client.login(token);
 
 process.on("unhandRejection", (reason, promise) => {
 	console.log(`🚫 Critical Error detected:\n\n`, reason, promise);
