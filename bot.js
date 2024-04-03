@@ -53,6 +53,9 @@ const registerCommands = (collection, folderPath) => {
 
 registerCommands(client.slashCommands, "/interactions/slash", client.slashCommands.set.bind(client.slashCommands)); //This one causes invalid form body
 registerCommands(client.contextCommands, "/interactions/context-menus", (key, command) => client.contextCommands.set(`${key.toUpperCase()} ${command.data.name}`, command)); //This one causes invalid form body too
+
+//For some reason, the above two functions cause invalid form body even though there is no data???
+
 registerCommands(client.buttonCommands, "/interactions/buttons/category", client.buttonCommands.set.bind(client.buttonCommands));
 registerCommands(client.modalCommands, "/interactions/modals", client.modalCommands.set.bind(client.modalCommands));
 registerCommands(client.selectCommands, "/interactions/select-menus", client.selectCommands.set.bind(client.selectCommands));
