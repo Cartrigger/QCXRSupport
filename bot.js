@@ -2,7 +2,7 @@
 const path = require('path');
 
 const fs = require("fs");
-const {Client, GatewayIntentBits, Partials, Collection, REST, Routes } = require("discord.js");
+const {Client, GatewayIntentBits, Partials, Events, Collection, REST, Routes } = require("discord.js");
 const { token, client_id, test_guild_id } = require("./config.json");
 
 // @ts-ignore
