@@ -16,7 +16,6 @@ module.exports = {
 			.setDescription("Quest 3 is not yet out for the public, but is available, to check out the Patreon, please do /patreon, if you are asking for a ETA, we dont have one yet, but it will be out as soon as it is finished.")
 			.setColor("Orange")
 		if (!disallowedChannels.includes(message.channelId) && hasAllowedRole) {
-			return;
 		} else {
 			message.channel.send({ embeds: [embed_Quest3] });
 		}
