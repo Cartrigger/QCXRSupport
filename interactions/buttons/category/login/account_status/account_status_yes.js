@@ -5,7 +5,7 @@ module.exports = {
 	id: "account_status_yes",
 
 	async execute(interaction) {
-		await interaction.update({ embeds: [login_embeds.username_change], components: [buttons.others] });
+		await interaction.update({ embeds: [login_embeds.others], components: [buttons.others] });
 		return;
 	}
 };

@@ -34,15 +34,6 @@ const login_embeds = {
 			iconURL: "https://cdn.discordapp.com/avatars/483359783831732255/be45184a1568fa89c5ea033b9c12948c.png?size=4096"
 		}),
 
-	username_change: new EmbedBuilder()
-		.setTitle("Change your username")
-		.setDescription("If your issue *still* persists, try change your Minecraft username via the [link](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile) used earlier\n- This matters if you owned Java edition before the Microsoft Migration, if you owned it after please click the button below")
-		.setColor("Green")
-		.setFooter({
-			text: "Written by TechyGiraffe999 [BETA]",
-			iconURL: "https://cdn.discordapp.com/attachments/1059913125308145716/1157685309602013304/TechyGiraffe_v.2.0_test_3.png?ex=651981f6&is=65183076&hm=b630b14532ae9e04c63949a94b12d9308431e6d7726cead62bca42ba4720f28d&"
-		}),
-
 	others: new EmbedBuilder()
 		.setTitle("If none of the things mentioned have worked")
 		.setDescription("If none of the things mentioned have worked you can try to Uninstall Questcraft with ADB commands, and then reinstall it. Then try launch QuestCraft again\n\nIf your issue still persists, please wait for a support staff member to review your issue and if you haven't already, please provide any additional information below or [create a ticket](https://discord.com/channels/820767484042018829/946184706486054984).")

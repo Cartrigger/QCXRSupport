@@ -1,5 +1,5 @@
-const login_embeds = require("../login_embeds");
-const buttons = require("../username_change/username_change_buttons");
+const login_embeds = require("../others/others");
+const buttons = require("../others/others_buttons");
 
 module.exports = {
 	id: "account_status_no",
