@@ -58,7 +58,7 @@ for (const file of eventFiles) {
 
 // Registration of Slash-Command Interactions.
 
-const slashCommands = getSlashCommands("./interactions/slash");
+getSlashCommands("./interactions/slash");
 
 function getSlashCommands(path) {
 	let slashCommands = [];
