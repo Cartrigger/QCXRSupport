@@ -4,7 +4,7 @@ module.exports = {
 	id: "login_restart",
 
 	async execute(interaction, message) {
-		await interaction.update({ embeds: [login_embeds.own], components: [buttons.own] });
+		await interaction.update({ embeds: [login_embeds.own_no], components: [buttons.own] });
 		return;
 	}
 };

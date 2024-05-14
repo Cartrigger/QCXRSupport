@@ -1,13 +1,10 @@
 // Declare constants which will be used throughout the bot.
 const path = require('path');
-
 const fs = require("fs");
 const {Client, GatewayIntentBits, Partials, Events, Collection, REST, Routes } = require("discord.js");
 const { token, client_id, test_guild_id } = require("./config.json");
 
-// @ts-ignore
 const client = new Client({
-	// Please add all intents you need, more detailed information @ https://ziad87.net/intents/
 	intents: [
 		GatewayIntentBits.Guilds,
 		GatewayIntentBits.GuildMessages,
@@ -24,7 +21,6 @@ client.events = new Collection();
 
 function readDirectoryRecursively(directory) {
 	const files = [];
-	const subdirectories = fs.readdirSync(directory).filter((file) => fs.statSync(`${directory}/${file}`).isDirectory());
 
 	for (const file of fs.readdirSync(directory)) {
 		const filePath = `${directory}/${file}`;
@@ -34,7 +30,6 @@ function readDirectoryRecursively(directory) {
 			files.push(...readDirectoryRecursively(filePath));
 		}
 	}
-
 	return files;
 }
 
@@ -51,7 +46,7 @@ for (const file of eventFiles) {
 	}
 	client.events.set(event.name, event);
 }
-/**********************************************************************/
+
 // Define Collection of Commands, Slash Commands and cooldowns
 
 client.commands = new Collection();
@@ -64,24 +59,6 @@ client.cooldowns = new Collection();
 client.autocompleteInteractions = new Collection();
 client.triggers = new Collection();
 
-/**********************************************************************/
-// Registration of Message-Based Legacy Commands.
-
-const commandFolders = fs.readdirSync("./commands");
-
-// Loop through all files and store commands in commands collection.
-
-for (const folder of commandFolders) {
-	const commandFiles = fs
-		.readdirSync(`./commands/${folder}`)
-		.filter((file) => file.endsWith(".js"));
-	for (const file of commandFiles) {
-		const command = require(`./commands/${folder}/${file}`);
-		client.commands.set(command.name, command);
-	}
-}
-
-/**********************************************************************/
 // Registration of Slash-Command Interactions.
 
 const slashCommands = getSlashCommands("./interactions/slash");
@@ -94,7 +71,6 @@ function getSlashCommands(path) {
 	for (const commandFile of commandFiles) {
 		const fullCommandPath = `${path}/${commandFile}`;
 		const commandStats = fs.statSync(fullCommandPath);
-
 		if (commandStats.isDirectory()) {
 			slashCommands = slashCommands.concat(getSlashCommands(fullCommandPath));
 		} else if (commandFile.endsWith(".js")) {
@@ -124,7 +100,6 @@ for (const folder of contextMenus) {
 	}
 }
 
-/**********************************************************************/
 // Registration of Button-Command Interactions.
 
 
@@ -145,6 +120,7 @@ function walk(dir) {
 }
 
 // Start the recursive loop at the root of the button commands directory.
+
 walk("./interactions/buttons");
 
 // Register each button command with the client.
@@ -155,17 +131,17 @@ for (const command of buttonCommands) {
 // Registration of Modal-Command Interactions.
 
 function loadModalCommands(dir) {
-    const files = fs.readdirSync(dir);
-    for (const file of files) {
-        const fullPath = path.join(dir, file);
-        const stat = fs.lstatSync(fullPath);
-        if (stat.isDirectory()) {
-            loadModalCommands(fullPath);
-        } else if (file.endsWith('.js')) {
-            const command = require(path.resolve(__dirname, fullPath));
-            client.modalCommands.set(command.id, command);
-        }
-    }
+	const files = fs.readdirSync(dir);
+	for (const file of files) {
+		const fullPath = path.join(dir, file);
+		const stat = fs.lstatSync(fullPath);
+		if (stat.isDirectory()) {
+			loadModalCommands(fullPath);
+		} else if (file.endsWith('.js')) {
+			const command = require(path.resolve(__dirname, fullPath));
+			client.modalCommands.set(command.id, command);
+		}
+	}
 }
 
 loadModalCommands(path.resolve(__dirname, './interactions/modals'));
@@ -200,23 +176,7 @@ const commandJsonData = [
 		console.log("Started refreshing application (/) commands.");
 
 		await rest.put(
-			/**
-			 * By default, you will be using guild commands during development.
-			 * Once you are done and ready to use global commands (which have 1 hour cache time),
-			 * 1. Please uncomment the below (commented) line to deploy global commands.
-			 * 2. Please comment the below (uncommented) line (for guild commands).
-			 */
-
-			//Routes.applicationGuildCommands(client_id, test_guild_id),
-
-			/**
-			 * Good advice for global commands, you need to execute them only once to update
-			 * your commands to the Discord API. Please comment it again after running the bot once
-			 * to ensure they don't get re-deployed on the next restart.
-			 */
-
 			Routes.applicationCommands(client_id),
-
 			{ body: commandJsonData }
 		);
 

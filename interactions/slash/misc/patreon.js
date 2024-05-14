@@ -1,24 +1,21 @@
-/**
- * @file Patreon Slash Command.
- * @author TechyGiraffe999
- */
-
-// Deconstructed the constants we need in this file.
-
-const { SlashCommandBuilder } = require("discord.js");
-const embeds = require("../../../embeds.js");
+const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 const buttons = require("../../../buttons.js");
 
-/**
- * @type {import("../../../typings").SlashInteractionCommand}
- */
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName("patreon")
 		.setDescription("Tells you about the Patreon."),
-	async execute(interaction) {
+	async execute(interaction){
+		const embed_patreon = new EmbedBuilder()
+			.setTitle("<:Patreon:1172245220721709066> Patreon")
+			.setDescription("You can support the Patreon [here](https://patreon.com/questcraftxr) to get special perks and early access builds of QuestCraft.")
+			.setColor("F96854")
+			.setFooter({
+				text: "Written by Cart",
+				iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=1024&width=0&height=256"
+			})
 		await interaction.reply({
-			embeds: [embeds.patreon],
+			embeds: [embed_patreon],
 			components: [buttons.patreon]
 		});
 	}

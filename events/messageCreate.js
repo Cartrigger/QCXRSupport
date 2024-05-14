@@ -1,10 +1,3 @@
-/**
- * @file Message Based Commands Handler
- * @author Naman Vrati
- * @since 1.0.0
- * @version 3.3.2
- */
-
 // Declares constants (destructured) to be used in this file.
 
 const { Collection, ChannelType, Events } = require("discord.js");
@@ -19,12 +12,6 @@ const escapeRegex = (string) => {
 
 module.exports = {
 	name: Events.MessageCreate,
-
-	/**
-	 * @description Executes when a message is created and handle it.
-	 * @author Naman Vrati
-	 * @param {import("discord.js").Message & { client: import("../typings").Client }} message The message which was created.
-	 */
 
 	async execute(message) {
 		// Declares const to be used.
@@ -42,16 +29,8 @@ module.exports = {
 			return;
 		}
 
-		/**
-		 * @description Converts prefix to lowercase.
-		 * @type {String}
-		 */
-
 		const checkPrefix = prefix.toLowerCase();
 
-		/**
-		 * @description Regex expression for mention prefix
-		 */
 
 		const prefixRegex = new RegExp(
 			`^(<@!?${client.user.id}>|${escapeRegex(checkPrefix)})\\s*`
@@ -61,23 +40,9 @@ module.exports = {
 
 		if (!prefixRegex.test(content.toLowerCase())) return;
 
-		/**
-		 * @description Checks and returned matched prefix, either mention or prefix in config.
-		 */
-
 		const [matchedPrefix] = content.toLowerCase().match(prefixRegex);
 
-		/**
-		 * @type {String[]}
-		 * @description The Message Content of the received message seperated by spaces (' ') in an array, this excludes prefix and command/alias itself.
-		 */
-
 		const args = content.slice(matchedPrefix.length).trim().split(/ +/);
-
-		/**
-		 * @type {String}
-		 * @description Name of the command received from first argument of the args array.
-		 */
 
 		const commandName = args.shift().toLowerCase();
 
@@ -92,7 +57,7 @@ module.exports = {
 				(cmd) => cmd.aliases && cmd.aliases.includes(commandName)
 			);
 
-		// It it's not a command, return :)
+		// If it's not a command, return :)
 
 		if (!command) return;
 
@@ -167,6 +132,7 @@ module.exports = {
 			command.execute(message, args);
 		} catch (error) {
 			console.error(error);
+			console.log("Message Creation error!");
 			message.reply({
 				content: "There was an error trying to execute that command!"
 			});

@@ -1,8 +1,3 @@
-/**
- * @file Channel Create Event.
- * @author TechyGiraffe999
- */
-
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events, EmbedBuilder, Embed } = require("discord.js");
 
 const login_embeds = require("../interactions/buttons/category/login/login_embeds");
@@ -23,9 +18,11 @@ module.exports = {
 
 				await new Promise(resolve => setTimeout(resolve, 2000)); // 2 second delay
 
-				const message = await channel.send({ embeds: [login_embeds.own], components: [buttons.own] });
+				const message = await channel.send({ embeds: [login_embeds.own_no], components: [buttons.own] });
 			}
 		} catch (err) {
+			console.error(err)
+			console.log("Login ticket error!");
 		}
 	}
 };

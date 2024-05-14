@@ -1,15 +1,4 @@
-/**
- * @file Ping Slash Command.
- * @author TechyGiraffe999
- */
-
-const { EmbedBuilder, SlashCommandBuilder, Embed } = require("discord.js");
-
-/**
- * @type {import("../../../typings").SlashInteractionCommand}
- */
-const embeds = require("../../../embeds.js");
-
+const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
 
 module.exports = {
 	data: new SlashCommandBuilder()

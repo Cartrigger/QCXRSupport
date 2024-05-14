@@ -1,13 +1,4 @@
-/**
- * @file Logs Slash Command.
- * @author TechyGiraffe999
- */
-
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
-/**
- * @type {import("../../../typings").SlashInteractionCommand}
- */
-const embeds = require("../../../embeds.js");
 const buttons = require("../../../buttons.js");
 
 module.exports = {
@@ -23,16 +14,46 @@ module.exports = {
 					{ name: "Quest", value: "quest" }
 				)),
 	async execute(interaction) {
-		const categorys = interaction.options.getString("device");
-		switch (categorys) {
+		const categories = interaction.options.getString("device");
+
+		const embed_pc_logs = new EmbedBuilder()
+			.setTitle("**Pc Logs Guide**")
+			.setDescription("**Sending a QuestCraft Log on PC:**\n\n1) Connect your headset to your pc via a cable that supports data transfer.\n2) Go into your headset and accept the file access prompt.\n3) Look onto your pc and find the new device that was recognized in windows explorer.\n4) On the device go to android/data/com.qcxr.qcxr/files/latestlog.txt.\n5) Once you found this file, drag it into a different folder on your pc, then drag it into discord.\n\n**Note: if there was no file access prompt, you may have file access prompts disabled in headset developer settings. If that doesn't work, try using a different cable.**")
+			.setColor("Green")
+			.setImage("https://media.discordapp.net/attachments/1057074981135196230/1099818983911346277/stinkers.gif?width=900&height=507")
+			.setFooter({
+				text: "Written by !DED",
+				iconURL: "https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318"
+			})
+
+		const embed_quest_logs = new EmbedBuilder()
+			.setTitle("**Getting logs on Quest Guide**")
+			.setDescription("**Sending logs from Quest:**\n\n1) Find the log located in `android/data/com.qcxr.qcxr/files/latestlog.txt`.\n2) Copy and Paste the log in `downloads`.\n3) Open Discord on the Meta Browser and click the + next to the chat box.\n4) Click `Upload a file` and in the top right, change the filter `Media` to `All`.\n5) Locate `latestlog.txt` and send it.")
+			.setImage("https://cdn.discordapp.com/attachments/1078126187064332359/1097009784944873533/ezgif.com-video-to-gif.gif")
+			.setColor("DarkOrange")
+			.setFooter({
+				text: "Written by Pixel",
+				iconURL: "https://media.discordapp.net/attachments/1078126187064332359/1100075208498487356/Crowpixel.webp"
+			})
+
+		const embed_embed_logs = new EmbedBuilder()
+			.setTitle("**Log Guides**")
+			.setDescription("Please select your device below to get the log guides.")
+			.setColor("Green")
+			.setFooter({
+				text: "Written by TechyGiraffe999",
+				iconURL: "https://media.discordapp.net/attachments/1059913125308145716/1157685309602013304/TechyGiraffe_v.2.0_test_3.png?ex=652aa576&is=65183076&hm=9533b00a2f57636ddb1b7a423ecf97bac64c866b9ce27581ce16283886a204c8&=&width=576&height=576"
+			})
+
+		switch (categories) {
 			case "pc":
-				await interaction.reply({ embeds: [embeds.pc_logs] });
+				await interaction.reply({ embeds: [embed_pc_logs] });
 				break;
 			case "quest":
-				await interaction.reply({ embeds: [embeds.quest_logs] });
+				await interaction.reply({ embeds: [embed_quest_logs] });
 				break;
 			default:
-				await interaction.reply({ embeds: [embeds.embed_logs], components: [buttons.logs] });
+				await interaction.reply({ embeds: [embed_embed_logs], components: [buttons.logs] });
 				break;
 		}
 	}

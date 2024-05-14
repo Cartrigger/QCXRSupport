@@ -1,24 +1,16 @@
-/**
- * @file Fixed Slash Command.
- * @author TechyGiraffe999
- */
-
-// Deconstructed the constants we need in this file.
-
 const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
-
-/**
- * @type {import("../../../typings").SlashInteractionCommand}
- */
-const embeds = require("../../../embeds.js");
 
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName("fixed")
 		.setDescription("Is QuestCraft fixed?"),
 	async execute(interaction, client) {
+		const embed_fixed = new EmbedBuilder()
+			.setTitle("**Was QuestCraft fixed...?**")
+			.setDescription("Yes! on <t:1671995040:D>!\n It's not if you are using a Quest 3")
+			.setColor("Green")
 		await interaction.reply({
-			embeds: [embeds.fixed]
+			embeds: [embed_fixed]
 		});
 	}
 };
