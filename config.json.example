@@ -5,5 +5,3 @@
 	"client_id": "...",
 	"test_guild_id": "..."
 }
-
-// Required fields is everything but test_guild_id
