@@ -2,14 +2,14 @@ game_ids = ["connect4_1", "connect4_2", "connect4_3", "connect4_4", "connect4_5"
 excluded_ids = ["yes_craftyai_personality", "no_craftyai_personality"];
 
 module.exports = {
-	async execute(interaction) {
-		const id = interaction.customId.substring(0, 7);
-		if (!game_ids.some((gameId) => gameId.startsWith(id) || excluded_ids.includes(interaction.customId))) {
-			await interaction.reply({
-				content: "There was an issue while fetching this button! If the issue persists please contact <@317814254336081930>",
-				ephemeral: true
-			});
-			return;
-		}
-	}
+    async execute(interaction) {
+        const id = interaction.customId.substring(0, 7);
+        if (!game_ids.some((gameId) => gameId.startsWith(id) || excluded_ids.includes(interaction.customId))) {
+            await interaction.reply({
+                content: "There was an issue while fetching this button! If the issue persists please contact <@317814254336081930>",
+                ephemeral: true
+            });
+            return;
+        }
+    }
 };
