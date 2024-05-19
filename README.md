@@ -6,12 +6,6 @@
 ## This is the place where the bot gets uploaded to
 This is a clone of the PR [git](https://github.com/Cartrigger/QCXRSupport).
 
-
-## Please read before looking at the description.
-
-This bot is not being actively developed by any main contributors, which means bugs will not be squashed, beware of
-bugs, though is still accepting Pull Requests.
-
 ## 🤔 What is this bot?
 
 QCXRSupport (CraftyVR) is a bot made for
