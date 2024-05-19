@@ -28,11 +28,11 @@ in [#bot-commands](https://discord.com/channels/820767484042018829/9533836959082
 
 ## 🧑‍💻 Current developers
 
-[TechyGiraffe999](https://github.com/TecEash1) and [Cart](https://github.com/Cartrigger).
+[Cart](https://github.com/Cartrigger).
 
 ### 🏗️ Additional Credits
 
-- This bot utilizes a modified version of the [discord bot template](https://github.com/NamVr/DiscordBot-Template) made
+- This bot utilizes a extremely modified version of the [Discord Bot Template](https://github.com/NamVr/DiscordBot-Template) made
   by [Naman Vrati](https://github.com/NamVr)! [\[Apache License 2.0\]](https://github.com/NamVr/DiscordBot-Template/blob/master/LICENSE)
 
 ### 🧩 Contributors
