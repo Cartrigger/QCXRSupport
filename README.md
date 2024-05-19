@@ -29,7 +29,7 @@ in [#bot-commands](https://discord.com/channels/820767484042018829/9533836959082
 ### 🏗️ Additional Credits
 
 - This bot utilizes a extremely modified version of the [Discord Bot Template](https://github.com/NamVr/DiscordBot-Template) made
-  by [Naman Vrati](https://github.com/NamVr)! [\[Apache License 2.0\]](https://github.com/NamVr/DiscordBot-Template/blob/master/LICENSE)
+  by [Naman Vrati](https://github.com/NamVr)! 
 
 ### 🧩 Contributors
 
