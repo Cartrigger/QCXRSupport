@@ -125,24 +125,6 @@ for (const command of buttonCommands) {
     client.buttonCommands.set(command.id, command);
 }
 
-// Registration of Modal-Command Interactions.
-
-function loadModalCommands(dir) {
-    const files = fs.readdirSync(dir);
-    for (const file of files) {
-        const fullPath = path.join(dir, file);
-        const stat = fs.lstatSync(fullPath);
-        if (stat.isDirectory()) {
-            loadModalCommands(fullPath);
-        } else if (file.endsWith('.js')) {
-            const command = require(path.resolve(__dirname, fullPath));
-            client.modalCommands.set(command.id, command);
-        }
-    }
-}
-
-loadModalCommands(path.resolve(__dirname, './interactions/modals'));
-
 // Registration of select-menus Interactions
 
 const selectMenus = fs.readdirSync("./interactions/select-menus");
@@ -168,25 +150,6 @@ const commandJsonData = [
     ...Array.from(client.contextCommands.values()).map((c) => c.data)
 ];
 
-(async () => {
-    try {
-        console.log("Started refreshing application (/) commands.");
-
-        await rest.put(
-            Routes.applicationCommands(client_id),
-            {body: commandJsonData}
-        );
-
-        console.log("Successfully reloaded application (/) commands.");
-    } catch (error) {
-        console.error(error);
-    }
-})();
-
-// Registration of Message Based Chat Triggers
-
-const triggerFolders = fs.readdirSync("./triggers");
-
 // Loop through all files and store triggers in triggers collection.
 
 for (const folder of triggerFolders) {
@@ -198,6 +161,25 @@ for (const folder of triggerFolders) {
         client.triggers.set(trigger.name, trigger);
     }
 }
+
+(async () => {
+    try {
+        console.log("Started refreshing application (/) commands.");
+
+        await rest.put(
+            Routes.applicationCommands(client_id),
+            {body: commandJsonData}
+        );
+
+        console.log("Successfully reloaded application (/) commands, Crafty is ready!");
+    } catch (error) {
+        console.error(error);
+    }
+})();
+
+// Registration of Message Based Chat Triggers
+
+const triggerFolders = fs.readdirSync("./triggers");
 
 client.login(token);
 
