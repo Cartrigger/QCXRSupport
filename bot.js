@@ -1,8 +1,7 @@
-// Declare constants which will be used throughout the bot.
 const path = require('path');
 const fs = require("fs");
-const {Client, GatewayIntentBits, Partials, Events, Collection, REST, Routes } = require("discord.js");
-const { token, client_id, test_guild_id } = require("./config.json");
+const {Client, GatewayIntentBits, Partials, Collection, REST, Routes } = require("discord.js");
+const { token, client_id } = require("./config.json");
 
 const client = new Client({
 	intents: [
@@ -15,7 +14,7 @@ const client = new Client({
 	partials: [Partials.Channel]
 });
 
-// Below we will be making an event handler!
+// Event Handler
 
 client.events = new Collection();
 
@@ -33,6 +32,16 @@ function readDirectoryRecursively(directory) {
 	return files;
 }
 
+client.commands = new Collection();
+client.slashCommands = new Collection();
+client.buttonCommands = new Collection();
+client.selectCommands = new Collection();
+client.contextCommands = new Collection();
+client.modalCommands = new Collection();
+client.cooldowns = new Collection();
+client.autocompleteInteractions = new Collection();
+client.triggers = new Collection();
+
 const eventFiles = readDirectoryRecursively("./events");
 
 for (const file of eventFiles) {
@@ -47,21 +56,9 @@ for (const file of eventFiles) {
 	client.events.set(event.name, event);
 }
 
-// Define Collection of Commands, Slash Commands and cooldowns
-
-client.commands = new Collection();
-client.slashCommands = new Collection();
-client.buttonCommands = new Collection();
-client.selectCommands = new Collection();
-client.contextCommands = new Collection();
-client.modalCommands = new Collection();
-client.cooldowns = new Collection();
-client.autocompleteInteractions = new Collection();
-client.triggers = new Collection();
-
 // Registration of Slash-Command Interactions.
 
-const slashCommands = getSlashCommands("./interactions/slash");
+getSlashCommands("./interactions/slash");
 
 function getSlashCommands(path) {
 	let slashCommands = [];
