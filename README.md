@@ -26,10 +26,6 @@ in [#bot-commands](https://discord.com/channels/820767484042018829/9533836959082
 
 - All PR's are welcome for improvements.
 
-## 🧑‍💻 Current developers
-
-[Cart](https://github.com/Cartrigger).
-
 ### 🏗️ Additional Credits
 
 - This bot utilizes a extremely modified version of the [Discord Bot Template](https://github.com/NamVr/DiscordBot-Template) made
