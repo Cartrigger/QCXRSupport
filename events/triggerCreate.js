@@ -27,7 +27,7 @@ module.exports = {
 						console.error(error);
 						console.log("Trigger error!");
 						message.reply({
-							content: "There was an error trying to execute that trigger! If the issue persists please contact <@317814254336081930> or <@719815864135712799>"
+							content: "There was an error trying to execute that trigger! If the issue persists please contact <@317814254336081930>"
 						});
 					}
 

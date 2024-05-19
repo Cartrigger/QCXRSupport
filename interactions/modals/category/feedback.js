@@ -1,4 +1,4 @@
-const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events, EmbedBuilder, Embed } = require("discord.js");
+const { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } = require("discord.js");
 const { test_guild_id } = require("../../../config.json");
 buttons = new ActionRowBuilder()
 	.addComponents(
@@ -20,7 +20,7 @@ buttons = new ActionRowBuilder()
 
 
 const error = new EmbedBuilder()
-	.setDescription("There was an error while fetching the Feedback channel, please contact <@719815864135712799>")
+	.setDescription("There was an error while fetching the Feedback channel, please contact")
 	.setColor("Red");
 
 module.exports = {

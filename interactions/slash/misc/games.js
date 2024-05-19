@@ -8,7 +8,7 @@ const error_game = new EmbedBuilder()
 
 const error = new EmbedBuilder()
 	.setTitle("Error!")
-	.setDescription("An Unknown error has occured, please contact <@719815864135712799> or <@317814254336081930>")
+	.setDescription("An Unknown error has occured, please contact <@317814254336081930>")
 	.setColor("Red");
 
 module.exports = {

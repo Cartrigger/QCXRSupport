@@ -27,7 +27,7 @@ module.exports = {
 			} catch (err) {
 				console.error(err);
 				await interaction.reply({
-					content: "There was an issue while executing that context command! If the issue persists please contact <@317814254336081930> or <@719815864135712799>",
+					content: "There was an issue while executing that context command! If the issue persists please contact <@317814254336081930>",
 					ephemeral: true
 				});
 			}
@@ -46,7 +46,7 @@ module.exports = {
 				console.error(err);
 				console.log("Context error!");
 				await interaction.reply({
-					content: "There was an issue while executing that context command! If the issue persists please contact <@317814254336081930> or <@719815864135712799>",
+					content: "There was an issue while executing that context command! If the issue persists please contact <@317814254336081930>",
 					ephemeral: true
 				});
 			}
@@ -56,7 +56,7 @@ module.exports = {
 		// Possible Fix is a restart!
 		else {
 			return console.log(
-				"Something weird happening in context menu. Received a context menu of unknown type. If the issue persists please contact <@317814254336081930> or <@719815864135712799>"
+				"Something weird happening in context menu. Received a context menu of unknown type. If the issue persists please contact <@317814254336081930>"
 			);
 		}
 	}

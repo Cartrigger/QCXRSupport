@@ -28,7 +28,7 @@ module.exports = {
 			console.error(err);
 			console.log("Modal error!");
 			await interaction.followUp({
-				content: "There was an issue while understanding this modal! If the issue persists please contact <@317814254336081930> or <@719815864135712799>",
+				content: "There was an issue while understanding this modal! If the issue persists please contact <@317814254336081930>",
 				ephemeral: true
 			});
 		}

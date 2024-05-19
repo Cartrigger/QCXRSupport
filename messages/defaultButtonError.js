@@ -6,7 +6,7 @@ module.exports = {
 		const id = interaction.customId.substring(0, 7);
 		if (!game_ids.some((gameId) => gameId.startsWith(id) || excluded_ids.includes(interaction.customId))) {
 			await interaction.reply({
-				content: "There was an issue while fetching this button! If the issue persists please contact <@317814254336081930> or <@719815864135712799>",
+				content: "There was an issue while fetching this button! If the issue persists please contact <@317814254336081930>",
 				ephemeral: true
 			});
 			return;

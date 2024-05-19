@@ -1,7 +1,7 @@
 module.exports = {
 	async execute(interaction) {
 		await interaction.reply({
-			content: "There was an issue while fetching this select menu option! If the issue persists please contact <@317814254336081930> or <@719815864135712799>",
+			content: "There was an issue while fetching this select menu option! If the issue persists please contact <@317814254336081930>",
 			ephemeral: true
 		});
 		return;
