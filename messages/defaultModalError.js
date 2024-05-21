@@ -1,9 +1,9 @@
 module.exports = {
-	async execute(interaction) {
-		await interaction.reply({
-			content: "There was an issue while fetching this modal! If the issue persists please contact <@317814254336081930> or <@719815864135712799>",
-			ephemeral: true
-		});
-		return;
-	}
+    async execute(interaction) {
+        await interaction.reply({
+            content: "There was an issue while fetching this modal! If the issue persists please contact <@317814254336081930>",
+            ephemeral: true
+        });
+        return;
+    }
 };

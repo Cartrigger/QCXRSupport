@@ -1,32 +1,32 @@
-const { Events } = require("discord.js");
+const {Events} = require("discord.js");
 
 module.exports = {
-	name: Events.InteractionCreate,
+    name: Events.InteractionCreate,
 
-	async execute(interaction) {
-		// Deconstructed client from interaction object.
-		const { client } = interaction;
+    async execute(interaction) {
+        // Deconstructed client from interaction object.
+        const {client} = interaction;
 
-		// Checks if the interaction is an autocomplete interaction (to prevent weird bugs)
+        // Checks if the interaction is an autocomplete interaction (to prevent weird bugs)
 
-		if (!interaction.isAutocomplete()) return;
+        if (!interaction.isAutocomplete()) return;
 
-		// Checks if the request is available in our code.
+        // Checks if the request is available in our code.
 
-		const request = client.autocompleteInteractions.get(
-			interaction.commandName
-		);
+        const request = client.autocompleteInteractions.get(
+            interaction.commandName
+        );
 
-		// If the interaction is not a request in cache return.
+        // If the interaction is not a request in cache return.
 
-		if (!request) return;
+        if (!request) return;
 
-		// A try to execute the interaction.
+        // A try to execute the interaction.
 
-		try {
-			await request.execute(interaction);
-		} catch (err) {
-			return Promise.reject(err);
-		}
-	}
+        try {
+            await request.execute(interaction);
+        } catch (err) {
+            return Promise.reject(err);
+        }
+    }
 };
