@@ -1,6 +1,5 @@
 const {EmbedBuilder, SlashCommandBuilder} = require("discord.js");
 
-module.exports = embed_adb
 const embed_adb = new EmbedBuilder()
     .setTitle("**Uninstalling using ADB commands**")
     .setDescription("If you're having an issue with uninstalling and need to perform a force uninstallation, Please make sure you are using **[SideQuest Advanced](https://SideQuestvr.com/setup-howto)** as basic SideQuest wont work. Run the command: ``adb uninstall com.qcxr.qcxr``, as shown in the image below.")
