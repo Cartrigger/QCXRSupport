@@ -33,7 +33,7 @@ module.exports = {
             .setColor("DarkOrange")
             .setFooter({
                 text: "Written by Cart",
-                iconURL: "https://media.discordapp.net/attachments/1078126187064332359/1100075208498487356/Crowpixel.webp"
+                iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
             })
 
         const embed_embed_logs = new EmbedBuilder()
