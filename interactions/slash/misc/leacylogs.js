@@ -3,7 +3,7 @@ const buttons = require("../../../buttons.js");
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName("logs")
+        .setName("legacylogs")
         .setDescription("Lists ways to get logs")
         .addStringOption(option =>
             option.setName("device")
@@ -28,12 +28,12 @@ module.exports = {
 
         const embed_quest_logs = new EmbedBuilder()
             .setTitle("**Getting logs on Quest Guide**")
-            .setDescription("**Sending logs from Quest:**\n\n1) Restart your game, press on need help on the bottom right, then post the log link inside of support, or ticket where the person is asking for logs.")
-            .setImage("https://cdn.discordapp.com/attachments/821076673331724309/1243279697459150959/image.png?ex=6650e5f2&is=664f9472&hm=4dff3409b8b444a11e294f4395024cadd5f0da1c81d5001c72f8523f4d8a7cda&")
+            .setDescription("**Sending logs from Quest:**\n\n1) Find the log located in `android/data/com.qcxr.qcxr/files/latestlog.txt`.\n2) Copy and Paste the log in `downloads`.\n3) Open Discord on the Meta Browser and click the + next to the chat box.\n4) Click `Upload a file` and in the top right, change the filter `Media` to `All`.\n5) Locate `latestlog.txt` and send it.")
+            .setImage("https://cdn.discordapp.com/attachments/1078126187064332359/1097009784944873533/ezgif.com-video-to-gif.gif")
             .setColor("DarkOrange")
             .setFooter({
-                text: "Written by Cart",
-                iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
+                text: "Written by Pixel",
+                iconURL: "https://media.discordapp.net/attachments/1078126187064332359/1100075208498487356/Crowpixel.webp"
             })
 
         const embed_embed_logs = new EmbedBuilder()
