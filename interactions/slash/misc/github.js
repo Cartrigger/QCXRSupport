@@ -27,11 +27,9 @@ module.exports = {
 
         if (categories === "questcraft") {
             await interaction.reply({embeds: [embed_github_qc]});
-            return;
         }
         if (categories === "crafty") {
             await interaction.reply({embeds: [embed_github_bot]});
-            return;
         }
     }
 };

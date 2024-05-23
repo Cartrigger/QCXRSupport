@@ -1,8 +1,6 @@
 const {EmbedBuilder, SlashCommandBuilder} = require("discord.js");
 
 module.exports = {
-    // The data needed to register slash commands to Discord.
-
     data: new SlashCommandBuilder()
         .setName("help")
         .setDescription(
@@ -15,23 +13,11 @@ module.exports = {
         ),
 
     async execute(interaction) {
-        /**
-         * @type {string}
-         * @description The "command" argument
-         */
         let name = interaction.options.getString("command");
-
-        /**
-         * @type {EmbedBuilder}
-         * @description Help command's embed
-         */
         const helpEmbed = new EmbedBuilder().setColor("Random");
 
         if (name) {
             name = name.toLowerCase();
-
-            // If a single command has been asked for, send only this command's help.
-
             helpEmbed.setTitle(`Help for \`${name}\` command`);
 
             if (interaction.client.slashCommands.has(name)) {
@@ -47,7 +33,6 @@ module.exports = {
                     .setColor("Red");
             }
         } else {
-            // Give a list of all the commands
 
             helpEmbed
                 .setTitle("List of all my slash commands")
@@ -59,8 +44,6 @@ module.exports = {
                     "`"
                 );
         }
-
-        // Replies to the interaction!
 
         await interaction.reply({
             embeds: [helpEmbed]
