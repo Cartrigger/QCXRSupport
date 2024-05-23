@@ -13,7 +13,6 @@ module.exports = {
                     {name: "Vivecraft Discord", value: "vivecraft"},
                     {name: "Vivecraft Mixin Discord", value: "vivecraft_mixin"},
                     {name: "PojavLauncher Discord", value: "pojav_launcher"},
-                    {name: "Digital Genesis Discord", value: "digital_genesis"}
                 )),
     async execute(interaction) {
         const categories = interaction.options.getString("invites");
@@ -31,10 +30,6 @@ module.exports = {
         }
         if (categories === "pojav_launcher") {
             await interaction.reply("https://discord.gg/pojavlauncher-724163890803638273");
-            return;
-        }
-        if (categories === "digital_genesis") {
-            await interaction.reply("https://discord.gg/2ck7EaEQym");
             return;
         }
     }

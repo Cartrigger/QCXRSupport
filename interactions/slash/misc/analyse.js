@@ -6,7 +6,6 @@ const error = new EmbedBuilder()
     .setDescription("There was an error while processing your log file")
     .setColor("Red");
 
-
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("analyse")
