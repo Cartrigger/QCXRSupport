@@ -95,11 +95,6 @@ const buttons = {
                 .setLabel("Bedrock players")
                 .setEmoji("<:bedrock:1089270506441687221>")
                 .setStyle(ButtonStyle.Danger),
-            new ButtonBuilder()
-                .setURL("https://discord.com/channels/820767484042018829/946021441298649158/1121556722021048432")
-                .setLabel("Recommended Servers")
-                .setEmoji("✨")
-                .setStyle(ButtonStyle.Link)
         ),
 
     patreon: new ActionRowBuilder()

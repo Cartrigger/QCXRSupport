@@ -53,7 +53,6 @@ module.exports = {
         }
         if (category === "regal") {
             await interaction.reply({embeds: [embed_renderer_regal]});
-            return;
         }
     }
 };
