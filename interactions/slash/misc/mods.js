@@ -29,9 +29,9 @@ module.exports = {
             .setDescription("**Modding QuestCraft Manually:**\n\n**NOTE: Launch the Minecraft version you are trying to mod first, as this will create the mods folder necessary**\n\n" +
                 "Before attempting this make sure you are the main account on your main account on your Quest (Only applies to family Quests)\n\n" +
                 "Note: install mods through Modrinth and select the Fabric option when searching, make sure to install dependencies and that the mod is the correct version for your game.\n\n" +
-                "1  Open the quest browser and search “activity launcher apk”, “FV file launcher apk”, “Shizuku APK” and install all 3 (note you will have to install all of these 3rd party) \n" +
+                "1. Open the quest browser and search “activity launcher apk”, “FV file launcher apk”, “Shizuku APK” and install all 3 (note you will have to install all of these 3rd party) \n" +
                 "2. Install mobile vr station through AppLab\n" +
-                "3  Open the app and press configuration wizard, show all options, configure scoped storage, step 1 and that should open the Quests native browser. \n" +
+                "3. Open the app and press configuration wizard, show all options, configure scoped storage, step 1 and that should open the Quests native browser. \n" +
                 "4. Now select the “standalone HDMI” or “Quest 3” in the top corner \n" +
                 "5. Press the “downloads” folder, then press the 3 dots in the top left corner, then “sort by” and select “newest updated” and install all 3 apks.\n" +
                 "6. Once all 3 are installed, open up the activity launcher (in unknown sources,) and scroll until you find the “settings” app, press settings, and when you get sent into the menu, press settings again.\n" +
