@@ -25,11 +25,27 @@ module.exports = {
             })
 
         const embed_mods_manual = new EmbedBuilder()
-            .setTitle("**Manual Modding Guide DO NOT FOLLOW**")
-            .setDescription("**Modding QuestCraft Manually:**\n\n**NOTE: Launch the Minecraft version you are trying to mod first, as this will create the mods folder necessary**\n\n1) Search for the mod you would like to install. We suggest getting mods from [Modrinth](https://modrinth.com/mods?g=categories:%27fabric%27&v=1.19.4&v=1.20.1&v=1.19.2&v=1.18.2)\n\n2) Open a file explorer of your choice. It's recommended you use Windows File Explorer but you could use side-loadable alternative like [CX File Explorer](https://cdn.discordapp.com/attachments/1057074981135196230/1098727942500134922/Cx_File_Explorer_1.9.8.apk) to do this directly standalone. (If you use sideloaded file explorer you must enable hidden files in file explorer settings.)\n\n3) Copy and paste the mod file to the directory `android/data/com.qcxr.qcxr/files/.minecraft/mods/mcversion#`\n\n4) Launch the game! The mods should work. If the game crashes, feel free to come to ⁠https://discord.com/channels/820767484042018829/945502948111290498 with a Log so that a support member could look over it.")
+            .setTitle("**Manual Modding Guide on Headset**")
+            .setDescription("**Modding QuestCraft Manually:**\n\n**NOTE: Launch the Minecraft version you are trying to mod first, as this will create the mods folder necessary**\n\n" +
+                "Before attempting this make sure you are the main account on your main account on your Quest (Only applies to family Quests)\n\n" +
+                "Note: install mods through Modrinth and select the Fabric option when searching, make sure to install dependencies and that the mod is the correct version for your game.\n\n" +
+                "1  Open the quest browser and search “activity launcher apk”, “FV file launcher apk”, “Shizuku APK” and install all 3 (note you will have to install all of these 3rd party) \n" +
+                "2. Install mobile vr station through AppLab\n" +
+                "3  Open the app and press configuration wizard, show all options, configure scoped storage, step 1 and that should open the Quests native browser. \n" +
+                "4. Now select the “standalone HDMI” or “Quest 3” in the top corner \n" +
+                "5. Press the “downloads” folder, then press the 3 dots in the top left corner, then “sort by” and select “newest updated” and install all 3 apks.\n" +
+                "6. Once all 3 are installed, open up the activity launcher (in unknown sources,) and scroll until you find the “settings” app, press settings, and when you get sent into the menu, press settings again.\n" +
+                "7. Scroll until you find “about phone”, press it then scroll until you find “build number, press build number 7 times until you activate developer mode.\n" +
+                "8. Go into developer options and scroll until you find “wireless debugging”, turn it on and press the meta button on your controller and accept, press the option to get inside the menu.\n" +
+                "9. Open Shizuku on the side (both apps must be open) and click “pair device with pairing code” on the settings app, and pair in Shizuku, then enter the code into Shizuku. \n" +
+                "10. Press “start” in Shizuku and wait for it to confirm.\n" +
+                "11. Open FV File Launcher and accept the permissions, also click allow Shizuku to access this app, same for Shizuku, make sure Shizuku is running.\n" +
+                "12. Click “/android with Shizuku” then find android/data/com.qcxr.qcxr/files/instances/minecraft version,\n" +
+                "13. Open another tab in FV File Launcher and find your mods in downloads. \n" +
+                "14. Move the mods to qc 1 by 1 testing them individually to see which works and which wont.")
             .setFooter({
-                text: "Written by !DED",
-                iconURL: "https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318"
+                text: "Written by Wattpatty",
+                iconURL: "https://cdn.discordapp.com/avatars/455264433522868235/4bd171ff3f890dc5141a7e19f416a7b4.png?size=4096"
             })
 
         const embed_mods_manager = new EmbedBuilder()
