@@ -22,7 +22,7 @@ module.exports = {
 
         const embed_fixed = new EmbedBuilder()
             .setTitle("**Was QuestCraft fixed...?**")
-            .setDescription("Yes! on <t:1671995040:D>!\n It's not if you are using a Quest 3")
+            .setDescription("Yes! on <t:1671995040:D>!\n Quest 3 was fixed on <t:1716507120>!")
             .setColor("Green")
 
         const embed_otherheadsets = new EmbedBuilder()
