@@ -1,5 +1,5 @@
 const {EmbedBuilder, SlashCommandBuilder} = require("discord.js");
-const buttons = require("../../buttons/category/login/own/own_buttons");
+const buttons = require("../buttons/category/login/own/own_buttons");
 
 
 const embed_own = new EmbedBuilder()

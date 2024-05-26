@@ -1,5 +1,5 @@
 const {SlashCommandBuilder, EmbedBuilder} = require("discord.js");
-const buttons = require("../../../buttons.js");
+const buttons = require("../../buttons.js");
 
 const embed_patreon = new EmbedBuilder()
     .setTitle("<:Patreon:1172245220721709066> Patreon")

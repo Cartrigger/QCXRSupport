@@ -1,5 +1,5 @@
 const {EmbedBuilder, SlashCommandBuilder} = require("discord.js");
-const buttons = require("../../../buttons.js");
+const buttons = require("../../buttons.js");
 
 const embed_servers = new EmbedBuilder()
     .setTitle("**Server Guide**")
