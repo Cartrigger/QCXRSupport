@@ -4,7 +4,6 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName("ping")
         .setDescription("Ping the bot to check its response time"),
-
     async execute(interaction) {
         const ping = new EmbedBuilder()
             .setTitle("**Response time**")

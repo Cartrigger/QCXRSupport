@@ -1,5 +1,5 @@
 const { EmbedBuilder, SlashCommandBuilder, PermissionsBitField } = require("discord.js");
-const { owner } = require("../../../config.json");
+const { owner } = require("../../config.json");
 
 
 const error_embed_builder_channel = new EmbedBuilder()
