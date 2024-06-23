@@ -2,16 +2,12 @@ const {EmbedBuilder} = require("discord.js");
 import { embed_adb } from "../../slash/adb"
 import { embed_bedrock } from "../../slash/bedrock"
 import { embed_fixed } from "../../slash/fixed"
+import { embed_reinstall } from "../../slash/reinstall"
 
 module.exports = {
     id: "select",
     async execute(interaction) {
         const selected = interaction.values[0];
-
-        const embed_reinstall = new EmbedBuilder()
-            .setTitle("**QuestCraft Reinstall Instructions**")
-            .setDescription("1. Uninstall QuestCraft (3 dots in unknown sources, or uninstall from SideQuest, click the ``💾 ADB Uninstall`` button for info on how to do that)\n2. Restart Headset\n3. Install QuestCraft from [GitHub](https://github.com/QuestCraftPlusPlus/QuestCraft/releases/latest) / [SideQuest](https://SideQuestvr.com/app/7150/questcraft)\n4. Open QuestCraft, if you have any issues with this procedure, please uninstall using the info on the button below.")
-            .setColor("Green")
 
         const embed_releases = new EmbedBuilder()
             .setTitle("**Release Info**")
