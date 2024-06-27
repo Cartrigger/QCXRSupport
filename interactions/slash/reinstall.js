@@ -11,7 +11,7 @@ const embed_reinstall = new EmbedBuilder()
 module.exports = {embed_reinstall}
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName("Reinstall")
+        .setName("reinstall")
         .setDescription("Tells you how to reinstall."),
     async execute(interaction, client) {
         await interaction.reply({embeds: [embed_reinstall]});

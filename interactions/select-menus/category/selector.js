@@ -1,4 +1,4 @@
-const {EmbedBuilder} = require("discord.js");
+/*const {EmbedBuilder} = require("discord.js");
 import { embed_adb } from "../../slash/adb"
 import { embed_bedrock } from "../../slash/bedrock"
 import { embed_fixed } from "../../slash/fixed"
@@ -123,4 +123,4 @@ module.exports = {
                 break;
         }
     }
-};
+};*/
