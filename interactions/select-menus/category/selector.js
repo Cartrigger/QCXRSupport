@@ -1,39 +1,13 @@
 const {EmbedBuilder} = require("discord.js");
+import { embed_adb } from "../../slash/adb"
+import { embed_bedrock } from "../../slash/bedrock"
+import { embed_fixed } from "../../slash/fixed"
+import { embed_reinstall } from "../../slash/reinstall"
 
 module.exports = {
     id: "select",
     async execute(interaction) {
         const selected = interaction.values[0];
-
-        const embed_adb = new EmbedBuilder()
-            .setTitle("**Uninstalling using ADB commands**")
-            .setDescription("If you're having an issue with uninstalling and need to perform a force uninstallation, Please make sure you are using **[SideQuest Advanced](https://SideQuestvr.com/setup-howto)** as basic SideQuest wont work. Run the command: ``adb uninstall com.qcxr.qcxr``, as shown in the image below.")
-            .setImage("https://media.discordapp.net/attachments/1059913125308145716/1111366186274390226/ADB.png?width=643&height=670")
-            .setColor("Green")
-            .setFooter({
-                text: "Written by my Developers",
-                iconURL: "https://images-ext-1.discordapp.net/external/5cPanAYF2wOpIhmzrCkina2UpawRtHHU4y2KjFviqCI/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/997670790604542012/92a28b5bb82c7512fe8711fa2fd63163.png?width=633&height=633"
-            });
-
-        const embed_bedrock = new EmbedBuilder()
-            .setTitle("**QuestCraft Bedrock Edition**")
-            .setDescription("QuestCraft doesn't have any immediate plans to introduce Bedrock due to the Minecraft TOS.\n\nIt is also incredibly difficult to reverse eningeer games coded in C++, which bedrock is coded in.\nIf you want bedrock vr, it does exist for pcvr. You can find info [here](https://www.minecraft.net/en-us/vr).")
-            .setColor("Green")
-
-        const embed_fixed = new EmbedBuilder()
-            .setTitle("**Was QuestCraft fixed...?**")
-            .setDescription("Yes! on <t:1671995040:D>!\n Quest 3 was fixed on <t:1716507120>!")
-            .setColor("Green")
-
-        const embed_otherheadsets = new EmbedBuilder()
-            .setTitle("**QuestCraft on other Headsets**")
-            .setDescription("QuestCraft is planned to release on other headsets in the future, however, it is required that the company contacts us first in order to do this. \n Currently we are planned to release on **YVR**, **Pico**, and **Pimax** headsets.")
-            .setColor("Green")
-
-        const embed_reinstall = new EmbedBuilder()
-            .setTitle("**QuestCraft Reinstall Instructions**")
-            .setDescription("1. Uninstall QuestCraft (3 dots in unknown sources, or uninstall from SideQuest, click the ``💾 ADB Uninstall`` button for info on how to do that)\n2. Restart Headset\n3. Install QuestCraft from [GitHub](https://github.com/QuestCraftPlusPlus/QuestCraft/releases/latest) / [SideQuest](https://SideQuestvr.com/app/7150/questcraft)\n4. Open QuestCraft, if you have any issues with this procedure, please uninstall using the info on the button below.")
-            .setColor("Green")
 
         const embed_releases = new EmbedBuilder()
             .setTitle("**Release Info**")
@@ -42,15 +16,6 @@ module.exports = {
             .setFooter({
                 text: "Written by TechyGiraffe999",
                 iconURL: "https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405"
-            })
-
-        const embed_yvr = new EmbedBuilder()
-            .setTitle("**YVR Info**")
-            .setDescription("YVR, a headset company from China, has expressed interest in having QuestCraft on their platform. We are currently developing both QCXR and YVRCraft simultaneously to accommodate their request.")
-            .setColor("Green")
-            .setFooter({
-                text: "Written by Cart, Updated by ChatGPT",
-                iconURL: "https://images-ext-1.discordapp.net/external/aTyGSUOhnDS_8fX4GGP9UfztBpotA7axEqb0ujMNz0U/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?width=372&height=372"
             })
 
         const embed_performance = new EmbedBuilder()
@@ -124,9 +89,6 @@ module.exports = {
             case "github":
                 await interaction.reply({embeds: [embed_github_qc], ephemeral: true});
                 break;
-            case "otherheadsets":
-                await interaction.reply({embeds: [embed_otherheadsets], ephemeral: true});
-                break;
             case "botgithub":
                 await interaction.reply({embeds: [embed_github_bot], ephemeral: true});
                 break;
@@ -138,9 +100,6 @@ module.exports = {
                 break;
             case "unity":
                 await interaction.reply({embeds: [embeds.unity], ephemeral: true});
-                break;
-            case "yvr":
-                await interaction.reply({embeds: [embed_yvr], ephemeral: true});
                 break;
             case "performance":
                 await interaction.reply({embeds: [embed_performance], ephemeral: true});
