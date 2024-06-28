@@ -16,7 +16,7 @@ module.exports = {
 
         const embed_yvr = new EmbedBuilder()
             .setTitle("**YVR Info**")
-            .setDescription("YVR, a headset company from China, has expressed interest in having QuestCraft on their platform. We are currently developing both QCXR and YVRCraft simultaneously to accommodate their request.")
+            .setDescription("YVR, a headset company from China, has expressed interest in having QuestCraft on their platform. We have finished developing YVRCraft in full. It is using V3 and V4 code.")
             .setColor("Green")
             .setFooter({
                 text: "Written by Cart, Updated by ChatGPT",
@@ -25,7 +25,7 @@ module.exports = {
 
         const embed_otherheadsets = new EmbedBuilder()
             .setTitle("**QuestCraft on other Headsets**")
-            .setDescription("QuestCraft is planned to release on other headsets in the future, however, it is required that the company contacts us first in order to do this. \n Currently we are planned to release on **YVR**, **Pico**, and **Pimax** headsets.")
+            .setDescription("QuestCraft is planned to release on other headsets in the future, however, it is required that the company contacts us first in order to do this. \n Currently we are planned to release on **Pico** headsets in the future.")
             .setColor("Green")
 
         if (categories === "yvr") {

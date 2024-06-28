@@ -27,7 +27,7 @@ module.exports = {
 
         const embed_renderer_zink = new EmbedBuilder()
             .setTitle("**QuestCraft Zink Renderer**")
-            .setDescription("QuestCraft versions 4.x utilize the **Zink Renderer**.\nThe Zink is a renderer implemented by the QuestCraft team to optimise the rendering of QuestCraft, but also improve mod compatibility.\n\nThis means that more complex mods, like [Create](https://modrinth.com/mod/create-fabric) do work in QC!")
+            .setDescription("QuestCraft versions 4.x utilize the **Zink Renderer**. It is moderately fast. \nThe Zink is a renderer implemented by the QuestCraft team to optimise the rendering of QuestCraft, but also improve mod compatibility.\n\nThis means that more complex mods, like [Create](https://modrinth.com/mod/create-fabric) do work in QC!")
             .setColor("Orange")
             .setFooter({
                 text: "Written by JaffaJace and my Contributors",
@@ -36,7 +36,7 @@ module.exports = {
 
         const embed_renderer_regal = new EmbedBuilder()
             .setTitle("**QuestCraft Regal Renderer**")
-            .setDescription("QuestCraft v5.0 is most likely going to use Regal renderer, it allows most mods to work and gives extremely high FPS, but Iris does not work in this case.")
+            .setDescription("QuestCraft v5.0 is using Regal renderer, it allows most mods to work and gives extremely high FPS, but Iris does not work in this case.")
             .setColor("Orange")
             .setFooter({
                 text: "Written by Cart",
