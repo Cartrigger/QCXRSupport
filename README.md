@@ -48,4 +48,4 @@ under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) (GNU General Public 
 
 🔄 Huge Declutter
 
-#### QCXR bot is in and used in the QuestCraft Server and is not always up to date to this github repo, it may be an older commit.
+#### QCXR bot is used in the QuestCraft Server and is not always up to date with this github repo, it may be an older commit.
