@@ -1,5 +1,5 @@
 const {EmbedBuilder, SlashCommandBuilder} = require("discord.js");
-
+const buttons = require("../../buttons.js");
 const embed_reinstall = new EmbedBuilder()
     .setTitle("**Uninstalling using ADB commands**")
     .setDescription("1. Uninstall QuestCraft (3 dots in unknown sources, or uninstall from SideQuest, click the ``💾 ADB Uninstall`` button for info on how to do that)\n2. Restart Headset\n3. Install QuestCraft from [GitHub](https://github.com/QuestCraftPlusPlus/QuestCraft/releases/latest) / [SideQuest](https://SideQuestvr.com/app/7150/questcraft)\n4. Open QuestCraft.")
@@ -14,6 +14,6 @@ module.exports = {
         .setName("reinstall")
         .setDescription("Tells you how to reinstall."),
     async execute(interaction, client) {
-        await interaction.reply({embeds: [embed_reinstall]});
+        await interaction.reply({embeds: [embed_reinstall], components: [buttons.adb]}) ;
     },
 };
