@@ -5,9 +5,10 @@
 ## 🤔 What is this bot?
 
 QCXRSupport (CraftyVR) is a bot made for
-the [QuestCraft](https://questcraft.org) Discord.
+the [QuestCraft](https://questcraft.org) [Discord](discord.gg/questcraft).
 
-The bot's main focus is around helping people as well as improving the overall experience on the server
+The bot's main focus is around helping people as well as improving the overall experience on the server with predefined answers that are 100% true.
+If you would like to commit, please make a Pull Request.
 
 To test the bot out join the [QuestCraft Discord Server](https://discord.gg/questcraft) and run a command
 in [#bot-commands](https://discord.com/channels/820767484042018829/953383695908216843)
@@ -41,11 +42,10 @@ Thank you to all these amazing contributors for helping with the bot!
 ## 📝 [License](LICENSE)
 
 QCXR Bot © 2023 by [Carson G](https://github.com/Cartrigger) is licensed
-under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) (GNU General Public License v3.0)
-with [Commons Clause](https://commonsclause.com)
+under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) (GNU General Public License v3.0) with [Commons Clause](https://commonsclause.com)
 
 ## 🔄 Updates!
 
 🔄 Huge Declutter
 
-#### QCXR bot is in and used in the QuestCraft Server and is not always up to date to this github repo, it may be an older commit.
+#### QCXR bot is used in the QuestCraft Server and is not always up to date with this github repo, it may be an older commit.
