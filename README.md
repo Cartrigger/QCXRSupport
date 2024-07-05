@@ -2,6 +2,9 @@
   <img align="right" width="310" alt="image" src="https://github.com/Cartrigger/QCXRSupport/assets/92249532/55dc86a0-b65c-4128-ba1d-b18a5b2df563">
 </p>
 
+# WARNING!
+THIS BRANCH IS MADE FOR BOTS WITHOUT PRIVILEGED INTENT BITS, USE MAIN IF YOU HAVE MESSAGE CONTENT INTENT BIT ACTIVE
+
 ## 🤔 What is this bot?
 
 QCXRSupport (CraftyVR) is a bot made for
