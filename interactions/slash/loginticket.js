@@ -1,6 +1,6 @@
-const {EmbedBuilder, SlashCommandBuilder} = require("discord.js");
+const {EmbedBuilder, SlashCommandBuilder, PermissionsBitField} = require("discord.js");
 const buttons = require("../buttons/category/login/own/own_buttons");
-
+const { owner } = require("../../config.json");
 
 const embed_own = new EmbedBuilder()
     .setTitle("Do you own Minecraft Java Edition?")
@@ -16,6 +16,15 @@ module.exports = {
         .setName("login")
         .setDescription("Info on how to solve login issues"),
     async execute(interaction) {
-        await interaction.reply({embeds: [embed_own], components: [buttons.own], ephemeral: true});
-    }
+
+            const allowedRoleIds = ["945554238380048456", "820768461697318982", "820768352712523857", "820781262335508512", "834177899321360404"];
+            const member = interaction.member;
+            const guildId = interaction.guild.id;
+            const hasAllowedRole = member.roles.cache.some(role => allowedRoleIds.includes(role.id));
+            if (guildId === allowedServerId) {
+                if (!hasAllowedRole) {
+                    return await interaction.reply({ embeds: [embed_own], components: [buttons.own]});
+                }
+            }
+        }
 };
