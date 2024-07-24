@@ -9,7 +9,7 @@ and security updates
 
 ### 🚨 Reporting a Vulnerability
 
-If you find a vunerability on one of the branches please file an  *
+If you find a vulnerability on one of the branches please file an  *
 *[issue,](https://github.com/Cartrigger/QCXRSoonBot/issues/new)* then we will try review it ASAP.
 
 ### 📜 License
