@@ -18,7 +18,7 @@ module.exports = {
 
         const embed_renderer_gl4es = new EmbedBuilder()
             .setTitle("**QuestCraft GL4ES Renderer**")
-            .setDescription("QuestCraft versions 3.1.2 and below utilize the **GL4ES renderer**, it has moderate speed with moderate mod compatibility.\n- Complex mods like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) do not work.\n\nPlease note moving forwards, on QuestCraft versions 4.0 and above, GL4ES is replaced with Zink.")
+            .setDescription("QuestCraft versions 3.1.2 and below utilize the **GL4ES renderer**, it has moderate speed with moderate mod compatibility.\n- Complex mods like [Create](https://www.curseforge.com/minecraft/mc-mods/create-fabric) do not work.\n\nPlease note moving forwards, on QuestCraft versions 4.x, GL4ES is replaced with Zink.")
             .setColor("Orange")
             .setFooter({
                 text: "Written by my Developers and my Contributors",
