@@ -15,7 +15,7 @@ module.exports = {
                     {name: "1.20.1", value: "1.20.1"}
                 )),
     async execute(interaction) {
-        const categorys = interaction.options.getString("version");
+        const categories = interaction.options.getString("version");
 
         const embed_immersivemc_1_18_2 = new EmbedBuilder()
             .setTitle("**Installing ImmersiveMC on 1.18.2**")
@@ -86,7 +86,7 @@ module.exports = {
                         }
                     )
             );
-        switch (categorys) {
+        switch (categories) {
             case "1.18.2":
                 await interaction.reply({embeds: [embed_immersivemc_1_18_2]});
                 break;
