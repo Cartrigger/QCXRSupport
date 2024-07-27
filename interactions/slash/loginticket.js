@@ -1,6 +1,5 @@
-const {EmbedBuilder, SlashCommandBuilder, PermissionsBitField} = require("discord.js");
+const {EmbedBuilder, SlashCommandBuilder} = require("discord.js");
 const buttons = require("../buttons/category/login/own/own_buttons");
-const { owner } = require("../../config.json");
 
 const embed_own = new EmbedBuilder()
     .setTitle("Do you own Minecraft Java Edition?")
@@ -13,10 +12,10 @@ const embed_own = new EmbedBuilder()
 module.exports = {embed_own}
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName("login")
+        .setName("loginticket")
         .setDescription("Info on how to solve login issues"),
     async execute(interaction) {
-
+            const allowedServerId = "820767484042018829"
             const allowedRoleIds = ["945554238380048456", "820768461697318982", "820768352712523857", "820781262335508512", "834177899321360404"];
             const member = interaction.member;
             const guildId = interaction.guild.id;
