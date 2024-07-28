@@ -13,7 +13,7 @@ module.exports = {embed_own}
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("loginticket")
-        .setDescription("Info on how to solve login issues but non ephemeral, used for support channels and tickets that are set wrong"),
+        .setDescription("Info on how to solve login issues but non ephemeral"),
     async execute(interaction) {
             const allowedServerId = "820767484042018829"
             const allowedRoleIds = ["945554238380048456", "820768461697318982", "820768352712523857", "820781262335508512", "834177899321360404"];
