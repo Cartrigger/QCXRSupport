@@ -1,11 +1,6 @@
 const axios = require("axios");
 const {EmbedBuilder, SlashCommandBuilder} = require("discord.js");
 
-const error = new EmbedBuilder()
-    .setTitle("Error!")
-    .setDescription("There was an error while processing your log file")
-    .setColor("Red");
-
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("analyse")
@@ -45,7 +40,7 @@ module.exports = {
             if (insights.analysis.problems.length === 0) {
                 const no_errors = new EmbedBuilder()
                     .setTitle(`Log was analyzed`)
-                    .setDescription("No problems/solutions were found, please note this works best for mod related issues.")
+                    .setDescription("No problems/solutions were found, please note this works best for mod related issues, and checking manually is ususally better for diagnosing issues.")
                     .setColor("Red");
 
                 if (file) {

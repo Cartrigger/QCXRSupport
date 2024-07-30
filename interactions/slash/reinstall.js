@@ -13,7 +13,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName("reinstall")
         .setDescription("Tells you how to reinstall."),
-    async execute(interaction, client) {
+    async execute(interaction) {
         await interaction.reply({embeds: [embed_reinstall], components: [buttons.adb]}) ;
     },
 };
