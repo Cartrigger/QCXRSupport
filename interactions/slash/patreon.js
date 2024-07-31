@@ -3,7 +3,7 @@ const buttons = require("../../buttons.js");
 
 const embed_patreon = new EmbedBuilder()
     .setTitle("<:Patreon:1172245220721709066> Patreon")
-    .setDescription("You can support the Patreon [here](https://patreon.com/questcraftxr) to get special perks and early access builds of QuestCraft.")
+    .setDescription("You can support the Patreon [here](https://patreon.com/questcraftxr) to get special perks and prebuilt early access builds of QuestCraft.")
     .setColor("F96854")
     .setFooter({
         text: "Written by Cart",
