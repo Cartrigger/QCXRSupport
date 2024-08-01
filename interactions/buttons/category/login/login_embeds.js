@@ -47,7 +47,7 @@ const login_embeds = {
         .setDescription("Due to being unable to change your age, you will have to join a family, families on Microsoft allow under 18 accounts to use alternative launchers.\nPlease join a family made by someone else for it to work")
         .setColor("Blurple")
         .setFooter({
-            text: "Written by Cartrigger",
+            text: "Written by Cart",
             iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
         })
 };
