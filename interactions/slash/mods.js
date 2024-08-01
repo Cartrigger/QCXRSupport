@@ -25,8 +25,6 @@ module.exports = {
                 iconURL: "https://media.discordapp.net/attachments/1059913125308145716/1157685309602013304/TechyGiraffe_v.2.0_test_3.png?ex=6533dff6&is=65216af6&hm=be5f4f64e4ad466e05649b713160104712622e426f1797c92ff78f58337a55f1&=&width=576&height=576"
             })
 
-
-
         const embed_mods_manual = new EmbedBuilder()
             .setTitle("**Manual Modding Guide on Headset**")
             .setDescription("**Modding QuestCraft Manually:**\n\n**NOTE: Launch the Minecraft version you are trying to mod first, as this will create the mods folder necessary**\n\n" +
@@ -51,12 +49,21 @@ module.exports = {
                 iconURL: "https://cdn.discordapp.com/avatars/455264433522868235/4bd171ff3f890dc5141a7e19f416a7b4.png?size=4096"
             })
 
+
         const embed_mods_manager = new EmbedBuilder()
             .setTitle("**Mod Manager Guide**")
-            .setDescription("**How to install mods using Mod Manager**\n**BE SURE TO LAUNCH THE VERSION YOU ARE DOWNLOADING MODS FOR AT LEAST ONCE, OR MOD MANAGER WILL GIVE YOU AN ERROR TELLING YOU TO DO SO**\n\n1) On the play screen, click `Mod Manager`\n2)On the right of the search bar, click the version number until it is the version you are installing mods for.\n3) Search for the mod you want to install\n4) Wait a minute for the game to load the mod icon, then click the mod\n5) Click the big install button, and your mod will be downloaded!\n\nNOTE: Managing Instances will be released soon at a later date")
+            .setDescription("**How to install mods using Mod Manager**\n\n1. On the play screen, click `Mods`\n2. On the right of the search bar, click the dropdown for the instance you want.\n3. Search for the mod you want to install\n4. Wait a second for the game to load the mod icon, then click the mod\n5. Click the big install button, and your mod will be downloaded!")
             .setFooter({
-                text: "Written by Pixel",
-                iconURL: "https://media.discordapp.net/attachments/1078126187064332359/1100075208498487356/Crowpixel.webp"
+                    text: "Written by Cart",
+                    iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
+            })
+
+        const embed_mods_pc  = new EmbedBuilder()
+            .setTitle("**PC Mod Install Guide**")
+            .setDescription("**How to install mods using a Computer**\n**NOTE**: You will have to manually download all dependencies, these mods will also not show up in modmanager or instance mananger.\n\n1. Plug in your headset, and choose a file manager.\n2. Once the headset is connected, navigate to (SDCARD) Android/Data/com.qcxr.qcxr/files/instances/(version or name)/mods\n3. Drop any mods in there\n4. Start the game.")
+            .setFooter({
+                text: "Written by Cart",
+                "iconURL": "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
             })
 
         switch (category) {
