@@ -1,8 +1,8 @@
-/*const {EmbedBuilder} = require("discord.js");
-import { embed_adb } from "../../slash/adb"
-import { embed_bedrock } from "../../slash/bedrock"
-import { embed_fixed } from "../../slash/fixed"
-import { embed_reinstall } from "../../slash/reinstall"
+const {EmbedBuilder} = require("discord.js");
+const embed_adb = ("../../slash/adb")
+const embed_bedrock = ("../../slash/bedrock")
+const embed_fixed = ("../../slash/fixed")
+const embed_reinstall = ("../../slash/reinstall")
 
 module.exports = {
     id: "select",
@@ -77,9 +77,6 @@ module.exports = {
             case "adb":
                 await interaction.reply({embeds: [embed_adb], ephemeral: true});
                 break;
-            case "logs":
-                await interaction.reply({embeds: [embeds.logs], ephemeral: true});
-                break;
             case "bedrock":
                 await interaction.reply({embeds: [embed_bedrock], ephemeral: true});
                 break;
@@ -98,9 +95,6 @@ module.exports = {
             case "releases":
                 await interaction.reply({embeds: [embed_releases], ephemeral: true});
                 break;
-            case "unity":
-                await interaction.reply({embeds: [embeds.unity], ephemeral: true});
-                break;
             case "performance":
                 await interaction.reply({embeds: [embed_performance], ephemeral: true});
                 break;
@@ -116,11 +110,8 @@ module.exports = {
             case "mods":
                 await interaction.reply({embeds: [embed_mods], ephemeral: true});
                 break;
-            case "test":
-                await interaction.reply({embeds: [embeds.test], ephemeral: true});
-                break;
             default:
                 break;
         }
     }
-};*/
+};
