@@ -4,7 +4,7 @@
 
 - TALK AS THE BOT (such as in commands)
 
-- If a embed already exists import it using ```const embed_reinstall = ("PATH HERE")```, the path can be ../../slash/ping.js **ADDING IN 7.2 AS DEFAULT!**
+- If a embed already exists import it using ```const embed_reinstall = ("PATH HERE")```, the path can be ```../../slash/ping.js```. **ADDING IN 7.2 AS DEFAULT!**
 
 - Make sure it doesn't crash
 
