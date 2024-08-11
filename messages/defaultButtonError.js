@@ -1,5 +1,5 @@
 game_ids = ["connect4_1", "connect4_2", "connect4_3", "connect4_4", "connect4_5", "connect4_6", "connect4_7", "TicTacToe_", "approve_accept", "approve_reject", "hangman_", "hangman_stop", "hangman_Y", "hangman_Z", "snake_up", "snake_down", "snake_left", "snake_right", "snake_stop", "matchpairs_", "housefinder_"];
-excluded_ids = ["yes_craftyai_personality", "no_craftyai_personality"];
+excluded_ids = [];
 
 module.exports = {
     async execute(interaction) {
