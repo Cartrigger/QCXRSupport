@@ -43,7 +43,7 @@ module.exports = {
 
         const embed_immersive_mc_embed = new EmbedBuilder()
             .setTitle("**Game crashes with ImmersiveMC**")
-            .setDescription("Please select your Minecraft Version below to get the [ImmersiveMC](https://modrinth.com/mod/immersivemc) info. \n*- Alternatively if you're on windows you can use <@483359783831732255>'s new [ImmersiveMC installer](https://discord.com/channels/820767484042018829/945502948111290498/1093048160244469820)*")
+            .setDescription("Please select your Minecraft Version below to get the [ImmersiveMC](https://modrinth.com/mod/immersivemc) info.")
             .setColor("Blurple")
             .setFooter({
                 text: "Written by TechyGiraffe999",
