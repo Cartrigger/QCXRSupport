@@ -6,6 +6,5 @@ module.exports = {
 
     async execute(interaction, message) {
         await interaction.update({embeds: [login_embeds.account_status], components: [buttons.account_status]});
-        return;
     }
 };

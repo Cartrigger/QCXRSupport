@@ -14,6 +14,6 @@ If you find a vulnerability on one of the branches please file an
 
 ### 📜 License
 
-Please also be aware of our current [license](LICENSE)
+Please also be aware of our current [license](LICENSE).
 
 
