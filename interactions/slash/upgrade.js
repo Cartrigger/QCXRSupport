@@ -11,9 +11,9 @@ const embed_upgrade = new EmbedBuilder()
 module.exports = {embed_upgrade}
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName("safegrade")
+        .setName("upgrade")
         .setDescription("Tells you how to safely upgrade QCXR"),
-    async execute(interaction, client) {
+    async execute(interaction) {
         await interaction.reply({embeds: [embed_upgrade]});
     },
 };
