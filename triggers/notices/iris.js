@@ -1,6 +1,6 @@
 const {EmbedBuilder} = require("discord.js");
 module.exports = {
-    name: ["iris"],
+    name: ["iris", "Iris"],
 
     execute(message, args) {
         const channels = ["945502948111290498", "946021441298649158"];
