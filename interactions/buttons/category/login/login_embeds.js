@@ -60,6 +60,14 @@ const login_embeds = {
         .setFooter({
             text: "Written by Cart",
             iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
+        }),
+    username_no: new EmbedBuilder()
+        .setTitle("Please set your username!")
+        .setDescription("TEMPORARY TESTING DESCRIPTION")
+        .setColor("DarkPurple")
+        .setFooter({
+            text: "Written by Cart",
+            iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
         })
 };
 
