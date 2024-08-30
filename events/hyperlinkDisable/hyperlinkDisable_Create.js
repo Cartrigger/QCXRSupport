@@ -1,13 +1,10 @@
 // Declares constants (destructured) to be used in this file.
 
-const {Collection, ChannelType, Events, EmbedBuilder} = require("discord.js");
-const {prefix, owner} = require("../../config.json");
+const {Events, EmbedBuilder} = require("discord.js");
+const {owner} = require("../../config.json");
+const regex = /\[[^\]]*\]\(https:\/\/[^\)]*\)|\[[^\]]*\]\([^)]*\)/;
 
 // Prefix regex, we will use to match in mention prefix.
-
-const escapeRegex = (string) => {
-    return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-};
 
 module.exports = {
     name: Events.MessageCreate,
@@ -24,8 +21,7 @@ module.exports = {
         try {
             const role_size = message.member ? parseInt(message.member.roles.cache.size) : 0;
             if (!owner.includes(message.author.id)) {
-                if (role_size == 1) {
-                    const regex = /\[[^\]]*\]\(https:\/\/[^\)]*\)|\[[^\]]*\]\([^)]*\)/;
+                if (role_size === 1) {
                     if (message.content.match(regex)) {
                         if (message.content.match(/\[[^\]]*\]\(https:\/\/[^\)]*\)/)) {
                             try {
