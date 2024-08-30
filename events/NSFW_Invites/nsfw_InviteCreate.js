@@ -1,7 +1,7 @@
 // Declares constants (destructured) to be used in this file.
 
-const {Collection, ChannelType, Events, EmbedBuilder} = require("discord.js");
-const {prefix, owner} = require("../../config.json");
+const {Events, EmbedBuilder} = require("discord.js");
+const {owner} = require("../../config.json");
 const fetch = require("node-fetch");
 
 const serverId = "820767484042018829";
@@ -74,7 +74,6 @@ module.exports = {
                                 const guild = message.client.guilds.cache.get(serverId);
                                 const channel = guild.channels.cache.get(channelId);
                                 channel.send({embeds: [crafty_NSFW]});
-                                return;
                             }
                         }
                     } catch (error) {
