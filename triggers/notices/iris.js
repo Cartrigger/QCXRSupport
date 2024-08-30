@@ -7,7 +7,7 @@ const embed_iris = new EmbedBuilder()
     .setColor("Blurple")
 
 module.exports = {
-    name: ["iris", "Iris"],
+    name: ["iris", "Iris", "IRIS"],
 
     execute(message, args) {
         const channels = ["945502948111290498", "946021441298649158"];
