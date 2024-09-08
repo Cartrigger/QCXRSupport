@@ -1,31 +1,41 @@
 // Declares constants (destructured) to be used in this file.
 
-const {Events, EmbedBuilder} = require("discord.js");
-const {owner} = require("../../config.json");
+const { Events, EmbedBuilder } = require("discord.js");
+const { owner } = require("../../config.json");
 const fetch = require("node-fetch");
 
+// Channel IDs to be ignored for message deletion
+const ignorechannel = [
+    "821078174992957480",
+    "1090068136528715928",
+    "821076673331724309",
+    "932673625813823518"
+];
 const serverId = "820767484042018829";
 const channelId = "1057074981135196230";
-
 
 module.exports = {
     name: Events.MessageCreate,
 
     async execute(message) {
         // Declares const to be used.
-        const NSFWwords = ["nsfw", "18+", "+18", "🔞", "nude", "addict", "egirl", "sex", "tik", "tok", "tiktok", "onlyfans", "porn", "lust", "bdsm", "hentai", "🍑", "🍆"]
+        const NSFWwords = ["nsfw", "18+", "+18", "🔞", "nude", "addict", "egirl", "sex", "tik", "tok", "tiktok", "onlyfans", "porn", "lust", "bdsm", "hentai", "🍑", "🍆"];
         const {client, guild, channel, content, author} = message;
 
         const no_perms = new EmbedBuilder()
             .setDescription(`⚠️ I lack the required permissions to delete this NSFW invite.`)
-            .setColor("Red")
+            .setColor("Red");
 
         const crafty_NSFW = new EmbedBuilder()
-            .setTitle("🤖 NSFW Server Invite Detected ")
+            .setTitle("🤖 NSFW Server Invite Detected")
             .setDescription(`The message sent by ${message.author} was deleted because it contained a NSFW server invite.\n\n**Message Content:**\n||${message.content}||`)
             .setTimestamp()
             .setFooter({text: `User ID: ${message.author.id}`})
-            .setColor("Red")
+            .setColor("Red");
+
+        if (ignorechannel.includes(message.channel.id)) {
+            return;
+        }
 
         try {
             if (!owner.includes(message.author.id)) {
@@ -38,8 +48,8 @@ module.exports = {
                         try {
                             await message.channel.send({content: `🚫 Potential scam sent by ${message.author} deleted, [more info](<https://youtu.be/Kah-Dot1734>.)`}).then(msg => {
                                 setTimeout(() => msg.delete(), 5000);
-                            })
-                            ;(await message).delete();
+                            });
+                            (await message).delete();
                         } catch (err) {
                             await message.reply({
                                 content: "<@&820768461697318982> NSFW Invite Detected",
@@ -61,10 +71,10 @@ module.exports = {
 
                             if (NSFWwords.some(word => guildName.includes(word))) {
                                 try {
-                                    await message.channel.send({content: `🚫 Potential scam sent by ${message.author} deleted, [more info](<https://youtu.be/Kah-Dot1734>.)`}).then(msg => {
+                                    await message.channel.send({ content: `🚫 Potential scam sent by ${message.author} deleted, [more info](<https://youtu.be/Kah-Dot1734>.)` }).then(msg => {
                                         setTimeout(() => msg.delete(), 5000);
-                                    })
-                                    ;(await message).delete();
+                                    });
+                                    (await message).delete();
                                 } catch (err) {
                                     await message.reply({
                                         content: "<@&820768461697318982> NSFW Invite Detected",
@@ -77,10 +87,12 @@ module.exports = {
                             }
                         }
                     } catch (error) {
+                        console.error("Error fetching invite:", error);
                     }
                 }
             }
         } catch (error) {
+            console.error("Error in message processing:", error);
         }
     }
 };
