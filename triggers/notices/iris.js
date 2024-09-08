@@ -3,7 +3,7 @@ const regex = /\b[Ii][Rr][Ii][Ss]\b/;
 
 const embed_iris = new EmbedBuilder()
     .setTitle("**Sorry, but Iris is not supported!**")
-    .setDescription("Sorry, but Iris is not supported on QuestCraft as of this time, it will crash. Please read [This Message](https://discord.com/channels/820767484042018829/1242887330969157723/1243302943365796003) for more mods that do not work!")
+    .setDescription("Sorry, but Iris is not supported on QuestCraft as of this time, it will crash. Please read [This Message](https://discord.com/channels/820767484042018829/1242887330969157723/1243302943365796003) for more mods that do not work.")
     .setColor("Blurple");
 
 module.exports = {
