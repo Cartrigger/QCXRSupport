@@ -50,4 +50,4 @@ under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) (GNU General Public 
 
 #### QCXR bot is used in the QuestCraft Server and is not always up to date with this github repo, it may be an older commit.
 
-<div align='center'><a href='https://www.websitecounterfree.com'><img src='https://www.websitecounterfree.com/c.php?d=9&id=58944&s=40' border='0' alt=''></a><br / ><small><a href='https://www.websitecounterfree.com' title="Free Website Counter">Free Website Counter</a></small></div>
+<div align='center'><a href='https://www.websitecounterfree.com'><img src='https://www.websitecounterfree.com/c.php?d=9&id=58944&s=40' border='0' alt=''></a><br / ><small><a href='https://www.websitecounterfree.com' title="Free Website Counter">From 2024-09-10</a></small></div>
