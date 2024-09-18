@@ -1,7 +1,7 @@
 const {ActionRowBuilder, ButtonBuilder, ButtonStyle} = require("discord.js");
 
 const buttons_username = {
-    buttons_username: new ActionRowBuilder()
+    username: new ActionRowBuilder()
         .addComponents(
             new ButtonBuilder()
                 .setCustomId("account_status_yes")
@@ -16,4 +16,15 @@ const buttons_username = {
         )
 };
 
-module.exports = buttons_username;
+const check_username = {
+    checkusername: new ActionRowBuilder()
+        .addComponents(
+            new ButtonBuilder()
+                .setCustomId("button_checkuser")
+                .setLabel("Check your username")
+                .setEmoji("✏️")
+                .setStyle(ButtonStyle.Primary),
+        )
+}
+
+module.exports = buttons_username && check_username;
