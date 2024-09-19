@@ -2,13 +2,14 @@ const {ActionRowBuilder, ButtonBuilder, ButtonStyle, Events, EmbedBuilder, Embed
 
 const login_embeds = require("../interactions/buttons/category/login/login_embeds");
 const buttons = require("../interactions/buttons/category/login/own/own_buttons");
+const ticket_category_id = require("../config.json")
 
 module.exports = {
     name: Events.ChannelCreate,
     async execute(channel) {
         try {
             channel_temp = channel.parent;
-            if ((channel_temp.id === "946184804657934469") && channel.name.slice(0, 5) === "login") {
+            if ((channel_temp.id === ticket_category_id) && channel.name.slice(0, 5) === "login") {
 
                 await new Promise(resolve => setTimeout(resolve, 1000)); // 1 second delay
                 const start_message = await channel.send({embeds: [login_embeds.login]});

@@ -3,5 +3,6 @@
 	"token": "...",
 	"owner": ["...","..."],
 	"client_id": "...",
-	"test_guild_id": "..."
+	"test_guild_id": "...",
+	"ticket_category_id": ""
 }
