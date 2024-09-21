@@ -1,6 +1,5 @@
 const { EmbedBuilder, SlashCommandBuilder } = require('discord.js');
 const MCAPI = require('mojang-lib');
-const usernotfound = `Username '${username}' not found.`
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -14,7 +13,7 @@ module.exports = {
         const username = interaction.options.getString('username');
         try {
             const player = await MCAPI.players.get(username);
-
+            const usernotfound = `Username '${username}' not found.`
             if (!player || !player.uuid) {
                 // Player not found
                 await interaction.reply({ content: usernotfound, ephemeral: true });
