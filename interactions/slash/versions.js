@@ -2,19 +2,19 @@ const {EmbedBuilder, SlashCommandBuilder} = require("discord.js");
 
 const embed_versions = new EmbedBuilder()
     .setTitle("**Version Info**")
-    .setDescription("Questcraft currently supports Minecraft versions:\n> 1.18.2 | 1.19.2  | 1.19.4 | 1.20.1 | 1.20.4 \n\nYou are unable to use any versions below 1.18.2\nTo change versions, Click on the version number in the bottom left of the play screen (As shown in the image below)")
+    .setDescription("Questcraft currently supports Minecraft versions:\n> 1.18.2 | 1.19.2  | 1.19.4 | 1.20.1 | 1.20.4 \n\nYou are unable to use any versions below 1.18.2\nTo change versions, click the version number for a dropdown, or create a new instance with a version of choice.")
     .setColor("Green")
-    .setImage("https://media.discordapp.net/attachments/1057074981135196230/1086666081244024925/version_switch.png?width=868&height=656")
+    .setImage("https://github.com/Cartrigger/QCXRSupport/blob/main/assets/versions.jpg?raw=true")
     .setFooter({
-        text: "Written by Pixel",
-        iconURL: "https://media.discordapp.net/attachments/1078126187064332359/1100075208498487356/Crowpixel.webp"
+        text: "Written by Cart",
+        iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
     })
 module.exports = {embed_versions}
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("versions")
         .setDescription("Displays minecraft version info for QuestCraft"),
-    async execute(interaction, client) {
+    async execute(interaction) {
         await interaction.reply({
             embeds: [embed_versions]
         });
