@@ -5,8 +5,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('lookup')
         .setDescription('Lookup a Minecraft username')
-        .addStringOption(option =>
-            option.setName('username')
+        .addStringOption(option => option.setName('username')
                 .setDescription('The Minecraft username to lookup')
                 .setRequired(true)
         ),
@@ -14,10 +13,10 @@ module.exports = {
         const username = interaction.options.getString('username');
         try {
             const player = await MCAPI.players.get(username);
-
+            const usernotfound = `Username '${username}' not found.`
             if (!player || !player.uuid) {
                 // Player not found
-                await interaction.reply({ content: `Username '${username}' not found.`, ephemeral: true });
+                await interaction.reply({ content: usernotfound, ephemeral: true });
                 return;
             }
 
@@ -25,11 +24,9 @@ module.exports = {
             const uuid = player.uuid || 'N/A';
             const isDemo = player.demo ? 'Yes' : 'No';
 
-            // Skin images using Minotar
             const avatarUrl = `https://minotar.net/helm/${username}/100.png`;
             const bodyUrl = `https://minotar.net/armor/body/${username}/100.png`;
 
-            // Construct the embed
             const embed = new EmbedBuilder()
                 .setTitle(`Minecraft User: ${player.username}`)
                 .setColor('Green')
@@ -45,7 +42,7 @@ module.exports = {
             console.error(error);
             // Check if the error is due to the username not being found
             if (error.message && error.message.includes('not found')) {
-                await interaction.reply({ content: `Username '${username}' not found.`, ephemeral: true });
+                await interaction.reply({ content: usernotfound, ephemeral: true });
             } else {
                 await interaction.reply({ content: `An error occurred while fetching data for username: ${username}`, ephemeral: true });
             }

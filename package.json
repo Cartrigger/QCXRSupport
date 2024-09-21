@@ -1,6 +1,6 @@
 {
   "name": "discord-qcxrsupport",
-  "version": "6.1",
+  "version": "7.0.2",
   "description": "",
   "types": "./typings.d.ts",
   "main": "bot.js",
