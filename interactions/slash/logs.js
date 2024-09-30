@@ -11,7 +11,7 @@ module.exports = {
                 .setRequired(false)
                 .addChoices(
                     {name: "PC", value: "pc"},
-                    {name: "Quest", value: "quest"}
+                    {name: "Standalone", value: "standalone"}
                 )),
     async execute(interaction) {
         const categories = interaction.options.getString("device");
@@ -26,7 +26,7 @@ module.exports = {
                 iconURL: "https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318"
             })
 
-        const embed_quest_logs = new EmbedBuilder()
+        const embed_standalone_logs = new EmbedBuilder()
             .setTitle("**Getting logs on Quest Guide**")
             .setDescription("**Sending logs from Quest:**\n\n Restart your game, press on need help on the bottom right, then post the log link inside of support, or ticket where the person is asking for logs.")
             .setImage("https://cdn.discordapp.com/attachments/821076673331724309/1243279697459150959/image.png?ex=6650e5f2&is=664f9472&hm=4dff3409b8b444a11e294f4395024cadd5f0da1c81d5001c72f8523f4d8a7cda&")
@@ -49,8 +49,8 @@ module.exports = {
             case "pc":
                 await interaction.reply({embeds: [embed_pc_logs]});
                 break;
-            case "quest":
-                await interaction.reply({embeds: [embed_quest_logs]});
+            case "standalone":
+                await interaction.reply({embeds: [embed_standalone_logs]});
                 break;
             default:
                 await interaction.reply({embeds: [embed_embed_logs], components: [buttons.logs]});
