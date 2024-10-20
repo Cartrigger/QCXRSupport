@@ -17,7 +17,7 @@ module.exports = {
 
         const embed_github_bot = new EmbedBuilder()
             .setTitle("**My GitHub Info!**")
-            .setDescription("My GitHub is located in **[this link](https://github.com/Cartrigger/QCXRSoonBot)**! Check out my code over there!\nYou can also see the **[future plans](https://github.com/Cartrigger/QCXRSoonBot/issues/25)** for me, suggest any others and report any **[issues](https://github.com/Cartrigger/QCXRSoonBot/issues/new/choose)**!")
+            .setDescription("My GitHub is located in **[this link](https://github.com/Cartrigger/QCXRSoonBot)**! Check out my code over there! If you would like to suggest any features and report any bugs, check out **[issues](https://github.com/Cartrigger/QCXRSoonBot/issues/new/choose)**!")
             .setColor("DarkBlue")
 
         const embed_github_qc = new EmbedBuilder()
