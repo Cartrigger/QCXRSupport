@@ -9,22 +9,12 @@ const embed_servers = ("../../slash/servers")
 const embed_releases = ("../../slash/releases")
 const embed_installation = ("../../slash/installation")
 const embed_mods = ("../../slash/mods")
-
+const embed_github_bot = ("../../slash/github")
+const embed_github_qc = ("../../slash/github")
 module.exports = {
     id: "select",
     async execute(interaction) {
         const selected = interaction.values[0];
-
-        const embed_github_bot = new EmbedBuilder()
-            .setTitle("**My GitHub Info!**")
-            .setDescription("My GitHub is located in **[this link](https://github.com/Cartrigger/QCXRSoonBot)**! Check out my code over there!\nYou can also see the **[future plans](https://github.com/Cartrigger/QCXRSoonBot/issues/25)** for me, suggest any others and report any **[issues](https://github.com/Cartrigger/QCXRSoonBot/issues/new/choose)**!")
-            .setColor("DarkBlue")
-
-        const embed_github_qc = new EmbedBuilder()
-            .setTitle("**QuestCraft Github**")
-            .setDescription("The QuestCraft GitHub is at the link [here](https://github.com/QuestCraftPlusPlus/QuestCraft) any other GitHub is potentially dangerous and any APK should not be downloaded from it.")
-            .setColor("DarkBlue")
-
         switch (selected) {
             case "adb":
                 await interaction.reply({embeds: [embed_adb], ephemeral: true});
