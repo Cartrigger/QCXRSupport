@@ -1,6 +1,5 @@
 const {EmbedBuilder, SlashCommandBuilder} = require("discord.js");
 const buttons = require("../buttons/category/login/own/own_buttons");
-const allowedServerId = "820767484042018829"
 const allowedRoleIds = ["945554238380048456", "820768461697318982", "820768352712523857", "820781262335508512", "834177899321360404, 1101634720929951796"];
 
 const embed_own = new EmbedBuilder()
@@ -18,12 +17,9 @@ module.exports = {
         .setDescription("Info on how to solve login issues but non ephemeral"),
     async execute(interaction) {
             const member = interaction.member;
-            const guildId = interaction.guild.id;
             const hasAllowedRole = member.roles.cache.some(role => allowedRoleIds.includes(role.id));
-            if (guildId === allowedServerId) {
-                if (hasAllowedRole) {
-                    return await interaction.reply({ embeds: [embed_own], components: [buttons.own]});
-                }
+            if (hasAllowedRole) {
+                return await interaction.reply({ embeds: [embed_own], components: [buttons.own]});
             }
         }
 };
