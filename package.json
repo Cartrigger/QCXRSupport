@@ -1,7 +1,7 @@
 {
-  "name": "discord-qcxrsupport",
+  "name": "discord-qcxrsupportbot",
   "version": "7.0.2",
-  "description": "",
+  "description": "A Support bot for the QuestCraft Discord.",
   "types": "./typings.d.ts",
   "main": "bot.js",
   "scripts": {
