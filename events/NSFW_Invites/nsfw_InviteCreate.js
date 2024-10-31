@@ -1,3 +1,5 @@
+// Declares constants (destructured) to be used in this file.
+
 const { Events, EmbedBuilder } = require("discord.js");
 const { owner } = require("../../config.json");
 const fetch = require("node-fetch");

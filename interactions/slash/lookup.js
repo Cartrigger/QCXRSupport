@@ -5,8 +5,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('lookup')
         .setDescription('Lookup a Minecraft username')
-        .addStringOption(option =>
-            option.setName('username')
+        .addStringOption(option => option.setName('username')
                 .setDescription('The Minecraft username to lookup')
                 .setRequired(true)
         ),
@@ -27,7 +26,7 @@ module.exports = {
 
             const avatarUrl = `https://minotar.net/helm/${username}/100.png`;
             const bodyUrl = `https://minotar.net/armor/body/${username}/100.png`;
-          
+
             const embed = new EmbedBuilder()
                 .setTitle(`Minecraft User: ${player.username}`)
                 .setColor('Green')
