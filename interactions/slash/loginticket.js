@@ -1,5 +1,4 @@
 const {EmbedBuilder, SlashCommandBuilder} = require("discord.js");
-const buttons = require("../buttons/category/login/own/own_buttons");
 const allowedRoleIds = ["945554238380048456", "820768461697318982", "820768352712523857", "820781262335508512", "834177899321360404, 1101634720929951796"];
 
 const embed_own = new EmbedBuilder()
