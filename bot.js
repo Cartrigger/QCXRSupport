@@ -87,7 +87,7 @@ const contextMenus = fs.readdirSync("./interactions/context-menus");
 
 for (const folder of contextMenus) {
     const files = fs
-        .readdirSync("./interactions/context-menus/${folder}")
+        .readdirSync(`./interactions/context-menus/${folder}`)
         .filter((file) => file.endsWith(".js"));
     for (const file of files) {
         const menu = require(`./interactions/context-menus/${folder}/${file}`);
