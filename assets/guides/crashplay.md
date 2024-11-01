@@ -15,7 +15,7 @@
 -  Wait around 1 minute **after** it has disappeared
 - Then press play
 
-⚠️ **don’t remove your headset during the whole download**⚠️
+⚠️ **Don’t remove your headset during the whole download!**⚠️
 
 🟣 **Other things will stop the download:**🟣
 • letting the headset go idle
@@ -37,4 +37,4 @@ Average completion time is 2-20 minutes but it depends on your internet speed.
   You can still play 1.19.4 **IF** you remove sodium.**
   (Though you will get worse performance)
 
-*Alternatively, if you know how to build sodium yourself, you can do that. But we won’t assist with it*
+*Alternatively, if you know how to build Sodium yourself, you can do that after applying our patch. But we won’t assist with it.*
