@@ -1,8 +1,3 @@
-/**
- * @file Buttons.
- * @author TechyGiraffe999
- */
-
 const {ActionRowBuilder, ButtonBuilder, ButtonStyle} = require("discord.js");
 
 const buttons = {
