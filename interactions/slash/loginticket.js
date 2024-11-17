@@ -4,7 +4,7 @@ const allowedRoleIds = ["945554238380048456", "820768461697318982", "82076835271
 
 const embed_own = new EmbedBuilder()
     .setTitle("Do you own Minecraft Java Edition?")
-    .setDescription("You can check via this [link](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile)\n\n IF you do own it and havn't made a username there already, please make one")
+    .setDescription("You can check via this [link](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile)\n\n IF you do own it and haven't made a username there already, please make one")
     .setColor("Green")
     .setFooter({
         text: "Written by TechyGiraffe999 [BETA]",

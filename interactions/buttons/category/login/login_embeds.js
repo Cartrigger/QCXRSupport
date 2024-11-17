@@ -11,7 +11,7 @@ const login_embeds = {
         }),
     own: new EmbedBuilder()
         .setTitle("Do you own Minecraft Java Edition?")
-        .setDescription("Minecraft Java Edition is the PC edition of the game which is not available on consoles. You can check if you own the gane via this [link](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile)")
+        .setDescription("Minecraft Java Edition is the PC edition of the game which is not available on consoles. You can check if you own the game via this [link](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile)")
         .setColor("Green")
         .setFooter({
             text: "Written by TechyGiraffe999",
