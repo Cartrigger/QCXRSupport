@@ -25,11 +25,11 @@ module.exports = {
         try {
             return await command.execute(interaction);
         } catch (err) {
+            console.log(err)
             await interaction.reply({
                 content: "There was an issue while executing that button! If the issue persists please contact <@317814254336081930>",
                 ephemeral: true
             });
-            return;
         }
     }
 };

@@ -1,4 +1,4 @@
-const embed_mods_manual = require("../../../slash/mods")
+const embed_mods_manual = require("../../../slash/mods.js")
 
 module.exports = {
     id: "mods_manual",

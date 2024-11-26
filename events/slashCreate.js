@@ -5,7 +5,6 @@ module.exports = {
     name: Events.InteractionCreate,
 
     async execute(interaction) {
-        // Deconstructed client from interaction object.
         const {client} = interaction;
         // Checks if the interaction is a command (to prevent weird bugs)
 
