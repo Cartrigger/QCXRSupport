@@ -8,8 +8,8 @@ const embed_binds = new EmbedBuilder()
 module.exports = {embed_binds}
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName("adb")
-        .setDescription("Tells you how to run the ADB uninstall command."),
+        .setName("binds")
+        .setDescription("Shows controller binds."),
     async execute(interaction) {
         await interaction.reply({embeds: [embed_binds]});
     },
