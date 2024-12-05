@@ -34,7 +34,7 @@ in [#bot-commands](https://discord.com/channels/820767484042018829/9533836959082
 
 ### 🧩 Contributors
 
-Thank you to all these amazing contributors for helping with the bot!
+Thank you to all these contributors for helping with the bot over the years!
 <a href="https://github.com/Cartrigger/QCXRSoonBot/graphs/contributors">
 <img src="https://contrib.rocks/image?repo=Cartrigger/QCXRSoonBot" />
 </a>
