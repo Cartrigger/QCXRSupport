@@ -1,7 +1,7 @@
 const {EmbedBuilder, SlashCommandBuilder} = require("discord.js");
 
 const embed_v71 = new EmbedBuilder()
-    .setTitle("#**Meta Quest V71 has major issues!**")
+    .setTitle("**Meta Quest V71 has major issues!**")
     .setDescription("**Meta Quest Version 71 has major issues impacting QuestCraft!**\n\nThese issues usually include crashing without reason.\nThere is no known way of fixing this, so you need to wait till QuestCraft updates.\n\nYou can see more info in <#1242887330969157723>.")
     .setColor("Green")
     .setFooter({
