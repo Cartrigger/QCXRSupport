@@ -1,5 +1,5 @@
 <p>
-  <img align="right" width="310" alt="image" src="https://github.com/Cartrigger/QCXRSupport/assets/92249532/55dc86a0-b65c-4128-ba1d-b18a5b2df563">
+  <img align="right" width="310" alt="image" src="https://github.com/Cartrigger/QCXRSupport/blob/main/assets/userprof.png?raw=true">
 </p>
 
 ## 🤔 What is this bot?
