@@ -1,5 +1,5 @@
 <p>
-  <img align="right" width="310" alt="image" src="https://github.com/Cartrigger/QCXRSupport/assets/92249532/55dc86a0-b65c-4128-ba1d-b18a5b2df563">
+  <img align="right" width="310" alt="image" src="https://github.com/Cartrigger/QCXRSupport/blob/main/assets/userprof.png?raw=true">
 </p>
 
 ## 🤔 What is this bot?
@@ -34,7 +34,7 @@ in [#bot-commands](https://discord.com/channels/820767484042018829/9533836959082
 
 ### 🧩 Contributors
 
-Thank you to all these amazing contributors for helping with the bot!
+Thank you to all these contributors for helping with the bot over the years!
 <a href="https://github.com/Cartrigger/QCXRSoonBot/graphs/contributors">
 <img src="https://contrib.rocks/image?repo=Cartrigger/QCXRSoonBot" />
 </a>
@@ -46,7 +46,7 @@ under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) (GNU General Public 
 
 ## 🔄 Updates!
 
-🔄 Huge Declutter
+🔄 Minor Command additions, maintenance updates.
 
 #### QCXR bot is used in the QuestCraft Server and is not always up to date with this github repo, it may be an older commit.
 
