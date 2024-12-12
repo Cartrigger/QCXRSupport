@@ -53,7 +53,6 @@ module.exports = {
             const member = interaction.member;
             const allowedServerId = "820767484042018829";
             const guildId = interaction.guild.id;
-            const adminPermissions = new PermissionsBitField(PermissionsBitField.Flags.Administrator);
             const hasAllowedRole = member.roles.cache.some(role => allowedRoleIds.includes(role.id));
 
             if (guildId === allowedServerId) {
