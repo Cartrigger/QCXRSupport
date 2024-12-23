@@ -19,19 +19,19 @@ module.exports = {
         const categories = interaction.options.getString("invites");
         switch(categories){
             case "xrcraft":
-                await interaction.reply("https://discord.gg/xrcraft-947244318740054149");
+                await interaction.reply("Here's a invite to XRCraft!\n\nhttps://discord.gg/xrcraft-947244318740054149");
                 return;
             case "pojavlauncher":
-                await interaction.reply("https://discord.gg/pojavlauncher-724163890803638273");
+                await interaction.reply("Here's a invite to PojavLauncher!\n\nhttps://discord.gg/pojavlauncher-724163890803638273");
                 return;
             case "vivecraft_mixin":
-                await interaction.reply("https://discord.gg/bnatWRD8v3");
+                await interaction.reply("Here's a invite to Vivecraft Mixin!\n\nhttps://discord.gg/bnatWRD8v3");
                 return;
             case "vivecraft":
-                await interaction.reply("https://discord.com/invite/2x3QCk8qa9");
+                await interaction.reply("Here's a invite to Vivecraft!\n\nhttps://discord.com/invite/2x3QCk8qa9");
                 return;
             case "questcraft":
-                await interaction.reply("https://discord.gg/questcraft")
+                await interaction.reply("Here's a invite to QuestCraft!\n\nhttps://discord.gg/questcraft")
                 return;
         }
     }
