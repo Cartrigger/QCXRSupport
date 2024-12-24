@@ -22,7 +22,7 @@ module.exports = {
                 await interaction.reply("Here's a invite to XRCraft!\n\nhttps://discord.gg/xrcraft-947244318740054149");
                 return;
             case "pojavlauncher":
-                await interaction.reply("Here's a invite to PojavLauncher!\n\nhttps://discord.gg/pojavlauncher-724163890803638273");
+                await interaction.reply("Here's a invite to PojavLauncher!\n\nhttps://discord.gg/tAmxAzSmvB");
                 return;
             case "vivecraft_mixin":
                 await interaction.reply("Here's a invite to Vivecraft Mixin!\n\nhttps://discord.gg/bnatWRD8v3");
