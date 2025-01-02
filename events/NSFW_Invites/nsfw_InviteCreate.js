@@ -17,7 +17,9 @@ module.exports = {
 
     async execute(message) {
         // Declares const to be used.
-        const NSFWwords = ["nsfw", "18+", "+18", "🔞", "nude", "addict", "egirl", "sex", "tik", "tok", "tiktok", "onlyfans", "porn", "lust", "bdsm", "hentai", "🍑", "🍆"];
+        const NSFWwords = [
+            "nsfw", "18+", "+18", "🔞", "nude", "addict", "egirl", "sex", "tik", "tok", "tiktok", "onlyfans", "porn", "lust", "bdsm", "hentai", "🍑", "🍆", "boobs", "tits", "ass", "buttocks", "vagina", "penis", "cock", "pussy", "dick", "cum", "cumshot", "blowjob", "handjob", "masturbation", "erotic", "lewd", "obscene", "vulgar", "racy", "provocative", "sexy", "hot", "horny", "slut", "whore", "threesome", "orgasm", "fetish", "bondage", "dom", "sub", "sadomasochism", "gangbang", "swinger", "swingers", "nudism", "nudist", "topless", "bottomless", "lingerie", "latex", "leather", "kink", "bdsm", "s&m", "anal", "golden shower", "watersports", "bondage", "pornstar", "cam girl", "chaturbate", "vibrator", "dildo", "adult",
+        ];
         const {client, guild, channel, content, author} = message;
 
         const no_perms = new EmbedBuilder()
