@@ -3,9 +3,10 @@ const {owner} = require("../config.json");
 
 module.exports = {
     async execute(message) {
-        if (message.author === owner) {
+        if (owner.includes(message.author.id)) {
             const mention = new EmbedBuilder()
-                .setDescription(`Hey ${message.author}! I am online and my ping is \`\`${message.client.ws.ping}ms\`\`.`);
+                .setDescription(`Hey ${message.author}! I am online and my ping is \`\`${message.client.ws.ping}ms\`\`.`)
+                .setColor("Blue");
             return message.reply({embeds: [mention]});
         } else {
             const mention = new EmbedBuilder()
