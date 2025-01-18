@@ -40,7 +40,7 @@ module.exports = {
             if (insights.analysis.problems.length === 0) {
                 const no_errors = new EmbedBuilder()
                     .setTitle(`Log was analyzed`)
-                    .setDescription("No problems/solutions were found, please note this works best for mod related issues, and checking manually is ususally better for diagnosing issues.")
+                    .setDescription("No problems/solutions were found, please note this works best for mod related issues, and checking manually is usually better for diagnosing issues.")
                     .setColor("Red");
 
                 if (file) {
