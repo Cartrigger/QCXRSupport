@@ -31,7 +31,7 @@ const login_embeds = {
         .setImage("https://media.discordapp.net/attachments/1059913125308145716/1092496548543332422/image.png?width=626&height=655")
         .setColor("Green")
         .setFooter({text: "Written by TechyGiraffe999 - Fix found by !DED"}),
-    account_status_no: new EmbedBuilder()
+    account_status_no_age: new EmbedBuilder()
         .setTitle("Please follow the steps below")
         .setDescription("First you must have a overage account to start a Microsoft family.\n1. Log into this [link](https://account.microsoft.com/family/home?refd=login.live.com) with the overage account\n2. Add your main account as a member.\n3. Accept invite you received in your main account's email.\n\n**Things to note:** \n- The overage account doesn't have to own java but can.\n- The main account has to be added to the family as a member instead of as an organizer.\n- The main account has to be added to the overage accounts family, not the other way around.\n- You cannot invite yourself as a member to a Microsoft family.\n\nOnce you have followed those steps try and login to QuestCraft again\n\nIf your issue still persists please click the button below")
         .setColor("Green")
@@ -47,13 +47,13 @@ const login_embeds = {
             text: "Written by TechyGiraffe999",
             iconURL: "https://cdn.discordapp.com/attachments/1059913125308145716/1157685309602013304/TechyGiraffe_v.2.0_test_3.png?ex=651981f6&is=65183076&hm=b630b14532ae9e04c63949a94b12d9308431e6d7726cead62bca42ba4720f28d&"
         }),
-    join_family: new EmbedBuilder()
-        .setTitle("Join a family instead")
-        .setDescription("Due to being unable to change your age, you will have to join a family, families on Microsoft allow under 18 accounts to use alternative launchers.\nPlease join a family made by someone else for it to work")
-        .setColor("Blurple")
+    account_status_no: new EmbedBuilder()
+        .setTitle("What do you prefer?")
+        .setDescription("Because your account isn't 18+, you may not be able to play Questcraft. You have two choices, using either a Microsoft Family to get access, or changing your age.")
+        .setColor("Red")
         .setFooter({
-            text: "Written by Cart",
-            iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
+            text: "",
+            iconURL: "",
         })
 };
 

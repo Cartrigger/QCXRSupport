@@ -15,6 +15,5 @@ module.exports = {
             })
 
         await interaction.reply({embeds: [embed_pc_logs], ephemeral: true});
-        return;
     }
 };

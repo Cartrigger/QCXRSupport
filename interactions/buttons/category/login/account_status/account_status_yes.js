@@ -6,6 +6,5 @@ module.exports = {
 
     async execute(interaction) {
         await interaction.update({embeds: [login_embeds.others], components: [buttons.others]});
-        return;
     }
 };

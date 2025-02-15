@@ -14,6 +14,5 @@ module.exports = {
             })
 
         await interaction.reply({embeds: [embed_quest_logs], ephemeral: true});
-        return;
     }
 };
