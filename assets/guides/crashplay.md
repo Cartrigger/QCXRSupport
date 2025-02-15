@@ -31,9 +31,9 @@ Average completion time is 2-20 minutes but it depends on your internet speed.
 - 1.18 doesn't work
 
 - 1.19.4 is currently bugged.
-  *(It is fixed on the current __patreon build__ and will be fixed when 5.1.0 launch)*
+  *(It is fixed on the current __patreon build__ and will be fixed when 6.0 launch)*
 
-- Until release of 5.1.0
+- Until release of 6.0
   You can still play 1.19.4 **IF** you remove sodium.**
   (Though you will get worse performance)
 
