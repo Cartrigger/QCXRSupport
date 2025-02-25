@@ -2,7 +2,7 @@ const {EmbedBuilder, SlashCommandBuilder} = require("discord.js");
 
 const embed_buy = new EmbedBuilder()
     .setTitle("**You need to own Minecraft Java Edition!**")
-    .setDescription("**QuestCraft is free, but Minecraft isn't.**\n\nYou need to own Minecraft Java Edition to play QuestCraft in any capacity. You can buy a genuine copy at https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc for $30 USD (currency conversion may apply when visiting site from different regions)")
+    .setDescription("**QuestCraft is free, but Minecraft is not.**\n\nYou need to own Minecraft Java Edition to play QuestCraft in any capacity. You can buy a genuine copy at https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc for $30 USD (currency conversion may apply when visiting site from different regions)")
     .setColor("Green")
     .setFooter({
         text: "Written by Cart",
