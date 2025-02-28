@@ -3,7 +3,7 @@ const {EmbedBuilder} = require("discord.js");
 const login_embeds = {
     login: new EmbedBuilder()
         .setTitle("You have selected a [LOGIN] issue")
-        .setDescription("Please respond with the correct buttons, if you mess anything up you can click the ``🔁 Restart`` Button at the end.")
+        .setDescription("Please respond with the correct buttons, if you mess anything up you can click the ``🔁 Restart`` Button at the end.\n\n**DO NOT PING MODERATORS, YOU WILL BE MUTED!**")
         .setColor("Aqua")
         .setFooter({
             text: "Developed by TechyGiraffe999",
