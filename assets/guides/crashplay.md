@@ -12,7 +12,7 @@
 - Choose that instance
 - Press play
 - Wait until the text in the lower right corner have disappeared
--  Wait around 1 minute **after** it has disappeared
+- Wait around 1 minute **after** it has disappeared
 - Then press play
 
 ⚠️ **Don’t remove your headset during the whole download!**⚠️

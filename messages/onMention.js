@@ -10,8 +10,8 @@ module.exports = {
             return message.reply({embeds: [mention]});
         } else {
             const mention = new EmbedBuilder()
-            .setDescription(`Hi ${message.author}! I am Crafty! To see my full list of commands, run \`/help\``)
-            .setColor("Gold");
+                .setDescription(`Hi ${message.author}! I am Crafty! To see my full list of commands, run \`/help\``)
+                .setColor("Gold");
             return message.reply({embeds: [mention]});
         }
     }

@@ -1,4 +1,4 @@
-const { EmbedBuilder, SlashCommandBuilder } = require('discord.js');
+const {EmbedBuilder, SlashCommandBuilder} = require('discord.js');
 const MCAPI = require('mojang-lib');
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
             const usernotfound = `Username '${username}' not found.`
             if (!player || !player.uuid) {
                 // Player not found
-                await interaction.reply({ content: usernotfound, ephemeral: true });
+                await interaction.reply({content: usernotfound, ephemeral: true});
                 return;
             }
 
@@ -27,7 +27,7 @@ module.exports = {
 
             const avatarUrl = `https://minotar.net/helm/${username}/100.png`;
             const bodyUrl = `https://minotar.net/armor/body/${username}/100.png`;
-          
+
             const embed = new EmbedBuilder()
                 .setTitle(`Minecraft User: ${player.username}`)
                 .setColor('Green')
@@ -37,15 +37,18 @@ module.exports = {
                 .setThumbnail(avatarUrl)
                 .setImage(bodyUrl);
 
-            await interaction.reply({ embeds: [embed] });
+            await interaction.reply({embeds: [embed]});
 
         } catch (error) {
             console.error(error);
             // Check if the error is due to the username not being found
             if (error.message && error.message.includes('not found')) {
-                await interaction.reply({ content: usernotfound, ephemeral: true });
+                await interaction.reply({content: usernotfound, ephemeral: true});
             } else {
-                await interaction.reply({ content: `An error occurred while fetching data for username: ${username}`, ephemeral: true });
+                await interaction.reply({
+                    content: `An error occurred while fetching data for username: ${username}`,
+                    ephemeral: true
+                });
             }
         }
     }

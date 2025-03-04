@@ -14,6 +14,6 @@ module.exports = {
         .setName("reinstall")
         .setDescription("Tells you how to reinstall."),
     async execute(interaction) {
-        await interaction.reply({embeds: [embed_reinstall], components: [buttons.adb]}) ;
+        await interaction.reply({embeds: [embed_reinstall], components: [buttons.adb]});
     },
 };

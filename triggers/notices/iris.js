@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require("discord.js");
+const {EmbedBuilder} = require("discord.js");
 const regex = /\b[Ii][Rr][Ii][Ss]\b/;
 
 const embed_iris = new EmbedBuilder()
