@@ -16,10 +16,10 @@ module.exports = {
         .setName("loginticket")
         .setDescription("Info on how to solve login issues but non ephemeral"),
     async execute(interaction) {
-            const member = interaction.member;
-            const hasAllowedRole = member.roles.cache.some(role => allowedRoleIds.includes(role.id));
-            if (hasAllowedRole) {
-                return await interaction.reply({ embeds: [embed_own], components: [buttons.own]});
-            }
+        const member = interaction.member;
+        const hasAllowedRole = member.roles.cache.some(role => allowedRoleIds.includes(role.id));
+        if (hasAllowedRole) {
+            return await interaction.reply({embeds: [embed_own], components: [buttons.own]});
         }
+    }
 };

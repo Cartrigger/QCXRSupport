@@ -17,7 +17,7 @@ module.exports = {
                 )),
     async execute(interaction) {
         const categories = interaction.options.getString("invites");
-        switch(categories){
+        switch (categories) {
             case "xrcraft":
                 await interaction.reply("Here's a invite to XRCraft!\n\nhttps://discord.gg/xrcraft-947244318740054149");
                 return;

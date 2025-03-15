@@ -1,5 +1,5 @@
-const { EmbedBuilder, SlashCommandBuilder, PermissionsBitField } = require("discord.js");
-const { owner } = require("../../config.json");
+const {EmbedBuilder, SlashCommandBuilder, PermissionsBitField} = require("discord.js");
+const {owner} = require("../../config.json");
 
 
 const error_embed_builder_channel = new EmbedBuilder()
@@ -46,7 +46,7 @@ module.exports = {
     async execute(interaction) {
         if (!owner.includes(interaction.user.id)) {
             if (!interaction.inGuild()) {
-                return await interaction.reply({ embeds: [server_only], ephemeral: true });
+                return await interaction.reply({embeds: [server_only], ephemeral: true});
             }
 
             const allowedRoleIds = ["945554238380048456", "820768461697318982", "820768352712523857", "820781262335508512", "834177899321360404"];
@@ -57,18 +57,18 @@ module.exports = {
 
             if (guildId === allowedServerId) {
                 if (!hasAllowedRole) {
-                    return await interaction.reply({ embeds: [roles_only], ephemeral: true });
+                    return await interaction.reply({embeds: [roles_only], ephemeral: true});
                 }
             }
             if (guildId !== allowedServerId) {
                 if (!member.permissions.has([PermissionsBitField.Flags.Administrator])) {
-                    return await interaction.reply({ embeds: [qc_only], ephemeral: true });
+                    return await interaction.reply({embeds: [qc_only], ephemeral: true});
                 }
             }
         }
 
 
-        const { options } = interaction;
+        const {options} = interaction;
 
         const title = options.getString("title");
         const description = options.getString("description");
@@ -98,16 +98,16 @@ module.exports = {
                 .setColor(color)
                 .setImage(image)
                 .setThumbnail(thumbnail)
-                .addFields({ name: `${fieldn}`, value: `${fieldv}` })
+                .addFields({name: `${fieldn}`, value: `${fieldv}`})
                 .setFooter({
                     text: `${footer}`,
-                    iconURL: interaction.user.displayAvatarURL({ dynamic: true })
+                    iconURL: interaction.user.displayAvatarURL({dynamic: true})
                 });
-            await interaction.reply({ embeds: [embed_success], ephemeral: true });
+            await interaction.reply({embeds: [embed_success], ephemeral: true});
             try {
-                const message = await interaction.channel.send({ embeds: [embed] });
+                const message = await interaction.channel.send({embeds: [embed]});
             } catch (err) {
-                const message = await interaction.user.send({ embeds: [embed] });
+                const message = await interaction.user.send({embeds: [embed]});
             }
 
 

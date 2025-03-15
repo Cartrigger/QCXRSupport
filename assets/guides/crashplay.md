@@ -12,7 +12,7 @@
 - Choose that instance
 - Press play
 - Wait until the text in the lower right corner have disappeared
--  Wait around 1 minute **after** it has disappeared
+- Wait around 1 minute **after** it has disappeared
 - Then press play
 
 ⚠️ **Don’t remove your headset during the whole download!**⚠️
@@ -29,6 +29,7 @@
 Average completion time is 2-20 minutes but it depends on your internet speed.
 • The file size is around 700 megabytes
 - 1.18 doesn't work
+   *(Removed in 6.0)*
 
 - 1.19.4 is currently bugged.
   *(It is fixed on the current __patreon build__ and will be fixed when 6.0 launch)*

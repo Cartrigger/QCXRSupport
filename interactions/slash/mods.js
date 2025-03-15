@@ -54,11 +54,11 @@ module.exports = {
             .setTitle("**Mod Manager Guide**")
             .setDescription("**How to install mods using Mod Manager**\n\n1. On the play screen, click `Mods`\n2. On the right of the search bar, click the dropdown for the instance you want.\n3. Search for the mod you want to install\n4. Wait a second for the game to load the mod icon, then click the mod\n5. Click the big install button, and your mod will be downloaded!")
             .setFooter({
-                    text: "Written by Cart",
-                    iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
+                text: "Written by Cart",
+                iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
             })
 
-        const embed_mods_pc  = new EmbedBuilder()
+        const embed_mods_pc = new EmbedBuilder()
             .setTitle("**PC Mod Install Guide**")
             .setDescription("**How to install mods using a Computer**\n**NOTE**: You will have to manually download all dependencies, these mods will also not show up in modmanager or instance mananger.\n\n1. Plug in your headset, and choose a file manager.\n2. Once the headset is connected, navigate to (SDCARD) Android/Data/com.qcxr.qcxr/files/instances/(version or name)/mods\n3. Drop any mods in there\n4. Start the game.")
             .setFooter({
