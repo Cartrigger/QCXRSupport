@@ -29,7 +29,6 @@
     "discord-gamecord": "^4.4.2",
     "discord.js": "^14.16.1",
     "figlet": "^1.7.0",
-    "libsodium-wrappers": "^0.7.13",
     "mojang-lib": "^1.13.2",
     "moment": "^2.29.4",
     "os": "^0.1.2",
