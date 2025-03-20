@@ -1,7 +1,7 @@
 *Solution is for those that haven't added any extra mods than the default ones*
 
 ❌  **You most likely got an interrupted download**
-*easiest way to solve this is to reinstall the instance*
+*Easiest way to solve this is to reinstall the instance*
 
 🟣 **Step by step**🟣
 **In instances**
@@ -22,12 +22,12 @@
 • exiting your guardian
 • clicking any buttons in the app
 • going into passthrough
-• messing with wifi settings
+• messing with WiFi settings
 • quitting the app
 
 ℹ️ **Additional info**
 Average completion time is 2-20 minutes but it depends on your internet speed.
-• The file size is around 700 megabytes
+• The file size is around 700~ megabytes, and a extra 200~ megabytes per version after that
 - 1.18 doesn't work
    *(Removed in 6.0)*
 
@@ -35,7 +35,7 @@ Average completion time is 2-20 minutes but it depends on your internet speed.
   *(It is fixed on the current __patreon build__ and will be fixed when 6.0 launch)*
 
 - Until release of 6.0
-  You can still play 1.19.4 **IF** you remove sodium.**
-  (Though you will get worse performance)
+  You can still play 1.19.4 **IF** you remove Sodium.**
+  (Though you **will** get worse performance)
 
 *Alternatively, if you know how to build Sodium yourself, you can do that after applying our patch. But we won’t assist with it.*

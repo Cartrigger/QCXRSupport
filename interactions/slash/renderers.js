@@ -11,7 +11,8 @@ module.exports = {
                 .addChoices(
                     {name: "GL4ES", value: "gl4es"},
                     {name: "Zink", value: "zink"},
-                    {name: "regal", value: "regal"}
+                    {name: "regal", value: "regal"},
+                    {name: "LightThinWrapper", value: "ltw"}
                 )),
     async execute(interaction) {
         const category = interaction.options.getString("renderer");
@@ -43,6 +44,15 @@ module.exports = {
                 iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
             })
 
+        const embed_renderer_ltw = new EmbedBuilder()
+            .setTitle("**QuestCraft + PojavLauncher LightThinWrapper Renderer**")
+            .setDescription("LightThinWrapper, also known as LTW is the newest renderer to be used in QuestCraft, releasing with v6.0 of QuestCraft, it is a high performant rendering solution that allows even big mods like Create to run, with some Iris support being possible.")
+            .setColor("Orange")
+            .setFooter({
+                text: "Written by Cart",
+                iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
+            })
+
         if (category === "gl4es") {
             await interaction.reply({embeds: [embed_renderer_gl4es]});
             return;
@@ -53,6 +63,10 @@ module.exports = {
         }
         if (category === "regal") {
             await interaction.reply({embeds: [embed_renderer_regal]});
+            return;
+        }
+        if (category === "ltw") {
+            await interaction.reply({embeds: [embed_renderer_ltw]});
         }
     }
 };
