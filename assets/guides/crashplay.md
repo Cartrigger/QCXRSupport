@@ -5,11 +5,11 @@
 
 🟣 **Step by step**🟣
 **In instances**
-- Delete the instance
-- Create a new instance, make sure it is set to download default mods as well
+- Delete the instance (Could be version number)
+- Create a new instance (Not needed if you want to use default mods / performance modpack)
 
 **Playscreen**
-- Choose that instance
+- Choose that instance or version
 - Press play
 - Wait until the text in the lower right corner have disappeared
 - Wait around 1 minute **after** it has disappeared
@@ -29,13 +29,13 @@
 Average completion time is 2-20 minutes but it depends on your internet speed.
 • The file size is around 700~ megabytes, and a extra 200~ megabytes per version after that
 - 1.18 doesn't work
-   *(Removed in 6.0)*
+    *(Removed in 6.0)*
 
 - 1.19.4 is currently bugged.
-  *(It is fixed on the current __patreon build__ and will be fixed when 6.0 launch)*
+   *(It is fixed on the current __patreon build__ and will be fixed when 6.0 launch)*
 
 - Until release of 6.0
   You can still play 1.19.4 **IF** you remove Sodium.**
-  (Though you **will** get worse performance)
+   (Though you may get worse performance)
 
 *Alternatively, if you know how to build Sodium yourself, you can do that after applying our patch. But we won’t assist with it.*
