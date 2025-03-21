@@ -1,5 +1,5 @@
 name: Crafty Server Restarter
-on: [ push ]
+on: [ push, workflow_dispatch ]
 jobs:
   restart-server:
     runs-on: ubuntu-latest
