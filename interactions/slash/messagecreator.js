@@ -33,16 +33,9 @@ const qc_only = new EmbedBuilder()
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName("embedcreator")
-        .setDescription("This creates a custom embed")
-        .addStringOption(option => option.setName("color").setDescription(`Use a six digit hex code for the embed color`).setRequired(true).setMaxLength(6))
-        .addStringOption(option => option.setName("title").setDescription(`This is the title of the embed`).setRequired(false))
-        .addStringOption(option => option.setName("description").setDescription(`This is the description of the embed`).setRequired(false))
-        .addStringOption(option => option.setName("image").setDescription(`This is the image of the embed`).setRequired(false))
-        .addStringOption(option => option.setName("thumbnail").setDescription(`This is the thumbnail of the embed`).setRequired(false))
-        .addStringOption(option => option.setName("field-name").setDescription(`This is the field name`).setRequired(false))
-        .addStringOption(option => option.setName("field-value").setDescription(`This is is the field value`).setRequired(false))
-        .addStringOption(option => option.setName("footer").setDescription(`This is the footer of the embed`).setRequired(false)),
+        .setName("messagecreator")
+        .setDescription("This creates a custom message")
+        .addStringOption(option => option.setName("message").setDescription(`This is the message of the message`).setRequired(true)),
     async execute(interaction) {
         if (!owner.includes(interaction.user.id)) {
             if (!interaction.inGuild()) {
@@ -70,44 +63,14 @@ module.exports = {
 
         const {options} = interaction;
 
-        const title = options.getString("title");
-        const description = options.getString("description");
-        const color = options.getString("color");
-        const image = options.getString("image");
-        const thumbnail = options.getString("thumbnail");
-        const fieldn = options.getString("field-name") || " ";
-        const fieldv = options.getString("field-value") || " ";
-        const footer = options.getString("footer") || " ";
+        const message = options.getString("message");
 
-        if (image) {
-            if (!image.startsWith("http")) return await interaction.reply({
-                content: "You cannot make this your image",
-                ephemeral: true
-            });
-        }
-        if (thumbnail) {
-            if (!thumbnail.startsWith("http")) return await interaction.reply({
-                content: "You cannot make this your thumbnail",
-                ephemeral: true
-            });
-        }
         try {
-            const embed = new EmbedBuilder()
-                .setTitle(title)
-                .setDescription(description)
-                .setColor(color)
-                .setImage(image)
-                .setThumbnail(thumbnail)
-                .addFields({name: `${fieldn}`, value: `${fieldv}`})
-                .setFooter({
-                    text: `${footer}`,
-                    iconURL: interaction.user.displayAvatarURL({dynamic: true})
-                });
             await interaction.reply({embeds: [embed_success], ephemeral: true});
             try {
-                await interaction.channel.send({embeds: [embed]});
+                await interaction.channel.send(message);
             } catch (err) {
-                await interaction.user.send({embeds: [embed]});
+                await interaction.user.send(message);
             }
 
 
