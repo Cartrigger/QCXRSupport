@@ -24,7 +24,7 @@ module.exports = {
             await interaction.reply({embeds: [embed_guide]});
         } catch (error) {
             console.error(error);
-            await interaction.reply({content: 'There was an error fetching the guide.', ephemeral: true});
+            await interaction.reply({content: 'There was an error fetching the guide.', flags: MessageFlags.Ephemeral });
         }
     },
 };

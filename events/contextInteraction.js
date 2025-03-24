@@ -28,7 +28,7 @@ module.exports = {
                 console.error(err);
                 await interaction.reply({
                     content: "There was an issue while executing that context command! If the issue persists please contact <@317814254336081930>",
-                    ephemeral: true
+                    flags: MessageFlags.Ephemeral 
                 });
             }
         }
@@ -47,7 +47,7 @@ module.exports = {
                 console.log("Context error!");
                 await interaction.reply({
                     content: "There was an issue while executing that context command! If the issue persists please contact <@317814254336081930>",
-                    ephemeral: true
+                    flags: MessageFlags.Ephemeral 
                 });
             }
         }

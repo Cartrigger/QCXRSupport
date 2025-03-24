@@ -46,7 +46,7 @@ module.exports = {
     async execute(interaction) {
         if (!owner.includes(interaction.user.id)) {
             if (!interaction.inGuild()) {
-                return await interaction.reply({embeds: [server_only], ephemeral: true});
+                return await interaction.reply({embeds: [server_only], flags: MessageFlags.Ephemeral });
             }
 
             const allowedRoleIds = ["945554238380048456", "820768461697318982", "820768352712523857", "820781262335508512", "834177899321360404"];
@@ -57,12 +57,12 @@ module.exports = {
 
             if (guildId === allowedServerId) {
                 if (!hasAllowedRole) {
-                    return await interaction.reply({embeds: [roles_only], ephemeral: true});
+                    return await interaction.reply({embeds: [roles_only], flags: MessageFlags.Ephemeral });
                 }
             }
             if (guildId !== allowedServerId) {
                 if (!member.permissions.has([PermissionsBitField.Flags.Administrator])) {
-                    return await interaction.reply({embeds: [qc_only], ephemeral: true});
+                    return await interaction.reply({embeds: [qc_only], flags: MessageFlags.Ephemeral });
                 }
             }
         }
@@ -82,13 +82,13 @@ module.exports = {
         if (image) {
             if (!image.startsWith("http")) return await interaction.reply({
                 content: "You cannot make this your image",
-                ephemeral: true
+                flags: MessageFlags.Ephemeral 
             });
         }
         if (thumbnail) {
             if (!thumbnail.startsWith("http")) return await interaction.reply({
                 content: "You cannot make this your thumbnail",
-                ephemeral: true
+                flags: MessageFlags.Ephemeral 
             });
         }
         try {
@@ -103,7 +103,7 @@ module.exports = {
                     text: `${footer}`,
                     iconURL: interaction.user.displayAvatarURL({dynamic: true})
                 });
-            await interaction.reply({embeds: [embed_success], ephemeral: true});
+            await interaction.reply({embeds: [embed_success], flags: MessageFlags.Ephemeral });
             try {
                 await interaction.channel.send({embeds: [embed]});
             } catch (err) {
@@ -115,12 +115,12 @@ module.exports = {
             try {
                 await interaction.editReply({
                     embeds: [error_embed_builder_channel],
-                    ephemeral: true
+                    flags: MessageFlags.Ephemeral 
                 });
             } catch (err1) {
                 await interaction.reply({
                     embeds: [error_embed_builder_hex],
-                    ephemeral: true
+                    flags: MessageFlags.Ephemeral 
                 });
             }
         }

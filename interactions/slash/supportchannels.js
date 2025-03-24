@@ -17,7 +17,7 @@ module.exports = {
         if (channelExceptions.includes(interaction.channelId)) {
             await interaction.reply({
                 embeds: [embed_error_channels],
-                ephemeral: true
+                flags: MessageFlags.Ephemeral 
             });
             return;
         }

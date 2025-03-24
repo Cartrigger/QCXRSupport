@@ -13,7 +13,7 @@ module.exports = {
                 iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
             })
 
-        await interaction.reply({embeds: [embed_quest_logs], ephemeral: true});
+        await interaction.reply({embeds: [embed_quest_logs], flags: MessageFlags.Ephemeral });
         return;
     }
 };

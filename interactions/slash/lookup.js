@@ -17,7 +17,7 @@ module.exports = {
             const usernotfound = `Username '${username}' not found.`
             if (!player || !player.uuid) {
                 // Player not found
-                await interaction.reply({content: usernotfound, ephemeral: true});
+                await interaction.reply({content: usernotfound, flags: MessageFlags.Ephemeral });
                 return;
             }
 
@@ -43,11 +43,11 @@ module.exports = {
             console.error(error);
             // Check if the error is due to the username not being found
             if (error.message && error.message.includes('not found')) {
-                await interaction.reply({content: usernotfound, ephemeral: true});
+                await interaction.reply({content: usernotfound, flags: MessageFlags.Ephemeral });
             } else {
                 await interaction.reply({
                     content: `An error occurred while fetching data for username: ${username}`,
-                    ephemeral: true
+                    flags: MessageFlags.Ephemeral 
                 });
             }
         }

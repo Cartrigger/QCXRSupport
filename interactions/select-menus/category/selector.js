@@ -16,40 +16,40 @@ module.exports = {
         const selected = interaction.values[0];
         switch (selected) {
             case "adb":
-                await interaction.reply({embeds: [embed_adb], ephemeral: true});
+                await interaction.reply({embeds: [embed_adb], flags: MessageFlags.Ephemeral });
                 break;
             case "bedrock":
-                await interaction.reply({embeds: [embed_bedrock], ephemeral: true});
+                await interaction.reply({embeds: [embed_bedrock], flags: MessageFlags.Ephemeral });
                 break;
             case "fixed":
-                await interaction.reply({embeds: [embed_fixed], ephemeral: true});
+                await interaction.reply({embeds: [embed_fixed], flags: MessageFlags.Ephemeral });
                 break;
             case "github":
-                await interaction.reply({embeds: [embed_github_qc], ephemeral: true});
+                await interaction.reply({embeds: [embed_github_qc], flags: MessageFlags.Ephemeral });
                 break;
             case "botgithub":
-                await interaction.reply({embeds: [embed_github_bot], ephemeral: true});
+                await interaction.reply({embeds: [embed_github_bot], flags: MessageFlags.Ephemeral });
                 break;
             case "reinstall":
-                await interaction.reply({embeds: [embed_reinstall], ephemeral: true});
+                await interaction.reply({embeds: [embed_reinstall], flags: MessageFlags.Ephemeral });
                 break;
             case "releases":
-                await interaction.reply({embeds: [embed_releases], ephemeral: true});
+                await interaction.reply({embeds: [embed_releases], flags: MessageFlags.Ephemeral });
                 break;
             case "performance":
-                await interaction.reply({embeds: [embed_performance], ephemeral: true});
+                await interaction.reply({embeds: [embed_performance], flags: MessageFlags.Ephemeral });
                 break;
             case "servers":
-                await interaction.reply({embeds: [embed_servers], ephemeral: true});
+                await interaction.reply({embeds: [embed_servers], flags: MessageFlags.Ephemeral });
                 break;
             case "installation":
-                await interaction.reply({embeds: [embed_installation], ephemeral: true});
+                await interaction.reply({embeds: [embed_installation], flags: MessageFlags.Ephemeral });
                 break;
             case "versions":
-                await interaction.reply({embeds: [embed_versions], ephemeral: true});
+                await interaction.reply({embeds: [embed_versions], flags: MessageFlags.Ephemeral });
                 break;
             case "mods":
-                await interaction.reply({embeds: [embed_mods], ephemeral: true});
+                await interaction.reply({embeds: [embed_mods], flags: MessageFlags.Ephemeral });
                 break;
             default:
                 break;

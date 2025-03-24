@@ -44,7 +44,7 @@ module.exports = {
                 .setColor("Orange");
             if (now < expirationTime) {
                 const expiredTimestamp = Math.round(expirationTime / 1000);
-                return interaction.reply({embeds: [embed], ephemeral: true});
+                return interaction.reply({embeds: [embed], flags: MessageFlags.Ephemeral });
             }
         }
 
@@ -59,7 +59,7 @@ module.exports = {
             console.log("Slash error!");
             await interaction.reply({
                 content: "There was an issue while executing that command! If the issue persists please contact <@317814254336081930>",
-                ephemeral: true
+                flags: MessageFlags.Ephemeral 
             });
         }
     }

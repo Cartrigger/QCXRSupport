@@ -18,7 +18,7 @@ module.exports = {
         } else {
             interaction.reply({
                 content: "Insufficient Permissions or an error occurred!",
-                ephemeral: true
+                flags: MessageFlags.Ephemeral 
             });
         }
     }

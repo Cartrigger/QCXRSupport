@@ -119,7 +119,7 @@ module.exports = {
                         return;
                     });
                 } catch (error) {
-                    interaction.reply({embeds: [error_game], ephemeral: true});
+                    interaction.reply({embeds: [error_game], flags: MessageFlags.Ephemeral });
                 }
             }
             if (categories === "tictactoe") {
@@ -156,7 +156,7 @@ module.exports = {
                         return;
                     });
                 } catch (error) {
-                    interaction.reply({embeds: [error_game], ephemeral: true});
+                    interaction.reply({embeds: [error_game], flags: MessageFlags.Ephemeral });
                 }
             }
             if (categories === "match_pairs") {
@@ -182,9 +182,9 @@ module.exports = {
             }
         } catch (err) {
             try {
-                interaction.reply({embeds: [error], ephemeral: true});
+                interaction.reply({embeds: [error], flags: MessageFlags.Ephemeral });
             } catch (err) {
-                await interaction.editReply({embeds: [error], ephemeral: true});
+                await interaction.editReply({embeds: [error], flags: MessageFlags.Ephemeral });
             }
         }
 

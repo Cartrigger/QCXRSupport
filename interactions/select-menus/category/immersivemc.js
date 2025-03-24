@@ -52,16 +52,16 @@ module.exports = {
 
         switch (selected) {
             case "1.18.2":
-                await interaction.reply({embeds: [embed_immersivemc_1_18_2], ephemeral: true});
+                await interaction.reply({embeds: [embed_immersivemc_1_18_2], flags: MessageFlags.Ephemeral });
                 break;
             case "1.19.2":
-                await interaction.reply({embeds: [embed_immersivemc_1_19_2], ephemeral: true});
+                await interaction.reply({embeds: [embed_immersivemc_1_19_2], flags: MessageFlags.Ephemeral });
                 break;
             case "1.19.4":
-                await interaction.reply({embeds: [embed_immersivemc_1_19_4], ephemeral: true});
+                await interaction.reply({embeds: [embed_immersivemc_1_19_4], flags: MessageFlags.Ephemeral });
                 break;
             case "1.20.1":
-                await interaction.reply({embeds: [embed_immersivemc_1_20_1], ephemeral: true});
+                await interaction.reply({embeds: [embed_immersivemc_1_20_1], flags: MessageFlags.Ephemeral });
                 break;
             default:
                 await interaction.reply({embeds: [embed_immersive_mc_embed]});

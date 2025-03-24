@@ -14,7 +14,7 @@ module.exports = {
                 iconURL: "https://media.discordapp.net/attachments/1057074981135196230/1096581536834404483/f2b05cbf99d0acf7f1da063f57b0053e.png?width=318&height=318"
             })
 
-        await interaction.reply({embeds: [embed_pc_logs], ephemeral: true});
+        await interaction.reply({embeds: [embed_pc_logs], flags: MessageFlags.Ephemeral });
         return;
     }
 };

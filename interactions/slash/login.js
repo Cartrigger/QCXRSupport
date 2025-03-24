@@ -7,6 +7,6 @@ module.exports = {
         .setName("login")
         .setDescription("Info on how to solve login issues"),
     async execute(interaction) {
-        await interaction.reply({embeds: [login_embeds.own], components: [buttons.own], ephemeral: true});
+        await interaction.reply({embeds: [login_embeds.own], components: [buttons.own], flags: MessageFlags.Ephemeral });
     }
 };

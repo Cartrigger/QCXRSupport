@@ -11,7 +11,7 @@ module.exports = {
                 text: "Written by TechyGiraffe999",
                 iconURL: "https://images-ext-1.discordapp.net/external/uVW63D2qclMVEwdF5yp21Fqi7sOmOzNWyRiRiWhTGAM/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/719815864135712799/08a1cc347410b8444f0ef68dc39c17a5.png?width=303&height=303"
             })
-        await interaction.reply({embeds: [embed_bedrock_geyser], ephemeral: true});
+        await interaction.reply({embeds: [embed_bedrock_geyser], flags: MessageFlags.Ephemeral });
         return;
     }
 };

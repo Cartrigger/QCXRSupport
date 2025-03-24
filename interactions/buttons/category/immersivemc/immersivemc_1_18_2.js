@@ -12,7 +12,7 @@ module.exports = {
                 iconURL: "https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405"
             })
 
-        await interaction.reply({embeds: [embed_immersivemc_1_18_2], ephemeral: true});
+        await interaction.reply({embeds: [embed_immersivemc_1_18_2], flags: MessageFlags.Ephemeral });
         return;
     }
 };
