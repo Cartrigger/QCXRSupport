@@ -1,5 +1,4 @@
-const {Collection, EmbedBuilder, Events} = require("discord.js"),
-    {owner} = require("../config.json");
+const {Collection, EmbedBuilder, Events, MessageFlags} = require("discord.js"), {owner} = require("../config.json");
 
 module.exports = {
     name: Events.InteractionCreate,

@@ -1,4 +1,4 @@
-const {EmbedBuilder} = require("discord.js");
+const {EmbedBuilder, MessageFlags} = require("discord.js");
 module.exports = {
     id: "installation",
     async execute(interaction) {
@@ -12,6 +12,5 @@ module.exports = {
             })
 
         await interaction.reply({embeds: [embed_installation], flags: MessageFlags.Ephemeral });
-        return;
     }
 };

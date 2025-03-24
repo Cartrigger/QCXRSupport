@@ -1,4 +1,4 @@
-const {EmbedBuilder} = require("discord.js");
+const {EmbedBuilder, MessageFlags} = require("discord.js");
 module.exports = {
     id: "immersivemc_1_18_2",
 
@@ -13,6 +13,5 @@ module.exports = {
             })
 
         await interaction.reply({embeds: [embed_immersivemc_1_18_2], flags: MessageFlags.Ephemeral });
-        return;
     }
 };

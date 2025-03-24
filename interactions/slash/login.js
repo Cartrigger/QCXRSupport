@@ -1,4 +1,4 @@
-const {SlashCommandBuilder} = require("discord.js");
+const {SlashCommandBuilder, MessageFlags} = require("discord.js");
 const buttons = require("../buttons/category/login/own/own_buttons");
 const login_embeds = require("../../interactions/buttons/category/login/login_embeds");
 
