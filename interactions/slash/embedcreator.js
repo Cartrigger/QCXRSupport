@@ -1,4 +1,4 @@
-const {EmbedBuilder, SlashCommandBuilder, PermissionsBitField} = require("discord.js");
+const {EmbedBuilder, SlashCommandBuilder, PermissionsBitField, MessageFlags} = require("discord.js");
 const {owner} = require("../../config.json");
 
 

@@ -1,4 +1,4 @@
-const {SlashCommandBuilder, EmbedBuilder} = require("discord.js");
+const {SlashCommandBuilder, EmbedBuilder, MessageFlags} = require("discord.js");
 const {Hangman, Snake, Connect4, TicTacToe, MatchPairs} = require("discord-gamecord");
 
 const error_game = new EmbedBuilder()
@@ -51,7 +51,6 @@ module.exports = {
 
                 await Game.startGame();
                 Game.on("gameOver", result => {
-                    return;
                 });
             }
 
@@ -82,7 +81,6 @@ module.exports = {
 
                 await Game.startGame();
                 Game.on("gameOver", result => {
-                    return;
                 });
             }
 
@@ -116,7 +114,6 @@ module.exports = {
 
                     await Game.startGame();
                     Game.on("gameOver", result => {
-                        return;
                     });
                 } catch (error) {
                     interaction.reply({embeds: [error_game], flags: MessageFlags.Ephemeral });
@@ -153,7 +150,6 @@ module.exports = {
 
                     await Game.startGame();
                     Game.on("gameOver", result => {
-                        return;
                     });
                 } catch (error) {
                     interaction.reply({embeds: [error_game], flags: MessageFlags.Ephemeral });
@@ -177,7 +173,6 @@ module.exports = {
 
                 await Game.startGame();
                 Game.on("gameOver", result => {
-                    return;
                 });
             }
         } catch (err) {

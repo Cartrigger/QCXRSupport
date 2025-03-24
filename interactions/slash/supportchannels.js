@@ -1,10 +1,10 @@
-const {EmbedBuilder, SlashCommandBuilder} = require("discord.js");
+const {EmbedBuilder, SlashCommandBuilder, MessageFlags} = require("discord.js");
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("supportchannels")
         .setDescription("Mentions the channels for support"),
-    async execute(interaction, client) {
+    async execute(interaction) {
         const channelExceptions = ["945502948111290498", "946021441298649158"];
         const embed_error_channels = new EmbedBuilder()
             .setTitle("Error!")

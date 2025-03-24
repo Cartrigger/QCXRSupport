@@ -1,4 +1,4 @@
-const {EmbedBuilder} = require("discord.js");
+const {EmbedBuilder, MessageFlags} = require("discord.js");
 
 module.exports = {
     id: "simple_voice_chat",
@@ -13,6 +13,5 @@ module.exports = {
                 iconURL: "https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405"
             })
         await interaction.reply({embeds: [embed_simple_voice_chat], flags: MessageFlags.Ephemeral });
-        return;
     }
 };

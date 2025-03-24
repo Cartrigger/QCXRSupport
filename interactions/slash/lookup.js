@@ -1,4 +1,4 @@
-const {EmbedBuilder, SlashCommandBuilder} = require('discord.js');
+const {EmbedBuilder, SlashCommandBuilder, MessageFlags} = require('discord.js');
 const MCAPI = require('mojang-lib');
 
 module.exports = {

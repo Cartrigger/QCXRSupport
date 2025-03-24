@@ -1,4 +1,4 @@
-const {EmbedBuilder} = require("discord.js");
+const {EmbedBuilder, MessageFlags} = require("discord.js");
 module.exports = {
     id: "logs_quest",
 
@@ -14,6 +14,5 @@ module.exports = {
             })
 
         await interaction.reply({embeds: [embed_quest_logs], flags: MessageFlags.Ephemeral });
-        return;
     }
 };

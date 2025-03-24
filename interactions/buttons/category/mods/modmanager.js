@@ -1,5 +1,5 @@
 const embed_mods_manager = require("../../../slash/mods.js")
-
+const MessageFlags = require("discord.js")
 module.exports = {
     id: "mods_modmanager",
 

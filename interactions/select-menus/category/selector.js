@@ -1,3 +1,4 @@
+const MessageFlags = require("discord.js")
 const embed_adb = ("../../slash/adb")
 const embed_bedrock = ("../../slash/bedrock")
 const embed_fixed = ("../../slash/fixed")
