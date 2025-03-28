@@ -177,7 +177,7 @@ for (const folder of triggerFolders) {
     }
 }
 
-client.login(token);
+client.login(token).then(r => {});
 
 // Anti Crash script
 
