@@ -7,13 +7,8 @@ const error_embed_builder_channel = new EmbedBuilder()
     .setDescription("There was an issue while sending that embed!\n\n> I lack the required permissions to send the Embed in this channel!\n\nIf the issue still persists please contact <@719815864135712799> or <@317814254336081930>")
     .setColor("Red");
 
-const error_embed_builder_hex = new EmbedBuilder()
-    .setTitle("Error!")
-    .setDescription("There was an issue while sending that embed!\n\n> Your Colour Hex code was invalid!\n\nIf the issue still persists please contact <@719815864135712799> or <@317814254336081930>")
-    .setColor("Red");
-
 const embed_success = new EmbedBuilder()
-    .setDescription("Your Embed was sent below")
+    .setDescription("Your Message was sent below")
     .setColor("Green");
 
 const server_only = new EmbedBuilder()
@@ -75,17 +70,10 @@ module.exports = {
 
 
         } catch (err) {
-            try {
-                await interaction.editReply({
-                    embeds: [error_embed_builder_channel],
-                    flags: MessageFlags.Ephemeral 
-                });
-            } catch (err1) {
-                await interaction.reply({
-                    embeds: [error_embed_builder_hex],
-                    flags: MessageFlags.Ephemeral 
-                });
-            }
+            await interaction.editReply({
+                embeds: [error_embed_builder_channel],
+                flags: MessageFlags.Ephemeral
+            });
         }
     }
 };
