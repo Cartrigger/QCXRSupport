@@ -1,4 +1,3 @@
-const path = require('path');
 const fs = require("fs");
 const {Client, GatewayIntentBits, Partials, Collection, REST, Routes} = require("discord.js");
 const {token, client_id} = require("./config.json");
@@ -48,9 +47,7 @@ for (const file of eventFiles) {
     if (event.once) {
         client.once(event.name, (...args) => event.execute(...args, client));
     } else {
-        client.on(event.name,
-
-            async (...args) => await event.execute(...args, client));
+        client.on(event.name, async (...args) => await event.execute(...args, client));
     }
     client.events.set(event.name, event);
 }
@@ -180,7 +177,7 @@ for (const folder of triggerFolders) {
     }
 }
 
-client.login(token);
+client.login(token).then(r => {});
 
 // Anti Crash script
 
