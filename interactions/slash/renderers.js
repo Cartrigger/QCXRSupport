@@ -53,20 +53,23 @@ module.exports = {
                 iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
             })
 
-        if (category === "gl4es") {
-            await interaction.reply({embeds: [embed_renderer_gl4es]});
-            return;
-        }
-        if (category === "zink") {
-            await interaction.reply({embeds: [embed_renderer_zink]});
-            return;
-        }
-        if (category === "regal") {
-            await interaction.reply({embeds: [embed_renderer_regal]});
-            return;
-        }
-        if (category === "ltw") {
-            await interaction.reply({embeds: [embed_renderer_ltw]});
+
+
+        switch (category) {
+            case "gl4es":
+                await interaction.reply({ embeds: [embed_renderer_gl4es] });
+                break;
+            case "zink":
+                await interaction.reply({ embeds: [embed_renderer_zink] });
+                break;
+            case "regal":
+                await interaction.reply({ embeds: [embed_renderer_regal] });
+                break;
+            case "ltw":
+                await interaction.reply({ embeds: [embed_renderer_ltw] });
+                break;
+            default:
+                break;
         }
     }
 };

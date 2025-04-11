@@ -3,7 +3,7 @@ const {SlashCommandBuilder, EmbedBuilder} = require("discord.js");
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("github")
-        .setDescription("Githubs for both QuestCraft and Me!")
+        .setDescription("Github's for both QuestCraft and Me!")
         .addStringOption(option =>
             option.setName("options")
                 .setDescription("Pick a Github Repo")

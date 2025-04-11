@@ -30,10 +30,8 @@ module.exports = {
 
         if (categories === "yvr") {
             await interaction.reply({embeds: [embed_yvr]});
-            return;
         } else {
             await interaction.reply({embeds: [embed_otherheadsets]});
-            return;
         }
     }
 };
