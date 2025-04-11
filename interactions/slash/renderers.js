@@ -54,7 +54,6 @@ module.exports = {
             })
 
 
-
         switch (category) {
             case "gl4es":
                 await interaction.reply({ embeds: [embed_renderer_gl4es] });

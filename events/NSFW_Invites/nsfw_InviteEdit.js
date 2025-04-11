@@ -3,7 +3,7 @@
 const {Events, EmbedBuilder} = require("discord.js");
 const {owner} = require("../../config.json");
 const fetch = require("node-fetch");
-const NSFWwords = require("nsfw.json");
+const NSFWwords = require("./nsfw.json");
 
 // Channel IDs to be ignored for message updates
 const ignorechannel = [
