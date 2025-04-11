@@ -12,7 +12,7 @@ const embed_versions = new EmbedBuilder()
 module.exports = {embed_versions}
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName("newverions")
+        .setName("newversions")
         .setDescription("Displays minecraft version info for QuestCraft"),
     async execute(interaction) {
         await interaction.reply({
