@@ -177,10 +177,8 @@ for (const folder of triggerFolders) {
     }
 }
 
-client.login(token).then(r => {});
-
+client.login(token);
 // Anti Crash script
-
 process.on("unhandRejection", (reason, promise) => {
     console.log(`🚫 Critical Error detected! Unhandled Rejection:\n\n`, reason, promise);
 });
