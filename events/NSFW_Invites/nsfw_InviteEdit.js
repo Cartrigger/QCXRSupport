@@ -3,6 +3,7 @@
 const {Events, EmbedBuilder} = require("discord.js");
 const {owner} = require("../../config.json");
 const fetch = require("node-fetch");
+const NSFWwords = require("nsfw.json");
 
 // Channel IDs to be ignored for message updates
 const ignorechannel = [
@@ -19,8 +20,6 @@ module.exports = {
 
     async execute(oldMessage, newMessage) {
         // Declares const to be used.
-        const NSFWwords = ["nsfw", "18+", "+18", "🔞", "nude", "addict", "egirl", "sex", "tik", "tok", "tiktok", "onlyfans", "porn", "lust", "bdsm", "hentai", "🍑", "🍆"];
-
         const no_perms = new EmbedBuilder()
             .setDescription(`⚠️ I lack the required permissions to delete this invite.`)
             .setColor("Red");
