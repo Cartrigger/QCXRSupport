@@ -2,6 +2,7 @@ const fs = require("fs");
 const {Client, GatewayIntentBits, Partials, Collection, REST, Routes} = require("discord.js");
 const {token, client_id} = require("./config.json");
 
+// noinspection JSUnresolvedReference
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
