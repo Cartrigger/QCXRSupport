@@ -2,7 +2,7 @@ const {EmbedBuilder} = require("discord.js");
 module.exports = {
     name: ["<:notsupportchannel:993043214472859778>"],
 
-    execute(message, args) {
+    execute(message) {
         const channelExceptions = ["945502948111290498", "946021441298649158", "1057074981135196230", "821078174992957480", "821076673331724309", "932673625813823518"];
         const embed_support_channels = new EmbedBuilder()
             .setTitle("**Sorry but <:notsupportchannel:993043214472859778>**")

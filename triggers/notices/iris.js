@@ -9,7 +9,7 @@ const embed_iris = new EmbedBuilder()
 module.exports = {
     name: ["iris", "Iris", "IRIS"],
 
-    execute(message, args) {
+    execute(message) {
         const channels = ["945502948111290498", "946021441298649158"];
         if ((channels.includes(message.channel.id) || channels.includes(message.channel.parentId)) && regex.test(message.content)) {
             message.channel.send({

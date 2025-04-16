@@ -2,7 +2,7 @@
 
 const {Events, EmbedBuilder} = require("discord.js");
 const {owner} = require("../../config.json");
-const regex = /\[[^\]]*\]\(https:\/\/[^\)]*\)|\[[^\]]*\]\([^)]*\)/;
+const regex = /\[[^\]]*\(https:\/\/[^]*\)|\[[^\]]*\([^)]*\)/;
 
 // Prefix regex, we will use to match in mention prefix.
 
@@ -23,7 +23,7 @@ module.exports = {
             if (!owner.includes(message.author.id)) {
                 if (role_size === 1) {
                     if (message.content.match(regex)) {
-                        if (message.content.match(/\[[^\]]*\]\(https:\/\/[^\)]*\)/)) {
+                        if (message.content.match(/\[[^\]]*\(https:\/\/[^]*\)/)) {
                             try {
                                 await message.author.send({
                                     embeds: [no_links]

@@ -2,7 +2,6 @@
 
 const {Collection, ChannelType, Events} = require("discord.js");
 const {prefix, owner} = require("../config.json");
-const fetch = require("node-fetch");
 
 // Prefix regex, we will use to match in mention prefix.
 

@@ -15,7 +15,8 @@ module.exports = {
     /**
      * @description Executes when a message is created and handle it.
      * @author Naman Vrati
-     * @param {import("discord.js").Message & { client: import("../../typings").Client }} message The message which was created.
+     * @param oldMessage
+     * @param newMessage
      */
 
     async execute(oldMessage, newMessage) {
@@ -29,9 +30,9 @@ module.exports = {
             const role_size = newMessage.member ? parseInt(newMessage.member.roles.cache.size) : 0;
             if (!owner.includes(newMessage.author.id)) {
                 if (role_size === 1) {
-                    const regex = /\[[^\]]*\]\(https:\/\/[^\)]*\)|\[[^\]]*\]\([^)]*\)/;
+                    const regex = /\[[^\]]*\(https:\/\/[^]*\)|\[[^\]]*\([^)]*\)/;
                     if (newMessage.content.match(regex)) {
-                        if (newMessage.content.match(/\[[^\]]*\]\(https:\/\/[^\)]*\)/)) {
+                        if (newMessage.content.match(/\[[^\]]*\(https:\/\/[^]*\)/)) {
                             try {
                                 await newMessage.author.send({
                                     embeds: [no_links]
