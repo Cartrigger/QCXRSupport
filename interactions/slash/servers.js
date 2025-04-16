@@ -9,12 +9,12 @@ const embed_servers = new EmbedBuilder()
         text: "Written by TechyGiraffe999",
         iconURL: "https://media.discordapp.net/attachments/1078126187064332359/1100222550027534416/08a1cc347410b8444f0ef68dc39c17a5.webp?width=405&height=405"
     })
-module.exports = {embed_servers}
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("servers")
         .setDescription("Displays a server guide"),
-    async execute(interaction, client) {
+    async execute(interaction) {
         await interaction.reply({
             embeds: [embed_servers], components: [buttons.servers]
         });
