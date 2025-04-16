@@ -1,4 +1,4 @@
-const {Client, Collection, GatewayIntentBits, Routes, Events, EmbedBuilder, ActivityType} = require("discord.js");
+const {Events, ActivityType} = require("discord.js");
 
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
         console.log(`Ready! Logged in as ${client.user.tag}`);
 
         client.user.setPresence({
-                activities: [{name: `The QuestCraft Discord Server`, type: ActivityType.Watching}],
+                activities: [{name: `Support Channels in QuestCraft`, type: ActivityType.Watching}],
                 status: "online"
             }
         );
