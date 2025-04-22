@@ -30,8 +30,10 @@ in [#bot-commands](https://discord.com/channels/820767484042018829/9533836959082
 
 ### 🏗️ Additional Credits
 
-- This bot utilizes a extremely modified version of the [Discord Bot Template](https://github.com/NamVr/DiscordBot-Template) made
-  by [Naman Vrati](https://github.com/NamVr) using the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) license! 
+- This bot utilizes an extremely modified version of the [Discord Bot Template](https://github.com/NamVr/DiscordBot-Template) made
+  by Naman Vrati using the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) license! As this has been heavily modified, it is no longer required to use GPL'able licences. 
+
+If you would no longer want any of your code within this Discord bot, please contact me and request for removal.
 
 ### 🧩 Contributors
 
@@ -43,7 +45,7 @@ Thank you to all these contributors for helping with the bot over the years!
 ## 📝 [License](LICENSE)
 
 QCXR Bot © 2023 by [Carson G](https://github.com/Cartrigger) is licensed
-under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) (GNU General Public License v3.0) with [Commons Clause](https://commonsclause.com)
+under [Polyform Noncommercial](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 ## 🔄 Updates!
 
