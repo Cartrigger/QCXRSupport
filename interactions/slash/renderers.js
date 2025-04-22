@@ -19,7 +19,7 @@ module.exports = {
 
         const embed_renderer_gl4es = new EmbedBuilder()
             .setTitle("**QuestCraft GL4ES Renderer**")
-            .setDescription("QuestCraft versions 3.x and below utilize the **Holy GL4ES renderer**, it has moderate speed with moderate mod compatibility.\n\nDerived from PojavLauncher, it was the best option available.\n\nComplex mods like [Create](https://modrinth.com/mod/create-fabric) do not work properly.")
+            .setDescription("QuestCraft versions 3.x and below utilize the **Holy GL4ES renderer**, it has moderate speed with low mod compatibility.\n\nDerived from PojavLauncher, it was the best option available.\n\nComplex mods like [Create](https://modrinth.com/mod/create-fabric) do not work properly, with shaders being unable to start.")
             .setColor("Orange")
             .setFooter({
                 text: "Written by Cart and my Contributors",
@@ -28,7 +28,7 @@ module.exports = {
 
         const embed_renderer_zink = new EmbedBuilder()
             .setTitle("**QuestCraft Zink Renderer**")
-            .setDescription("QuestCraft versions 4.x utilize the **Zink Renderer**. It is moderately fast. \nThe Zink is a renderer implemented by the QuestCraft team to optimize the rendering of QuestCraft, but also improve mod compatibility.\n\nThis means that more complex mods, like [Create](https://modrinth.com/mod/create-fabric) work with this renderer.\n\nZink was removed from QuestCraft due to the performance degradation and a better renderer.")
+            .setDescription("QuestCraft versions 4.x utilize the **Zink Renderer**. It is moderately fast.\n\nThe Zink is a renderer implemented by the QuestCraft team to optimize the rendering of QuestCraft, but also improve mod compatibility.\n\nThis means that more complex mods, like [Create](https://modrinth.com/mod/create-fabric) work with this renderer.\n\nZink was removed from QuestCraft due to the performance degradation and a better renderer.")
             .setColor("Orange")
             .setFooter({
                 text: "Written by Cart and Jaffa",
@@ -37,7 +37,7 @@ module.exports = {
 
         const embed_renderer_regal = new EmbedBuilder()
             .setTitle("**QuestCraft Regal Renderer**")
-            .setDescription("QuestCraft v5.0 is using Regal renderer, it allows most mods to work and gives high FPS, but Iris does not work in this case.")
+            .setDescription("QuestCraft v5.0 is using Regal renderer, it allows most mods to work and gives high FPS, but shaders do not work in this case.")
             .setColor("Orange")
             .setFooter({
                 text: "Written by Cart",
@@ -46,7 +46,7 @@ module.exports = {
 
         const embed_renderer_ltw = new EmbedBuilder()
             .setTitle("**QuestCraft + PojavLauncher LightThinWrapper Renderer**")
-            .setDescription("LightThinWrapper, also known as LTW is the newest renderer to be used in QuestCraft, releasing with v6.0 of QuestCraft, it is a high performant rendering solution that allows even big mods like Create to run, with some Iris support being possible.")
+            .setDescription("LightThinWrapper, also known as LTW is the newest renderer to be used in QuestCraft, releasing with v6.0 of QuestCraft.\n\nIt is highly performant, and very mod compatible, to the point that it even allows even big mods like [Create](https://modrinth.com/mod/create-fabric) to run, with shader support being semi-available.")
             .setColor("Orange")
             .setFooter({
                 text: "Written by Cart",
