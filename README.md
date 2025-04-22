@@ -26,7 +26,7 @@ in [#bot-commands](https://discord.com/channels/820767484042018829/9533836959082
 3. Run ``node bot``
 
 - All PR's are welcome for improvements.
-<br>Please note that certain features like the markdown guides may require Internet access to grab files, and grab it from predefined, hardcoded links.
+<br>Please note that certain features like the markdown guides may require a repository to be given, which is hardcoded.
 
 ### 🏗️ Additional Credits
 
