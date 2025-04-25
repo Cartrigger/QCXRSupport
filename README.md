@@ -45,7 +45,7 @@ Thank you to all these contributors for helping with the bot over the years!
 ## 📝 [License](LICENSE)
 
 QCXR Bot © 2023 by [Carson G](https://github.com/Cartrigger) is licensed
-under [Polyform Noncommercial](https://www.gnu.org/licenses/gpl-3.0.en.html).
+under [Polyform Noncommercial](https://polyformproject.org/licenses/noncommercial/1.0.0/).
 
 ## 🔄 Updates!
 
