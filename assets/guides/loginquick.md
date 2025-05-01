@@ -1,4 +1,4 @@
-🟢 **1. Do you own Minecraft PC edition?**  (Questcraft is a port of Minecraft Java / PC.)
+🟢 **1. Do you own Minecraft PC edition?**  (QuestCraft is a port of Minecraft Java / PC.)
 ⚠️  [Check here](https://www.minecraft.net/en-us/msaprofile) __If it says buy, you don't own it__
 
 🟢 **2. Have you created a Minecraft __Java__ username ?**
