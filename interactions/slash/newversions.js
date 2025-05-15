@@ -13,7 +13,7 @@ module.exports = {embed_versions}
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("newversions")
-        .setDescription("Displays minecraft version info for QuestCraft"),
+        .setDescription("Displays Minecraft version info for QuestCraft"),
     async execute(interaction) {
         await interaction.reply({
             embeds: [embed_versions]
