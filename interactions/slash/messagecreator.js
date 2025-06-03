@@ -18,7 +18,7 @@ const server_only = new EmbedBuilder()
 
 const roles_only = new EmbedBuilder()
     .setTitle("Error!")
-    .setDescription("You do not have permission to use this command. Currently only [<@&945554238380048456>],[<@&820768461697318982>],[<@&820768352712523857>],[<@&820781262335508512>] and [<@&834177899321360404>] have access to this command")
+    .setDescription("You do not have permission to use this command. Currently only [<@&820768461697318982>],[<@&820768352712523857>],[<@&820781262335508512>] and [<@&834177899321360404>] have access to this command")
     .setColor("Red");
 
 const qc_only = new EmbedBuilder()
@@ -37,7 +37,7 @@ module.exports = {
                 return await interaction.reply({embeds: [server_only], flags: MessageFlags.Ephemeral });
             }
 
-            const allowedRoleIds = ["945554238380048456", "820768461697318982", "820768352712523857", "820781262335508512", "834177899321360404"];
+            const allowedRoleIds = ["820768461697318982", "820768352712523857", "820781262335508512", "834177899321360404"];
             const member = interaction.member;
             const allowedServerId = "820767484042018829";
             const guildId = interaction.guild.id;
