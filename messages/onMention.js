@@ -3,6 +3,7 @@ const {owner} = require("../config.json");
 
 module.exports = {
     async execute(message) {
+        await message.react("❤️");
         if (owner.includes(message.author.id)) {
             const mention = new EmbedBuilder()
                 .setDescription(`Hey ${message.author}! I am online and my ping is \`\`${message.client.ws.ping}ms\`\`.`)
