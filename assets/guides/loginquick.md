@@ -6,6 +6,3 @@
 
 🟢 **3. Is the account 18+ or a member of a Microsoft family?** 
 ⚠️ [Check age here](https://account.microsoft.com/profile?lang=en-US#main-content-landing-react) If yes, specify if it is 18+ or in a family.
-
-🟢 **4. Did you use the quest browser when signing in?**
-⚠️ If you did, *__use a different device__*.
