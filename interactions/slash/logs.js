@@ -28,7 +28,7 @@ module.exports = {
 
         const embed_quest_logs = new EmbedBuilder()
             .setTitle("**Getting logs on Quest Guide**")
-            .setDescription("**Sending logs from Quest:**\n\n Restart your game, press on need help on the bottom right, then post the log link inside of support, or ticket where the person is asking for logs.")
+            .setDescription("**Sending logs from Quest:**\n\n Restart your game, press on need help on the top right, then share the log link inside of support, or ticket where the person is asking for logs.")
             .setImage("https://raw.githubusercontent.com/Cartrigger/QCXRSupport/refs/heads/main/assets/quest_logs.png")
             .setColor("DarkOrange")
             .setFooter({
