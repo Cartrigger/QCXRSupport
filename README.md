@@ -44,11 +44,9 @@ Thank you to all these contributors for helping with the bot over the years!
 
 ## 📝 [License](LICENSE)
 
-QCXR Bot © 2023 by [Carson G](https://github.com/Cartrigger) is licensed
+QCXR Bot © 2023 by [Cart](https://github.com/Cartrigger) is licensed
 under [Polyform Noncommercial](https://polyformproject.org/licenses/noncommercial/1.0.0/).
 
 ## 🔄 Updates!
 
 🔄 Minor Command additions, maintenance updates.
-
-#### QCXR bot is used in the QuestCraft Server and is not always up to date with this github repo, it may be an older commit.
