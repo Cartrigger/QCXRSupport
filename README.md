@@ -13,7 +13,8 @@ If you would like to commit, please make a Pull Request.
 To test the bot out join the [QuestCraft Discord Server](https://discord.gg/questcraft) and run a command
 in [#bot-commands](https://discord.com/channels/820767484042018829/953383695908216843)
 
-- You can also invite the bot to your server by clicking on its profile and selecting 'Add to server'
+- You can also invite the bot to your server by clicking on its profile and selecting 'Add to server'<br>
+<br>
 Please note: Adding the bot to your server is not recommended as you lose access to auto responding to tickets.
 
 ---
