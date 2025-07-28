@@ -29,6 +29,23 @@ module.exports = {
             return;
         }
 
+        async function handleNSFWInvite() {
+            try {
+                await newMessage.channel.send({content: `🚫 Potential scam sent by ${newMessage.author} deleted, [more info](<https://youtu.be/Kah-Dot1734>.)`}).then(msg => {
+                    setTimeout(() => msg.delete(), 5000);
+                });
+                (await newMessage).delete();
+            } catch (err) {
+                await newMessage.reply({
+                    content: "<@&820768461697318982> NSFW Invite Detected",
+                    embeds: [no_perms]
+                });
+            }
+            const guild = newMessage.client.guilds.cache.get(serverId);
+            const channel = guild.channels.cache.get(channelId);
+            channel.send({embeds: [crafty_NSFW]});
+        }
+
         try {
             if (!owner.includes(newMessage.author.id)) {
                 if (newMessage.content.includes("discord.gg/") || newMessage.content.includes("discord.com/invite/")) {
@@ -36,20 +53,7 @@ module.exports = {
                     const inviteCode = string.substring(string.lastIndexOf("/") + 1);
 
                     if (NSFWwords.some(word => inviteCode.includes(word))) {
-                        try {
-                            await newMessage.channel.send({content: `🚫 Potential scam sent by ${newMessage.author} deleted, [more info](<https://youtu.be/Kah-Dot1734>.)`}).then(msg => {
-                                setTimeout(() => msg.delete(), 5000);
-                            });
-                            (await newMessage).delete();
-                        } catch (err) {
-                            await newMessage.reply({
-                                content: "<@&820768461697318982> NSFW Invite Detected",
-                                embeds: [no_perms]
-                            });
-                        }
-                        const guild = newMessage.client.guilds.cache.get(serverId);
-                        const channel = guild.channels.cache.get(channelId);
-                        channel.send({embeds: [crafty_NSFW]});
+                        await handleNSFWInvite()
                         return;
                     }
 
@@ -61,20 +65,7 @@ module.exports = {
                             const guildName = data.guild.name.toLowerCase();
 
                             if (NSFWwords.some(word => guildName.includes(word))) {
-                                try {
-                                    await newMessage.channel.send({content: `🚫 Potential scam sent by ${newMessage.author} deleted, [more info](<https://youtu.be/Kah-Dot1734>.)`}).then(msg => {
-                                        setTimeout(() => msg.delete(), 5000);
-                                    });
-                                    (await newMessage).delete();
-                                } catch (err) {
-                                    await newMessage.reply({
-                                        content: "<@&820768461697318982> NSFW Invite Detected",
-                                        embeds: [no_perms]
-                                    });
-                                }
-                                const guild = newMessage.client.guilds.cache.get(serverId);
-                                const channel = guild.channels.cache.get(channelId);
-                                channel.send({embeds: [crafty_NSFW]});
+                                await handleNSFWInvite()
                             }
                         }
                     } catch (error) {
