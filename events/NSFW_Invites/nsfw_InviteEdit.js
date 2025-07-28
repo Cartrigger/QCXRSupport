@@ -3,7 +3,7 @@
 const {Events, EmbedBuilder} = require("discord.js");
 const {owner} = require("../../config.json");
 const fetch = require("node-fetch");
-const NSFWwords = require("nsfw.json");
+const NSFWwords = require("./nsfw.json");
 const ignorechannel = require("./ignoredchannels.json")
 
 const serverId = "820767484042018829";
