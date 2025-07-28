@@ -52,7 +52,7 @@ module.exports = {
 
 
                     if (NSFWwords.some(word => inviteCode.includes(word))) {
-                        handleNSFWInvite();
+                        await handleNSFWInvite();
                         return;
                     }
 
@@ -64,7 +64,7 @@ module.exports = {
                             const guildName = data.guild.name.toLowerCase();
 
                             if (NSFWwords.some(word => guildName.includes(word))) {
-                                handleNSFWInvite();
+                                await handleNSFWInvite();
                             }
                         }
                     } catch (error) {
