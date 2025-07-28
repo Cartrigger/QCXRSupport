@@ -3,15 +3,9 @@
 const {Events, EmbedBuilder} = require("discord.js");
 const {owner} = require("../../config.json");
 const fetch = require("node-fetch");
-const NSFWwords = require("./nsfw.json");
+const NSFWwords = require("nsfw.json");
+const ignorechannel = require("ignorechannel.json")
 
-// Channel IDs to be ignored for message updates
-const ignorechannel = [
-    "821078174992957480",
-    "1090068136528715928",
-    "821076673331724309",
-    "932673625813823518"
-];
 const serverId = "820767484042018829";
 const channelId = "1057074981135196230";
 
@@ -39,8 +33,7 @@ module.exports = {
             if (!owner.includes(newMessage.author.id)) {
                 if (newMessage.content.includes("discord.gg/") || newMessage.content.includes("discord.com/invite/")) {
                     const string = newMessage.content;
-                    const code = string.substring(string.lastIndexOf("/") + 1);
-                    const inviteCode = code;
+                    const inviteCode = string.substring(string.lastIndexOf("/") + 1);
 
                     if (NSFWwords.some(word => inviteCode.includes(word))) {
                         try {
