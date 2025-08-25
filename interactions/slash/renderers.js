@@ -12,7 +12,8 @@ module.exports = {
                     {name: "GL4ES", value: "gl4es"},
                     {name: "Zink", value: "zink"},
                     {name: "regal", value: "regal"},
-                    {name: "LightThinWrapper", value: "ltw"}
+                    {name: "LightThinWrapper", value: "ltw"},
+                    {name: "MobileGlues", value: "mglues"}
                 )),
     async execute(interaction) {
         const category = interaction.options.getString("renderer");
@@ -46,7 +47,15 @@ module.exports = {
 
         const embed_renderer_ltw = new EmbedBuilder()
             .setTitle("**QuestCraft + PojavLauncher LightThinWrapper Renderer**")
-            .setDescription("LightThinWrapper, also known as LTW is the newest renderer to be used in QuestCraft, releasing with v6.0 of QuestCraft.\n\nIt is highly performant, and very mod compatible, to the point that it even allows even big mods like [Create](https://modrinth.com/mod/create-fabric) to run, with shader support being semi-available.")
+            .setDescription("LightThinWrapper, also known as LTW or OpenLTW, releasing with v6.0 of QuestCraft.\n\nIt is highly performant, and very mod compatible, to the point that it even allows even big mods like [Create](https://modrinth.com/mod/create-fabric) to run, with shader support being semi-available.")
+            .setColor("Orange")
+            .setFooter({
+                text: "Written by Cart",
+                iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
+            })
+        const embed_renderer_mglues = new EmbedBuilder()
+            .setTitle("**QuestCraft MobileGlues Renderer**")
+            .setDescription("MobileGlues is a renderer that should be used in the upcoming QuestCraft v6.0.1, it is a renderer that is used to allow the use of shaders, and is about as performant as LTW.\n\n It is slightly better than LTW in terms of compatibility, and can use mods like [Create](https://modrinth.com/mod/create-fabric).\n\nIt is also used in many other mobile launchers, such as AngelAuraMC and can run most shaders.")
             .setColor("Orange")
             .setFooter({
                 text: "Written by Cart",
@@ -66,6 +75,9 @@ module.exports = {
                 break;
             case "ltw":
                 await interaction.reply({ embeds: [embed_renderer_ltw] });
+                break;
+            case "mglues":
+                await interaction.reply({ embeds: [embed_renderer_mglues] });
                 break;
             default:
                 break;

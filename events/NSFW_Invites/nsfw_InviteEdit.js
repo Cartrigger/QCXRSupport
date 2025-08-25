@@ -4,14 +4,8 @@ const {Events, EmbedBuilder} = require("discord.js");
 const {owner} = require("../../config.json");
 const fetch = require("node-fetch");
 const NSFWwords = require("./nsfw.json");
+const ignorechannel = require("./ignoredchannels.json")
 
-// Channel IDs to be ignored for message updates
-const ignorechannel = [
-    "821078174992957480",
-    "1090068136528715928",
-    "821076673331724309",
-    "932673625813823518"
-];
 const serverId = "820767484042018829";
 const channelId = "1057074981135196230";
 
@@ -35,28 +29,31 @@ module.exports = {
             return;
         }
 
+        async function handleNSFWInvite() {
+            try {
+                await newMessage.channel.send({content: `🚫 Potential scam sent by ${newMessage.author} deleted, [more info](<https://youtu.be/Kah-Dot1734>.)`}).then(msg => {
+                    setTimeout(() => msg.delete(), 5000);
+                });
+                (await newMessage).delete();
+            } catch (err) {
+                await newMessage.reply({
+                    content: "<@&820768461697318982> NSFW Invite Detected",
+                    embeds: [no_perms]
+                });
+            }
+            const guild = newMessage.client.guilds.cache.get(serverId);
+            const channel = guild.channels.cache.get(channelId);
+            channel.send({embeds: [crafty_NSFW]});
+        }
+
         try {
             if (!owner.includes(newMessage.author.id)) {
                 if (newMessage.content.includes("discord.gg/") || newMessage.content.includes("discord.com/invite/")) {
                     const string = newMessage.content;
-                    const code = string.substring(string.lastIndexOf("/") + 1);
-                    const inviteCode = code;
+                    const inviteCode = string.substring(string.lastIndexOf("/") + 1);
 
                     if (NSFWwords.some(word => inviteCode.includes(word))) {
-                        try {
-                            await newMessage.channel.send({content: `🚫 Potential scam sent by ${newMessage.author} deleted, [more info](<https://youtu.be/Kah-Dot1734>.)`}).then(msg => {
-                                setTimeout(() => msg.delete(), 5000);
-                            });
-                            (await newMessage).delete();
-                        } catch (err) {
-                            await newMessage.reply({
-                                content: "<@&820768461697318982> NSFW Invite Detected",
-                                embeds: [no_perms]
-                            });
-                        }
-                        const guild = newMessage.client.guilds.cache.get(serverId);
-                        const channel = guild.channels.cache.get(channelId);
-                        channel.send({embeds: [crafty_NSFW]});
+                        await handleNSFWInvite()
                         return;
                     }
 
@@ -68,20 +65,7 @@ module.exports = {
                             const guildName = data.guild.name.toLowerCase();
 
                             if (NSFWwords.some(word => guildName.includes(word))) {
-                                try {
-                                    await newMessage.channel.send({content: `🚫 Potential scam sent by ${newMessage.author} deleted, [more info](<https://youtu.be/Kah-Dot1734>.)`}).then(msg => {
-                                        setTimeout(() => msg.delete(), 5000);
-                                    });
-                                    (await newMessage).delete();
-                                } catch (err) {
-                                    await newMessage.reply({
-                                        content: "<@&820768461697318982> NSFW Invite Detected",
-                                        embeds: [no_perms]
-                                    });
-                                }
-                                const guild = newMessage.client.guilds.cache.get(serverId);
-                                const channel = guild.channels.cache.get(channelId);
-                                channel.send({embeds: [crafty_NSFW]});
+                                await handleNSFWInvite()
                             }
                         }
                     } catch (error) {

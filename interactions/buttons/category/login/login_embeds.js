@@ -54,6 +54,14 @@ const login_embeds = {
         .setFooter({
             text: "Written by Cart",
             iconURL: "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
+        }),
+    username_no: new EmbedBuilder()
+        .setTitle("You must set your username!")
+        .setDescription("You must set your username. Please set it via this [link](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile) and then try again.\n\n*If your issue still persists please select the ``🔁 Restart`` below.*")
+        .setColor("Blue")
+        .setFooter({
+            text: "Written by Cart",
+            "iconURL": "https://cdn.discordapp.com/avatars/317814254336081930/a_89da6baf3d01206f8bd3e0f4ac91295f.gif?size=4096"
         })
 };
 

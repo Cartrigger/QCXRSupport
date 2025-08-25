@@ -12,7 +12,7 @@ module.exports = {
                     {name: "QuestCraft Discord", value: "questcraft"},
                     {name: "Vivecraft Discord", value: "vivecraft"},
                     {name: "Vivecraft Mixin Discord", value: "vivecraft_mixin"},
-                    {name: "PojavLauncher Discord", value: "pojavlauncher"},
+                    {name: "AAMC / Amethyst Discord", value: "amethyst"},
                     {name: "XRCraft Discord", value: "xrcraft"},
                 )),
     async execute(interaction) {
@@ -21,8 +21,8 @@ module.exports = {
             case "xrcraft":
                 await interaction.reply("Here's a invite to XRCraft!\n\nhttps://discord.gg/xrcraft-947244318740054149");
                 return;
-            case "pojavlauncher":
-                await interaction.reply("Here's a invite to PojavLauncher!\n\nhttps://discord.gg/tAmxAzSmvB");
+            case "amethyst":
+                await interaction.reply("Here's a invite to AngelAuraMC / Amethyst!\n\nhttps://discord.gg/5ptqkyZxEy");
                 return;
             case "vivecraft_mixin":
                 await interaction.reply("Here's a invite to Vivecraft Mixin!\n\nhttps://discord.gg/bnatWRD8v3");

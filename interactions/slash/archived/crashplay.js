@@ -2,7 +2,7 @@ const {EmbedBuilder, SlashCommandBuilder, MessageFlags} = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName("crashplay")
+        .setName("acrashplay")
         .setDescription("Displays the guide from the markdown document."),
     async execute(interaction) {
         try {

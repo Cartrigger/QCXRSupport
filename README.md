@@ -13,7 +13,9 @@ If you would like to commit, please make a Pull Request.
 To test the bot out join the [QuestCraft Discord Server](https://discord.gg/questcraft) and run a command
 in [#bot-commands](https://discord.com/channels/820767484042018829/953383695908216843)
 
-- You can also invite the bot to your server by clicking on its profile and selecting 'Add to server'
+- You can also invite the bot to your server by clicking on its profile and selecting 'Add to server'<br>
+<br>
+Please note: Adding the bot to your server is not recommended as you lose access to auto responding to tickets.
 
 ---
 
@@ -44,13 +46,9 @@ Thank you to all these contributors for helping with the bot over the years!
 
 ## 📝 [License](LICENSE)
 
-QCXR Bot © 2023 by [Carson G](https://github.com/Cartrigger) is licensed
+QCXR Bot © 2023 by [Cart](https://github.com/Cartrigger) is licensed
 under [Polyform Noncommercial](https://polyformproject.org/licenses/noncommercial/1.0.0/).
 
 ## 🔄 Updates!
 
 🔄 Minor Command additions, maintenance updates.
-
-#### QCXR bot is used in the QuestCraft Server and is not always up to date with this github repo, it may be an older commit.
-
-<div align='center'><a href='https://www.websitecounterfree.com'><img src='https://www.websitecounterfree.com/c.php?d=9&id=58944&s=40' border='0' alt=''></a><br / ><small><a href='https://www.websitecounterfree.com' title="Free Website Counter">From 2024-09-10</a></small></div>
