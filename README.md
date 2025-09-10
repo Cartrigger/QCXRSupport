@@ -32,10 +32,13 @@ Please note: Adding the bot to your server is not recommended as you lose access
 
 ### 🏗️ Additional Credits
 
-- This bot utilizes an extremely modified version of the [Discord Bot Template](https://github.com/NamVr/DiscordBot-Template) made
-  by Naman Vrati using the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) license! As this has been heavily modified, it is no longer required to use GPL'able licences. 
+- This bot uses an extremely modified version of the [Discord Bot Template](https://github.com/NamVr/DiscordBot-Template) made
+  by Naman Vrati using the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) license! 
 
 If you would no longer want any of your code within this Discord bot, please contact me and request for removal.
+
+## Notes on deployment
+For custom deployments, make sure to read the [notes](NOTES.md).
 
 ### 🧩 Contributors
 
@@ -48,7 +51,3 @@ Thank you to all these contributors for helping with the bot over the years!
 
 QCXR Bot © 2023 by [Cart](https://github.com/Cartrigger) is licensed
 under [Polyform Noncommercial](https://polyformproject.org/licenses/noncommercial/1.0.0/).
-
-## 🔄 Updates!
-
-🔄 Minor Command additions, maintenance updates.
