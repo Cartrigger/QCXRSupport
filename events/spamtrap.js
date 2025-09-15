@@ -20,7 +20,7 @@ module.exports = {
                 const deletePromises = [];
 
                 // meat and potatoes, should be able to read
-                for (const {channelId, channel} of channels) {
+                for (const [channelId, channel] of channels) {
                     deletePromises.push(
                         (async () => {
                             try {
@@ -34,7 +34,7 @@ module.exports = {
                                     await channel.bulkDelete(messagesToDelete);
                                 }
                             } catch (error) {
-                                console.log(`Could not delete messages from channel ${channel.name}: ${error.message}`);
+                                console.log(`Could not delete messages from channel ${channel?.name || 'undefined'}: ${error.message}`);
                             }
                         })()
                     );
@@ -48,14 +48,14 @@ module.exports = {
                 }
 
                 await message.member.kick(`User sent a message in the spam channel: ${message.content}`);
-                const kickMessage = await message.channel.send(`User <@${message.author.id}> is most likely a spam bot and has been kicked with some messages deleted.`);
-                setTimeout(() => kickMessage.delete().catch(console.error), 120000);
+                const kickMessage = await message.channel.send(`User ${message.author.id} is most likely a spam bot and has been kicked with some messages deleted.`);
+                setTimeout(() => kickMessage.delete().catch(console.error), 60000);
 
                 // await for delete
                 await Promise.all(deletePromises);
             } else {
-                const permissionMessage = await message.channel.send(`I do not have permission to kick <@${message.author.id}>! <@317814254336081930>`);
-                setTimeout(() => permissionMessage.delete().catch(console.error), 120000);
+                const permissionMessage = await message.channel.send(`I do not have permission to kick ${message.author.id}! <@317814254336081930>`);
+                setTimeout(() => permissionMessage.delete().catch(console.error), 60000);
             }
         }
     }
