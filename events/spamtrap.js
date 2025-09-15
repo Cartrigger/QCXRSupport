@@ -54,7 +54,7 @@ module.exports = {
                 // await for delete
                 await Promise.all(deletePromises);
             } else {
-                const permissionMessage = await message.channel.send(`I do not have permission to kick ${message.author.id}! <@317814254336081930>`);
+                const permissionMessage = await message.channel.send(`I do not have permission to kick <@${message.author.id}>! <@317814254336081930>`);
                 setTimeout(() => permissionMessage.delete().catch(console.error), 60000);
             }
         }
