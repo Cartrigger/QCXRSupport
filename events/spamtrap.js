@@ -39,6 +39,7 @@ module.exports = {
                                     msg.author.id === message.author.id &&
                                     (Date.now() - msg.createdTimestamp) < 1 * 60 * 1000
                                 );
+                                // Bulk deletion time
                                 await channel.bulkDelete(messagesToDelete);
                             } catch (error) {
                                 console.log(`Could not delete messages from channel ${channel?.name || 'undefined'}: ${error.message}`);
