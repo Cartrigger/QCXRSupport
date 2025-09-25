@@ -22,14 +22,8 @@
   "dependencies": {
     "@iamtraction/google-translate": "^2.0.1",
     "axios": "1.12.2",
-    "blessed": "^0.1.81",
-    "canvas": "^3.2.0",
-    "chalk": "^5.3.0",
-    "child_process": "^1.0.2",
     "discord-gamecord": "^4.4.2",
     "discord.js": "^14.18.0",
-    "figlet": "^1.7.0",
-    "mojang-lib": "^1.13.2",
-    "moment": "^2.29.4"
+    "mojang-lib": "^1.13.2"
   }
 }

@@ -14,8 +14,8 @@ To test the bot out join the [QuestCraft Discord Server](https://discord.gg/ques
 in [#bot-commands](https://discord.com/channels/820767484042018829/953383695908216843)
 
 - You can also invite the bot to your server by clicking on its profile and selecting 'Add to server'<br>
-<br>
-Please note: Adding the bot to your server is not recommended as you lose access to auto responding to tickets.
+  <br>
+  Please note: Adding the bot to your server is not recommended as you lose access to auto responding to tickets.
 
 ---
 
@@ -28,12 +28,12 @@ Please note: Adding the bot to your server is not recommended as you lose access
 3. Run ``node bot``
 
 - All PR's are welcome for improvements.
-<br>Please note that certain features like the markdown guides may require a repository to be given, which is hardcoded.
+  <br>Please note that certain features like the markdown guides may require a repository to be given, which is hardcoded.
 
 ### 🏗️ Additional Credits
 
 - This bot uses an extremely modified version of the [Discord Bot Template](https://github.com/NamVr/DiscordBot-Template) made
-  by Naman Vrati using the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) license! 
+  by Naman Vrati using the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) license!
 
 If you would no longer want any of your code within this Discord bot, please contact me and request for removal.
 
@@ -49,5 +49,5 @@ Thank you to all these contributors for helping with the bot over the years!
 
 ## 📝 [License](LICENSE)
 
-QCXR Bot © 2023 by [Cart](https://github.com/Cartrigger) is licensed
+QCXR Bot © 2025 by [Cartrigger](https://github.com/Cartrigger) is licensed
 under [Polyform Noncommercial](https://polyformproject.org/licenses/noncommercial/1.0.0/).
