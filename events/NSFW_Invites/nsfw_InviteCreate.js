@@ -11,6 +11,9 @@ module.exports = {
     name: Events.MessageCreate,
 
     async execute(message) {
+        if (!message.guild) { // Servers only
+            return;
+        }
 
         const no_perms = new EmbedBuilder()
             .setDescription(`⚠️ I lack the required permissions to delete this NSFW invite.`)

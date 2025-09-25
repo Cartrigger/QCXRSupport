@@ -13,6 +13,10 @@ module.exports = {
     name: Events.MessageUpdate,
 
     async execute(oldMessage, newMessage) {
+        if (!newMessage.guild) { // Servers only
+            return;
+        }
+
         // Declares const to be used.
         const no_perms = new EmbedBuilder()
             .setDescription(`⚠️ I lack the required permissions to delete this invite.`)
