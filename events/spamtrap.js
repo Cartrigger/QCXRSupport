@@ -1,7 +1,7 @@
 const {Events} = require("discord.js");
 const spamchannel = "1416919307115434095";
 const whitelist = [
-    "820781262335508512", // Role IDs that don't get flagged
+    "820781262335508512", // todo: move to config.json
     "834177899321360404"
 ];
 
