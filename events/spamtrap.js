@@ -42,7 +42,7 @@ module.exports = {
                     deletePromises.push(
                         (async () => {
                             try {
-                                const fetchedMessages = await channel.messages.fetch({ limit: 50 });
+                                const fetchedMessages = await channel.messages.fetch({ limit: 100 });
                                 const messagesToDelete = fetchedMessages.filter(msg =>
                                     msg.author.id === message.author.id
                                 );
