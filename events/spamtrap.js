@@ -29,6 +29,7 @@ module.exports = {
                 const guild = message.guild;
                 const channels = guild.channels.cache.filter(channel =>
                     channel.isTextBased() &&
+                    !channel.isThread() &&
                     channel.permissionsFor(guild.members.me).has(['ViewChannel', 'ReadMessageHistory', 'ManageMessages'])
                 );
 
