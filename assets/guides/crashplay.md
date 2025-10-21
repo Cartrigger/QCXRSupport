@@ -3,7 +3,7 @@
 ❌  **You most likely got an interrupted download**
 *Easiest way to solve this is to reinstall the instance*
 
-🟣 **Step by step**🟣
+🟣 **Step by step** 🟣
 **In instances**
 - Delete the instance (Could be version number)
 - Create a new instance (Not needed if you want to use default mods / performance modpack)
@@ -17,7 +17,7 @@
 
 ⚠️ **Don’t remove your headset during the whole download!**⚠️
 
-🟣 **Other things will stop the download:**🟣
+🟣 **Other things will stop the download:** 🟣
 • letting the headset go idle
 • exiting your guardian
 • clicking any buttons in the app
