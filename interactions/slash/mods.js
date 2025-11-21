@@ -27,7 +27,7 @@ module.exports = {
 
         const embed_mods_manual = new EmbedBuilder()
             .setTitle("**Manual Modding Guide on Headset**")
-            .setDescription("**Modding QuestCraft Manually:**\n\n**NOTE: Launch the Minecraft version you are trying to mod first, as this will create the mods folder necessary**\n\n" +
+            .setDescription("**Modding QuestCraft Manually:**\n\n**NOTE: Launch the Minecraft version you are trying to mod first, as this will create the mods folder necessary**\n\n## WARNING! THIS NO LONGER WORKS!\n\n" +
                 "Before attempting this make sure you are the main account on your main account on your Quest (Only applies to family Quests)\n\n" +
                 "Note: Install mods through Modrinth and select the Fabric option when searching, make sure to install dependencies and that the mod is the correct version for your game.\n\n" +
                 "1. Open the quest browser and search “Activity Launcher APK”, “FV File Launcher apk”, “Shizuku APK” and download them (NOTE: You will have to download all of these from 3rd parties) \n" +
