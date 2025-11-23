@@ -14,6 +14,7 @@ module.exports = {
                     {name: "Vivecraft Mixin Discord", value: "vivecraft_mixin"},
                     {name: "AAMC / Amethyst Discord", value: "amethyst"},
                     {name: "XRCraft Discord", value: "xrcraft"},
+                    {name: "Kilt Discord", value: "kilt"}
                 )),
     async execute(interaction) {
         const categories = interaction.options.getString("invites");
@@ -32,6 +33,9 @@ module.exports = {
                 return;
             case "questcraft":
                 await interaction.reply("Here's a invite to QuestCraft!\n\nhttps://discord.gg/questcraft")
+                return;
+            case "kilt":
+                await interaction.reply("Here's an invite to Kilt, make sure to specify you're using QuestCraft if you need support.\n\nhttps://discord.gg/pWTvVYWjTB")
                 return;
         }
     }
