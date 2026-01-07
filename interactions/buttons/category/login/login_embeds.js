@@ -6,8 +6,8 @@ const login_embeds = {
         .setDescription("Please respond with the correct buttons, if you mess anything up you can click the ``🔁 Restart`` Button at the end.\n\n**DO NOT PING MODERATORS, YOU WILL BE MUTED!**\n\nPlease also include your issue, as the login flow is meant for basic login issues.")
         .setColor("Aqua")
         .setFooter({
-            text: "Developed by TechyGiraffe999",
-            iconURL: "https://cdn.discordapp.com/attachments/1059913125308145716/1157685309602013304/TechyGiraffe_v.2.0_test_3.png?ex=651981f6&is=65183076&hm=b630b14532ae9e04c63949a94b12d9308431e6d7726cead62bca42ba4720f28d&"
+            text: "Developed by TechyGiraffe999, updated by Cartrigger",
+            iconURL: "https://images-ext-1.discordapp.net/external/5cPanAYF2wOpIhmzrCkina2UpawRtHHU4y2KjFviqCI/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/997670790604542012/92a28b5bb82c7512fe8711fa2fd63163.png?width=633&height=633"
         }),
     own: new EmbedBuilder()
         .setTitle("Do you own Minecraft Java Edition?")
