@@ -28,6 +28,3 @@
 ℹ️ **Additional info**
 Average completion time is 2-20 minutes but it depends on your internet speed.
 • The file size is around 700~ megabytes, and a extra 200~ megabytes per version after that
-
-  You can still play 1.19.4 **IF** you remove Sodium.**
-   (Though you may get worse performance)
