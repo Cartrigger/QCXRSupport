@@ -21,7 +21,7 @@
   "homepage": "https://github.com/Cartrigger/QCXRSupport/blob/main/README.md",
   "dependencies": {
     "@iamtraction/google-translate": "^2.0.1",
-    "axios": "1.12.2",
+    "axios": "1.13.5",
     "discord-gamecord": "^4.4.2",
     "discord.js": "^14.18.0",
     "mojang-lib": "^1.13.2"
