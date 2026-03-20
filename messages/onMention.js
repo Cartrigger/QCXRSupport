@@ -1,5 +1,17 @@
 const {EmbedBuilder} = require("discord.js");
 const {owner} = require("../config.json");
+const {randomMentionReplies} = require("../config.json");
+
+// Colour names. Doesn't need to be shared across project so it's here.
+const randomMentionColors = [
+    "Gold",
+    "Aqua",
+    "Green",
+    "Blue",
+    "Purple",
+    "Orange",
+    "Fuchsia"
+];
 
 module.exports = {
     async execute(message) {
@@ -10,9 +22,12 @@ module.exports = {
                 .setColor("Blue");
             return message.reply({embeds: [mention]});
         } else {
+            const randomTemplate = randomMentionReplies[Math.floor(Math.random() * randomMentionReplies.length)];
+            const randomReply = randomTemplate.replace("{user}", `${message.author}`);
+            const randomColor = randomMentionColors[Math.floor(Math.random() * randomMentionColors.length)];
             const mention = new EmbedBuilder()
-                .setDescription(`Hi ${message.author}! I am Crafty! To see my full list of commands, run \`/help\``)
-                .setColor("Gold");
+                .setDescription(randomReply)
+                .setColor(randomColor);
             return message.reply({embeds: [mention]});
         }
     }

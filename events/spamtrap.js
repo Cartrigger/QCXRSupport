@@ -1,5 +1,7 @@
 const {Events} = require("discord.js");
 const spamchannel = "1416919307115434095";
+const DELETE_WINDOW_MS = 5 * 60 * 1000;
+const BULK_DELETE_MAX_AGE_MS = 14 * 24 * 60 * 60 * 1000;
 const whitelist = [
     "820781262335508512", // todo: move to config.json
     "834177899321360404"
@@ -10,6 +12,7 @@ module.exports = {
 
     // this code is very stinky, but it grabs if a user sent a message in the spam catch channel, then scans through all channels and deletes any messages from them within the last five minutes, kicking them and sending them a message. Istg if people just message in the channel I'll be angy.
     async execute(message) {
+        if (!message.inGuild()) return;
         if (message.author.bot) return;
         if (message.channel.id === spamchannel) {
             console.log(`Spamtrap triggered by user ${message.author.tag} (${message.author.id})`);
@@ -29,7 +32,7 @@ module.exports = {
                 const guild = message.guild;
                 const channels = guild.channels.cache.filter(channel =>
                     channel.isTextBased() &&
-                    !channel.isThread() &&
+                    typeof channel.messages?.fetch === "function" &&
                     channel.permissionsFor(guild.members.me).has(['ViewChannel', 'ReadMessageHistory', 'ManageMessages'])
                 );
 
@@ -43,17 +46,65 @@ module.exports = {
                     deletePromises.push(
                         (async () => {
                             try {
-                                const fetchedMessages = await channel.messages.fetch({ limit: 100 });
-                                const messagesToDelete = fetchedMessages.filter(msg =>
-                                    msg.author.id === message.author.id
-                                );
-                                console.log(`Found ${messagesToDelete.size} messages to delete in #${channel.name}`);
-                                totalMessagesFound += messagesToDelete.size;
+                                const cutoffTimestamp = Date.now() - DELETE_WINDOW_MS;
+                                const now = Date.now();
+                                let before;
+                                let channelFound = 0;
+                                let channelDeleted = 0;
+                                let channelTooOld = 0;
+                                let page = 0;
 
-                                // Delete time
-                                const deleted = await channel.bulkDelete(messagesToDelete, true);
-                                totalMessagesDeleted += deleted.size;
-                                console.log(`Deleted messages in #${channel.name}`);
+                                while (true) {
+                                    const fetchOptions = before ? {limit: 100, before} : {limit: 100};
+                                    const fetchedMessages = await channel.messages.fetch(fetchOptions);
+                                    if (!fetchedMessages.size) break;
+
+                                    const userMessagesInWindow = fetchedMessages.filter(msg =>
+                                        msg.author.id === message.author.id &&
+                                        msg.createdTimestamp >= cutoffTimestamp
+                                    );
+
+                                    channelFound += userMessagesInWindow.size;
+
+                                    const bulkDeletable = userMessagesInWindow.filter(msg =>
+                                        now - msg.createdTimestamp < BULK_DELETE_MAX_AGE_MS
+                                    );
+                                    const tooOldForBulk = userMessagesInWindow.filter(msg =>
+                                        now - msg.createdTimestamp >= BULK_DELETE_MAX_AGE_MS
+                                    );
+
+                                    if (bulkDeletable.size > 0) {
+                                        const deleted = await channel.bulkDelete(bulkDeletable, false);
+                                        channelDeleted += deleted.size;
+                                    }
+
+                                    if (tooOldForBulk.size > 0) {
+                                        channelTooOld += tooOldForBulk.size;
+                                        const deletionResults = await Promise.allSettled(
+                                            tooOldForBulk.map(msg => msg.delete())
+                                        );
+                                        channelDeleted += deletionResults.filter(result => result.status === "fulfilled").length;
+                                    }
+
+                                    const oldestMessage = fetchedMessages.last();
+                                    if (!oldestMessage || oldestMessage.createdTimestamp < cutoffTimestamp) {
+                                        break;
+                                    }
+
+                                    before = oldestMessage.id;
+                                    page += 1;
+                                    if (page >= 20) {
+                                        console.log(`Stopped scanning #${channel.name} after 20 pages to avoid runaway fetches.`);
+                                        break;
+                                    }
+                                }
+
+                                totalMessagesFound += channelFound;
+                                totalMessagesDeleted += channelDeleted;
+
+                                if (channelFound > 0) {
+                                    console.log(`Channel #${channel.name}: found ${channelFound}, deleted ${channelDeleted}, too old for bulk ${channelTooOld}`);
+                                }
                             } catch (error) {
                                 console.log(`Could not delete messages from channel ${channel?.name}: ${error.message}`);
                             }
@@ -71,7 +122,7 @@ module.exports = {
 
                 // Attempt the kick
                 try {
-                    await message.author.send(`You have been kicked from ${message.guild.name} for sending a message in the spam bot catch channel. If you think this was a mistake or did this on accident, join back @ https://discord.gg/questcraft\n\nAllthough, if you didn't do this, you've been hacked and you should change your [password immediately](https://support.discord.com/hc/en-us/articles/218410947-How-to-Reset-or-Change-Your-Forgotten-Password-on-Discord).`);
+                    await message.author.send(`You have been kicked from ${message.guild.name} for sending a message in the spam bot catch channel. If you think this was a mistake or did this on accident, join back @ https://discord.gg/questcraft\n\nAlthough, if you didn't do this, you've been hacked and you should change your [password immediately](https://support.discord.com/hc/en-us/articles/218410947-How-to-Reset-or-Change-Your-Forgotten-Password-on-Discord).`);
                     console.log(`Sent DM to ${message.author.tag}`);
                 } catch (error) {
                     console.log(`Could not send DM to ${message.author.id}: ${error.message}`);
