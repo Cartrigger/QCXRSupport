@@ -4,4 +4,15 @@
 	"owner": ["...","..."],
 	"client_id": "...",
 	"test_guild_id": "..."
+    "randomMentionReplies" : [
+      "Hi {user}! I am Crafty! Try `/help` for all my commands.",
+      "Hey {user}! Need a hand? Run `/help` and I can show you around.",
+      "Yo {user}! I am awake and ready. Use `/help` to see what I can do.",
+      "Hello {user}! Looking for commands? `/help` has the full list.",
+      "Sup {user}! Want the good stuff? Type `/help`.",
+      "Hey {user}, I am your friendly support bot. Start with `/help`.",
+      "Hi  {user}! I have plenty of tricks, and `/help` shows them all.",
+      "Heyo {user}! You can check me out with '/help'.",
+      "Hey funny {user}! I'm here to help! Run 'help' if you want to my commands."
+    ]
 }
