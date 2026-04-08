@@ -8,14 +8,12 @@ module.exports = {
     async execute(channel) {
         try {
             channel_temp = channel.parent;
-            if ((channel_temp.id === "946184804657934469" || channel_temp.id === "1157685975896555551") && channel.name.slice(0, 5) === "login") {
+            if ((channel_temp.id === "946184804657934469") && channel.name.slice(0, 5) === "login") {
 
                 await new Promise(resolve => setTimeout(resolve, 1000)); // 1 second delay
-                const start_message = await channel.send({embeds: [login_embeds.login]});
-
+                await channel.send({embeds: [login_embeds.login]});
                 await new Promise(resolve => setTimeout(resolve, 2000)); // 2 second delay
-
-                const message = await channel.send({embeds: [login_embeds.own], components: [buttons.own]});
+                await channel.send({embeds: [login_embeds.own], components: [buttons.own]});
             }
         } catch (err) {
             console.error(err)
